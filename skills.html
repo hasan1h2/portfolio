@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Technical & Creative Skills of Habib Hasan - Flutter, Dart, Web, DevOps, Graphic Design, Video Editing, AI, and Marketing.">
+  <title>Skills & Expertise | Habib Hasan</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-theme="dark">
+
+  <div id="preloader"><div class="preloader-spinner"></div><div class="preloader-logo">HABIB HASAN</div></div>
+  <div class="custom-cursor"></div><div class="cursor-follower"></div><div class="mouse-glow-bg"></div><div class="scroll-progress-bar"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">HABIB<span class="brand-dot"></span></a>
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <i class="fas fa-bars fs-3"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="skills.html">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown">Portfolio</a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="portfolioDropdown">
+              <li><a class="dropdown-item" href="portfolio/flutter.html"><i class="fas fa-mobile-alt me-2 text-info"></i>Flutter Apps</a></li>
+              <li><a class="dropdown-item" href="portfolio/web.html"><i class="fas fa-code me-2 text-primary"></i>Web Projects</a></li>
+              <li><a class="dropdown-item" href="portfolio/graphic-design.html"><i class="fas fa-palette me-2 text-warning"></i>Graphic Design</a></li>
+              <li><a class="dropdown-item" href="portfolio/video-editing.html"><i class="fas fa-film me-2 text-danger"></i>Video Editing</a></li>
+              <li><a class="dropdown-item" href="portfolio/digital-marketing.html"><i class="fas fa-chart-line me-2 text-success"></i>Digital Marketing</a></li>
+              <li><a class="dropdown-item" href="portfolio/ai-projects.html"><i class="fas fa-robot me-2 text-accent"></i>AI Projects</a></li>
+              <li><a class="dropdown-item" href="portfolio/devops.html"><i class="fas fa-server me-2 text-secondary"></i>DevOps</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="certificates.html">Certificates</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-3 ms-lg-3 mt-3 mt-lg-0">
+          <a href="contact.html" class="btn-primary-glow px-4 py-2 text-decoration-none"><i class="fas fa-paper-plane me-1"></i> Hire Me</a>
+          <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="pt-5 mt-5 pb-4">
+    <div class="container text-center pt-4" data-aos="fade-up">
+      <span class="badge-glow mb-2">MY CAPABILITIES</span>
+      <h1 class="display-4 fw-extrabold text-white">Skills & <span class="gradient-text">Proficiency</span></h1>
+      <p class="text-muted max-w-600 mx-auto fs-5">A detailed breakdown of my tech stack, frameworks, design tools, and learning roadmaps.</p>
+    </div>
+  </section>
+
+  <!-- Skill Filter Tabs -->
+  <section class="py-4">
+    <div class="container">
+      <ul class="nav nav-pills justify-content-center mb-5" id="skillTabs" role="tablist" data-aos="fade-up">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="mobile-tab" data-bs-toggle="tab" data-bs-target="#mobile" type="button" role="tab">Flutter & Mobile</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="web-tab" data-bs-toggle="tab" data-bs-target="#web" type="button" role="tab">Web Development</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="devops-tab" data-bs-toggle="tab" data-bs-target="#devops" type="button" role="tab">DevOps & Tools</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="design-tab" data-bs-toggle="tab" data-bs-target="#design" type="button" role="tab">Design & Creative</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="marketing-tab" data-bs-toggle="tab" data-bs-target="#marketing" type="button" role="tab">Video & SEO</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="ai-tab" data-bs-toggle="tab" data-bs-target="#ai" type="button" role="tab">AI & Automation</button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="skillTabsContent">
+        
+        <!-- Tab 1: Flutter & Mobile -->
+        <div class="tab-pane fade show active" id="mobile" role="tabpanel">
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="glass-card skill-card tilt-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="skill-icon mb-0"><i class="fab fa-flutter"></i></div>
+                  <span class="badge-glow">90% • Advanced</span>
+                </div>
+                <h5 class="text-white fw-bold mb-1">Flutter</h5>
+                <p class="text-muted small">Cross-Platform Mobile App Development</p>
+                <div class="progress"><div class="progress-bar" style="width: 90%;"></div></div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="glass-card skill-card tilt-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="skill-icon mb-0"><i class="fas fa-code"></i></div>
+                  <span class="badge-glow">85% • Advanced</span>
+                </div>
+                <h5 class="text-white fw-bold mb-1">Dart</h5>
+                <p class="text-muted small">Object-Oriented Mobile Programming</p>
+                <div class="progress"><div class="progress-bar" style="width: 85%;"></div></div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="glass-card skill-card tilt-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="skill-icon mb-0"><i class="fas fa-cubes"></i></div>
+                  <span class="badge-glow">92% • Expert</span>
+                </div>
+                <h5 class="text-white fw-bold mb-1">GetX</h5>
+                <p class="text-muted small">State Management & Navigation</p>
+                <div class="progress"><div class="progress-bar" style="width: 92%;"></div></div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+              <div class="glass-card skill-card tilt-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="skill-icon mb-0"><i class="fas fa-plug"></i></div>
+                  <span class="badge-glow">88% • Advanced</span>
+                </div>
+                <h5 class="text-white fw-bold mb-1">REST API & JSON</h5>
+                <p class="text-muted small">Backend Data Fetching & Serializers</p>
+                <div class="progress"><div class="progress-bar" style="width: 88%;"></div></div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+              <div class="glass-card skill-card tilt-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="skill-icon mb-0"><i class="fas fa-fire text-warning"></i></div>
+                  <span class="badge-glow">80% • Intermediate</span>
+                </div>
+                <h5 class="text-white fw-bold mb-1">Firebase</h5>
+                <p class="text-muted small">Authentication, Firestore, Push Notifications</p>
+                <div class="progress"><div class="progress-bar" style="width: 80%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Web Development -->
+        <div class="tab-pane fade" id="web" role="tabpanel">
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="glass-card skill-card tilt-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="skill-icon mb-0"><i class="fab fa-html5 text-danger"></i></div>
+                  <span class="badge-glow">95% • Master</span>
+                </div>
+                <h5 class="text-white fw-bold mb-1">HTML5 & Semantic Markup</h5>
+                <p class="text-muted small">Accessible, SEO-structured web code</p>
+                <div class="progress"><div class="progress-bar" style="width: 95%;"></div></div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="glass-card skill-card tilt-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="skill-icon mb-0"><i class="fab fa-css3-alt text-primary"></i></div>
+                  <span class="badge-glow">90% • Expert</span>
+                </div>
+                <h5 class="text-white fw-bold mb-1">CSS3 & Glassmorphism</h5>
+                <p class="text-muted small">Animations, Flexbox, Grid, Custom Themes</p>
+                <div class="progress"><div class="progress-bar" style="width: 90%;"></div></div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="glass-card skill-card tilt-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="skill-icon mb-0"><i class="fab fa-bootstrap text-purple"></i></div>
+                  <span class="badge-glow">92% • Expert</span>
+                </div>
+                <h5 class="text-white fw-bold mb-1">Bootstrap 5</h5>
+                <p class="text-muted small">Responsive Layouts & UI Components</p>
+                <div class="progress"><div class="progress-bar" style="width: 92%;"></div></div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="glass-card skill-card tilt-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="skill-icon mb-0"><i class="fab fa-js text-warning"></i></div>
+                  <span class="badge-glow">85% • Advanced</span>
+                </div>
+                <h5 class="text-white fw-bold mb-1">JavaScript ES6+</h5>
+                <p class="text-muted small">DOM Manipulation, Async/Await, ES Modules</p>
+                <div class="progress"><div class="progress-bar" style="width: 85%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: DevOps & Tools -->
+        <div class="tab-pane fade" id="devops" role="tabpanel">
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="glass-card skill-card tilt-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="skill-icon mb-0"><i class="fab fa-git-alt text-danger"></i></div>
+                  <span class="badge-glow">88% • Advanced</span>
+                </div>
+                <h5 class="text-white fw-bold mb-1">Git & GitHub</h5>
+                <p class="text-muted small">Version Control, Branching & Actions</p>
+                <div class="progress"><div class="progress-bar" style="width: 88%;"></div></div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="glass-card skill-card tilt-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="skill-icon mb-0"><i class="fab fa-linux text-accent"></i></div>
+                  <span class="badge-glow">65% • Learning</span>
+                </div>
+                <h5 class="text-white fw-bold mb-1">Linux Systems</h5>
+                <p class="text-muted small">Bash scripting & system administration</p>
+                <div class="progress"><div class="progress-bar" style="width: 65%;"></div></div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="glass-card skill-card tilt-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="skill-icon mb-0"><i class="fab fa-docker text-info"></i></div>
+                  <span class="badge-glow">60% • Learning</span>
+                </div>
+                <h5 class="text-white fw-bold mb-1">Docker Containers</h5>
+                <p class="text-muted small">Containerization & Compose Basics</p>
+                <div class="progress"><div class="progress-bar" style="width: 60%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: Design -->
+        <div class="tab-pane fade" id="design" role="tabpanel">
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="glass-card skill-card tilt-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="skill-icon mb-0"><i class="fas fa-paintbrush text-info"></i></div>
+                  <span class="badge-glow">85% • Advanced</span>
+                </div>
+                <h5 class="text-white fw-bold mb-1">Adobe Photoshop & Illustrator</h5>
+                <p class="text-muted small">Posters, Banners, Social Graphics</p>
+                <div class="progress"><div class="progress-bar" style="width: 85%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 5: Video & SEO -->
+        <div class="tab-pane fade" id="marketing" role="tabpanel">
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="glass-card skill-card tilt-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="skill-icon mb-0"><i class="fas fa-video text-danger"></i></div>
+                  <span class="badge-glow">82% • Advanced</span>
+                </div>
+                <h5 class="text-white fw-bold mb-1">Video Editing & CapCut</h5>
+                <p class="text-muted small">Shorts, Reels, Motion Graphics</p>
+                <div class="progress"><div class="progress-bar" style="width: 82%;"></div></div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="glass-card skill-card tilt-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="skill-icon mb-0"><i class="fas fa-search-dollar text-success"></i></div>
+                  <span class="badge-glow">85% • Advanced</span>
+                </div>
+                <h5 class="text-white fw-bold mb-1">SEO & Digital Marketing</h5>
+                <p class="text-muted small">On-Page SEO, Keyword Research, Ads</p>
+                <div class="progress"><div class="progress-bar" style="width: 85%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 6: AI & Automation -->
+        <div class="tab-pane fade" id="ai" role="tabpanel">
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="glass-card skill-card tilt-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="skill-icon mb-0"><i class="fas fa-wand-magic-sparkles text-accent"></i></div>
+                  <span class="badge-glow">88% • Advanced</span>
+                </div>
+                <h5 class="text-white fw-bold mb-1">AI Generation & Prompting</h5>
+                <p class="text-muted small">Midjourney, ChatGPT, AI Visuals</p>
+                <div class="progress"><div class="progress-bar" style="width: 88%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center text-muted small">
+      <p class="mb-0">&copy; 2026 Habib Hasan. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <div class="back-to-top"><i class="fas fa-chevron-up"></i></div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

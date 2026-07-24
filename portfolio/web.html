@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Web Development Portfolio of Habib Hasan - HTML5, CSS3, Bootstrap 5, JavaScript, and Glassmorphism Web Apps.">
+  <title>Web Development Portfolio | Habib Hasan</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-theme="dark">
+
+  <div id="preloader"><div class="preloader-spinner"></div><div class="preloader-logo">HABIB HASAN</div></div>
+  <div class="custom-cursor"></div><div class="cursor-follower"></div><div class="mouse-glow-bg"></div><div class="scroll-progress-bar"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">HABIB<span class="brand-dot"></span></a>
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <i class="fas fa-bars fs-3"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center gap-1">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="../skills.html">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="../experience.html">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="../education.html">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="../projects.html">Projects</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown">Portfolio</a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="portfolioDropdown">
+              <li><a class="dropdown-item" href="flutter.html"><i class="fas fa-mobile-alt me-2 text-info"></i>Flutter Apps</a></li>
+              <li><a class="dropdown-item active" href="web.html"><i class="fas fa-code me-2 text-primary"></i>Web Projects</a></li>
+              <li><a class="dropdown-item" href="graphic-design.html"><i class="fas fa-palette me-2 text-warning"></i>Graphic Design</a></li>
+              <li><a class="dropdown-item" href="video-editing.html"><i class="fas fa-film me-2 text-danger"></i>Video Editing</a></li>
+              <li><a class="dropdown-item" href="digital-marketing.html"><i class="fas fa-chart-line me-2 text-success"></i>Digital Marketing</a></li>
+              <li><a class="dropdown-item" href="ai-projects.html"><i class="fas fa-robot me-2 text-accent"></i>AI Projects</a></li>
+              <li><a class="dropdown-item" href="devops.html"><i class="fas fa-server me-2 text-secondary"></i>DevOps</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="../services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="../certificates.html">Certificates</a></li>
+          <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-3 ms-lg-3 mt-3 mt-lg-0">
+          <a href="../contact.html" class="btn-primary-glow px-4 py-2 text-decoration-none"><i class="fas fa-paper-plane me-1"></i> Hire Me</a>
+          <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="pt-5 mt-5 pb-4">
+    <div class="container text-center pt-4" data-aos="fade-up">
+      <span class="badge-glow mb-2"><i class="fas fa-code text-primary"></i> FRONTEND & WEB ENGINEERING</span>
+      <h1 class="display-4 fw-extrabold text-white">Web <span class="gradient-text">Development</span></h1>
+      <p class="text-muted max-w-600 mx-auto fs-5">Static 3D web applications, luxury landing pages, and interactive UI systems.</p>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Item 1 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="glass-card project-card tilt-card">
+            <div class="project-img-wrapper">
+              <img src="../assets/images/profile.png" alt="3D Portfolio Website">
+              <div class="project-overlay">
+                <div>
+                  <h5 class="text-white fw-bold">3D Personal Brand Portfolio</h5>
+                  <p class="text-muted small">Three.js + Bootstrap 5</p>
+                  <div class="d-flex gap-2">
+                    <a href="../index.html" class="btn-primary-glow py-1 px-3 fs-7">Live Demo</a>
+                    <a href="https://github.com" target="_blank" class="btn-outline-glass py-1 px-3 fs-7"><i class="fab fa-github"></i> Source</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="d-flex gap-1 mb-2">
+                <span class="project-tech-badge">HTML5</span>
+                <span class="project-tech-badge">CSS3</span>
+                <span class="project-tech-badge">Three.js</span>
+              </div>
+              <h5 class="text-white fw-bold mb-1">3D Personal Brand Portfolio</h5>
+              <p class="text-muted small mb-0">Production-ready static website with glassmorphism, 3D interactive hero, and particles canvas.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="glass-card project-card tilt-card">
+            <div class="project-img-wrapper">
+              <img src="../assets/projects/chef-starz.png" alt="SaaS Landing Page">
+              <div class="project-overlay">
+                <div>
+                  <h5 class="text-white fw-bold">SaaS Product Landing Page</h5>
+                  <p class="text-muted small">High Conversion Layout</p>
+                  <div class="d-flex gap-2">
+                    <a href="../assets/projects/chef-starz.png" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="SaaS Landing Page">Preview</a>
+                    <a href="https://github.com" target="_blank" class="btn-outline-glass py-1 px-3 fs-7"><i class="fab fa-github"></i> Source</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="d-flex gap-1 mb-2">
+                <span class="project-tech-badge">Bootstrap 5</span>
+                <span class="project-tech-badge">JS ES6</span>
+                <span class="project-tech-badge">GSAP</span>
+              </div>
+              <h5 class="text-white fw-bold mb-1">SaaS Product Landing Page</h5>
+              <p class="text-muted small mb-0">Lightweight responsive landing page optimized for fast load speed and lead capture.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center text-muted small">
+      <p class="mb-0">&copy; 2026 Habib Hasan. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <div class="back-to-top"><i class="fas fa-chevron-up"></i></div>
+
+  <!-- Lightbox Modal -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content glass-card p-2 border-0">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title text-white fw-bold" id="lightboxTitle">Preview</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center p-3">
+          <img id="lightboxImage" src="" alt="Preview" class="img-fluid rounded-3">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /assets/images/
+Disallow: /assets/projects/
+Disallow: /assets/certificates/
+
+Sitemap: https://habibhasan.github.io/my_portfolio/sitemap.xml
