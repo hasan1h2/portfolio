@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AI Content & Automation Showcase by Habib Hasan - Prompt Engineering, Generative AI Images, AI Videos, and Automated Workflows.">
-  <title>AI Content & Prompt Showcase | Habib Hasan</title>
-  
+  <meta name="description" content="AI Projects Portfolio of Habib Hasan - AI Image Generation, AI Video Creation, Prompt Engineering, Creative Designs, and Workflow Automation.">
+  <title>AI Projects Portfolio | Habib Hasan</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -15,17 +14,13 @@
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body data-theme="dark">
-
   <div id="preloader"><div class="preloader-spinner"></div><div class="preloader-logo">HABIB HASAN</div></div>
   <div class="custom-cursor"></div><div class="cursor-follower"></div><div class="mouse-glow-bg"></div><div class="scroll-progress-bar"></div>
 
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top glass-nav">
     <div class="container">
       <a class="navbar-brand" href="../index.html">HABIB<span class="brand-dot"></span></a>
-      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <i class="fas fa-bars fs-3"></i>
-      </button>
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle Navigation"><i class="fas fa-bars fs-3"></i></button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-center gap-1">
           <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
@@ -35,8 +30,10 @@
           <li class="nav-item"><a class="nav-link" href="../education.html">Education</a></li>
           <li class="nav-item"><a class="nav-link" href="../projects.html">Projects</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown">Portfolio</a>
+            <a class="nav-link dropdown-toggle active" href="../portfolio.html" id="portfolioDropdown" role="button" data-bs-toggle="dropdown">Portfolio</a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="portfolioDropdown">
+              <li><a class="dropdown-item" href="../portfolio.html"><i class="fas fa-th me-2 text-warning"></i>All Categories</a></li>
+              <li><hr class="dropdown-divider border-secondary opacity-25"></li>
               <li><a class="dropdown-item" href="flutter.html"><i class="fas fa-mobile-alt me-2 text-info"></i>Flutter Apps</a></li>
               <li><a class="dropdown-item" href="web.html"><i class="fas fa-code me-2 text-primary"></i>Web Projects</a></li>
               <li><a class="dropdown-item" href="graphic-design.html"><i class="fas fa-palette me-2 text-warning"></i>Graphic Design</a></li>
@@ -58,97 +55,178 @@
     </div>
   </nav>
 
-  <!-- Hero Banner -->
   <section class="pt-5 mt-5 pb-4">
-    <div class="container text-center pt-4" data-aos="fade-up">
-      <span class="badge-glow mb-2"><i class="fas fa-robot text-accent"></i> GENERATIVE AI & AUTOMATION</span>
-      <h1 class="display-4 fw-extrabold text-white">AI Content & <span class="gradient-text">Prompts</span></h1>
-      <p class="text-muted max-w-600 mx-auto fs-5">Generative AI visuals, prompt engineering showcases, and automated media creation tools.</p>
+    <div class="container pt-4">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-3">
+          <li class="breadcrumb-item"><a href="../index.html" class="text-primary">Home</a></li>
+          <li class="breadcrumb-item"><a href="../portfolio.html" class="text-primary">Portfolio</a></li>
+          <li class="breadcrumb-item active text-white" aria-current="page">AI Projects</li>
+        </ol>
+      </nav>
+      <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4" data-aos="fade-up">
+        <div>
+          <span class="badge-glow mb-2"><i class="fas fa-robot me-1"></i> ARTIFICIAL INTELLIGENCE & GENERATIVE TOOLS</span>
+          <h1 class="display-4 fw-extrabold text-white">AI <span class="gradient-text">Projects</span></h1>
+          <p class="text-muted max-w-600 mb-0">Generative AI image creation, AI-powered videos, advanced prompt engineering collections, and intelligent workflow automation concepts.</p>
+        </div>
+        <a href="../portfolio.html" class="btn-outline-glass align-self-start align-self-md-center"><i class="fas fa-arrow-left me-2"></i> All Categories</a>
+      </div>
     </div>
   </section>
 
-  <!-- Content Grid -->
-  <section class="py-5">
+  <section class="py-4">
     <div class="container">
-      <div class="row g-4">
+      <div class="row justify-content-center mb-4" data-aos="fade-up">
+        <div class="col-md-8 col-lg-6">
+          <div class="search-input-group"><i class="fas fa-search"></i><input type="text" id="portfolioSearch" placeholder="Search AI projects..."></div>
+        </div>
+      </div>
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-5" data-aos="fade-up">
+        <button class="btn-outline-glass filter-btn active px-4 py-2" data-filter="all">All (5)</button>
+        <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="images">AI Images</button>
+        <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="video">AI Video</button>
+        <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="prompts">Prompts</button>
+        <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="automation">Automation</button>
+      </div>
 
-        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+      <div class="row g-4" id="projectsGrid">
+
+        <!-- 1. AI Images -->
+        <div class="col-md-6 col-lg-4 filter-item" data-category="images" data-aos="fade-up">
           <div class="glass-card project-card tilt-card">
             <div class="project-img-wrapper">
-              <img src="../assets/images/profile.png" alt="Generative AI Art">
+              <img src="../assets/images/projects/ai/ai-images.svg" alt="AI-Generated Concept Art">
               <div class="project-overlay">
                 <div>
-                  <h5 class="text-white fw-bold">Futuristic Cyberpunk Avatar</h5>
-                  <p class="text-muted small">Midjourney / Imagen 3 Generation</p>
-                  <a href="../assets/images/profile.png" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="Generative AI Avatar">Preview Image</a>
+                  <h5 class="text-white fw-bold project-title">AI Concept Art Gallery</h5>
+                  <p class="text-muted small project-desc">Midjourney & Stable Diffusion generated artworks.</p>
+                  <a href="../assets/images/projects/ai/ai-images.svg" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="AI Concept Art Gallery">Preview</a>
                 </div>
               </div>
             </div>
             <div class="p-4">
-              <div class="d-flex gap-1 mb-2">
-                <span class="project-tech-badge">Prompt Eng</span>
-                <span class="project-tech-badge">Midjourney</span>
-              </div>
-              <h5 class="text-white fw-bold mb-1">Futuristic Cyberpunk Avatar</h5>
-              <p class="text-muted small mb-0">High-detail photorealistic AI character generated using tuned prompt styling.</p>
+              <div class="d-flex gap-1 mb-2"><span class="project-tech-badge">Midjourney</span><span class="project-tech-badge">AI Image</span></div>
+              <h5 class="text-white fw-bold card-title mb-1">AI Concept Art Gallery</h5>
+              <p class="text-muted small card-text mb-0">Collection of high-quality AI-generated visuals for creative and commercial use.</p>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <!-- 2. AI Videos -->
+        <div class="col-md-6 col-lg-4 filter-item" data-category="video" data-aos="fade-up" data-aos-delay="100">
           <div class="glass-card project-card tilt-card">
             <div class="project-img-wrapper">
-              <img src="../assets/projects/chef-starz.png" alt="AI Generated Product Mockup">
+              <img src="../assets/images/projects/ai/ai-videos.svg" alt="AI Avatar Video Generation">
               <div class="project-overlay">
                 <div>
-                  <h5 class="text-white fw-bold">AI Commercial Product Mockup</h5>
-                  <p class="text-muted small">Generative Media</p>
-                  <a href="../assets/projects/chef-starz.png" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="AI Commercial Product Mockup">Preview Image</a>
+                  <h5 class="text-white fw-bold project-title">AI Avatar Video Generation</h5>
+                  <p class="text-muted small project-desc">Realistic AI talking head videos for marketing.</p>
+                  <a href="../assets/images/projects/ai/ai-videos.svg" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="AI Avatar Video Generation">Preview</a>
                 </div>
               </div>
             </div>
             <div class="p-4">
-              <div class="d-flex gap-1 mb-2">
-                <span class="project-tech-badge">AI Imagery</span>
-                <span class="project-tech-badge">Photoshop AI</span>
+              <div class="d-flex gap-1 mb-2"><span class="project-tech-badge">AI Video</span><span class="project-tech-badge">Avatar</span></div>
+              <h5 class="text-white fw-bold card-title mb-1">AI Avatar Video Generation</h5>
+              <p class="text-muted small card-text mb-0">Synthetic spokesperson videos with custom scripts and avatars.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Prompt Collection -->
+        <div class="col-md-6 col-lg-4 filter-item" data-category="prompts" data-aos="fade-up" data-aos-delay="200">
+          <div class="glass-card project-card tilt-card">
+            <div class="project-img-wrapper">
+              <img src="../assets/images/projects/ai/prompt-collection.svg" alt="Advanced Prompt Matrix">
+              <div class="project-overlay">
+                <div>
+                  <h5 class="text-white fw-bold project-title">Advanced Prompt Matrix</h5>
+                  <p class="text-muted small project-desc">Curated prompt library for design, code, and content.</p>
+                  <a href="../assets/images/projects/ai/prompt-collection.svg" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="Advanced Prompt Matrix">Preview</a>
+                </div>
               </div>
-              <h5 class="text-white fw-bold mb-1">AI Commercial Product Mockup</h5>
-              <p class="text-muted small mb-0">Commercial branding asset created through AI generation & touchup.</p>
+            </div>
+            <div class="p-4">
+              <div class="d-flex gap-1 mb-2"><span class="project-tech-badge">Prompts</span><span class="project-tech-badge">ChatGPT</span></div>
+              <h5 class="text-white fw-bold card-title mb-1">Advanced Prompt Matrix</h5>
+              <p class="text-muted small card-text mb-0">Categorized prompt templates for image, text, and code generation.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Creative Designs -->
+        <div class="col-md-6 col-lg-4 filter-item" data-category="images" data-aos="fade-up">
+          <div class="glass-card project-card tilt-card">
+            <div class="project-img-wrapper">
+              <img src="../assets/images/projects/ai/creative-designs.svg" alt="Generative Visual Assets">
+              <div class="project-overlay">
+                <div>
+                  <h5 class="text-white fw-bold project-title">Generative Visual Assets</h5>
+                  <p class="text-muted small project-desc">AI-generated branding elements, backgrounds, and textures.</p>
+                  <a href="../assets/images/projects/ai/creative-designs.svg" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="Generative Visual Assets">Preview</a>
+                </div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="d-flex gap-1 mb-2"><span class="project-tech-badge">DALL-E</span><span class="project-tech-badge">Creative AI</span></div>
+              <h5 class="text-white fw-bold card-title mb-1">Generative Visual Assets</h5>
+              <p class="text-muted small card-text mb-0">AI-powered backgrounds, patterns, and brand visuals.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Automation Concepts -->
+        <div class="col-md-6 col-lg-4 filter-item" data-category="automation" data-aos="fade-up" data-aos-delay="100">
+          <div class="glass-card project-card tilt-card">
+            <div class="project-img-wrapper">
+              <img src="../assets/images/projects/ai/automation-concepts.svg" alt="AI Workflow Automation">
+              <div class="project-overlay">
+                <div>
+                  <h5 class="text-white fw-bold project-title">AI Workflow Automation</h5>
+                  <p class="text-muted small project-desc">Intelligent automation blueprints and flowcharts.</p>
+                  <a href="../assets/images/projects/ai/automation-concepts.svg" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="AI Workflow Automation">Preview</a>
+                </div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="d-flex gap-1 mb-2"><span class="project-tech-badge">Automation</span><span class="project-tech-badge">AI</span></div>
+              <h5 class="text-white fw-bold card-title mb-1">AI Workflow Automation</h5>
+              <p class="text-muted small card-text mb-0">Concepts for AI-assisted content pipelines and repetitive task elimination.</p>
             </div>
           </div>
         </div>
 
       </div>
+
+      <nav class="mt-5" aria-label="Page Navigation">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled"><a class="page-link bg-glass text-muted" href="#">Previous</a></li>
+          <li class="page-item active"><a class="page-link btn-primary-glow border-0" href="#">1</a></li>
+          <li class="page-item disabled"><a class="page-link bg-glass text-muted" href="#">Next</a></li>
+        </ul>
+      </nav>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <div class="container text-center text-muted small">
-      <p class="mb-0">&copy; 2026 Habib Hasan. All Rights Reserved.</p>
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4"><a class="navbar-brand mb-3 d-inline-block" href="../index.html">HABIB<span class="brand-dot"></span></a><p class="text-muted small">Habib Hasan • Flutter App Developer, Full Stack Web Developer, Graphic Designer, Digital Marketer, Video Editor, AI Content Creator &amp; DevOps Learner.</p></div>
+        <div class="col-6 col-lg-2"><h6 class="text-white fw-bold mb-3">Quick Links</h6><ul class="p-0 m-0"><li class="mb-2"><a href="../about.html" class="text-muted small">About Me</a></li><li class="mb-2"><a href="../skills.html" class="text-muted small">Skills</a></li><li class="mb-2"><a href="../experience.html" class="text-muted small">Experience</a></li><li class="mb-2"><a href="../education.html" class="text-muted small">Education</a></li><li class="mb-2"><a href="../certificates.html" class="text-muted small">Certificates</a></li></ul></div>
+        <div class="col-6 col-lg-2"><h6 class="text-white fw-bold mb-3">Portfolio</h6><ul class="p-0 m-0"><li class="mb-2"><a href="flutter.html" class="text-muted small">Flutter Apps</a></li><li class="mb-2"><a href="web.html" class="text-muted small">Web Projects</a></li><li class="mb-2"><a href="graphic-design.html" class="text-muted small">Graphic Design</a></li><li class="mb-2"><a href="video-editing.html" class="text-muted small">Video Editing</a></li><li class="mb-2"><a href="devops.html" class="text-muted small">DevOps</a></li></ul></div>
+        <div class="col-lg-4"><h6 class="text-white fw-bold mb-3">Stay Connected</h6><p class="text-muted small">Reach out directly.</p><div class="d-flex gap-2"><a href="https://github.com" target="_blank" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="GitHub"><i class="fab fa-github"></i></a><a href="https://linkedin.com" target="_blank" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="https://facebook.com" target="_blank" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="mailto:habibhasan@example.com" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="Email"><i class="fas fa-envelope"></i></a></div></div>
+      </div>
+      <hr class="border-secondary opacity-25 mb-4">
+      <div class="d-flex flex-column flex-md-row align-items-center justify-content-between text-muted small gap-2"><p class="mb-0">&copy; 2026 Habib Hasan. All Rights Reserved.</p><div class="d-flex gap-3"><a href="../privacy-policy.html" class="text-muted">Privacy Policy</a><a href="../terms.html" class="text-muted">Terms of Service</a></div></div>
     </div>
   </footer>
-
   <div class="back-to-top"><i class="fas fa-chevron-up"></i></div>
-
-  <!-- Lightbox Modal -->
-  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content glass-card p-2 border-0">
-        <div class="modal-header border-0 pb-0">
-          <h5 class="modal-title text-white fw-bold" id="lightboxTitle">Preview AI Asset</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-center p-3">
-          <img id="lightboxImage" src="" alt="Preview" class="img-fluid rounded-3">
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content glass-card p-2 border-0"><div class="modal-header border-0 pb-0"><h5 class="modal-title text-white fw-bold" id="lightboxTitle">Preview</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body text-center p-3"><img id="lightboxImage" src="" alt="Preview" class="img-fluid rounded-3"></div></div></div></div>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
   <script src="../assets/js/main.js"></script>
 </body>
 </html>

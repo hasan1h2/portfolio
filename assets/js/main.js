@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     5. TYPED.JS TEXT INITIALIZATION
+     5. TYPED.JS TEXT & GSAP ENTRANCE INITIALIZATION
      -------------------------------------------------------------------------- */
   if (typeof Typed !== 'undefined' && document.querySelector('.typed-text')) {
     new Typed('.typed-text', {
@@ -131,8 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'Flutter App Developer',
         'Full Stack Web Developer',
         'Graphic Designer',
+        'Digital Marketer',
         'SEO Specialist',
-        'Video Editor',
         'AI Content Creator',
         'DevOps Learner'
       ],
@@ -143,8 +143,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // GSAP Smooth Page-Load Sequence
+  if (typeof gsap !== 'undefined') {
+    if (document.querySelectorAll('.gsap-hero-item').length > 0) {
+      gsap.from('.gsap-hero-item', {
+        opacity: 0,
+        y: 35,
+        duration: 1,
+        stagger: 0.12,
+        ease: 'power3.out',
+        delay: 0.3
+      });
+    }
+    if (document.querySelector('.gsap-hero-right')) {
+      gsap.from('.gsap-hero-right', {
+        opacity: 0,
+        scale: 0.88,
+        duration: 1.2,
+        ease: 'back.out(1.5)',
+        delay: 0.6
+      });
+    }
+  }
+
   /* --------------------------------------------------------------------------
-     6. AOS (ANIMATE ON SCROLL) INITIALIZATION
+     6. BUTTON RIPPLE EFFECT & TOOLTIPS
+     -------------------------------------------------------------------------- */
+  document.querySelectorAll('.ripple-btn').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      const rect = this.getBoundingClientRect();
+      const circle = document.createElement('span');
+      circle.classList.add('ripple-span');
+      const diameter = Math.max(rect.width, rect.height);
+      circle.style.width = circle.style.height = `${diameter}px`;
+      circle.style.left = `${e.clientX - rect.left - diameter / 2}px`;
+      circle.style.top = `${e.clientY - rect.top - diameter / 2}px`;
+      const existing = this.querySelector('.ripple-span');
+      if (existing) existing.remove();
+      this.appendChild(circle);
+      setTimeout(() => circle.remove(), 600);
+    });
+  });
+
+  // Bootstrap Tooltip Initialization
+  if (typeof bootstrap !== 'undefined' && bootstrap.Tooltip) {
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+  }
+
+  /* --------------------------------------------------------------------------
+     7. AOS (ANIMATE ON SCROLL) INITIALIZATION
      -------------------------------------------------------------------------- */
   if (typeof AOS !== 'undefined') {
     AOS.init({
@@ -156,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     7. VANILLA TILT INITIALIZATION
+     8. VANILLA TILT INITIALIZATION
      -------------------------------------------------------------------------- */
   if (typeof VanillaTilt !== 'undefined') {
     VanillaTilt.init(document.querySelectorAll('.tilt-card'), {
@@ -169,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     8. ANIMATED COUNTERS
+     9. ANIMATED COUNTERS
      -------------------------------------------------------------------------- */
   const counters = document.querySelectorAll('.counter-value');
   let counterStarted = false;
@@ -178,14 +226,14 @@ document.addEventListener('DOMContentLoaded', () => {
     counters.forEach(counter => {
       const target = +counter.getAttribute('data-target');
       let count = 0;
-      const speed = target / 50;
+      const speed = target / 40;
       const updateCount = () => {
         count += speed;
         if (count < target) {
           counter.innerText = Math.ceil(count);
           setTimeout(updateCount, 30);
         } else {
-          counter.innerText = target + '+';
+          counter.innerText = target === 100 ? '100%' : target + '+';
         }
       };
       updateCount();
@@ -284,4 +332,173 @@ document.addEventListener('DOMContentLoaded', () => {
       contactForm.reset();
     });
   }
+
+  /* --------------------------------------------------------------------------
+     12. FULL-SCREEN MOBILE MENU CONTROLLER & ESC KEY SUPPORT
+     -------------------------------------------------------------------------- */
+  const mobileHamburgerBtn = document.getElementById('mobileHamburgerBtn');
+  const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+  const mobileNavClose = document.getElementById('mobileNavClose');
+
+  function openMobileNav() {
+    if (mobileNavOverlay) {
+      mobileNavOverlay.classList.add('active');
+      if (mobileHamburgerBtn) mobileHamburgerBtn.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeMobileNav() {
+    if (mobileNavOverlay) {
+      mobileNavOverlay.classList.remove('active');
+      if (mobileHamburgerBtn) mobileHamburgerBtn.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (mobileHamburgerBtn) {
+    mobileHamburgerBtn.addEventListener('click', () => {
+      if (mobileNavOverlay && mobileNavOverlay.classList.contains('active')) {
+        closeMobileNav();
+      } else {
+        openMobileNav();
+      }
+    });
+  }
+
+  if (mobileNavClose) {
+    mobileNavClose.addEventListener('click', closeMobileNav);
+  }
+
+  document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', closeMobileNav);
+  });
+
+  /* --------------------------------------------------------------------------
+     13. GLOBAL SEARCH OVERLAY & KEYBOARD SHORTCUTS
+     -------------------------------------------------------------------------- */
+  const searchTriggers = document.querySelectorAll('.search-trigger-btn');
+  const searchOverlayModal = document.getElementById('searchOverlayModal');
+  const searchOverlayClose = document.getElementById('searchOverlayClose');
+  const searchOverlayInput = document.getElementById('searchOverlayInput');
+  const searchResultsList = document.getElementById('searchResultsList');
+
+  function openSearchOverlay() {
+    if (searchOverlayModal) {
+      searchOverlayModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      if (searchOverlayInput) {
+        setTimeout(() => searchOverlayInput.focus(), 150);
+      }
+    }
+  }
+
+  function closeSearchOverlay() {
+    if (searchOverlayModal) {
+      searchOverlayModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  searchTriggers.forEach(btn => btn.addEventListener('click', openSearchOverlay));
+  if (searchOverlayClose) searchOverlayClose.addEventListener('click', closeSearchOverlay);
+
+  // ESC Key Support for closing overlays
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeMobileNav();
+      closeSearchOverlay();
+    }
+  });
+
+  // Live Search Filter inside Overlay
+  if (searchOverlayInput && searchResultsList) {
+    const defaultSearchItems = [
+      { title: 'Flutter App Development', cat: 'Services / Skills', link: 'portfolio/flutter.html', icon: 'fab fa-flutter text-info' },
+      { title: 'Chef Starz Gourmet App', cat: 'Featured Project', link: 'portfolio/flutter.html', icon: 'fas fa-utensils text-warning' },
+      { title: 'Worker Hiring Mobile App', cat: 'Featured Project', link: 'portfolio/flutter.html', icon: 'fas fa-user-gear text-primary' },
+      { title: 'Full Stack Web Development', cat: 'Skills', link: 'skills.html', icon: 'fas fa-code text-primary' },
+      { title: 'DevOps & Docker Journey', cat: 'Learning Roadmap', link: 'portfolio/devops.html', icon: 'fab fa-docker text-info' },
+      { title: 'Graphic & Brand Design', cat: 'Services', link: 'portfolio/graphic-design.html', icon: 'fas fa-palette text-warning' },
+      { title: 'Sparktech Agency Experience', cat: 'Career', link: 'experience.html', icon: 'fas fa-briefcase text-accent' },
+      { title: 'Download Official Resume', cat: 'Document', link: '#', icon: 'fas fa-download text-success' }
+    ];
+
+    function renderSearchResults(query = '') {
+      const filtered = defaultSearchItems.filter(item => 
+        item.title.toLowerCase().includes(query.toLowerCase()) || 
+        item.cat.toLowerCase().includes(query.toLowerCase())
+      );
+
+      if (filtered.length === 0) {
+        searchResultsList.innerHTML = `<div class="p-4 text-center text-muted">No results found for "${query}"</div>`;
+        return;
+      }
+
+      searchResultsList.innerHTML = filtered.map(item => `
+        <a href="${item.link}" class="search-result-item">
+          <div class="mega-icon-box"><i class="${item.icon}"></i></div>
+          <div>
+            <h6 class="text-white fw-bold mb-0">${item.title}</h6>
+            <span class="text-muted tiny">${item.cat}</span>
+          </div>
+          <i class="fas fa-chevron-right ms-auto text-muted"></i>
+        </a>
+      `).join('');
+    }
+
+    renderSearchResults();
+
+    searchOverlayInput.addEventListener('input', function() {
+      renderSearchResults(this.value);
+    });
+  }
+
+  /* --------------------------------------------------------------------------
+     14. DOWNLOAD RESUME LOADING SPINNER ANIMATION
+     -------------------------------------------------------------------------- */
+  const downloadBtn = document.getElementById('downloadResumeBtn');
+  if (downloadBtn) {
+    downloadBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const textSpan = this.querySelector('.btn-text');
+      const spinner = this.querySelector('.spinner-border');
+      if (spinner && textSpan) {
+        spinner.classList.remove('d-none');
+        textSpan.innerText = 'Preparing Resume...';
+        setTimeout(() => {
+          spinner.classList.add('d-none');
+          textSpan.innerText = 'Download Resume';
+          alert('Habib Hasan Resume Download Initiated!');
+        }, 1200);
+      }
+    });
+  }
+
+  /* --------------------------------------------------------------------------
+     15. SCROLL SPY ACTIVE NAV HIGHLIGHT
+     -------------------------------------------------------------------------- */
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+  if (sections.length > 0 && navLinks.length > 0) {
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}` || link.getAttribute('href') === `${current}.html`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  }
 });
+
