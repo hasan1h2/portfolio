@@ -61,67 +61,277 @@
   <!-- Page Header -->
   <section class="pt-5 mt-5 pb-4">
     <div class="container text-center pt-4" data-aos="fade-up">
-      <span class="badge-glow mb-2">CAREER TRACK</span>
-      <h1 class="display-4 fw-extrabold text-white">Work <span class="gradient-text">Experience</span></h1>
-      <p class="text-muted max-w-600 mx-auto fs-5">My agency work history, core software responsibilities, and client project deployments.</p>
+      <span class="badge-glow mb-2">MY JOURNEY</span>
+      <h1 class="display-4 fw-extrabold text-white">Experience, Education & <span class="gradient-text">Professional Growth</span></h1>
+      <p class="text-muted max-w-600 mx-auto fs-5">Presenting a professional journey demonstrating real-world software engineering, continuous learning, and creative development.</p>
     </div>
   </section>
 
-  <!-- Experience Timeline -->
-  <section class="py-5">
+  <!-- Interactive Timeline Filter Navigation -->
+  <section class="py-3">
+    <div class="container text-center" data-aos="fade-up">
+      <div class="skill-tabs-nav justify-content-center mb-5">
+        <button class="skill-tab-btn active"><i class="fas fa-history me-1"></i> All Milestones</button>
+        <button class="skill-tab-btn"><i class="fas fa-briefcase me-1"></i> Professional Work</button>
+        <button class="skill-tab-btn"><i class="fas fa-graduation-cap me-1"></i> Education & Training</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Education Master Timeline -->
+  <section class="pb-5">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-10">
-          <div class="timeline">
+          <div class="timeline-v2">
             
-            <!-- Timeline Item: Sparktech Agency -->
+            <!-- Timeline Item 1: Sparktech Agency -->
             <div class="timeline-item" data-aos="fade-up">
-              <div class="timeline-dot"></div>
-              <div class="glass-card p-4 p-md-5 tilt-card">
+              <div class="timeline-dot" style="border-color: var(--primary);"></div>
+              <div class="glass-card p-4 p-md-5 tilt-card border-glow">
                 <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
                   <div class="d-flex align-items-center gap-3">
-                    <div class="skill-icon mb-0" style="width:50px;height:50px;"><i class="fas fa-building text-primary fs-4"></i></div>
+                    <div class="skill-icon-box mb-0" style="width:55px;height:55px;"><i class="fas fa-building text-primary fs-4"></i></div>
                     <div>
+                      <span class="exp-badge professional mb-1 d-inline-block">AGENCY TENURE</span>
                       <h3 class="text-white fw-bold mb-0">Sparktech Agency</h3>
-                      <span class="text-primary fw-semibold">Flutter App Developer</span>
+                      <span class="text-primary fw-semibold fs-6">Flutter & Mobile App Developer</span>
                     </div>
                   </div>
-                  <span class="timeline-date mt-2 mt-sm-0">6 Months Tenure</span>
+                  <span class="timeline-date mt-2 mt-sm-0"><i class="fas fa-calendar-alt me-1"></i> 6 Months Tenure</span>
                 </div>
 
-                <p class="text-muted mb-4">
-                  Served as a primary Flutter App Developer working on client applications including Chef Starz and Artisan. Engineered reactive user interfaces, handled REST API integrations, managed state with GetX, and performed production builds.
+                <p class="text-muted mb-4 fs-6">
+                  Served as a core mobile developer in a fast-paced software agency environment. Collaborated directly with UI/UX designers, backend engineers, and project managers to build natively compiled Flutter applications for commercial release.
                 </p>
 
-                <h6 class="text-white fw-bold mb-3">Key Responsibilities & Achievements:</h6>
+                <h6 class="text-white fw-bold mb-3"><i class="fas fa-trophy text-warning me-2"></i> Key Responsibilities & Technical Contributions:</h6>
                 <div class="row g-3 mb-4">
                   <div class="col-md-6">
                     <ul class="p-0 m-0 text-muted small">
-                      <li class="mb-2"><i class="fas fa-check-circle text-accent me-2"></i> Designed modular & reusable Flutter UI components.</li>
-                      <li class="mb-2"><i class="fas fa-check-circle text-accent me-2"></i> Implemented GetX Controllers, State Management & Bindings.</li>
-                      <li class="mb-2"><i class="fas fa-check-circle text-accent me-2"></i> Integrated REST APIs & JSON serialization.</li>
+                      <li class="mb-2 d-flex align-items-start gap-2"><i class="fas fa-check-circle text-accent mt-1"></i> <span>Engineered cross-platform mobile apps including <strong>Chef Starz</strong> and <strong>Artisan App</strong> from Figma wireframes to production builds.</span></li>
+                      <li class="mb-2 d-flex align-items-start gap-2"><i class="fas fa-check-circle text-accent mt-1"></i> <span>Implemented reactive state management using <strong>GetX</strong> controllers, dependency bindings, and route navigation.</span></li>
+                      <li class="mb-2 d-flex align-items-start gap-2"><i class="fas fa-check-circle text-accent mt-1"></i> <span>Integrated asynchronous REST APIs, structured JSON serialization, and JWT token authentication flows.</span></li>
                     </ul>
                   </div>
                   <div class="col-md-6">
                     <ul class="p-0 m-0 text-muted small">
-                      <li class="mb-2"><i class="fas fa-check-circle text-accent me-2"></i> Version control workflows using Git & GitHub.</li>
-                      <li class="mb-2"><i class="fas fa-check-circle text-accent me-2"></i> Bug fixing, memory leak optimization, & testing.</li>
-                      <li class="mb-2"><i class="fas fa-check-circle text-accent me-2"></i> Prepared APK & iOS release bundles for client review.</li>
+                      <li class="mb-2 d-flex align-items-start gap-2"><i class="fas fa-check-circle text-accent mt-1"></i> <span>Practiced disciplined Git version control, branch management, pull requests, and peer code reviews.</span></li>
+                      <li class="mb-2 d-flex align-items-start gap-2"><i class="fas fa-check-circle text-accent mt-1"></i> <span>Resolved critical UI bugs, optimized widget rendering trees, and reduced app memory footprints.</span></li>
+                      <li class="mb-2 d-flex align-items-start gap-2"><i class="fas fa-check-circle text-accent mt-1"></i> <span>Prepared signed APK bundles and iOS release builds for staging testing and client deployment.</span></li>
                     </ul>
                   </div>
                 </div>
 
-                <div class="d-flex flex-wrap gap-2">
-                  <span class="badge-glow"><i class="fab fa-flutter me-1"></i> Flutter</span>
-                  <span class="badge-glow"><i class="fas fa-code me-1"></i> Dart</span>
-                  <span class="badge-glow"><i class="fas fa-cubes me-1"></i> GetX</span>
-                  <span class="badge-glow"><i class="fas fa-network-wired me-1"></i> REST API</span>
-                  <span class="badge-glow"><i class="fab fa-github me-1"></i> Git / GitHub</span>
+                <div class="d-flex flex-wrap gap-2 pt-2 border-top border-glass">
+                  <span class="badge-glow"><i class="fab fa-flutter me-1"></i> Flutter SDK</span>
+                  <span class="badge-glow"><i class="fas fa-code me-1"></i> Dart 3</span>
+                  <span class="badge-glow"><i class="fas fa-cubes me-1"></i> GetX State</span>
+                  <span class="badge-glow"><i class="fas fa-network-wired me-1"></i> REST APIs</span>
+                  <span class="badge-glow"><i class="fab fa-git-alt me-1"></i> Git / GitHub</span>
+                  <span class="badge-glow"><i class="fas fa-mobile-screen me-1"></i> Material UI</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline Item 2: Freelance Software & Creative Developer -->
+            <div class="timeline-item" data-aos="fade-up">
+              <div class="timeline-dot" style="border-color: var(--success);"></div>
+              <div class="glass-card p-4 p-md-5 tilt-card">
+                <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="skill-icon-box mb-0" style="width:55px;height:55px; color:#10b981; background:rgba(16,185,129,0.1);"><i class="fas fa-globe-americas fs-4"></i></div>
+                    <div>
+                      <span class="exp-badge advanced mb-1 d-inline-block" style="background:rgba(16,185,129,0.15); color:#10b981; border-color:rgba(16,185,129,0.3);">INDEPENDENT CONSULTING</span>
+                      <h3 class="text-white fw-bold mb-0">Freelance Software & Creative Developer</h3>
+                      <span class="text-success fw-semibold fs-6">Fiverr • Upwork • International & Local Clients</span>
+                    </div>
+                  </div>
+                  <span class="timeline-date mt-2 mt-sm-0"><i class="fas fa-clock me-1"></i> 2023 – Present</span>
+                </div>
+
+                <p class="text-muted mb-4 fs-6">
+                  Delivering end-to-end digital solutions combining technical software development with high-impact visual design. Trusted by international entrepreneurs, software agencies, and local businesses to craft premium web applications, mobile UIs, and brand identities.
+                </p>
+
+                <h6 class="text-white fw-bold mb-3"><i class="fas fa-star text-success me-2"></i> Freelance Deliverables & Success Metrics:</h6>
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <ul class="p-0 m-0 text-muted small">
+                      <li class="mb-2 d-flex align-items-start gap-2"><i class="fas fa-check-circle text-success mt-1"></i> <span>Developed custom responsive web architectures using HTML5, CSS3, Bootstrap 5, and JavaScript (ES6/jQuery).</span></li>
+                      <li class="mb-2 d-flex align-items-start gap-2"><i class="fas fa-check-circle text-success mt-1"></i> <span>Designed high-conversion brand identities, vector logos, social media kits, and marketing banners using Photoshop & Illustrator.</span></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="p-0 m-0 text-muted small">
+                      <li class="mb-2 d-flex align-items-start gap-2"><i class="fas fa-check-circle text-success mt-1"></i> <span>Produced engaging promotional video commercials, YouTube Shorts, and Instagram Reels using CapCut and motion typography.</span></li>
+                      <li class="mb-2 d-flex align-items-start gap-2"><i class="fas fa-check-circle text-success mt-1"></i> <span>Provided technical consultation, UI bug debugging, and Search Engine Optimization (SEO) structure formatting.</span></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="d-flex flex-wrap gap-2 pt-2 border-top border-glass">
+                  <span class="badge-glow"><i class="fab fa-html5 me-1"></i> HTML5 / CSS3</span>
+                  <span class="badge-glow"><i class="fab fa-bootstrap me-1"></i> Bootstrap 5</span>
+                  <span class="badge-glow"><i class="fab fa-js me-1"></i> ES6 & jQuery</span>
+                  <span class="badge-glow"><i class="fas fa-palette me-1"></i> Photoshop & Illustrator</span>
+                  <span class="badge-glow"><i class="fas fa-film me-1"></i> CapCut Editing</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline Item 3: BdCalling Academy -->
+            <div class="timeline-item" data-aos="fade-up">
+              <div class="timeline-dot" style="border-color: var(--accent);"></div>
+              <div class="glass-card p-4 p-md-5 tilt-card">
+                <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="skill-icon-box mb-0" style="width:55px;height:55px; color:#00e5ff; background:rgba(0,229,255,0.1);"><i class="fas fa-laptop-code fs-4"></i></div>
+                    <div>
+                      <span class="exp-badge professional mb-1 d-inline-block" style="background:rgba(0,229,255,0.15); color:#00e5ff; border-color:rgba(0,229,255,0.3);">INDUSTRIAL TRAINING</span>
+                      <h3 class="text-white fw-bold mb-0">BdCalling Academy</h3>
+                      <span class="text-accent fw-semibold fs-6">Practical Software Development Workshop</span>
+                    </div>
+                  </div>
+                  <span class="timeline-date mt-2 mt-sm-0"><i class="fas fa-graduation-cap me-1"></i> Professional Training</span>
+                </div>
+
+                <p class="text-muted mb-4 fs-6">
+                  Completed intensive practical training in industry-standard software development methodologies, modern version control workflows, and collaborative project building under senior tech mentorship.
+                </p>
+
+                <h6 class="text-white fw-bold mb-3"><i class="fas fa-award text-accent me-2"></i> Training Curriculum & Milestones:</h6>
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <ul class="p-0 m-0 text-muted small">
+                      <li class="mb-2 d-flex align-items-start gap-2"><i class="fas fa-check-circle text-accent mt-1"></i> <span>Hands-on training in object-oriented programming principles and structured code architecture.</span></li>
+                      <li class="mb-2 d-flex align-items-start gap-2"><i class="fas fa-check-circle text-accent mt-1"></i> <span>Mastered Git CLI, branch conflict resolutions, and collaborative team development on GitHub.</span></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="p-0 m-0 text-muted small">
+                      <li class="mb-2 d-flex align-items-start gap-2"><i class="fas fa-check-circle text-accent mt-1"></i> <span>Built practical portfolio projects emphasizing responsive UI design and cross-device compatibility.</span></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="d-flex flex-wrap gap-2 pt-2 border-top border-glass">
+                  <span class="badge-glow"><i class="fas fa-terminal me-1"></i> Software Principles</span>
+                  <span class="badge-glow"><i class="fab fa-git-alt me-1"></i> Git Workflows</span>
+                  <span class="badge-glow"><i class="fas fa-laptop me-1"></i> Responsive UI</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline Item 4: Dreamland IT Institute -->
+            <div class="timeline-item" data-aos="fade-up">
+              <div class="timeline-dot" style="border-color: #ff9f43;"></div>
+              <div class="glass-card p-4 p-md-5 tilt-card">
+                <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="skill-icon-box mb-0" style="width:55px;height:55px; color:#ff9f43; background:rgba(255,159,67,0.1);"><i class="fas fa-certificate fs-4"></i></div>
+                    <div>
+                      <span class="exp-badge advanced mb-1 d-inline-block" style="background:rgba(255,159,67,0.15); color:#ff9f43; border-color:rgba(255,159,67,0.3);">DIPLOMA CERTIFICATION</span>
+                      <h3 class="text-white fw-bold mb-0">Dreamland IT Institute</h3>
+                      <span class="fw-semibold fs-6" style="color:#ff9f43;">Graphic Design & Video Editing Certification</span>
+                    </div>
+                  </div>
+                  <span class="timeline-date mt-2 mt-sm-0"><i class="fas fa-user-graduate me-1"></i> Certified Diploma</span>
+                </div>
+
+                <p class="text-muted mb-4 fs-6">
+                  Earned professional certification in digital graphic arts, brand design psychology, and multimedia video production. Developed a sharp aesthetic eye that elevates all my software engineering interfaces.
+                </p>
+
+                <h6 class="text-white fw-bold mb-3" style="color:#ff9f43;"><i class="fas fa-paint-brush me-2"></i> Creative Competencies Acquired:</h6>
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <ul class="p-0 m-0 text-muted small">
+                      <li class="mb-2 d-flex align-items-start gap-2"><i class="fas fa-check-circle mt-1" style="color:#ff9f43;"></i> <span>Advanced mastery of Adobe Photoshop & Adobe Illustrator for vector illustration and raster manipulations.</span></li>
+                      <li class="mb-2 d-flex align-items-start gap-2"><i class="fas fa-check-circle mt-1" style="color:#ff9f43;"></i> <span>Color theory, typography pairing, grid layout composition, and visual branding guidelines.</span></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="p-0 m-0 text-muted small">
+                      <li class="mb-2 d-flex align-items-start gap-2"><i class="fas fa-check-circle mt-1" style="color:#ff9f43;"></i> <span>Commercial video editing, sound syncing, motion keyframing, and visual effects using CapCut.</span></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="d-flex flex-wrap gap-2 pt-2 border-top border-glass">
+                  <span class="badge-glow"><i class="fas fa-palette me-1"></i> Adobe Photoshop</span>
+                  <span class="badge-glow"><i class="fas fa-vector-square me-1"></i> Adobe Illustrator</span>
+                  <span class="badge-glow"><i class="fas fa-video me-1"></i> Video Production</span>
+                  <span class="badge-glow"><i class="fas fa-eye me-1"></i> UI Aesthetics</span>
                 </div>
               </div>
             </div>
 
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Career Milestones & Metrics CountUp Section -->
+  <section class="py-5 bg-glass border-top border-bottom border-glass" data-aos="fade-up">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="badge-glow mb-2">PROVEN TRACK RECORD</span>
+        <h3 class="text-white fw-bold">Professional Career Metrics</h3>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-6 col-md-3">
+          <div class="countup-card-v2">
+            <div class="countup-icon-box"><i class="fas fa-project-diagram"></i></div>
+            <div class="countup-number"><span class="countup" data-count="35">0</span>+</div>
+            <p class="text-muted tiny mb-0 fw-semibold">Total Client Projects</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="countup-card-v2">
+            <div class="countup-icon-box" style="color:#10b981; background:rgba(16,185,129,0.1);"><i class="fas fa-smile"></i></div>
+            <div class="countup-number" style="color:#10b981;"><span class="countup" data-count="99">0</span>%</div>
+            <p class="text-muted tiny mb-0 fw-semibold">Client Satisfaction Rate</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="countup-card-v2">
+            <div class="countup-icon-box" style="color:#00e5ff; background:rgba(0,229,255,0.1);"><i class="fas fa-mobile-alt"></i></div>
+            <div class="countup-number" style="color:#00e5ff;"><span class="countup" data-count="15">0</span>+</div>
+            <p class="text-muted tiny mb-0 fw-semibold">Live Production Apps</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="countup-card-v2">
+            <div class="countup-icon-box" style="color:#ff9f43; background:rgba(255,159,67,0.1);"><i class="fas fa-calendar-check"></i></div>
+            <div class="countup-number" style="color:#ff9f43;"><span class="countup" data-count="3">0</span>+</div>
+            <p class="text-muted tiny mb-0 fw-semibold">Years of Dedication</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume CTA Banner -->
+  <section class="py-5" data-aos="fade-up">
+    <div class="container text-center">
+      <div class="resume-cta-banner glass-card p-5 border-glow">
+        <span class="badge-glow mb-2">LET'S CONNECT</span>
+        <h3 class="text-white fw-extrabold mb-3">Looking for a Dedicated Flutter & Frontend Engineer?</h3>
+        <p class="text-muted max-w-600 mx-auto mb-4 fs-6">
+          Whether you need to scale an existing mobile app codebase, build a high-converting web architecture, or design a world-class brand identity, I am ready to deliver excellence.
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="assets/resume.pdf" class="btn btn-primary-glow px-4 py-3 btn-ripple text-decoration-none fw-bold">
+            <i class="fas fa-file-download me-2"></i> Download Full Resume
+          </a>
+          <a href="contact.html" class="btn btn-outline-glass px-4 py-3 btn-ripple text-decoration-none fw-bold">
+            <i class="fas fa-paper-plane me-2"></i> Schedule an Interview
+          </a>
+          <a href="skills.html" class="btn btn-outline-glass px-4 py-3 btn-ripple text-decoration-none fw-bold">
+            <i class="fas fa-layer-group me-2"></i> Explore Tech Stack
+          </a>
         </div>
       </div>
     </div>

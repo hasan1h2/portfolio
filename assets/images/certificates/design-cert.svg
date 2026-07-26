@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="550" viewBox="0 0 800 550">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#1E1B4B" />
+    </linearGradient>
+    <linearGradient id="overlay" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.15)" />
+      <stop offset="100%" stop-color="rgba(0,0,0,0.4)" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)" />
+  <rect width="100%" height="100%" fill="url(#overlay)" />
+  <circle cx="400" cy="245" r="60" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <text x="50%" y="250" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">Verified Credential</text>
+  <text x="50%" y="315" font-family="Arial, sans-serif" font-size="22" font-weight="600" fill="#00FFA3" text-anchor="middle">Graphic & Digital Media Certification</text>
+  <text x="50%" y="355" font-family="Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.7)" text-anchor="middle">Habib Hasan Portfolio Asset</text>
+  <rect x="20" y="20" width="760" height="510" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2" rx="16" />
+</svg>

@@ -500,5 +500,276 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  /* --------------------------------------------------------------------------
+     16. SVG CIRCULAR PROGRESS RINGS ANIMATION
+     -------------------------------------------------------------------------- */
+  const progressCircles = document.querySelectorAll('.progress-ring-circle');
+
+  function animateProgressRings() {
+    progressCircles.forEach(circle => {
+      const radius = circle.r.baseVal.value;
+      const circumference = 2 * Math.PI * radius;
+      circle.style.strokeDasharray = `${circumference} ${circumference}`;
+
+      const percent = circle.getAttribute('data-percent') || 0;
+      const offset = circumference - (percent / 100) * circumference;
+
+      const rect = circle.getBoundingClientRect();
+      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+        circle.style.strokeDashoffset = offset;
+      }
+    });
+  }
+
+  window.addEventListener('scroll', animateProgressRings);
+  setTimeout(animateProgressRings, 400);
+
+  /* --------------------------------------------------------------------------
+     17. MASTER SKILLS CATEGORY FILTER & LIVE SEARCH
+     -------------------------------------------------------------------------- */
+  const skillTabBtns = document.querySelectorAll('.skill-tab-btn');
+  const skillCards = document.querySelectorAll('.skill-item-col');
+  const skillSearchInput = document.getElementById('skillSearchInput');
+
+  let activeCategory = 'all';
+  let searchQuery = '';
+
+  function filterSkills() {
+    skillCards.forEach(col => {
+      const category = col.getAttribute('data-category');
+      const name = col.getAttribute('data-skill-name') ? col.getAttribute('data-skill-name').toLowerCase() : '';
+      const desc = col.querySelector('p') ? col.querySelector('p').innerText.toLowerCase() : '';
+
+      const matchesCat = (activeCategory === 'all' || category === activeCategory);
+      const matchesSearch = (!searchQuery || name.includes(searchQuery) || desc.includes(searchQuery));
+
+      if (matchesCat && matchesSearch) {
+        col.style.display = 'block';
+        col.classList.add('aos-animate');
+      } else {
+        col.style.display = 'none';
+      }
+    });
+  }
+
+  skillTabBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+      skillTabBtns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      activeCategory = this.getAttribute('data-filter');
+      filterSkills();
+    });
+  });
+
+  if (skillSearchInput) {
+    skillSearchInput.addEventListener('input', function () {
+      searchQuery = this.value.toLowerCase().trim();
+      filterSkills();
+    });
+  }
+
+  /* --------------------------------------------------------------------------
+     18. SKILL DETAILS EXPAND MODAL HANDLER
+     -------------------------------------------------------------------------- */
+  const skillModalElement = document.getElementById('skillDetailModal');
+  let skillModalInstance = null;
+
+  if (skillModalElement && typeof bootstrap !== 'undefined') {
+    skillModalInstance = new bootstrap.Modal(skillModalElement);
+  }
+
+  document.addEventListener('click', (e) => {
+    const expandBtn = e.target.closest('.btn-expand-skill');
+    if (expandBtn) {
+      const card = expandBtn.closest('.skill-card-v2');
+      if (!card) return;
+
+      const title = card.getAttribute('data-skill-name') || 'Skill Detail';
+      const category = card.getAttribute('data-category-label') || 'General Tech';
+      const level = card.getAttribute('data-level') || 'Advanced';
+      const percent = card.getAttribute('data-percent') || '90%';
+      const desc = card.getAttribute('data-description') || '';
+      const tools = card.getAttribute('data-tools') || 'HTML5, CSS3, JS, Git';
+      const projects = card.getAttribute('data-projects') || 'Chef Starz, Worker Hiring, Sparktech Agency Work';
+
+      document.getElementById('modalSkillTitle').innerText = title;
+      document.getElementById('modalSkillCategory').innerText = category;
+      document.getElementById('modalSkillLevel').innerText = `${level} • ${percent}%`;
+      document.getElementById('modalSkillDesc').innerText = desc;
+      document.getElementById('modalSkillTools').innerText = tools;
+      document.getElementById('modalSkillProjects').innerText = projects;
+
+      if (skillModalInstance) {
+        skillModalInstance.show();
+      }
+    }
+  });
+
+  /* --------------------------------------------------------------------------
+     19. MOUSE PARALLAX EFFECT ON DECORATIVE CARDS
+     -------------------------------------------------------------------------- */
+  const parallaxElements = document.querySelectorAll('.mouse-parallax-item');
+  if (parallaxElements.length > 0) {
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX - window.innerWidth / 2) / 45;
+      const y = (e.clientY - window.innerHeight / 2) / 45;
+
+      parallaxElements.forEach(el => {
+        const speed = el.getAttribute('data-speed') || 1;
+        el.style.transform = `translate3d(${x * speed}px, ${y * speed}px, 0)`;
+      });
+    });
+  }
+
+  /* --------------------------------------------------------------------------
+     20. BUTTON RIPPLE EFFECT & COUNTUP COUNTERS RUNNER
+     -------------------------------------------------------------------------- */
+  document.querySelectorAll('.btn-ripple, .btn-primary-glow, .btn-outline-glass').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      const rect = this.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const wave = document.createElement('span');
+      wave.classList.add('ripple-wave');
+      wave.style.left = `${x}px`;
+      wave.style.top = `${y}px`;
+      this.appendChild(wave);
+
+      setTimeout(() => wave.remove(), 650);
+    });
+  });
+
+  // Animated CountUp Numbers
+  const countUpElements = document.querySelectorAll('.countup, [data-count]');
+  let countUpTriggered = false;
+
+  function runCountUp() {
+    countUpElements.forEach(el => {
+      const target = parseInt(el.getAttribute('data-count'), 10);
+      if (isNaN(target)) return;
+
+      const rect = el.getBoundingClientRect();
+      if (rect.top <= window.innerHeight && rect.bottom >= 0 && !el.classList.contains('counted')) {
+        el.classList.add('counted');
+        let current = 0;
+        const duration = 1500;
+        const stepTime = Math.abs(Math.floor(duration / target)) || 30;
+        
+        const timer = setInterval(() => {
+          current += Math.ceil(target / 40) || 1;
+          if (current >= target) {
+            el.innerText = target;
+            clearInterval(timer);
+          } else {
+            el.innerText = current;
+          }
+        }, stepTime);
+      }
+    });
+  }
+
+  window.addEventListener('scroll', runCountUp);
+  setTimeout(runCountUp, 500);
+
+  // Initialize Vanilla Tilt if available
+  if (typeof VanillaTilt !== 'undefined') {
+    VanillaTilt.init(document.querySelectorAll('.tilt-card, .skill-card-v2, .top-skill-card, .category-landing-card'), {
+      max: 12,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.2
+    });
+  }
+
+  /* --------------------------------------------------------------------------
+     21. GALLERY LAYOUT SWITCHER & FAVORITE BUTTON TOGGLE
+     -------------------------------------------------------------------------- */
+  const layoutBtns = document.querySelectorAll('.layout-btn');
+  const projectsGrid = document.getElementById('projectsGrid');
+  if (layoutBtns.length > 0 && projectsGrid) {
+    layoutBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        layoutBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const view = this.getAttribute('data-view');
+        projectsGrid.classList.remove('view-masonry', 'view-cards', 'view-large-preview');
+        if (view && view !== 'grid') {
+          projectsGrid.classList.add('view-' + view);
+        }
+        if (typeof AOS !== 'undefined') AOS.refresh();
+      });
+    });
+  }
+
+  // Favorite Heart Toggle
+  const favBtns = document.querySelectorAll('.btn-favorite');
+  favBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      this.classList.toggle('favorited');
+      const icon = this.querySelector('i');
+      if (icon) {
+        if (this.classList.contains('favorited')) {
+          icon.classList.remove('far');
+          icon.classList.add('fas');
+        } else {
+          icon.classList.remove('fas');
+          icon.classList.add('far');
+        }
+      }
+    });
+  });
+
+  /* --------------------------------------------------------------------------
+     22. COMPREHENSIVE PROJECT DETAILS MODAL POPULATOR
+     -------------------------------------------------------------------------- */
+  const detailTriggers = document.querySelectorAll('.project-details-trigger');
+  const projectDetailModalEl = document.getElementById('projectDetailModal');
+  if (detailTriggers.length > 0 && projectDetailModalEl) {
+    detailTriggers.forEach(trigger => {
+      trigger.addEventListener('click', function(e) {
+        e.preventDefault();
+        const title = this.getAttribute('data-title') || 'Project Details';
+        const category = this.getAttribute('data-category') || 'Web & Mobile App';
+        const desc = this.getAttribute('data-desc') || 'Comprehensive digital solution engineered with clean architecture and modern UI/UX principles.';
+        const imgSrc = this.getAttribute('data-img') || 'assets/images/projects/flutter/chef-starz.svg';
+        const github = this.getAttribute('data-github') || 'https://github.com';
+        const demo = this.getAttribute('data-demo') || '#';
+        const apk = this.getAttribute('data-apk') || '';
+
+        const modalTitleEl = document.getElementById('detailModalTitle');
+        const modalCategoryEl = document.getElementById('detailModalCategory');
+        const modalDescEl = document.getElementById('detailModalDesc');
+        const modalImgEl = document.getElementById('detailModalImg');
+        const modalGithubEl = document.getElementById('detailModalGithub');
+        const modalDemoEl = document.getElementById('detailModalDemo');
+        const modalApkEl = document.getElementById('detailModalApk');
+
+        if (modalTitleEl) modalTitleEl.innerText = title;
+        if (modalCategoryEl) modalCategoryEl.innerText = category;
+        if (modalDescEl) modalDescEl.innerText = desc;
+        if (modalImgEl) modalImgEl.src = imgSrc;
+        if (modalGithubEl) modalGithubEl.href = github;
+        if (modalDemoEl) modalDemoEl.href = demo;
+        if (modalApkEl) {
+          if (apk) {
+            modalApkEl.style.display = 'inline-flex';
+            modalApkEl.href = apk;
+          } else {
+            modalApkEl.style.display = 'none';
+          }
+        }
+
+        const modalInst = new bootstrap.Modal(projectDetailModalEl);
+        modalInst.show();
+      });
+    });
+  }
 });
+
+
+
 
