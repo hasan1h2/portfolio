@@ -1,99 +1,130 @@
-# 🚀 Habib Hasan | Premium 3D Portfolio
+# 🚀 Habib Hasan — Award-Winning 3D Personal Portfolio Website
 
-A world-class, production-ready, fully responsive static personal portfolio website for **Habib Hasan** (Flutter App Developer, Full Stack Web Developer, Graphic Designer, Digital Marketer, SEO Specialist, Video Editor, AI Content Creator, DevOps Learner).
+Welcome to the official production-ready repository of **Habib Hasan** — Agency-proven Flutter App Developer, Full Stack Web Engineer, Creative Professional, and DevOps Learner.
 
-## 🌟 Features
-- **Award-winning Design**: Luxury dark theme with glassmorphism layers, neon gradients, and premium visual hierarchy.
-- **3D Interactions**: Geodesic interactive 3D hero background via [Three.js](https://threejs.org/).
-- **Dynamic Effects**: Custom animated glowing cursor, page preloaders, tilting cards (Vanilla-tilt), particle backgrounds (Particles.js).
-- **Responsive Architecture**: Built ground-up with HTML5, Vanilla CSS3, custom utilities, and Bootstrap 5.
-- **Fast & SEO Optimized**: 100% static, modular Javascript, semantic markup, zero backend rendering wait times.
+This website is a **100% static, responsive, high-performance web portfolio** built without backend frameworks, fully deployable on **GitHub Pages**, Vercel, Netlify, or any static hosting service.
 
-## 🛠️ Tech Stack
-This project purposely avoids modern frontend frameworks (React, Vue, Next.js) to remain incredibly lightweight and instantly deployable.
+---
 
-- **Structure**: HTML5
-- **Styling**: Vanilla CSS3, Bootstrap 5 (Grid, Modals)
-- **Logics & Animations**: JavaScript (ES6+), GSAP (Scroll triggers), AOS (Fade Animations), JQuery
-- **Interactivity**: Three.js, Particles.js, Vanilla Tilt.js, Typed.js
-- **Icons & Typography**: Font Awesome 6, Bootstrap Icons, Google Fonts (Outfit)
+## 🌟 Key Highlights & Features
 
-## 📂 Project Structure
+- **Award-Winning Visual Design**: Dark Glassmorphism aesthetic featuring HSL tailored colors, cyber neon accents, floating 3D tilt cards, custom particle canvas, and reactive cursor effects.
+- **Master Featured Projects Section** (`projects.html`): Chef Starz spotlight hero card, 8 category filters, live instant search, 4 dynamic layout switchers (Grid, Cards, Masonry, Large Preview), and Swiper.js project detail modal.
+- **Multi-Category Portfolio Hub** (`portfolio.html`): 7 premium category landing cards with project counts, gradient borders, and CountUp statistics.
+- **Seven Sub-Portfolio Pages** (`portfolio/`):
+  - 📱 `flutter.html` — 12 Mobile Applications with APK download placeholders & device previews.
+  - 💻 `web-development.html` & `web.html` — 6 Full-Stack Websites, SaaS Portals, and Dashboards.
+  - 🎨 `graphic-design.html` — 10 Design items (Logos, Posters, Banners, Business Cards, Brand Identity).
+  - 🎬 `video-editing.html` — 5 Video items (YouTube, Reels, Shorts, Commercials, Motion Graphics).
+  - 📈 `digital-marketing.html` — 5 Growth Campaigns, Technical SEO Audit reports, Meta Ads & GA4.
+  - 🤖 `ai-projects.html` — 5 AI Generative Workflows, Midjourney v6 Art & Prompt Matrices.
+  - ⚙️ `devops.html` — 6 DevOps modules (Linux CLI, Docker Compose, GitHub Actions CI/CD, NGINX, Deployment).
+- **Professional Digital Services** (`services.html`): 9 Service cards with feature lists, learn more modals, 6-step Work Process timeline, Why Choose Me section, Client Benefits, and flexible pricing tiers.
+- **Education & Verified Certificates** (`certificates.html`): Official certificates (BdCalling Academy, Dreamland IT, Creative IT), live search, skills badges, 8 future certifications, credential modals.
+- **Interactive Contact Page** (`contact.html`): 8 Quick Contact Cards with copy to clipboard buttons, EmailJS form integration, 6 FAQ accordions, and responsive Google Map embed.
+
+---
+
+## 🛠️ Technology Stack
+
+- **Core**: HTML5, Vanilla CSS3, JavaScript (ES6+)
+- **UI Framework**: Bootstrap 5.3 (Modular Grid & Utilities)
+- **Plugins**:
+  - `jQuery 3.7`
+  - `GSAP` (GreenSock Animation Platform)
+  - `AOS` (Animate On Scroll)
+  - `Vanilla Tilt.js` (3D Card Tilt)
+  - `Swiper.js` (Image Gallery Sliders)
+  - `GLightbox` (Lightbox Image & Video Popups)
+  - `Isotope.js` (Masonry Grid Filtering)
+  - `EmailJS` (Client-side Email Contact Form)
+- **Icons**: Font Awesome 6, Bootstrap Icons
+
+---
+
+## 📂 Project Folder Structure
 
 ```
-my_portfolio/
+portfolio/
+├── index.html                    # Master Landing Page (Hero, Stats, About, Skills, Featured)
+├── about.html                    # Bio, Career Timeline & Agency Experience
+├── skills.html                   # Interactive Tech Stack & Mastery Progress Bars
+├── experience.html               # Sparktech Agency Experience & Job Responsibilities
+├── education.html                # Academic Background & Qualifications
+├── projects.html                # Master Featured Projects & Spotlight Showcase
+├── portfolio.html                # Multi-Category Portfolio Hub
+├── services.html                # Professional Services, Process & Pricing
+├── certificates.html            # Education, Verified Certificates & Credentials
+├── contact.html                 # Interactive Contact Form, FAQs & Map
+├── privacy-policy.html          # Legal Privacy Policy
+├── terms.html                   # Terms of Service
+├── 404.html                     # Custom Cyberpunk 404 Error Page
+├── robots.txt                   # Search Engine Crawler Guidance
+├── sitemap.xml                  # Full XML Sitemap for SEO Indexing
+├── manifest.json                # PWA Progressive Web App Manifest
+├── README.md                    # Deployment & Architecture Documentation
+├── OPTIMIZATION_REPORT.md       # Lighthouse Audit & Code Quality Report
 │
-├── assets/
-│   ├── css/
-│   │   └── style.css            # Global unified styles and glassmorphism framework
-│   ├── js/
-│   │   ├── main.js              # Global controller (Loader, Theme, Cursor, Navbar, Filtering)
-│   │   ├── three-hero.js        # Three.js custom 3D scene script
-│   │   └── particles-config.js  # Background particles configuration
-│   ├── images/                  # Bio avatars and global graphics
-│   ├── projects/                # Specific project showcases (Chef Starz, Artisan, etc.)
-│   └── certificates/            # Official certificates and awards
+├── portfolio/                   # Category Sub-Portfolios
+│   ├── flutter.html             # Flutter Apps Portfolio (12 Apps)
+│   ├── web-development.html     # Web Projects Portfolio (6 Websites)
+│   ├── web.html                 # Web Projects Mirror Link
+│   ├── graphic-design.html      # Graphic Design Masonry Gallery (10 Designs)
+│   ├── video-editing.html       # Video Editing Portfolio (5 Videos)
+│   ├── digital-marketing.html   # Digital Marketing & SEO (5 Campaigns)
+│   ├── ai-projects.html         # AI & Generative Art (5 Workflows)
+│   └── devops.html              # DevOps Pathways & Server Notes (6 Modules)
 │
-├── portfolio/                   # Specialized Sub-Portfolio Pages
-│   ├── flutter.html
-│   ├── web.html
-│   ├── graphic-design.html
-│   ├── video-editing.html
-│   ├── digital-marketing.html
-│   ├── ai-projects.html
-│   └── devops.html
-│
-├── index.html                   # Root Hero & Summary Page
-├── about.html                   # Detailed Biography
-├── skills.html                  # Skill Progress & Focus
-├── experience.html              # Tech Agency Experience
-├── education.html               # Institutional Training
-├── projects.html                # Searchable Gallery Grid
-├── services.html                # Service Offers
-├── certificates.html            # Certification Downloads
-├── contact.html                 # Direct Contact & Maps
-│
-├── sitemap.xml                  # SEO Index Map
-├── robots.txt                   # Search Crawler Directives
-└── README.md                    # Documentation
-```
-
-## 🚀 Deployment Guide (GitHub Pages)
-
-This static site is completely ready for deployment on **GitHub Pages**.
-
-### Steps to Deploy:
-1. **Initialize Git Repository:**
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: Habib Portfolio"
-   ```
-2. **Push to GitHub:**
-   - Create a new repository on GitHub named `my_portfolio` (or `habibhasan.github.io`).
-   - Add the remote origin and push.
-   ```bash
-   git remote add origin https://github.com/Username/my_portfolio.git
-   git branch -M main
-   git push -u origin main
-   ```
-3. **Enable GitHub Pages:**
-   - Go to your repository **Settings**.
-   - Navigate to the **Pages** section on the left sidebar.
-   - Under **Build and deployment**, select **Deploy from a branch**.
-   - Under **Branch**, select the `main` branch, root `/` folder, and hit **Save**.
-   - Your site will instantly be built and available at `https://[Your-Username].github.io/my_portfolio/`.
-
-## 🎨 Theme Customization
-To change the primary branding colors, open `assets/css/style.css` and navigate to the `:root` pseudo-class variables:
-```css
-:root {
-  --primary-color: #00E5FF;
-  --secondary-color: #7B61FF;
-  --accent-color: #00FFA3;
-  --bg-dark: #050816;
-}
+└── assets/
+    ├── css/
+    │   └── style.css            # Master Glassmorphism & Custom Utility Stylesheet
+    ├── js/
+    │   ├── email-config.js      # EmailJS Credentials Configuration File
+    │   └── main.js              # Interactive DOM Controller & Plugin Manager
+    └── images/                  # High-Resolution Vector SVG & Image Assets
+        ├── profile.svg
+        ├── certificates/
+        └── projects/            # Category Project Images (flutter, web, graphic, video, etc.)
 ```
 
 ---
-**Designed & Developed for Habib Hasan.**
+
+## 📧 EmailJS Setup Guide
+
+To connect the contact form to your personal email inbox:
+1. Create a free account at [EmailJS](https://www.emailjs.com/).
+2. Create an **Email Service** (e.g. Gmail).
+3. Create an **Email Template** with fields: `from_name`, `from_email`, `phone`, `company`, `service`, `budget`, `subject`, `message`.
+4. Open `assets/js/email-config.js` and paste your keys:
+```javascript
+const EMAILJS_CONFIG = {
+  PUBLIC_KEY: "YOUR_PUBLIC_KEY",
+  SERVICE_ID: "YOUR_SERVICE_ID",
+  TEMPLATE_ID: "YOUR_TEMPLATE_ID"
+};
+```
+*(Note: If left empty, the contact form automatically operates in graceful demonstration mode for static previews).*
+
+---
+
+## 🌐 GitHub Pages Deployment Guide
+
+1. Create a new repository on GitHub (e.g. `portfolio`).
+2. Push all files from your workspace directory to the `main` branch:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial release of Habib Hasan Portfolio"
+   git branch -M main
+   git remote add origin https://github.com/YOUR_USERNAME/portfolio.git
+   git push -u origin main
+   ```
+3. Navigate to **Settings** -> **Pages** in your GitHub repository.
+4. Select `Branch: main`, `Folder: / (root)`, and click **Save**.
+5. Your website will be live in ~60 seconds at: `https://YOUR_USERNAME.github.io/portfolio/`
+
+---
+
+## ⚖️ License & Attribution
+
+Designed & Developed by **Habib Hasan** &copy; 2026. All Rights Reserved.

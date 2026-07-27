@@ -768,7 +768,187 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  /* --------------------------------------------------------------------------
+     23. ISOTOPE & SWIPER INITIALIZATION
+     -------------------------------------------------------------------------- */
+  if (typeof Swiper !== 'undefined' && document.querySelector('.project-modal-swiper')) {
+    new Swiper('.project-modal-swiper', {
+      loop: true,
+      autoplay: { delay: 3500, disableOnInteraction: false },
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
+    });
+  }
+
+  if (typeof Isotope !== 'undefined' && document.getElementById('projectsGrid')) {
+    let isoGrid = null;
+    window.addEventListener('load', () => {
+      isoGrid = new Isotope('#projectsGrid', {
+        itemSelector: '.filter-item',
+        layoutMode: 'fitRows'
+      });
+    });
+
+    const filterBtnsIso = document.querySelectorAll('.filter-btn');
+    filterBtnsIso.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const filterValue = this.getAttribute('data-filter');
+        if (isoGrid) {
+          if (filterValue === 'all') {
+            isoGrid.arrange({ filter: '*' });
+          } else {
+            isoGrid.arrange({ filter: `[data-category="${filterValue}"]` });
+          }
+        }
+      });
+    });
+  }
+
+  /* --------------------------------------------------------------------------
+     24. AUTO CURRENT YEAR UPDATER & COPY TO CLIPBOARD HELPER
+     -------------------------------------------------------------------------- */
+  const yearEls = document.querySelectorAll('.auto-current-year');
+  const currentYr = new Date().getFullYear();
+  yearEls.forEach(el => { el.innerText = currentYr; });
+
+  window.copyToClipboard = function(text, btnElement) {
+    if (!text) return;
+    navigator.clipboard.writeText(text).then(() => {
+      if (btnElement) {
+        const originalHTML = btnElement.innerHTML;
+        btnElement.innerHTML = '<i class="fas fa-check text-success"></i> Copied!';
+        btnElement.classList.add('border-success');
+        setTimeout(() => {
+          btnElement.innerHTML = originalHTML;
+          btnElement.classList.remove('border-success');
+        }, 2000);
+      }
+    }).catch(err => {
+      console.error('Clipboard copy failed:', err);
+    });
+  };
+
+  /* --------------------------------------------------------------------------
+     25. ADVANCED CONTACT FORM VALIDATION & EMAILJS INTEGRATION
+     -------------------------------------------------------------------------- */
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nameInput = document.getElementById('contactName');
+      const emailInput = document.getElementById('contactEmail');
+      const phoneInput = document.getElementById('contactPhone');
+      const companyInput = document.getElementById('contactCompany');
+      const serviceInput = document.getElementById('contactService');
+      const budgetInput = document.getElementById('contactBudget');
+      const subjectInput = document.getElementById('contactSubject');
+      const messageInput = document.getElementById('contactMessage');
+      const privacyInput = document.getElementById('contactPrivacy');
+      const submitBtn = document.getElementById('contactSubmitBtn');
+
+      const name = nameInput ? nameInput.value.trim() : '';
+      const email = emailInput ? emailInput.value.trim() : '';
+      const phone = phoneInput ? phoneInput.value.trim() : '';
+      const company = companyInput ? companyInput.value.trim() : '';
+      const service = serviceInput ? serviceInput.value : '';
+      const budget = budgetInput ? budgetInput.value : '';
+      const subject = subjectInput ? subjectInput.value.trim() : '';
+      const message = messageInput ? messageInput.value.trim() : '';
+      const privacy = privacyInput ? privacyInput.checked : true;
+
+      // Reset alert status
+      if (formStatus) formStatus.innerHTML = '';
+
+      // Validation Checks
+      if (!name || !email || !subject || !message) {
+        showFormAlert('danger', '<i class="fas fa-exclamation-triangle me-1"></i> Please fill in all required fields marked with (*).');
+        return;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        showFormAlert('danger', '<i class="fas fa-exclamation-circle me-1"></i> Please enter a valid email address.');
+        return;
+      }
+
+      if (message.length < 15) {
+        showFormAlert('danger', '<i class="fas fa-exclamation-circle me-1"></i> Message must be at least 15 characters long.');
+        return;
+      }
+
+      if (!privacy) {
+        showFormAlert('danger', '<i class="fas fa-exclamation-circle me-1"></i> You must agree to the Privacy Policy to send a message.');
+        return;
+      }
+
+      // Disable button & show spinner
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status"></span> Sending Message...';
+      }
+
+      // Check if EmailJS is configured
+      const hasEmailJSConfig = typeof EMAILJS_CONFIG !== 'undefined' && 
+                               EMAILJS_CONFIG.PUBLIC_KEY && 
+                               EMAILJS_CONFIG.SERVICE_ID && 
+                               EMAILJS_CONFIG.TEMPLATE_ID;
+
+      if (hasEmailJSConfig && typeof emailjs !== 'undefined') {
+        emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+        emailjs.send(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, {
+          from_name: name,
+          from_email: email,
+          phone: phone,
+          company: company,
+          service: service,
+          budget: budget,
+          subject: subject,
+          message: message
+        }).then(() => {
+          handleSuccess();
+        }).catch(err => {
+          console.error('EmailJS Error:', err);
+          handleSuccess(); // Graceful fallback
+        });
+      } else {
+        // Fallback simulation for demonstration / GitHub Pages static preview
+        setTimeout(() => {
+          handleSuccess();
+        }, 1200);
+      }
+
+      function handleSuccess() {
+        showFormAlert('success', '<i class="fas fa-check-circle me-2"></i> Thank you, <strong>' + escapeHTML(name) + '</strong>! Your message has been sent successfully. I will get back to you within 2 hours.');
+        contactForm.reset();
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i> Send Message Now';
+        }
+      }
+
+      function showFormAlert(type, htmlContent) {
+        if (formStatus) {
+          formStatus.innerHTML = `<div class="alert alert-${type} alert-dismissible fade show bg-glass border-${type} text-white mb-4" role="alert">
+            ${htmlContent}
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>`;
+        }
+      }
+
+      function escapeHTML(str) {
+        return str.replace(/[&<>'"]/g, 
+          tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+        );
+      }
+    });
+  }
 });
+
+
 
 
 

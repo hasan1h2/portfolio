@@ -3,24 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Graphic Design Portfolio of Habib Hasan - Logo, Poster, Banner, Business Card, Flyer, Brochure, Thumbnail, Social Media, Packaging, and Brand Identity.">
+  <meta name="description" content="Graphic Design Portfolio of Habib Hasan - Logos, Posters, Banners, Social Media Packs, Business Cards, Flyers, Brochures, Thumbnails, Packaging, and Brand Identity.">
   <title>Graphic Design Portfolio | Habib Hasan</title>
+  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- CSS Plugins -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body data-theme="dark">
+
+  <!-- Preloader & Background FX -->
   <div id="preloader"><div class="preloader-spinner"></div><div class="preloader-logo">HABIB HASAN</div></div>
   <div class="custom-cursor"></div><div class="cursor-follower"></div><div class="mouse-glow-bg"></div><div class="scroll-progress-bar"></div>
 
+  <!-- Master Glass Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top glass-nav">
     <div class="container">
-      <a class="navbar-brand" href="../index.html">HABIB<span class="brand-dot"></span></a>
-      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle Navigation"><i class="fas fa-bars fs-3"></i></button>
+      <a class="navbar-brand" href="../index.html">
+        <div class="logo-badge">HH</div> HABIB<span class="brand-dot pulse"></span>
+      </a>
+      <div class="d-flex align-items-center gap-2 ms-auto d-lg-none me-2">
+        <button class="nav-action-btn search-trigger-btn" aria-label="Quick Search"><i class="fas fa-search"></i></button>
+        <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
+      </div>
+      <button class="mobile-hamburger-btn d-lg-none" id="mobileHamburgerBtn" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-center gap-1">
           <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
@@ -29,324 +47,563 @@
           <li class="nav-item"><a class="nav-link" href="../experience.html">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="../education.html">Education</a></li>
           <li class="nav-item"><a class="nav-link" href="../projects.html">Projects</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="../portfolio.html" id="portfolioDropdown" role="button" data-bs-toggle="dropdown">Portfolio</a>
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="portfolioDropdown">
-              <li><a class="dropdown-item" href="../portfolio.html"><i class="fas fa-th me-2 text-warning"></i>All Categories</a></li>
-              <li><hr class="dropdown-divider border-secondary opacity-25"></li>
-              <li><a class="dropdown-item" href="flutter.html"><i class="fas fa-mobile-alt me-2 text-info"></i>Flutter Apps</a></li>
-              <li><a class="dropdown-item" href="web.html"><i class="fas fa-code me-2 text-primary"></i>Web Projects</a></li>
-              <li><a class="dropdown-item active" href="graphic-design.html"><i class="fas fa-palette me-2 text-warning"></i>Graphic Design</a></li>
-              <li><a class="dropdown-item" href="video-editing.html"><i class="fas fa-film me-2 text-danger"></i>Video Editing</a></li>
-              <li><a class="dropdown-item" href="digital-marketing.html"><i class="fas fa-chart-line me-2 text-success"></i>Digital Marketing</a></li>
-              <li><a class="dropdown-item" href="ai-projects.html"><i class="fas fa-robot me-2 text-accent"></i>AI Projects</a></li>
-              <li><a class="dropdown-item" href="devops.html"><i class="fas fa-server me-2 text-secondary"></i>DevOps</a></li>
-            </ul>
+          
+          <li class="nav-item dropdown mega-dropdown">
+            <a class="nav-link dropdown-toggle active" href="../portfolio.html" id="portfolioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Portfolio
+            </a>
+            <div class="dropdown-menu mega-menu dropdown-menu-dark" aria-labelledby="portfolioDropdown">
+              <div class="row g-2">
+                <div class="col-6">
+                  <a href="../portfolio.html" class="mega-menu-item">
+                    <div class="mega-icon-box text-warning"><i class="fas fa-th-large"></i></div>
+                    <div>
+                      <span class="mega-title">All Categories</span>
+                      <p class="mega-desc">Explore full multi-category hub</p>
+                    </div>
+                  </a>
+                  <a href="flutter.html" class="mega-menu-item">
+                    <div class="mega-icon-box text-info"><i class="fab fa-flutter"></i></div>
+                    <div>
+                      <span class="mega-title">Flutter Apps</span>
+                      <p class="mega-desc">12 Mobile screenshot apps</p>
+                    </div>
+                  </a>
+                  <a href="web-development.html" class="mega-menu-item">
+                    <div class="mega-icon-box text-primary"><i class="fas fa-code"></i></div>
+                    <div>
+                      <span class="mega-title">Web Projects</span>
+                      <p class="mega-desc">SaaS, Portals &amp; Dashboards</p>
+                    </div>
+                  </a>
+                  <a href="graphic-design.html" class="mega-menu-item active">
+                    <div class="mega-icon-box text-warning"><i class="fas fa-palette"></i></div>
+                    <div>
+                      <span class="mega-title">Graphic Design</span>
+                      <p class="mega-desc">Logos, Posters &amp; Branding</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-6">
+                  <a href="video-editing.html" class="mega-menu-item">
+                    <div class="mega-icon-box text-danger"><i class="fas fa-film"></i></div>
+                    <div>
+                      <span class="mega-title">Video Editing</span>
+                      <p class="mega-desc">YouTube, Reels &amp; Commercials</p>
+                    </div>
+                  </a>
+                  <a href="digital-marketing.html" class="mega-menu-item">
+                    <div class="mega-icon-box text-success"><i class="fas fa-chart-line"></i></div>
+                    <div>
+                      <span class="mega-title">Digital Marketing</span>
+                      <p class="mega-desc">SEO &amp; Ad Growth Campaigns</p>
+                    </div>
+                  </a>
+                  <a href="ai-projects.html" class="mega-menu-item">
+                    <div class="mega-icon-box text-accent"><i class="fas fa-robot"></i></div>
+                    <div>
+                      <span class="mega-title">AI Projects</span>
+                      <p class="mega-desc">Prompt Engineering &amp; GenArt</p>
+                    </div>
+                  </a>
+                  <a href="devops.html" class="mega-menu-item">
+                    <div class="mega-icon-box text-secondary"><i class="fas fa-server"></i></div>
+                    <div>
+                      <span class="mega-title">DevOps Pathways</span>
+                      <p class="mega-desc">Docker, CI/CD &amp; NGINX</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
           </li>
+
           <li class="nav-item"><a class="nav-link" href="../services.html">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="../certificates.html">Certificates</a></li>
           <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
         </ul>
         <div class="d-flex align-items-center gap-3 ms-lg-3 mt-3 mt-lg-0">
+          <button class="nav-action-btn search-trigger-btn d-none d-lg-flex" aria-label="Global Search"><i class="fas fa-search"></i></button>
           <a href="../contact.html" class="btn-primary-glow px-4 py-2 text-decoration-none"><i class="fas fa-paper-plane me-1"></i> Hire Me</a>
-          <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
+          <button class="theme-toggle-btn d-none d-lg-flex" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
         </div>
       </div>
     </div>
   </nav>
 
-  <!-- Header -->
-  <section class="pt-5 mt-5 pb-4">
+  <!-- Mobile Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-nav-header">
+      <a class="navbar-brand" href="../index.html"><div class="logo-badge">HH</div> HABIB<span class="brand-dot"></span></a>
+      <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="mobile-nav-links">
+      <div class="mobile-nav-item"><a href="../index.html" class="mobile-nav-link">Home <i class="fas fa-chevron-right fs-7"></i></a></div>
+      <div class="mobile-nav-item"><a href="../about.html" class="mobile-nav-link">About <i class="fas fa-chevron-right fs-7"></i></a></div>
+      <div class="mobile-nav-item"><a href="../skills.html" class="mobile-nav-link">Skills <i class="fas fa-chevron-right fs-7"></i></a></div>
+      <div class="mobile-nav-item"><a href="../projects.html" class="mobile-nav-link">Projects <i class="fas fa-chevron-right fs-7"></i></a></div>
+      <div class="mobile-nav-item"><a href="../portfolio.html" class="mobile-nav-link active">Portfolio Hub <i class="fas fa-chevron-right fs-7"></i></a></div>
+      <div class="mobile-nav-item"><a href="graphic-design.html" class="mobile-nav-link ps-4 text-warning active">↳ Graphic Design</a></div>
+      <div class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact <i class="fas fa-chevron-right fs-7"></i></a></div>
+    </div>
+  </div>
+
+  <!-- Hero Header & Breadcrumb -->
+  <section class="pt-5 mt-5 pb-3">
     <div class="container pt-4">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb mb-3">
           <li class="breadcrumb-item"><a href="../index.html" class="text-primary">Home</a></li>
-          <li class="breadcrumb-item"><a href="../portfolio.html" class="text-primary">Portfolio</a></li>
+          <li class="breadcrumb-item"><a href="../portfolio.html" class="text-primary">Portfolio Hub</a></li>
           <li class="breadcrumb-item active text-white" aria-current="page">Graphic Design</li>
         </ol>
       </nav>
+      
       <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4" data-aos="fade-up">
         <div>
-          <span class="badge-glow mb-2"><i class="fas fa-palette text-warning me-1"></i> CREATIVE VISUAL DESIGN</span>
-          <h1 class="display-4 fw-extrabold text-white">Graphic <span class="gradient-text">Design</span></h1>
-          <p class="text-muted max-w-600 mb-0">Logos, brand identities, posters, banners, social media kits, brochures, and product packaging — all crafted with Adobe Photoshop & Illustrator.</p>
+          <span class="badge-glow bg-dark text-warning border-warning mb-2"><i class="fas fa-palette me-1"></i> VISUAL BRANDING &amp; GRAPHICS</span>
+          <h1 class="display-4 fw-extrabold text-white">Graphic Design <span class="gradient-text">Masonry Gallery</span></h1>
+          <p class="text-muted max-w-650 mb-0">Logos, Posters, Banners, Social Media Packs, Luxury Business Cards, Packaging, Flyers, Brochures, YouTube Thumbnails, and Brand Guidelines.</p>
         </div>
-        <a href="../portfolio.html" class="btn-outline-glass align-self-start align-self-md-center"><i class="fas fa-arrow-left me-2"></i> All Categories</a>
+        <a href="../portfolio.html" class="btn-outline-glass align-self-start align-self-md-center">
+          <i class="fas fa-arrow-left me-1"></i> All Categories
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Filter & Gallery -->
-  <section class="py-4">
+  <!-- Filter & Search Controls -->
+  <section class="py-3">
     <div class="container">
-      <!-- Search -->
-      <div class="row justify-content-center mb-4" data-aos="fade-up">
+      
+      <div class="row align-items-center justify-content-between g-3 mb-4" data-aos="fade-up">
         <div class="col-md-8 col-lg-6">
           <div class="search-input-group">
             <i class="fas fa-search"></i>
-            <input type="text" id="portfolioSearch" placeholder="Search graphic design projects...">
+            <input type="text" id="portfolioSearch" placeholder="Search graphic design works...">
           </div>
         </div>
-      </div>
-      <!-- Filters -->
-      <div class="d-flex flex-wrap justify-content-center gap-2 mb-5" data-aos="fade-up">
-        <button class="btn-outline-glass filter-btn active px-4 py-2" data-filter="all">All (10)</button>
-        <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="branding">Branding</button>
-        <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="print">Print</button>
-        <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="digital">Digital</button>
+        <div class="col-md-4 col-lg-3 text-md-end">
+          <span class="badge-glow bg-dark text-white"><i class="fas fa-gem me-1 text-warning"></i> High-Resolution Vector Assets</span>
+        </div>
       </div>
 
+      <!-- Animated Category Filter Buttons -->
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-5" data-aos="fade-up">
+        <button class="btn-outline-glass filter-btn active px-4 py-2" data-filter="all">All Designs (10)</button>
+        <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="logo">Logos &amp; Branding</button>
+        <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="poster">Posters &amp; Flyers</button>
+        <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="social">Social &amp; Thumbnails</button>
+        <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="print">Print &amp; Packaging</button>
+      </div>
+
+      <!-- 10 Graphic Design Items (Masonry Compatible) -->
       <div class="row g-4" id="projectsGrid">
 
-        <!-- 1. Logo Design -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="branding" data-aos="fade-up">
-          <div class="glass-card project-card tilt-card">
+        <!-- 1. Logo & Identity -->
+        <div class="col-md-6 col-lg-4 filter-item" data-category="logo" data-aos="fade-up">
+          <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
-              <img src="../assets/images/projects/graphic/logo-design.svg" alt="Logo Design">
+              <img src="../assets/images/projects/graphic/logo-design.svg" alt="Brand Logo Design">
               <div class="project-overlay">
                 <div>
-                  <h5 class="text-white fw-bold project-title">Brand Logo Design</h5>
-                  <p class="text-muted small project-desc">Modern logo creation for tech startups and agencies.</p>
-                  <a href="../assets/images/projects/graphic/logo-design.svg" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="Brand Logo Design">Preview</a>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="badge-glow bg-dark text-warning"><i class="fas fa-vector-square me-1"></i> Logo</span>
+                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
+                  </div>
+                  <h5 class="text-white fw-bold project-title">Brand Logo &amp; Identity</h5>
+                  <p class="text-muted small project-desc">Minimalist corporate logo mark &amp; typography guide.</p>
+                  <div class="d-flex gap-2">
+                    <a href="../assets/images/projects/graphic/logo-design.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="graphic-gallery" data-title="Brand Logo Preview">Full View</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="p-4">
-              <div class="d-flex gap-1 mb-2"><span class="project-tech-badge">Illustrator</span><span class="project-tech-badge">Branding</span></div>
-              <h5 class="text-white fw-bold card-title mb-1">Brand Logo Design</h5>
-              <p class="text-muted small card-text mb-0">Minimal, scalable vector logos with full brand color guidelines.</p>
+            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+              <div>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="project-tech-badge">Illustrator</span>
+                  <span class="project-tech-badge">Vector</span>
+                  <span class="project-tech-badge">Branding</span>
+                </div>
+                <h5 class="text-white fw-bold card-title mb-2">Brand Logo &amp; Identity</h5>
+                <p class="text-muted small card-text mb-0">Vector logo design with brand color palette and typography specs.</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- 2. Poster Design -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="print" data-aos="fade-up" data-aos-delay="100">
-          <div class="glass-card project-card tilt-card">
+        <!-- 2. Promotional Poster -->
+        <div class="col-md-6 col-lg-4 filter-item" data-category="poster" data-aos="fade-up" data-aos-delay="100">
+          <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
               <img src="../assets/images/projects/graphic/poster-design.svg" alt="Promotional Poster">
               <div class="project-overlay">
                 <div>
-                  <h5 class="text-white fw-bold project-title">Promotional Poster</h5>
-                  <p class="text-muted small project-desc">High-impact promotional poster for events and campaigns.</p>
-                  <a href="../assets/images/projects/graphic/poster-design.svg" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="Promotional Poster">Preview</a>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="badge-glow bg-dark text-warning"><i class="fas fa-image me-1"></i> Poster</span>
+                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
+                  </div>
+                  <h5 class="text-white fw-bold project-title">Promotional Event Poster</h5>
+                  <p class="text-muted small project-desc">Cyberpunk event promo poster graphics.</p>
+                  <div class="d-flex gap-2">
+                    <a href="../assets/images/projects/graphic/poster-design.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="graphic-gallery" data-title="Promotional Poster Preview">Full View</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="p-4">
-              <div class="d-flex gap-1 mb-2"><span class="project-tech-badge">Photoshop</span><span class="project-tech-badge">Print</span></div>
-              <h5 class="text-white fw-bold card-title mb-1">Promotional Poster</h5>
-              <p class="text-muted small card-text mb-0">A3/A4 print-ready posters with typography hierarchy.</p>
+            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+              <div>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="project-tech-badge">Photoshop</span>
+                  <span class="project-tech-badge">Poster</span>
+                </div>
+                <h5 class="text-white fw-bold card-title mb-2">Promotional Event Poster</h5>
+                <p class="text-muted small card-text mb-0">High-resolution promotional event poster with lighting effects.</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- 3. Banner Design -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="digital" data-aos="fade-up" data-aos-delay="200">
-          <div class="glass-card project-card tilt-card">
+        <!-- 3. Social Media Banner -->
+        <div class="col-md-6 col-lg-4 filter-item" data-category="social" data-aos="fade-up" data-aos-delay="200">
+          <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
               <img src="../assets/images/projects/graphic/banner-design.svg" alt="Social Media Banner">
               <div class="project-overlay">
                 <div>
-                  <h5 class="text-white fw-bold project-title">Social Media Banner</h5>
-                  <p class="text-muted small project-desc">Facebook, Instagram, and YouTube cover banners.</p>
-                  <a href="../assets/images/projects/graphic/banner-design.svg" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="Social Media Banner">Preview</a>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="badge-glow bg-dark text-warning"><i class="fas fa-share-alt me-1"></i> Banner</span>
+                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
+                  </div>
+                  <h5 class="text-white fw-bold project-title">Social Media Banner Suite</h5>
+                  <p class="text-muted small project-desc">Facebook &amp; LinkedIn cover header banners.</p>
+                  <div class="d-flex gap-2">
+                    <a href="../assets/images/projects/graphic/banner-design.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="graphic-gallery" data-title="Social Banner Preview">Full View</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="p-4">
-              <div class="d-flex gap-1 mb-2"><span class="project-tech-badge">Photoshop</span><span class="project-tech-badge">Social</span></div>
-              <h5 class="text-white fw-bold card-title mb-1">Social Media Banner</h5>
-              <p class="text-muted small card-text mb-0">Platform-specific cover designs with brand consistency.</p>
+            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+              <div>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="project-tech-badge">Photoshop</span>
+                  <span class="project-tech-badge">Banner</span>
+                </div>
+                <h5 class="text-white fw-bold card-title mb-2">Social Media Banner Suite</h5>
+                <p class="text-muted small card-text mb-0">Header banners tailored for personal and agency social profiles.</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- 4. Business Card -->
+        <!-- 4. Luxury Business Card -->
         <div class="col-md-6 col-lg-4 filter-item" data-category="print" data-aos="fade-up">
-          <div class="glass-card project-card tilt-card">
+          <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
               <img src="../assets/images/projects/graphic/business-card.svg" alt="Luxury Business Card">
               <div class="project-overlay">
                 <div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="badge-glow bg-dark text-warning"><i class="fas fa-id-card me-1"></i> Print</span>
+                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
+                  </div>
                   <h5 class="text-white fw-bold project-title">Luxury Business Card</h5>
-                  <p class="text-muted small project-desc">Premium double-sided business card design.</p>
-                  <a href="../assets/images/projects/graphic/business-card.svg" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="Luxury Business Card">Preview</a>
+                  <p class="text-muted small project-desc">Double-sided foil mockup card design.</p>
+                  <div class="d-flex gap-2">
+                    <a href="../assets/images/projects/graphic/business-card.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="graphic-gallery" data-title="Business Card Preview">Full View</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="p-4">
-              <div class="d-flex gap-1 mb-2"><span class="project-tech-badge">Illustrator</span><span class="project-tech-badge">Print</span></div>
-              <h5 class="text-white fw-bold card-title mb-1">Luxury Business Card</h5>
-              <p class="text-muted small card-text mb-0">Print-ready CMYK business card with foil effects.</p>
+            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+              <div>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="project-tech-badge">Print Ready</span>
+                  <span class="project-tech-badge">Mockup</span>
+                </div>
+                <h5 class="text-white fw-bold card-title mb-2">Luxury Business Card</h5>
+                <p class="text-muted small card-text mb-0">Premium dark theme business card layout with spot UV accents.</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- 5. Flyer Design -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="print" data-aos="fade-up" data-aos-delay="100">
-          <div class="glass-card project-card tilt-card">
+        <!-- 5. Corporate Event Flyer -->
+        <div class="col-md-6 col-lg-4 filter-item" data-category="poster" data-aos="fade-up" data-aos-delay="100">
+          <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
-              <img src="../assets/images/projects/graphic/flyer-design.svg" alt="Event Flyer Design">
+              <img src="../assets/images/projects/graphic/flyer-design.svg" alt="Corporate Event Flyer">
               <div class="project-overlay">
                 <div>
-                  <h5 class="text-white fw-bold project-title">Event Flyer Design</h5>
-                  <p class="text-muted small project-desc">Corporate event and promotional flyer artwork.</p>
-                  <a href="../assets/images/projects/graphic/flyer-design.svg" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="Event Flyer Design">Preview</a>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="badge-glow bg-dark text-warning"><i class="fas fa-file-alt me-1"></i> Flyer</span>
+                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
+                  </div>
+                  <h5 class="text-white fw-bold project-title">Corporate Event Flyer</h5>
+                  <p class="text-muted small project-desc">Conference &amp; workshop promotion flyer.</p>
+                  <div class="d-flex gap-2">
+                    <a href="../assets/images/projects/graphic/flyer-design.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="graphic-gallery" data-title="Event Flyer Preview">Full View</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="p-4">
-              <div class="d-flex gap-1 mb-2"><span class="project-tech-badge">Photoshop</span><span class="project-tech-badge">Print</span></div>
-              <h5 class="text-white fw-bold card-title mb-1">Event Flyer Design</h5>
-              <p class="text-muted small card-text mb-0">Eye-catching event flyer with structured layout.</p>
+            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+              <div>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="project-tech-badge">InDesign</span>
+                  <span class="project-tech-badge">Flyer</span>
+                </div>
+                <h5 class="text-white fw-bold card-title mb-2">Corporate Event Flyer</h5>
+                <p class="text-muted small card-text mb-0">Clean single-page corporate promotional flyer layout.</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- 6. Brochure -->
+        <!-- 6. Tri-Fold Brochure -->
         <div class="col-md-6 col-lg-4 filter-item" data-category="print" data-aos="fade-up" data-aos-delay="200">
-          <div class="glass-card project-card tilt-card">
+          <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
-              <img src="../assets/images/projects/graphic/brochure-design.svg" alt="Corporate Brochure">
+              <img src="../assets/images/projects/graphic/brochure-design.svg" alt="Tri-Fold Company Brochure">
               <div class="project-overlay">
                 <div>
-                  <h5 class="text-white fw-bold project-title">Corporate Brochure</h5>
-                  <p class="text-muted small project-desc">Tri-fold and bi-fold brochure design layout.</p>
-                  <a href="../assets/images/projects/graphic/brochure-design.svg" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="Corporate Brochure">Preview</a>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="badge-glow bg-dark text-warning"><i class="fas fa-book-open me-1"></i> Brochure</span>
+                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
+                  </div>
+                  <h5 class="text-white fw-bold project-title">Tri-Fold Company Brochure</h5>
+                  <p class="text-muted small project-desc">Company overview tri-fold brochure layout.</p>
+                  <div class="d-flex gap-2">
+                    <a href="../assets/images/projects/graphic/brochure-design.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="graphic-gallery" data-title="Brochure Preview">Full View</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="p-4">
-              <div class="d-flex gap-1 mb-2"><span class="project-tech-badge">Illustrator</span><span class="project-tech-badge">Print</span></div>
-              <h5 class="text-white fw-bold card-title mb-1">Corporate Brochure</h5>
-              <p class="text-muted small card-text mb-0">Multi-page corporate brochure for service presentations.</p>
+            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+              <div>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="project-tech-badge">InDesign</span>
+                  <span class="project-tech-badge">Tri-Fold</span>
+                </div>
+                <h5 class="text-white fw-bold card-title mb-2">Tri-Fold Company Brochure</h5>
+                <p class="text-muted small card-text mb-0">Multi-panel company profile brochure ready for offset printing.</p>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- 7. YouTube Thumbnail -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="digital" data-aos="fade-up">
-          <div class="glass-card project-card tilt-card">
+        <div class="col-md-6 col-lg-4 filter-item" data-category="social" data-aos="fade-up">
+          <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
-              <img src="../assets/images/projects/graphic/thumbnail-design.svg" alt="YouTube Thumbnail">
+              <img src="../assets/images/projects/graphic/thumbnail-design.svg" alt="High CTR YouTube Thumbnail">
               <div class="project-overlay">
                 <div>
-                  <h5 class="text-white fw-bold project-title">YouTube Thumbnail</h5>
-                  <p class="text-muted small project-desc">High-CTR thumbnail graphics for content creators.</p>
-                  <a href="../assets/images/projects/graphic/thumbnail-design.svg" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="YouTube Thumbnail">Preview</a>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="badge-glow bg-dark text-warning"><i class="fab fa-youtube me-1"></i> Thumbnail</span>
+                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
+                  </div>
+                  <h5 class="text-white fw-bold project-title">High CTR YouTube Thumbnail</h5>
+                  <p class="text-muted small project-desc">High click-through-rate tech thumbnail.</p>
+                  <div class="d-flex gap-2">
+                    <a href="../assets/images/projects/graphic/thumbnail-design.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="graphic-gallery" data-title="YouTube Thumbnail Preview">Full View</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="p-4">
-              <div class="d-flex gap-1 mb-2"><span class="project-tech-badge">Photoshop</span><span class="project-tech-badge">Digital</span></div>
-              <h5 class="text-white fw-bold card-title mb-1">YouTube Thumbnail</h5>
-              <p class="text-muted small card-text mb-0">Attention-grabbing 1280×720 video thumbnail designs.</p>
+            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+              <div>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="project-tech-badge">Photoshop</span>
+                  <span class="project-tech-badge">YouTube</span>
+                </div>
+                <h5 class="text-white fw-bold card-title mb-2">High CTR YouTube Thumbnail</h5>
+                <p class="text-muted small card-text mb-0">Vibrant contrast graphics designed for high video click performance.</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- 8. Social Media Pack -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="digital" data-aos="fade-up" data-aos-delay="100">
-          <div class="glass-card project-card tilt-card">
+        <!-- 8. Social Media Campaign Pack -->
+        <div class="col-md-6 col-lg-4 filter-item" data-category="social" data-aos="fade-up" data-aos-delay="100">
+          <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
-              <img src="../assets/images/projects/graphic/social-media-pack.svg" alt="Social Media Campaign">
+              <img src="../assets/images/projects/graphic/social-media-pack.svg" alt="Social Campaign Creative">
               <div class="project-overlay">
                 <div>
-                  <h5 class="text-white fw-bold project-title">Social Media Campaign</h5>
-                  <p class="text-muted small project-desc">Complete social media content kit for brands.</p>
-                  <a href="../assets/images/projects/graphic/social-media-pack.svg" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="Social Media Campaign">Preview</a>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="badge-glow bg-dark text-warning"><i class="fab fa-instagram me-1"></i> Social Pack</span>
+                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
+                  </div>
+                  <h5 class="text-white fw-bold project-title">Social Campaign Creative Pack</h5>
+                  <p class="text-muted small project-desc">Instagram post &amp; story design series.</p>
+                  <div class="d-flex gap-2">
+                    <a href="../assets/images/projects/graphic/social-media-pack.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="graphic-gallery" data-title="Social Pack Preview">Full View</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="p-4">
-              <div class="d-flex gap-1 mb-2"><span class="project-tech-badge">Photoshop</span><span class="project-tech-badge">Social</span></div>
-              <h5 class="text-white fw-bold card-title mb-1">Social Media Campaign</h5>
-              <p class="text-muted small card-text mb-0">Instagram & Facebook post template series design.</p>
+            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+              <div>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="project-tech-badge">Canva</span>
+                  <span class="project-tech-badge">Photoshop</span>
+                </div>
+                <h5 class="text-white fw-bold card-title mb-2">Social Campaign Creative Pack</h5>
+                <p class="text-muted small card-text mb-0">Cohesive brand post templates for Instagram, Facebook, and Twitter.</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- 9. Packaging -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="branding" data-aos="fade-up" data-aos-delay="200">
-          <div class="glass-card project-card tilt-card">
+        <!-- 9. Product Package Design -->
+        <div class="col-md-6 col-lg-4 filter-item" data-category="print" data-aos="fade-up" data-aos-delay="200">
+          <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
               <img src="../assets/images/projects/graphic/packaging-design.svg" alt="Product Packaging">
               <div class="project-overlay">
                 <div>
-                  <h5 class="text-white fw-bold project-title">Product Packaging</h5>
-                  <p class="text-muted small project-desc">Consumer product box and label design.</p>
-                  <a href="../assets/images/projects/graphic/packaging-design.svg" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="Product Packaging">Preview</a>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="badge-glow bg-dark text-warning"><i class="fas fa-box me-1"></i> Packaging</span>
+                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
+                  </div>
+                  <h5 class="text-white fw-bold project-title">Product Packaging Design</h5>
+                  <p class="text-muted small project-desc">Retail box &amp; label artwork.</p>
+                  <div class="d-flex gap-2">
+                    <a href="../assets/images/projects/graphic/packaging-design.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="graphic-gallery" data-title="Packaging Preview">Full View</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="p-4">
-              <div class="d-flex gap-1 mb-2"><span class="project-tech-badge">Illustrator</span><span class="project-tech-badge">Packaging</span></div>
-              <h5 class="text-white fw-bold card-title mb-1">Product Packaging</h5>
-              <p class="text-muted small card-text mb-0">Full product box mockup with dieline and print specs.</p>
+            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+              <div>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="project-tech-badge">3D Mockup</span>
+                  <span class="project-tech-badge">Packaging</span>
+                </div>
+                <h5 class="text-white fw-bold card-title mb-2">Product Package Design</h5>
+                <p class="text-muted small card-text mb-0">Custom product box dieline and 3D realistic rendering.</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- 10. Brand Identity -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="branding" data-aos="fade-up">
-          <div class="glass-card project-card tilt-card">
+        <!-- 10. Brand Guidelines Guide -->
+        <div class="col-md-6 col-lg-4 filter-item" data-category="logo" data-aos="fade-up">
+          <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
-              <img src="../assets/images/projects/graphic/brand-identity.svg" alt="Brand Identity Guide">
+              <img src="../assets/images/projects/graphic/brand-identity.svg" alt="Brand Guidelines">
               <div class="project-overlay">
                 <div>
-                  <h5 class="text-white fw-bold project-title">Brand Identity Guide</h5>
-                  <p class="text-muted small project-desc">Complete visual identity system for organizations.</p>
-                  <a href="../assets/images/projects/graphic/brand-identity.svg" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="Brand Identity Guide">Preview</a>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="badge-glow bg-dark text-warning"><i class="fas fa-book me-1"></i> Brand Book</span>
+                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
+                  </div>
+                  <h5 class="text-white fw-bold project-title">Brand Identity Guidelines</h5>
+                  <p class="text-muted small project-desc">Complete brand identity rulebook.</p>
+                  <div class="d-flex gap-2">
+                    <a href="../assets/images/projects/graphic/brand-identity.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="graphic-gallery" data-title="Brand Identity Guidelines">Full View</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="p-4">
-              <div class="d-flex gap-1 mb-2"><span class="project-tech-badge">Illustrator</span><span class="project-tech-badge">Branding</span></div>
-              <h5 class="text-white fw-bold card-title mb-1">Brand Identity Guide</h5>
-              <p class="text-muted small card-text mb-0">Logo usage, color palette, typography, and brand rules.</p>
+            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+              <div>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="project-tech-badge">Brand Guidelines</span>
+                  <span class="project-tech-badge">Identity</span>
+                </div>
+                <h5 class="text-white fw-bold card-title mb-2">Brand Style Guidelines</h5>
+                <p class="text-muted small card-text mb-0">Comprehensive brand usage book with logo clearance, color codes, and fonts.</p>
+              </div>
             </div>
           </div>
         </div>
 
       </div>
-
-      <!-- Pagination -->
-      <nav class="mt-5" aria-label="Page Navigation">
-        <ul class="pagination justify-content-center">
-          <li class="page-item disabled"><a class="page-link bg-glass text-muted" href="#">Previous</a></li>
-          <li class="page-item active"><a class="page-link btn-primary-glow border-0" href="#">1</a></li>
-          <li class="page-item disabled"><a class="page-link bg-glass text-muted" href="#">Next</a></li>
-        </ul>
-      </nav>
     </div>
   </section>
+
+  <!-- Statistics -->
+  <section class="py-5 bg-glass border-top border-bottom border-secondary border-opacity-10 my-5">
+    <div class="container text-center" data-aos="fade-up">
+      <span class="badge-glow mb-2"><i class="fas fa-palette text-warning me-1"></i> DESIGN METRICS</span>
+      <h2 class="section-title text-white">Graphic &amp; Brand <span class="gradient-text">Statistics</span></h2>
+      <div class="row g-4 text-center mt-3">
+        <div class="col-6 col-md-3">
+          <div class="glass-card p-4 tilt-card">
+            <h2 class="display-5 fw-extrabold text-warning countup" data-count="20">0</h2>
+            <p class="text-muted small mb-0 fw-bold">Designs &amp; Branding</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="glass-card p-4 tilt-card">
+            <h2 class="display-5 fw-extrabold text-primary countup" data-count="10">0</h2>
+            <p class="text-muted small mb-0 fw-bold">Brand Logo Suites</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="glass-card p-4 tilt-card">
+            <h2 class="display-5 fw-extrabold text-info countup" data-count="30">0</h2>
+            <p class="text-muted small mb-0 fw-bold">Social Media Assets</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="glass-card p-4 tilt-card">
+            <h2 class="display-5 fw-extrabold text-accent countup" data-count="100">0</h2>
+            <p class="text-muted small mb-0 fw-bold">% Vector Quality</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search Overlay -->
+  <div class="mobile-nav-overlay" id="searchOverlayModal" style="background: rgba(5,8,22,0.98);">
+    <div class="container max-w-700 pt-5">
+      <div class="d-flex align-items-center justify-content-between mb-4">
+        <h4 class="text-white fw-bold mb-0"><i class="fas fa-search text-primary me-2"></i> Search Entire Portfolio</h4>
+        <button class="mobile-nav-close" id="searchOverlayClose" aria-label="Close Search"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="search-input-group mb-4">
+        <i class="fas fa-search fs-5"></i>
+        <input type="text" id="searchOverlayInput" placeholder="Type project name, skill, technology, or category...">
+      </div>
+      <div id="searchResultsList" class="d-flex flex-column gap-2 max-h-400 overflow-y-auto pe-2"></div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer>
     <div class="container">
       <div class="row g-4 mb-5">
         <div class="col-lg-4">
-          <a class="navbar-brand mb-3 d-inline-block" href="../index.html">HABIB<span class="brand-dot"></span></a>
-          <p class="text-muted small">Habib Hasan • Flutter App Developer, Full Stack Web Developer, Graphic Designer, Digital Marketer, Video Editor, AI Content Creator &amp; DevOps Learner.</p>
+          <a class="navbar-brand mb-3 d-inline-block" href="../index.html">
+            HABIB<span class="brand-dot"></span>
+          </a>
+          <p class="text-muted small">
+            Habib Hasan • Flutter App Developer, Full Stack Web Developer, Graphic Designer, Digital Marketer, Video Editor, AI Content Creator &amp; DevOps Learner.
+          </p>
         </div>
         <div class="col-6 col-lg-2">
           <h6 class="text-white fw-bold mb-3">Quick Links</h6>
           <ul class="p-0 m-0">
-            <li class="mb-2"><a href="../about.html" class="text-muted small">About Me</a></li>
-            <li class="mb-2"><a href="../skills.html" class="text-muted small">Skills</a></li>
-            <li class="mb-2"><a href="../experience.html" class="text-muted small">Experience</a></li>
-            <li class="mb-2"><a href="../education.html" class="text-muted small">Education</a></li>
-            <li class="mb-2"><a href="../certificates.html" class="text-muted small">Certificates</a></li>
+            <li class="mb-2"><a href="../about.html" class="text-muted small hover-primary">About Me</a></li>
+            <li class="mb-2"><a href="../skills.html" class="text-muted small hover-primary">Skills</a></li>
+            <li class="mb-2"><a href="../experience.html" class="text-muted small hover-primary">Experience</a></li>
+            <li class="mb-2"><a href="../education.html" class="text-muted small hover-primary">Education</a></li>
+            <li class="mb-2"><a href="../certificates.html" class="text-muted small hover-primary">Certificates</a></li>
           </ul>
         </div>
         <div class="col-6 col-lg-2">
           <h6 class="text-white fw-bold mb-3">Portfolio</h6>
           <ul class="p-0 m-0">
-            <li class="mb-2"><a href="flutter.html" class="text-muted small">Flutter Apps</a></li>
-            <li class="mb-2"><a href="web.html" class="text-muted small">Web Projects</a></li>
-            <li class="mb-2"><a href="graphic-design.html" class="text-muted small">Graphic Design</a></li>
-            <li class="mb-2"><a href="video-editing.html" class="text-muted small">Video Editing</a></li>
-            <li class="mb-2"><a href="devops.html" class="text-muted small">DevOps</a></li>
+            <li class="mb-2"><a href="flutter.html" class="text-muted small hover-primary">Flutter Apps</a></li>
+            <li class="mb-2"><a href="web-development.html" class="text-muted small hover-primary">Web Projects</a></li>
+            <li class="mb-2"><a href="graphic-design.html" class="text-muted small hover-primary">Graphic Design</a></li>
+            <li class="mb-2"><a href="video-editing.html" class="text-muted small hover-primary">Video Editing</a></li>
+            <li class="mb-2"><a href="devops.html" class="text-muted small hover-primary">DevOps</a></li>
           </ul>
         </div>
         <div class="col-lg-4">
@@ -364,31 +621,28 @@
       <div class="d-flex flex-column flex-md-row align-items-center justify-content-between text-muted small gap-2">
         <p class="mb-0">&copy; 2026 Habib Hasan. All Rights Reserved.</p>
         <div class="d-flex gap-3">
-          <a href="../privacy-policy.html" class="text-muted">Privacy Policy</a>
-          <a href="../terms.html" class="text-muted">Terms of Service</a>
+          <a href="../privacy-policy.html" class="text-muted hover-primary">Privacy Policy</a>
+          <a href="../terms.html" class="text-muted hover-primary">Terms of Service</a>
         </div>
       </div>
     </div>
   </footer>
-  <div class="back-to-top"><i class="fas fa-chevron-up"></i></div>
 
-  <!-- Lightbox Modal -->
-  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content glass-card p-2 border-0">
-        <div class="modal-header border-0 pb-0">
-          <h5 class="modal-title text-white fw-bold" id="lightboxTitle">Preview</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-center p-3"><img id="lightboxImage" src="" alt="Preview" class="img-fluid rounded-3"></div>
-      </div>
-    </div>
-  </div>
+  <div class="back-to-top" aria-label="Back To Top"><i class="fas fa-chevron-up"></i></div>
 
+  <!-- JavaScript Bundle Plugins -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof GLightbox !== 'undefined') {
+        GLightbox({ selector: '.glightbox' });
+      }
+    });
+  </script>
 </body>
 </html>

@@ -3,24 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DevOps Learning Portfolio of Habib Hasan - Linux, Docker, GitHub Actions, NGINX, CI/CD Pipeline, and Cloud Deployment documentation.">
-  <title>DevOps Learning Portfolio | Habib Hasan</title>
+  <meta name="description" content="DevOps Pathways & Infrastructure Portfolio of Habib Hasan - Linux system administration, Docker microservices, GitHub Actions CI/CD pipelines, NGINX reverse proxies, and cloud deployments.">
+  <title>DevOps Pathways & Infrastructure | Habib Hasan</title>
+  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- CSS Plugins -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body data-theme="dark">
+
+  <!-- Preloader & Background FX -->
   <div id="preloader"><div class="preloader-spinner"></div><div class="preloader-logo">HABIB HASAN</div></div>
   <div class="custom-cursor"></div><div class="cursor-follower"></div><div class="mouse-glow-bg"></div><div class="scroll-progress-bar"></div>
 
+  <!-- Master Glass Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top glass-nav">
     <div class="container">
-      <a class="navbar-brand" href="../index.html">HABIB<span class="brand-dot"></span></a>
-      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle Navigation"><i class="fas fa-bars fs-3"></i></button>
+      <a class="navbar-brand" href="../index.html">
+        <div class="logo-badge">HH</div> HABIB<span class="brand-dot pulse"></span>
+      </a>
+      <div class="d-flex align-items-center gap-2 ms-auto d-lg-none me-2">
+        <button class="nav-action-btn search-trigger-btn" aria-label="Quick Search"><i class="fas fa-search"></i></button>
+        <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
+      </div>
+      <button class="mobile-hamburger-btn d-lg-none" id="mobileHamburgerBtn" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-center gap-1">
           <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
@@ -29,233 +48,502 @@
           <li class="nav-item"><a class="nav-link" href="../experience.html">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="../education.html">Education</a></li>
           <li class="nav-item"><a class="nav-link" href="../projects.html">Projects</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="../portfolio.html" id="portfolioDropdown" role="button" data-bs-toggle="dropdown">Portfolio</a>
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="portfolioDropdown">
-              <li><a class="dropdown-item" href="../portfolio.html"><i class="fas fa-th me-2 text-warning"></i>All Categories</a></li>
-              <li><hr class="dropdown-divider border-secondary opacity-25"></li>
-              <li><a class="dropdown-item" href="flutter.html"><i class="fas fa-mobile-alt me-2 text-info"></i>Flutter Apps</a></li>
-              <li><a class="dropdown-item" href="web.html"><i class="fas fa-code me-2 text-primary"></i>Web Projects</a></li>
-              <li><a class="dropdown-item" href="graphic-design.html"><i class="fas fa-palette me-2 text-warning"></i>Graphic Design</a></li>
-              <li><a class="dropdown-item" href="video-editing.html"><i class="fas fa-film me-2 text-danger"></i>Video Editing</a></li>
-              <li><a class="dropdown-item" href="digital-marketing.html"><i class="fas fa-chart-line me-2 text-success"></i>Digital Marketing</a></li>
-              <li><a class="dropdown-item" href="ai-projects.html"><i class="fas fa-robot me-2 text-accent"></i>AI Projects</a></li>
-              <li><a class="dropdown-item active" href="devops.html"><i class="fas fa-server me-2 text-secondary"></i>DevOps</a></li>
-            </ul>
+          
+          <li class="nav-item dropdown mega-dropdown">
+            <a class="nav-link dropdown-toggle active" href="../portfolio.html" id="portfolioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Portfolio
+            </a>
+            <div class="dropdown-menu mega-menu dropdown-menu-dark" aria-labelledby="portfolioDropdown">
+              <div class="row g-2">
+                <div class="col-6">
+                  <a href="../portfolio.html" class="mega-menu-item">
+                    <div class="mega-icon-box text-warning"><i class="fas fa-th-large"></i></div>
+                    <div>
+                      <span class="mega-title">All Categories</span>
+                      <p class="mega-desc">Explore full multi-category hub</p>
+                    </div>
+                  </a>
+                  <a href="flutter.html" class="mega-menu-item">
+                    <div class="mega-icon-box text-info"><i class="fab fa-flutter"></i></div>
+                    <div>
+                      <span class="mega-title">Flutter Apps</span>
+                      <p class="mega-desc">12 Mobile screenshot apps</p>
+                    </div>
+                  </a>
+                  <a href="web-development.html" class="mega-menu-item">
+                    <div class="mega-icon-box text-primary"><i class="fas fa-code"></i></div>
+                    <div>
+                      <span class="mega-title">Web Projects</span>
+                      <p class="mega-desc">SaaS, Portals &amp; Dashboards</p>
+                    </div>
+                  </a>
+                  <a href="graphic-design.html" class="mega-menu-item">
+                    <div class="mega-icon-box text-warning"><i class="fas fa-palette"></i></div>
+                    <div>
+                      <span class="mega-title">Graphic Design</span>
+                      <p class="mega-desc">Logos, Posters &amp; Branding</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-6">
+                  <a href="video-editing.html" class="mega-menu-item">
+                    <div class="mega-icon-box text-danger"><i class="fas fa-film"></i></div>
+                    <div>
+                      <span class="mega-title">Video Editing</span>
+                      <p class="mega-desc">YouTube, Reels &amp; Commercials</p>
+                    </div>
+                  </a>
+                  <a href="digital-marketing.html" class="mega-menu-item">
+                    <div class="mega-icon-box text-success"><i class="fas fa-chart-line"></i></div>
+                    <div>
+                      <span class="mega-title">Digital Marketing</span>
+                      <p class="mega-desc">SEO &amp; Ad Growth Campaigns</p>
+                    </div>
+                  </a>
+                  <a href="ai-projects.html" class="mega-menu-item">
+                    <div class="mega-icon-box text-accent"><i class="fas fa-robot"></i></div>
+                    <div>
+                      <span class="mega-title">AI Projects</span>
+                      <p class="mega-desc">Prompt Engineering &amp; GenArt</p>
+                    </div>
+                  </a>
+                  <a href="devops.html" class="mega-menu-item active">
+                    <div class="mega-icon-box text-secondary"><i class="fas fa-server"></i></div>
+                    <div>
+                      <span class="mega-title">DevOps Pathways</span>
+                      <p class="mega-desc">Docker, CI/CD &amp; NGINX</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
           </li>
+
           <li class="nav-item"><a class="nav-link" href="../services.html">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="../certificates.html">Certificates</a></li>
           <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
         </ul>
         <div class="d-flex align-items-center gap-3 ms-lg-3 mt-3 mt-lg-0">
+          <button class="nav-action-btn search-trigger-btn d-none d-lg-flex" aria-label="Global Search"><i class="fas fa-search"></i></button>
           <a href="../contact.html" class="btn-primary-glow px-4 py-2 text-decoration-none"><i class="fas fa-paper-plane me-1"></i> Hire Me</a>
-          <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
+          <button class="theme-toggle-btn d-none d-lg-flex" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
         </div>
       </div>
     </div>
   </nav>
 
-  <section class="pt-5 mt-5 pb-4">
+  <!-- Mobile Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-nav-header">
+      <a class="navbar-brand" href="../index.html"><div class="logo-badge">HH</div> HABIB<span class="brand-dot"></span></a>
+      <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="mobile-nav-links">
+      <div class="mobile-nav-item"><a href="../index.html" class="mobile-nav-link">Home <i class="fas fa-chevron-right fs-7"></i></a></div>
+      <div class="mobile-nav-item"><a href="../about.html" class="mobile-nav-link">About <i class="fas fa-chevron-right fs-7"></i></a></div>
+      <div class="mobile-nav-item"><a href="../skills.html" class="mobile-nav-link">Skills <i class="fas fa-chevron-right fs-7"></i></a></div>
+      <div class="mobile-nav-item"><a href="../projects.html" class="mobile-nav-link">Projects <i class="fas fa-chevron-right fs-7"></i></a></div>
+      <div class="mobile-nav-item"><a href="../portfolio.html" class="mobile-nav-link active">Portfolio Hub <i class="fas fa-chevron-right fs-7"></i></a></div>
+      <div class="mobile-nav-item"><a href="devops.html" class="mobile-nav-link ps-4 text-secondary active">↳ DevOps Pathways</a></div>
+      <div class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact <i class="fas fa-chevron-right fs-7"></i></a></div>
+    </div>
+  </div>
+
+  <!-- Hero Header & Breadcrumb -->
+  <section class="pt-5 mt-5 pb-3">
     <div class="container pt-4">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb mb-3">
           <li class="breadcrumb-item"><a href="../index.html" class="text-primary">Home</a></li>
-          <li class="breadcrumb-item"><a href="../portfolio.html" class="text-primary">Portfolio</a></li>
-          <li class="breadcrumb-item active text-white" aria-current="page">DevOps</li>
+          <li class="breadcrumb-item"><a href="../portfolio.html" class="text-primary">Portfolio Hub</a></li>
+          <li class="breadcrumb-item active text-white" aria-current="page">DevOps Pathways</li>
         </ol>
       </nav>
+      
       <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4" data-aos="fade-up">
         <div>
-          <span class="badge-glow mb-2"><i class="fas fa-server me-1"></i> DEVOPS & INFRASTRUCTURE LEARNING</span>
-          <h1 class="display-4 fw-extrabold text-white">DevOps <span class="gradient-text">Journey</span></h1>
-          <p class="text-muted max-w-600 mb-0">Actively learning Linux system administration, Docker containerization, GitHub Actions CI/CD pipelines, NGINX reverse proxy, and cloud server deployment.</p>
+          <span class="badge-glow bg-dark text-secondary border-secondary mb-2"><i class="fas fa-server me-1"></i> INFRASTRUCTURE &amp; CI/CD LABS</span>
+          <h1 class="display-4 fw-extrabold text-white">DevOps <span class="gradient-text">Pathways &amp; Notes</span></h1>
+          <p class="text-muted max-w-650 mb-0">Linux system administration, Docker microservices containerization, GitHub Actions CI/CD pipelines, NGINX reverse proxies, SSL config, and cloud server deployment notes.</p>
         </div>
-        <a href="../portfolio.html" class="btn-outline-glass align-self-start align-self-md-center"><i class="fas fa-arrow-left me-2"></i> All Categories</a>
-      </div>
-      <!-- DevOps Learning Badge -->
-      <div class="glass-card p-4 mb-4 d-flex align-items-center gap-3" data-aos="fade-up">
-        <i class="fas fa-graduation-cap text-accent display-5"></i>
-        <div>
-          <h5 class="text-white fw-bold mb-1">Active DevOps Learner</h5>
-          <p class="text-muted small mb-0">These projects represent hands-on practice sessions, notes, and lab exercises completed as part of a structured DevOps learning roadmap. Full deployment expertise is being actively developed.</p>
-        </div>
+        <a href="../portfolio.html" class="btn-outline-glass align-self-start align-self-md-center">
+          <i class="fas fa-arrow-left me-1"></i> All Categories
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="py-4">
+  <!-- Filter & Search Controls -->
+  <section class="py-3">
     <div class="container">
-      <div class="row justify-content-center mb-4" data-aos="fade-up">
+      
+      <div class="row align-items-center justify-content-between g-3 mb-4" data-aos="fade-up">
         <div class="col-md-8 col-lg-6">
-          <div class="search-input-group"><i class="fas fa-search"></i><input type="text" id="portfolioSearch" placeholder="Search DevOps projects..."></div>
+          <div class="search-input-group">
+            <i class="fas fa-search"></i>
+            <input type="text" id="portfolioSearch" placeholder="Search Linux, Docker, CI/CD, NGINX, or server notes...">
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 text-md-end">
+          <span class="badge-glow bg-dark text-white"><i class="fas fa-terminal me-1 text-secondary"></i> Continuous Learning Journey</span>
         </div>
       </div>
-      <div class="d-flex flex-wrap justify-content-center gap-2 mb-5" data-aos="fade-up">
-        <button class="btn-outline-glass filter-btn active px-4 py-2" data-filter="all">All (6)</button>
-        <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="linux">Linux</button>
-        <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="containers">Containers</button>
-        <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="cicd">CI/CD</button>
-        <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="server">Server</button>
-      </div>
 
+      <!-- 6 DevOps Modules Grid -->
       <div class="row g-4" id="projectsGrid">
 
-        <!-- 1. Linux Practice -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="linux" data-aos="fade-up">
-          <div class="glass-card project-card tilt-card">
+        <!-- 1. Linux Server Administration -->
+        <div class="col-md-6 col-lg-4 filter-item" data-aos="fade-up">
+          <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
               <img src="../assets/images/projects/devops/linux-practice.svg" alt="Linux Server Administration">
               <div class="project-overlay">
                 <div>
-                  <h5 class="text-white fw-bold project-title">Linux Administration</h5>
-                  <p class="text-muted small project-desc">Hands-on Linux command line and server setup.</p>
-                  <a href="../assets/images/projects/devops/linux-practice.svg" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="Linux Administration">Preview</a>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="badge-glow bg-dark text-secondary"><i class="fab fa-linux me-1"></i> Linux</span>
+                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
+                  </div>
+                  <h5 class="text-white fw-bold project-title">Linux Systems Administration</h5>
+                  <p class="text-muted small project-desc">Ubuntu / Debian bash scripting &amp; user permission management.</p>
+                  <div class="d-flex gap-2">
+                    <a href="../assets/images/projects/devops/linux-practice.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="devops-gallery" data-title="Linux Lab Preview">CLI Notes</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="p-4">
-              <div class="d-flex gap-1 mb-2"><span class="project-tech-badge">Linux</span><span class="project-tech-badge">Bash</span><span class="project-tech-badge">SSH</span></div>
-              <h5 class="text-white fw-bold card-title mb-1">Linux Administration</h5>
-              <p class="text-muted small card-text mb-0">File system management, user permissions, process control, and service setup.</p>
+            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+              <div>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="project-tech-badge">Ubuntu</span>
+                  <span class="project-tech-badge">Bash CLI</span>
+                  <span class="project-tech-badge">SSH</span>
+                </div>
+                <h5 class="text-white fw-bold card-title mb-2">Linux Systems Administration</h5>
+                <p class="text-muted small card-text mb-3">User privileges, systemd service management, and firewall rules setup.</p>
+                <div class="p-2 rounded-3 bg-glass border border-secondary border-opacity-25 mb-2">
+                  <span class="tiny text-secondary fw-bold font-monospace d-block mb-1">COMMAND LAB:</span>
+                  <p class="tiny text-muted mb-0 font-monospace">$ sudo ufw allow 80,443/tcp &amp;&amp; systemctl status nginx</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+                <span class="status-badge-live"><span class="pulsating-dot-live"></span> Active Practice</span>
+                <span class="text-muted small"><i class="fab fa-linux text-secondary me-1"></i> Bash</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- 2. Docker -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="containers" data-aos="fade-up" data-aos-delay="100">
-          <div class="glass-card project-card tilt-card">
+        <!-- 2. Docker Microservices Setup -->
+        <div class="col-md-6 col-lg-4 filter-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
-              <img src="../assets/images/projects/devops/docker-containers.svg" alt="Docker Microservices">
+              <img src="../assets/images/projects/devops/docker-containers.svg" alt="Docker Microservices Setup">
               <div class="project-overlay">
                 <div>
-                  <h5 class="text-white fw-bold project-title">Docker Microservices</h5>
-                  <p class="text-muted small project-desc">Containerized app environments using Docker Compose.</p>
-                  <a href="../assets/images/projects/devops/docker-containers.svg" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="Docker Microservices">Preview</a>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="badge-glow bg-dark text-secondary"><i class="fab fa-docker me-1"></i> Docker</span>
+                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
+                  </div>
+                  <h5 class="text-white fw-bold project-title">Docker Microservices Setup</h5>
+                  <p class="text-muted small project-desc">Dockerfile &amp; docker-compose multi-container orchestrations.</p>
+                  <div class="d-flex gap-2">
+                    <a href="../assets/images/projects/devops/docker-containers.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="devops-gallery" data-title="Docker Containers Preview">Container Specs</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="p-4">
-              <div class="d-flex gap-1 mb-2"><span class="project-tech-badge">Docker</span><span class="project-tech-badge">Compose</span></div>
-              <h5 class="text-white fw-bold card-title mb-1">Docker Microservices</h5>
-              <p class="text-muted small card-text mb-0">Building and running containerized services with Docker and Compose.</p>
+            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+              <div>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="project-tech-badge">Docker</span>
+                  <span class="project-tech-badge">Docker Compose</span>
+                </div>
+                <h5 class="text-white fw-bold card-title mb-2">Docker Containerization</h5>
+                <p class="text-muted small card-text mb-3">Multi-stage builds for node/web services and isolated networks.</p>
+                <div class="p-2 rounded-3 bg-glass border border-secondary border-opacity-25 mb-2">
+                  <span class="tiny text-secondary fw-bold font-monospace d-block mb-1">DOCKER COMPOSE:</span>
+                  <p class="tiny text-muted mb-0 font-monospace">$ docker compose up -d --build</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+                <span class="status-badge-live"><span class="pulsating-dot-live"></span> Containerized</span>
+                <span class="text-muted small"><i class="fab fa-docker text-secondary me-1"></i> Docker Hub</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- 3. GitHub Actions -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="cicd" data-aos="fade-up" data-aos-delay="200">
-          <div class="glass-card project-card tilt-card">
+        <!-- 3. GitHub Actions CI/CD -->
+        <div class="col-md-6 col-lg-4 filter-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
               <img src="../assets/images/projects/devops/github-actions.svg" alt="GitHub Actions CI/CD">
               <div class="project-overlay">
                 <div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="badge-glow bg-dark text-secondary"><i class="fab fa-github me-1"></i> CI/CD</span>
+                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
+                  </div>
                   <h5 class="text-white fw-bold project-title">GitHub Actions CI/CD</h5>
-                  <p class="text-muted small project-desc">Automated build, test, and deploy pipelines.</p>
-                  <a href="../assets/images/projects/devops/github-actions.svg" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="GitHub Actions CI/CD">Preview</a>
+                  <p class="text-muted small project-desc">Automated build, test, &amp; GitHub Pages deployment pipelines.</p>
+                  <div class="d-flex gap-2">
+                    <a href="../assets/images/projects/devops/github-actions.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="devops-gallery" data-title="GitHub Actions CI/CD Preview">Pipeline Workflow</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="p-4">
-              <div class="d-flex gap-1 mb-2"><span class="project-tech-badge">GitHub Actions</span><span class="project-tech-badge">YAML</span></div>
-              <h5 class="text-white fw-bold card-title mb-1">GitHub Actions CI/CD</h5>
-              <p class="text-muted small card-text mb-0">Workflow files for automated testing and deployment pipelines.</p>
+            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+              <div>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="project-tech-badge">GitHub Actions</span>
+                  <span class="project-tech-badge">YAML</span>
+                </div>
+                <h5 class="text-white fw-bold card-title mb-2">GitHub Actions CI/CD</h5>
+                <p class="text-muted small card-text mb-3">Automated push triggers, runner jobs, and production deployment.</p>
+                <div class="p-2 rounded-3 bg-glass border border-secondary border-opacity-25 mb-2">
+                  <span class="tiny text-secondary fw-bold font-monospace d-block mb-1">WORKFLOW YAML:</span>
+                  <p class="tiny text-muted mb-0 font-monospace">on: [push] -> uses: actions/checkout@v4</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+                <span class="status-badge-live"><span class="pulsating-dot-live"></span> Passing</span>
+                <span class="text-muted small"><i class="fab fa-github text-secondary me-1"></i> Actions</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- 4. NGINX Config -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="server" data-aos="fade-up">
-          <div class="glass-card project-card tilt-card">
+        <!-- 4. NGINX Reverse Proxy -->
+        <div class="col-md-6 col-lg-4 filter-item" data-aos="fade-up">
+          <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
               <img src="../assets/images/projects/devops/nginx-config.svg" alt="NGINX Reverse Proxy">
               <div class="project-overlay">
                 <div>
-                  <h5 class="text-white fw-bold project-title">NGINX Reverse Proxy</h5>
-                  <p class="text-muted small project-desc">NGINX setup with SSL and load balancing config.</p>
-                  <a href="../assets/images/projects/devops/nginx-config.svg" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="NGINX Reverse Proxy">Preview</a>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="badge-glow bg-dark text-secondary"><i class="fas fa-server me-1"></i> NGINX</span>
+                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
+                  </div>
+                  <h5 class="text-white fw-bold project-title">NGINX Reverse Proxy &amp; SSL</h5>
+                  <p class="text-muted small project-desc">Server block configuration &amp; Let's Encrypt SSL setup.</p>
+                  <div class="d-flex gap-2">
+                    <a href="../assets/images/projects/devops/nginx-config.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="devops-gallery" data-title="NGINX Config Preview">Config Notes</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="p-4">
-              <div class="d-flex gap-1 mb-2"><span class="project-tech-badge">NGINX</span><span class="project-tech-badge">SSL/TLS</span></div>
-              <h5 class="text-white fw-bold card-title mb-1">NGINX Reverse Proxy</h5>
-              <p class="text-muted small card-text mb-0">Configuring NGINX as a reverse proxy with Let's Encrypt SSL certificates.</p>
+            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+              <div>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="project-tech-badge">NGINX</span>
+                  <span class="project-tech-badge">SSL / TLS</span>
+                  <span class="project-tech-badge">Certbot</span>
+                </div>
+                <h5 class="text-white fw-bold card-title mb-2">NGINX Reverse Proxy &amp; SSL</h5>
+                <p class="text-muted small card-text mb-3">Load balancing, proxy pass headers, and HTTPS encryption.</p>
+              </div>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+                <span class="status-badge-live"><span class="pulsating-dot-live"></span> SSL Active</span>
+                <span class="text-muted small"><i class="fas fa-lock text-secondary me-1"></i> HTTPS</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- 5. CI/CD Notes -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="cicd" data-aos="fade-up" data-aos-delay="100">
-          <div class="glass-card project-card tilt-card">
+        <!-- 5. Deployment Pipeline Notes -->
+        <div class="col-md-6 col-lg-4 filter-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
-              <img src="../assets/images/projects/devops/cicd-notes.svg" alt="CI/CD Pipeline Notes">
+              <img src="../assets/images/projects/devops/cicd-notes.svg" alt="Deployment Notes">
               <div class="project-overlay">
                 <div>
-                  <h5 class="text-white fw-bold project-title">CI/CD Pipeline Notes</h5>
-                  <p class="text-muted small project-desc">Structured DevOps learning documentation and diagrams.</p>
-                  <a href="../assets/images/projects/devops/cicd-notes.svg" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="CI/CD Pipeline Notes">Preview</a>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="badge-glow bg-dark text-secondary"><i class="fas fa-book-code me-1"></i> Notes</span>
+                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
+                  </div>
+                  <h5 class="text-white fw-bold project-title">Deployment Practice Notes</h5>
+                  <p class="text-muted small project-desc">Architecture notes &amp; troubleshooting guide.</p>
+                  <div class="d-flex gap-2">
+                    <a href="../assets/images/projects/devops/cicd-notes.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="devops-gallery" data-title="Deployment Notes Preview">Read Notes</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="p-4">
-              <div class="d-flex gap-1 mb-2"><span class="project-tech-badge">CI/CD</span><span class="project-tech-badge">Notes</span></div>
-              <h5 class="text-white fw-bold card-title mb-1">CI/CD Pipeline Notes</h5>
-              <p class="text-muted small card-text mb-0">Reference documentation and pipeline architecture diagrams.</p>
+            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+              <div>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="project-tech-badge">DevOps Notes</span>
+                  <span class="project-tech-badge">Architecture</span>
+                </div>
+                <h5 class="text-white fw-bold card-title mb-2">Deployment Practice Notes</h5>
+                <p class="text-muted small card-text mb-3">Structured learning journey documenting server provisioning and zero-downtime releases.</p>
+              </div>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+                <span class="status-badge-live"><span class="pulsating-dot-live"></span> Documented</span>
+                <span class="text-muted small"><i class="fas fa-journal-whills text-secondary me-1"></i> Roadmap</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- 6. Deployment Screenshots -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="server" data-aos="fade-up" data-aos-delay="200">
-          <div class="glass-card project-card tilt-card">
+        <!-- 6. Cloud Server Deployment Screenshots -->
+        <div class="col-md-6 col-lg-4 filter-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
-              <img src="../assets/images/projects/devops/deployment-screenshots.svg" alt="Cloud Server Deployment">
+              <img src="../assets/images/projects/devops/deployment-screenshots.svg" alt="Cloud Deployment">
               <div class="project-overlay">
                 <div>
-                  <h5 class="text-white fw-bold project-title">Cloud Deployment Log</h5>
-                  <p class="text-muted small project-desc">Successful VPS and cloud app deployments.</p>
-                  <a href="../assets/images/projects/devops/deployment-screenshots.svg" class="btn-primary-glow py-1 px-3 fs-7 lightbox-trigger" data-title="Cloud Deployment Log">Preview</a>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="badge-glow bg-dark text-secondary"><i class="fas fa-cloud me-1"></i> Cloud Lab</span>
+                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
+                  </div>
+                  <h5 class="text-white fw-bold project-title">Cloud Server Deployment</h5>
+                  <p class="text-muted small project-desc">Static portfolio &amp; web app cloud hosting setup.</p>
+                  <div class="d-flex gap-2">
+                    <a href="../assets/images/projects/devops/deployment-screenshots.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="devops-gallery" data-title="Cloud Deployment Preview">View Screenshots</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="p-4">
-              <div class="d-flex gap-1 mb-2"><span class="project-tech-badge">Cloud</span><span class="project-tech-badge">VPS</span></div>
-              <h5 class="text-white fw-bold card-title mb-1">Cloud Deployment Log</h5>
-              <p class="text-muted small card-text mb-0">Documented server provisioning, app deployment, and monitoring setup.</p>
+            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+              <div>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="project-tech-badge">GitHub Pages</span>
+                  <span class="project-tech-badge">Cloudflare DNS</span>
+                </div>
+                <h5 class="text-white fw-bold card-title mb-2">Cloud Server Deployment</h5>
+                <p class="text-muted small card-text mb-3">Live production static deployment on GitHub Pages with custom domain DNS routing.</p>
+              </div>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+                <span class="status-badge-live"><span class="pulsating-dot-live"></span> Deployed</span>
+                <span class="text-muted small"><i class="fas fa-globe text-secondary me-1"></i> Production</span>
+              </div>
             </div>
           </div>
         </div>
 
       </div>
-
-      <nav class="mt-5" aria-label="Page Navigation">
-        <ul class="pagination justify-content-center">
-          <li class="page-item disabled"><a class="page-link bg-glass text-muted" href="#">Previous</a></li>
-          <li class="page-item active"><a class="page-link btn-primary-glow border-0" href="#">1</a></li>
-          <li class="page-item disabled"><a class="page-link bg-glass text-muted" href="#">Next</a></li>
-        </ul>
-      </nav>
     </div>
   </section>
 
+  <!-- Statistics -->
+  <section class="py-5 bg-glass border-top border-bottom border-secondary border-opacity-10 my-5">
+    <div class="container text-center" data-aos="fade-up">
+      <span class="badge-glow mb-2"><i class="fas fa-server text-secondary me-1"></i> DEVOPS METRICS</span>
+      <h2 class="section-title text-white">Infrastructure &amp; DevOps <span class="gradient-text">Statistics</span></h2>
+      <div class="row g-4 text-center mt-3">
+        <div class="col-6 col-md-3">
+          <div class="glass-card p-4 tilt-card">
+            <h2 class="display-5 fw-extrabold text-secondary countup" data-count="6">0</h2>
+            <p class="text-muted small mb-0 fw-bold">DevOps Labs</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="glass-card p-4 tilt-card">
+            <h2 class="display-5 fw-extrabold text-info countup" data-count="100">0</h2>
+            <p class="text-muted small mb-0 fw-bold">% GitHub Actions Success</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="glass-card p-4 tilt-card">
+            <h2 class="display-5 fw-extrabold text-accent countup" data-count="5">0</h2>
+            <p class="text-muted small mb-0 fw-bold">Docker Microservices</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="glass-card p-4 tilt-card">
+            <h2 class="display-5 fw-extrabold text-warning countup" data-count="99">0</h2>
+            <p class="text-muted small mb-0 fw-bold">% NGINX Uptime Target</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search Overlay -->
+  <div class="mobile-nav-overlay" id="searchOverlayModal" style="background: rgba(5,8,22,0.98);">
+    <div class="container max-w-700 pt-5">
+      <div class="d-flex align-items-center justify-content-between mb-4">
+        <h4 class="text-white fw-bold mb-0"><i class="fas fa-search text-primary me-2"></i> Search Entire Portfolio</h4>
+        <button class="mobile-nav-close" id="searchOverlayClose" aria-label="Close Search"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="search-input-group mb-4">
+        <i class="fas fa-search fs-5"></i>
+        <input type="text" id="searchOverlayInput" placeholder="Type project name, skill, technology, or category...">
+      </div>
+      <div id="searchResultsList" class="d-flex flex-column gap-2 max-h-400 overflow-y-auto pe-2"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
   <footer>
     <div class="container">
       <div class="row g-4 mb-5">
-        <div class="col-lg-4"><a class="navbar-brand mb-3 d-inline-block" href="../index.html">HABIB<span class="brand-dot"></span></a><p class="text-muted small">Habib Hasan • Flutter App Developer, Full Stack Web Developer, Graphic Designer, Digital Marketer, Video Editor, AI Content Creator &amp; DevOps Learner.</p></div>
-        <div class="col-6 col-lg-2"><h6 class="text-white fw-bold mb-3">Quick Links</h6><ul class="p-0 m-0"><li class="mb-2"><a href="../about.html" class="text-muted small">About Me</a></li><li class="mb-2"><a href="../skills.html" class="text-muted small">Skills</a></li><li class="mb-2"><a href="../experience.html" class="text-muted small">Experience</a></li><li class="mb-2"><a href="../education.html" class="text-muted small">Education</a></li><li class="mb-2"><a href="../certificates.html" class="text-muted small">Certificates</a></li></ul></div>
-        <div class="col-6 col-lg-2"><h6 class="text-white fw-bold mb-3">Portfolio</h6><ul class="p-0 m-0"><li class="mb-2"><a href="flutter.html" class="text-muted small">Flutter Apps</a></li><li class="mb-2"><a href="web.html" class="text-muted small">Web Projects</a></li><li class="mb-2"><a href="graphic-design.html" class="text-muted small">Graphic Design</a></li><li class="mb-2"><a href="video-editing.html" class="text-muted small">Video Editing</a></li><li class="mb-2"><a href="devops.html" class="text-muted small">DevOps</a></li></ul></div>
-        <div class="col-lg-4"><h6 class="text-white fw-bold mb-3">Stay Connected</h6><p class="text-muted small">Reach out directly.</p><div class="d-flex gap-2"><a href="https://github.com" target="_blank" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="GitHub"><i class="fab fa-github"></i></a><a href="https://linkedin.com" target="_blank" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="https://facebook.com" target="_blank" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="mailto:habibhasan@example.com" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="Email"><i class="fas fa-envelope"></i></a></div></div>
+        <div class="col-lg-4">
+          <a class="navbar-brand mb-3 d-inline-block" href="../index.html">
+            HABIB<span class="brand-dot"></span>
+          </a>
+          <p class="text-muted small">
+            Habib Hasan • Flutter App Developer, Full Stack Web Developer, Graphic Designer, Digital Marketer, Video Editor, AI Content Creator &amp; DevOps Learner.
+          </p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="text-white fw-bold mb-3">Quick Links</h6>
+          <ul class="p-0 m-0">
+            <li class="mb-2"><a href="../about.html" class="text-muted small hover-primary">About Me</a></li>
+            <li class="mb-2"><a href="../skills.html" class="text-muted small hover-primary">Skills</a></li>
+            <li class="mb-2"><a href="../experience.html" class="text-muted small hover-primary">Experience</a></li>
+            <li class="mb-2"><a href="../education.html" class="text-muted small hover-primary">Education</a></li>
+            <li class="mb-2"><a href="../certificates.html" class="text-muted small hover-primary">Certificates</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="text-white fw-bold mb-3">Portfolio</h6>
+          <ul class="p-0 m-0">
+            <li class="mb-2"><a href="flutter.html" class="text-muted small hover-primary">Flutter Apps</a></li>
+            <li class="mb-2"><a href="web-development.html" class="text-muted small hover-primary">Web Projects</a></li>
+            <li class="mb-2"><a href="graphic-design.html" class="text-muted small hover-primary">Graphic Design</a></li>
+            <li class="mb-2"><a href="video-editing.html" class="text-muted small hover-primary">Video Editing</a></li>
+            <li class="mb-2"><a href="devops.html" class="text-muted small hover-primary">DevOps</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h6 class="text-white fw-bold mb-3">Stay Connected</h6>
+          <p class="text-muted small">Reach out directly via email or social platforms.</p>
+          <div class="d-flex gap-2">
+            <a href="https://github.com" target="_blank" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://facebook.com" target="_blank" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:habibhasan@example.com" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
       </div>
       <hr class="border-secondary opacity-25 mb-4">
-      <div class="d-flex flex-column flex-md-row align-items-center justify-content-between text-muted small gap-2"><p class="mb-0">&copy; 2026 Habib Hasan. All Rights Reserved.</p><div class="d-flex gap-3"><a href="../privacy-policy.html" class="text-muted">Privacy Policy</a><a href="../terms.html" class="text-muted">Terms of Service</a></div></div>
+      <div class="d-flex flex-column flex-md-row align-items-center justify-content-between text-muted small gap-2">
+        <p class="mb-0">&copy; 2026 Habib Hasan. All Rights Reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="../privacy-policy.html" class="text-muted hover-primary">Privacy Policy</a>
+          <a href="../terms.html" class="text-muted hover-primary">Terms of Service</a>
+        </div>
+      </div>
     </div>
   </footer>
-  <div class="back-to-top"><i class="fas fa-chevron-up"></i></div>
-  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content glass-card p-2 border-0"><div class="modal-header border-0 pb-0"><h5 class="modal-title text-white fw-bold" id="lightboxTitle">Preview</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body text-center p-3"><img id="lightboxImage" src="" alt="Preview" class="img-fluid rounded-3"></div></div></div></div>
+
+  <div class="back-to-top" aria-label="Back To Top"><i class="fas fa-chevron-up"></i></div>
+
+  <!-- JavaScript Bundle Plugins -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof GLightbox !== 'undefined') {
+        GLightbox({ selector: '.glightbox' });
+      }
+    });
+  </script>
 </body>
 </html>

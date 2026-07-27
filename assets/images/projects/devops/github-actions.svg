@@ -1,19 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg_CICDPipelineAutomation" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#475569" />
       <stop offset="100%" stop-color="#0F172A" />
     </linearGradient>
-    <linearGradient id="overlay" x1="0%" y1="0%" x2="0%" y2="100%">
+    <linearGradient id="overlay_CICDPipelineAutomation" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="rgba(255,255,255,0.15)" />
-      <stop offset="100%" stop-color="rgba(0,0,0,0.4)" />
+      <stop offset="100%" stop-color="rgba(0,0,0,0.55)" />
     </linearGradient>
   </defs>
-  <rect width="100%" height="100%" fill="url(#bg)" />
-  <rect width="100%" height="100%" fill="url(#overlay)" />
-  <circle cx="400" cy="220" r="60" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
-  <text x="50%" y="225" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">DevOps & Infrastructure</text>
-  <text x="50%" y="290" font-family="Arial, sans-serif" font-size="22" font-weight="600" fill="#00FFA3" text-anchor="middle">CI/CD Pipeline Automation</text>
-  <text x="50%" y="330" font-family="Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.7)" text-anchor="middle">Habib Hasan Portfolio Asset</text>
+  <rect width="100%" height="100%" fill="url(#bg_CICDPipelineAutomation)" />
+  <rect width="100%" height="100%" fill="url(#overlay_CICDPipelineAutomation)" />
+  <circle cx="400" cy="220" r="55" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <text x="50%" y="225" font-family="Outfit, Arial, sans-serif" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">DevOps & Infrastructure</text>
+  <text x="50%" y="285" font-family="Outfit, Arial, sans-serif" font-size="22" font-weight="600" fill="#00FFA3" text-anchor="middle">CI/CD Pipeline Automation</text>
+  <text x="50%" y="325" font-family="Outfit, Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.7)" text-anchor="middle">Habib Hasan • Featured Project Asset</text>
   <rect x="20" y="20" width="760" height="460" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2" rx="16" />
 </svg>

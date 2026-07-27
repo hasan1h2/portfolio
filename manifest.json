@@ -1,0 +1,17 @@
+{
+  "name": "Habib Hasan Portfolio",
+  "short_name": "HabibHasan",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#050816",
+  "theme_color": "#050816",
+  "description": "Award-Winning 3D Personal Portfolio of Habib Hasan - Flutter Developer & Full Stack Engineer.",
+  "icons": [
+    {
+      "src": "assets/images/profile.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

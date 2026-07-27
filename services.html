@@ -3,29 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional Digital Services by Habib Hasan - Flutter Apps, Web Development, Graphic Design, Video Editing, SEO, and AI Solutions.">
-  <title>Services & Solutions | Habib Hasan</title>
+  <meta name="description" content="Professional Digital Services by Habib Hasan - Flutter App Development, Website Engineering, UI/UX Design, Graphic Design, Video Editing, SEO Optimization, Digital Marketing, AI Content Creation, and Website Maintenance.">
+  <meta name="keywords" content="Habib Hasan Services, Flutter Developer, Web Development, UI/UX Design, Graphic Design, Video Editing, SEO, Digital Marketing, AI Solutions">
+  <title>Professional Digital Services | Habib Hasan</title>
   
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- CSS Plugins -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body data-theme="dark">
 
+  <!-- Preloader & Background FX -->
   <div id="preloader"><div class="preloader-spinner"></div><div class="preloader-logo">HABIB HASAN</div></div>
   <div class="custom-cursor"></div><div class="cursor-follower"></div><div class="mouse-glow-bg"></div><div class="scroll-progress-bar"></div>
 
-  <!-- Navbar -->
+  <!-- Master Glass Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top glass-nav">
     <div class="container">
-      <a class="navbar-brand" href="index.html">HABIB<span class="brand-dot"></span></a>
-      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <i class="fas fa-bars fs-3"></i>
+      <a class="navbar-brand" href="index.html">
+        <div class="logo-badge">HH</div> HABIB<span class="brand-dot pulse"></span>
+      </a>
+      <div class="d-flex align-items-center gap-2 ms-auto d-lg-none me-2">
+        <button class="nav-action-btn search-trigger-btn" aria-label="Quick Search"><i class="fas fa-search"></i></button>
+        <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
+      </div>
+      <button class="mobile-hamburger-btn d-lg-none" id="mobileHamburgerBtn" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-center gap-1">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -34,131 +47,454 @@
           <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown">Portfolio</a>
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="portfolioDropdown">
-              <li><a class="dropdown-item" href="portfolio/flutter.html"><i class="fas fa-mobile-alt me-2 text-info"></i>Flutter Apps</a></li>
-              <li><a class="dropdown-item" href="portfolio/web.html"><i class="fas fa-code me-2 text-primary"></i>Web Projects</a></li>
-              <li><a class="dropdown-item" href="portfolio/graphic-design.html"><i class="fas fa-palette me-2 text-warning"></i>Graphic Design</a></li>
-              <li><a class="dropdown-item" href="portfolio/video-editing.html"><i class="fas fa-film me-2 text-danger"></i>Video Editing</a></li>
-              <li><a class="dropdown-item" href="portfolio/digital-marketing.html"><i class="fas fa-chart-line me-2 text-success"></i>Digital Marketing</a></li>
-              <li><a class="dropdown-item" href="portfolio/ai-projects.html"><i class="fas fa-robot me-2 text-accent"></i>AI Projects</a></li>
-              <li><a class="dropdown-item" href="portfolio/devops.html"><i class="fas fa-server me-2 text-secondary"></i>DevOps</a></li>
-            </ul>
+          
+          <li class="nav-item dropdown mega-dropdown">
+            <a class="nav-link dropdown-toggle" href="portfolio.html" id="portfolioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Portfolio
+            </a>
+            <div class="dropdown-menu mega-menu dropdown-menu-dark" aria-labelledby="portfolioDropdown">
+              <div class="row g-2">
+                <div class="col-6">
+                  <a href="portfolio.html" class="mega-menu-item">
+                    <div class="mega-icon-box text-warning"><i class="fas fa-th-large"></i></div>
+                    <div>
+                      <span class="mega-title">All Categories</span>
+                      <p class="mega-desc">Explore full multi-category hub</p>
+                    </div>
+                  </a>
+                  <a href="portfolio/flutter.html" class="mega-menu-item">
+                    <div class="mega-icon-box text-info"><i class="fab fa-flutter"></i></div>
+                    <div>
+                      <span class="mega-title">Flutter Apps</span>
+                      <p class="mega-desc">12 Mobile screenshot apps</p>
+                    </div>
+                  </a>
+                  <a href="portfolio/web-development.html" class="mega-menu-item">
+                    <div class="mega-icon-box text-primary"><i class="fas fa-code"></i></div>
+                    <div>
+                      <span class="mega-title">Web Projects</span>
+                      <p class="mega-desc">SaaS, Portals &amp; Dashboards</p>
+                    </div>
+                  </a>
+                  <a href="portfolio/graphic-design.html" class="mega-menu-item">
+                    <div class="mega-icon-box text-warning"><i class="fas fa-palette"></i></div>
+                    <div>
+                      <span class="mega-title">Graphic Design</span>
+                      <p class="mega-desc">Logos, Posters &amp; Branding</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-6">
+                  <a href="portfolio/video-editing.html" class="mega-menu-item">
+                    <div class="mega-icon-box text-danger"><i class="fas fa-film"></i></div>
+                    <div>
+                      <span class="mega-title">Video Editing</span>
+                      <p class="mega-desc">YouTube, Reels &amp; Commercials</p>
+                    </div>
+                  </a>
+                  <a href="portfolio/digital-marketing.html" class="mega-menu-item">
+                    <div class="mega-icon-box text-success"><i class="fas fa-chart-line"></i></div>
+                    <div>
+                      <span class="mega-title">Digital Marketing</span>
+                      <p class="mega-desc">SEO &amp; Ad Growth Campaigns</p>
+                    </div>
+                  </a>
+                  <a href="portfolio/ai-projects.html" class="mega-menu-item">
+                    <div class="mega-icon-box text-accent"><i class="fas fa-robot"></i></div>
+                    <div>
+                      <span class="mega-title">AI Projects</span>
+                      <p class="mega-desc">Prompt Engineering &amp; GenArt</p>
+                    </div>
+                  </a>
+                  <a href="portfolio/devops.html" class="mega-menu-item">
+                    <div class="mega-icon-box text-secondary"><i class="fas fa-server"></i></div>
+                    <div>
+                      <span class="mega-title">DevOps Pathways</span>
+                      <p class="mega-desc">Docker, CI/CD &amp; NGINX</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
           </li>
+
           <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="certificates.html">Certificates</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
         <div class="d-flex align-items-center gap-3 ms-lg-3 mt-3 mt-lg-0">
+          <button class="nav-action-btn search-trigger-btn d-none d-lg-flex" aria-label="Global Search"><i class="fas fa-search"></i></button>
           <a href="contact.html" class="btn-primary-glow px-4 py-2 text-decoration-none"><i class="fas fa-paper-plane me-1"></i> Hire Me</a>
-          <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
+          <button class="theme-toggle-btn d-none d-lg-flex" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
         </div>
       </div>
     </div>
   </nav>
 
-  <!-- Page Header -->
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-nav-header">
+      <a class="navbar-brand" href="index.html"><div class="logo-badge">HH</div> HABIB<span class="brand-dot"></span></a>
+      <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="mobile-nav-links">
+      <div class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home <i class="fas fa-chevron-right fs-7"></i></a></div>
+      <div class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About <i class="fas fa-chevron-right fs-7"></i></a></div>
+      <div class="mobile-nav-item"><a href="skills.html" class="mobile-nav-link">Skills <i class="fas fa-chevron-right fs-7"></i></a></div>
+      <div class="mobile-nav-item"><a href="projects.html" class="mobile-nav-link">Projects <i class="fas fa-chevron-right fs-7"></i></a></div>
+      <div class="mobile-nav-item"><a href="portfolio.html" class="mobile-nav-link">Portfolio Hub <i class="fas fa-chevron-right fs-7"></i></a></div>
+      <div class="mobile-nav-item"><a href="services.html" class="mobile-nav-link active">Services <i class="fas fa-chevron-right fs-7"></i></a></div>
+      <div class="mobile-nav-item"><a href="certificates.html" class="mobile-nav-link">Certificates <i class="fas fa-chevron-right fs-7"></i></a></div>
+      <div class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact <i class="fas fa-chevron-right fs-7"></i></a></div>
+    </div>
+  </div>
+
+  <!-- Hero Header Section -->
   <section class="pt-5 mt-5 pb-4">
     <div class="container text-center pt-4" data-aos="fade-up">
-      <span class="badge-glow mb-2">WHAT I OFFER</span>
-      <h1 class="display-4 fw-extrabold text-white">Services & <span class="gradient-text">Solutions</span></h1>
-      <p class="text-muted max-w-600 mx-auto fs-5">High-impact mobile development, web engineering, visual branding, and digital growth services.</p>
+      <span class="badge-glow mb-2"><i class="fas fa-briefcase text-primary me-1"></i> MY SERVICES</span>
+      <h1 class="display-4 fw-extrabold text-white">Professional Digital <span class="gradient-text">Solutions</span></h1>
+      <p class="text-muted max-w-650 mx-auto fs-5">
+        Helping businesses, startups, and individuals build modern applications, websites, digital brands, and AI-powered solutions with agency-level quality.
+      </p>
     </div>
   </section>
 
-  <!-- Services Grid -->
+  <!-- 9 Services Grid Section -->
   <section class="py-5">
     <div class="container">
       <div class="row g-4">
 
-        <!-- Service 1: Flutter App Dev -->
+        <!-- Service 1: Flutter App Development -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="glass-card p-4 height-100 tilt-card">
-            <div class="skill-icon text-info"><i class="fab fa-flutter fs-2"></i></div>
-            <h4 class="text-white fw-bold mb-3">Flutter App Development</h4>
-            <p class="text-muted small mb-4">Cross-platform iOS and Android apps using GetX architecture, clean REST API integrations, and smooth 60fps UI animations.</p>
-            <a href="contact.html" class="text-primary fw-semibold text-decoration-none small">Inquire Service <i class="fas fa-arrow-right ms-1"></i></a>
+          <div class="glass-card p-4 h-100 tilt-card d-flex flex-column justify-content-between">
+            <div>
+              <div class="service-icon-box text-info">
+                <i class="fab fa-flutter fs-2"></i>
+              </div>
+              <h4 class="text-white fw-bold mb-2">Flutter App Development</h4>
+              <p class="text-muted small mb-4">Cross-platform iOS and Android mobile applications engineered with GetX state management, clean architecture, and smooth REST API integration.</p>
+              
+              <div class="mb-4">
+                <h6 class="text-white fs-7 text-uppercase tracking-wider fw-bold mb-2"><i class="fas fa-check-circle text-info me-1"></i> Key Features</h6>
+                <ul class="p-0 m-0 list-unstyled text-muted small">
+                  <li class="mb-1"><i class="fas fa-caret-right text-info me-2"></i>Single codebase for iOS &amp; Android</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-info me-2"></i>GetX &amp; Provider State Management</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-info me-2"></i>RESTful API &amp; JSON Data Sync</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-info me-2"></i>Native 60fps animations &amp; widgets</li>
+                </ul>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+              <button class="btn-outline-glass fs-7 py-1 px-3 service-learn-more" 
+                      data-title="Flutter App Development"
+                      data-icon="fab fa-flutter"
+                      data-desc="End-to-end mobile application development utilizing Flutter and Dart. From UI design translation to App Store & Play Store deployment readiness."
+                      data-features="Cross-Platform iOS & Android, GetX State Management, REST API Integration, Firebase Auth & Push Notifications, SQLite Local Caching, Offline Support"
+                      data-process="1. UI Wireframing -> 2. Architecture Setup -> 3. API Binding -> 4. QA Testing -> 5. App Store Publishing"
+                      data-tech="Flutter, Dart, GetX, REST API, Firebase, SQLite"
+                      data-timeline="2 - 4 Weeks"
+                      data-deliverables="Full Source Code, APK & IPA Releases, Documentation, 30 Days Maintenance">
+                Learn More
+              </button>
+              <a href="contact.html" class="btn-primary-glow fs-7 py-1 px-3 text-decoration-none">Request Service</a>
+            </div>
           </div>
         </div>
 
-        <!-- Service 2: Web Dev -->
+        <!-- Service 2: Website Development -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="glass-card p-4 height-100 tilt-card">
-            <div class="skill-icon text-primary"><i class="fas fa-code fs-2"></i></div>
-            <h4 class="text-white fw-bold mb-3">Website Development</h4>
-            <p class="text-muted small mb-4">Modern responsive web applications built with HTML5, CSS3, Bootstrap 5, and JavaScript for seamless cross-browser experiences.</p>
-            <a href="contact.html" class="text-primary fw-semibold text-decoration-none small">Inquire Service <i class="fas fa-arrow-right ms-1"></i></a>
+          <div class="glass-card p-4 h-100 tilt-card d-flex flex-column justify-content-between">
+            <div>
+              <div class="service-icon-box text-primary">
+                <i class="fas fa-code fs-2"></i>
+              </div>
+              <h4 class="text-white fw-bold mb-2">Website Development</h4>
+              <p class="text-muted small mb-4">High-performance full-stack web applications and websites crafted with HTML5, Vanilla CSS3, Bootstrap 5, JavaScript ES6+, and jQuery.</p>
+              
+              <div class="mb-4">
+                <h6 class="text-white fs-7 text-uppercase tracking-wider fw-bold mb-2"><i class="fas fa-check-circle text-primary me-1"></i> Key Features</h6>
+                <ul class="p-0 m-0 list-unstyled text-muted small">
+                  <li class="mb-1"><i class="fas fa-caret-right text-primary me-2"></i>100% Mobile &amp; Tablet Responsive</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-primary me-2"></i>SEO-friendly semantic structure</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-primary me-2"></i>Fast loading speed &amp; lightweight CSS</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-primary me-2"></i>Custom dark theme &amp; glassmorphism</li>
+                </ul>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+              <button class="btn-outline-glass fs-7 py-1 px-3 service-learn-more" 
+                      data-title="Website Development"
+                      data-icon="fas fa-code"
+                      data-desc="Custom website development tailored for corporate agencies, SaaS startups, portfolio showcases, and e-commerce platforms."
+                      data-features="Responsive Grid Layouts, Modern CSS Animations, Light/Dark Mode Switcher, Clean Code Standards, Cross-Browser Compatibility"
+                      data-process="1. Briefing & Specs -> 2. Design Mockups -> 3. Frontend Coding -> 4. Optimization -> 5. Launch"
+                      data-tech="HTML5, CSS3, JavaScript ES6, Bootstrap 5, jQuery, GSAP"
+                      data-timeline="1 - 3 Weeks"
+                      data-deliverables="Production HTML/CSS/JS Files, GitHub Pages Ready Repo, Asset Files">
+                Learn More
+              </button>
+              <a href="contact.html" class="btn-primary-glow fs-7 py-1 px-3 text-decoration-none">Request Service</a>
+            </div>
           </div>
         </div>
 
-        <!-- Service 3: Landing Page -->
+        <!-- Service 3: UI/UX Design -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="glass-card p-4 height-100 tilt-card">
-            <div class="skill-icon text-accent"><i class="fas fa-rocket fs-2"></i></div>
-            <h4 class="text-white fw-bold mb-3">Landing Page Design</h4>
-            <p class="text-muted small mb-4">High-converting sales and product landing pages crafted with fast loading speeds, SEO structure, and strong calls to action.</p>
-            <a href="contact.html" class="text-primary fw-semibold text-decoration-none small">Inquire Service <i class="fas fa-arrow-right ms-1"></i></a>
+          <div class="glass-card p-4 h-100 tilt-card d-flex flex-column justify-content-between">
+            <div>
+              <div class="service-icon-box text-accent">
+                <i class="fas fa-layer-group fs-2"></i>
+              </div>
+              <h4 class="text-white fw-bold mb-2">UI/UX Design</h4>
+              <p class="text-muted small mb-4">User-centered interface design, interactive prototypes, visual aesthetics, wireframing, and seamless user experience flows.</p>
+              
+              <div class="mb-4">
+                <h6 class="text-white fs-7 text-uppercase tracking-wider fw-bold mb-2"><i class="fas fa-check-circle text-accent me-1"></i> Key Features</h6>
+                <ul class="p-0 m-0 list-unstyled text-muted small">
+                  <li class="mb-1"><i class="fas fa-caret-right text-accent me-2"></i>User research &amp; persona mapping</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-accent me-2"></i>High-fidelity mobile &amp; web wireframes</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-accent me-2"></i>Design systems &amp; UI component kits</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-accent me-2"></i>Interactive clickable prototypes</li>
+                </ul>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+              <button class="btn-outline-glass fs-7 py-1 px-3 service-learn-more" 
+                      data-title="UI/UX Design"
+                      data-icon="fas fa-layer-group"
+                      data-desc="Crafting intuitive and aesthetically pleasing digital interfaces focused on maximizing user engagement and conversion."
+                      data-features="Wireframing & Storyboarding, High-Fidelity UI Mockups, Design Tokens & Colors, Micro-Interactions Blueprint"
+                      data-process="1. User Research -> 2. Wireframing -> 3. UI Mockup Design -> 4. Prototyping -> 5. Handoff"
+                      data-tech="Figma, Adobe XD, Photoshop, Illustrator"
+                      data-timeline="1 - 2 Weeks"
+                      data-deliverables="Figma Source File, Design System Guidelines, Exported Assets">
+                Learn More
+              </button>
+              <a href="contact.html" class="btn-primary-glow fs-7 py-1 px-3 text-decoration-none">Request Service</a>
+            </div>
           </div>
         </div>
 
-        <!-- Service 4: Portfolio Website -->
+        <!-- Service 4: Graphic Design -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="glass-card p-4 height-100 tilt-card">
-            <div class="skill-icon text-warning"><i class="fas fa-id-card fs-2"></i></div>
-            <h4 class="text-white fw-bold mb-3">Portfolio Website</h4>
-            <p class="text-muted small mb-4">Custom static 3D personal brand websites with glassmorphism, interactive particle canvas, dark theme, and GitHub Pages hosting readiness.</p>
-            <a href="contact.html" class="text-primary fw-semibold text-decoration-none small">Inquire Service <i class="fas fa-arrow-right ms-1"></i></a>
+          <div class="glass-card p-4 h-100 tilt-card d-flex flex-column justify-content-between">
+            <div>
+              <div class="service-icon-box text-warning">
+                <i class="fas fa-palette fs-2"></i>
+              </div>
+              <h4 class="text-white fw-bold mb-2">Graphic Design</h4>
+              <p class="text-muted small mb-4">Creative visual graphics, logo design, brand identity packages, promotional posters, banners, flyers, and business cards.</p>
+              
+              <div class="mb-4">
+                <h6 class="text-white fs-7 text-uppercase tracking-wider fw-bold mb-2"><i class="fas fa-check-circle text-warning me-1"></i> Key Features</h6>
+                <ul class="p-0 m-0 list-unstyled text-muted small">
+                  <li class="mb-1"><i class="fas fa-caret-right text-warning me-2"></i>Vector logo &amp; brand identity kit</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-warning me-2"></i>Social media post &amp; banner design</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-warning me-2"></i>Print-ready brochures &amp; flyers</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-warning me-2"></i>High CTR YouTube thumbnails</li>
+                </ul>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+              <button class="btn-outline-glass fs-7 py-1 px-3 service-learn-more" 
+                      data-title="Graphic Design"
+                      data-icon="fas fa-palette"
+                      data-desc="Professional visual design services creating compelling branding assets that captivate target audiences across digital and print media."
+                      data-features="Logo Vector Design, Brand Identity Guidelines, Social Media Banners, Luxury Business Cards, Print Dieline Packaging"
+                      data-process="1. Brand Brief -> 2. Concept Sketching -> 3. Vector Design -> 4. Revisions -> 5. Export"
+                      data-tech="Adobe Photoshop, Adobe Illustrator, Canva"
+                      data-timeline="3 - 7 Days"
+                      data-deliverables="AI, PSD, PNG, SVG Vector Files, Print-Ready PDFs">
+                Learn More
+              </button>
+              <a href="contact.html" class="btn-primary-glow fs-7 py-1 px-3 text-decoration-none">Request Service</a>
+            </div>
           </div>
         </div>
 
-        <!-- Service 5: Graphic Design -->
+        <!-- Service 5: Video Editing -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="glass-card p-4 height-100 tilt-card">
-            <div class="skill-icon text-danger"><i class="fas fa-pen-nib fs-2"></i></div>
-            <h4 class="text-white fw-bold mb-3">Graphic Design</h4>
-            <p class="text-muted small mb-4">Eye-catching logo design, social media banners, promotional posters, brand identities, thumbnails, and print assets.</p>
-            <a href="contact.html" class="text-primary fw-semibold text-decoration-none small">Inquire Service <i class="fas fa-arrow-right ms-1"></i></a>
+          <div class="glass-card p-4 h-100 tilt-card d-flex flex-column justify-content-between">
+            <div>
+              <div class="service-icon-box text-danger">
+                <i class="fas fa-film fs-2"></i>
+              </div>
+              <h4 class="text-white fw-bold mb-2">Video Editing</h4>
+              <p class="text-muted small mb-4">Engaging video editing for YouTube tech reviews, viral Instagram reels, TikTok shorts, commercial app promos, and motion intros.</p>
+              
+              <div class="mb-4">
+                <h6 class="text-white fs-7 text-uppercase tracking-wider fw-bold mb-2"><i class="fas fa-check-circle text-danger me-1"></i> Key Features</h6>
+                <ul class="p-0 m-0 list-unstyled text-muted small">
+                  <li class="mb-1"><i class="fas fa-caret-right text-danger me-2"></i>High retention pacing &amp; jump cuts</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-danger me-2"></i>Animated pop-up captions &amp; subtitles</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-danger me-2"></i>Sound FX &amp; background music sync</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-danger me-2"></i>4K &amp; 1080p high quality render</li>
+                </ul>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+              <button class="btn-outline-glass fs-7 py-1 px-3 service-learn-more" 
+                      data-title="Video Editing"
+                      data-icon="fas fa-film"
+                      data-desc="Post-production video editing engineered to boost audience retention, watch time, and engagement for content creators and businesses."
+                      data-features="Multi-Cam Editing, Motion Text Graphics, Sound Design & Audio Mix, Color Grading, 9:16 & 16:9 Formats"
+                      data-process="1. Footage Ingestion -> 2. Assembly Cut -> 3. Graphics & Captions -> 4. Audio Mix -> 5. Render"
+                      data-tech="Adobe Premiere Pro, After Effects, CapCut"
+                      data-timeline="2 - 5 Days"
+                      data-deliverables="Final MP4 (4K / 1080p), Subtitle Files (.srt), Project Files">
+                Learn More
+              </button>
+              <a href="contact.html" class="btn-primary-glow fs-7 py-1 px-3 text-decoration-none">Request Service</a>
+            </div>
           </div>
         </div>
 
-        <!-- Service 6: Video Editing -->
+        <!-- Service 6: SEO Optimization -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="glass-card p-4 height-100 tilt-card">
-            <div class="skill-icon text-info"><i class="fas fa-film fs-2"></i></div>
-            <h4 class="text-white fw-bold mb-3">Video Editing</h4>
-            <p class="text-muted small mb-4">Dynamic YouTube videos, Instagram Reels, TikTok shorts, motion graphic titles, and promotional video editing with CapCut.</p>
-            <a href="contact.html" class="text-primary fw-semibold text-decoration-none small">Inquire Service <i class="fas fa-arrow-right ms-1"></i></a>
+          <div class="glass-card p-4 h-100 tilt-card d-flex flex-column justify-content-between">
+            <div>
+              <div class="service-icon-box text-success">
+                <i class="fas fa-magnifying-glass-chart fs-2"></i>
+              </div>
+              <h4 class="text-white fw-bold mb-2">SEO Optimization</h4>
+              <p class="text-muted small mb-4">Technical SEO audits, on-page search engine optimization, keyword strategy, schema markup, and speed enhancements for organic growth.</p>
+              
+              <div class="mb-4">
+                <h6 class="text-white fs-7 text-uppercase tracking-wider fw-bold mb-2"><i class="fas fa-check-circle text-success me-1"></i> Key Features</h6>
+                <ul class="p-0 m-0 list-unstyled text-muted small">
+                  <li class="mb-1"><i class="fas fa-caret-right text-success me-2"></i>Technical SEO audit &amp; sitemap submission</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-success me-2"></i>On-page meta title &amp; description tuning</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-success me-2"></i>High-intent keyword positioning</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-success me-2"></i>Google Search Console &amp; GA4 setup</li>
+                </ul>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+              <button class="btn-outline-glass fs-7 py-1 px-3 service-learn-more" 
+                      data-title="SEO Optimization"
+                      data-icon="fas fa-magnifying-glass-chart"
+                      data-desc="Data-driven Search Engine Optimization designed to elevate your web presence to Page #1 rankings on Google search results."
+                      data-features="Technical Crawl Audit, Core Web Vitals Optimization, Schema.org Markup, Keyword Research & Mapping, Competitor Analysis"
+                      data-process="1. Site Audit -> 2. Keyword Mapping -> 3. On-Page Fixes -> 4. Schema Injection -> 5. Tracking"
+                      data-tech="Google Search Console, GA4, Ahrefs, Semrush"
+                      data-timeline="1 - 2 Weeks"
+                      data-deliverables="SEO Audit Report PDF, Optimized Meta Tags, Configured GA4 & Console">
+                Learn More
+              </button>
+              <a href="contact.html" class="btn-primary-glow fs-7 py-1 px-3 text-decoration-none">Request Service</a>
+            </div>
           </div>
         </div>
 
-        <!-- Service 7: SEO -->
+        <!-- Service 7: Digital Marketing -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="glass-card p-4 height-100 tilt-card">
-            <div class="skill-icon text-success"><i class="fas fa-magnifying-glass-chart fs-2"></i></div>
-            <h4 class="text-white fw-bold mb-3">SEO Optimization</h4>
-            <p class="text-muted small mb-4">On-page SEO, meta optimization, keyword positioning, sitemap structure, and speed optimizations to boost search rankings.</p>
-            <a href="contact.html" class="text-primary fw-semibold text-decoration-none small">Inquire Service <i class="fas fa-arrow-right ms-1"></i></a>
+          <div class="glass-card p-4 h-100 tilt-card d-flex flex-column justify-content-between">
+            <div>
+              <div class="service-icon-box text-primary">
+                <i class="fas fa-chart-line fs-2"></i>
+              </div>
+              <h4 class="text-white fw-bold mb-2">Digital Marketing</h4>
+              <p class="text-muted small mb-4">Strategic Facebook Ads, Meta campaigns, Google Search Ads, sales funnel setup, target audience retargeting, and lead generation.</p>
+              
+              <div class="mb-4">
+                <h6 class="text-white fs-7 text-uppercase tracking-wider fw-bold mb-2"><i class="fas fa-check-circle text-primary me-1"></i> Key Features</h6>
+                <ul class="p-0 m-0 list-unstyled text-muted small">
+                  <li class="mb-1"><i class="fas fa-caret-right text-primary me-2"></i>Meta Ads (Facebook &amp; Instagram)</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-primary me-2"></i>Google Search PPC Ad campaigns</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-primary me-2"></i>High conversion ad copy &amp; creatives</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-primary me-2"></i>Pixel &amp; Conversion API tracking</li>
+                </ul>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+              <button class="btn-outline-glass fs-7 py-1 px-3 service-learn-more" 
+                      data-title="Digital Marketing"
+                      data-icon="fas fa-chart-line"
+                      data-desc="Performance marketing services focused on driving high-ROI paid ad campaigns and qualified customer leads for businesses."
+                      data-features="Target Audience Segmentation, Meta Pixel Setup, A/B Split Testing, Conversion Rate Optimization, Weekly Performance Analytics"
+                      data-process="1. Strategy & Audience -> 2. Creative Copy -> 3. Campaign Setup -> 4. Optimization -> 5. Scaling"
+                      data-tech="Meta Business Suite, Google Ads Manager, Looker Studio"
+                      data-timeline="Ongoing Monthly / Project"
+                      data-deliverables="Campaign Setup, Ad Creatives, Conversion Tracking, Performance Report">
+                Learn More
+              </button>
+              <a href="contact.html" class="btn-primary-glow fs-7 py-1 px-3 text-decoration-none">Request Service</a>
+            </div>
           </div>
         </div>
 
-        <!-- Service 8: Digital Marketing -->
+        <!-- Service 8: AI Content Creation -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="glass-card p-4 height-100 tilt-card">
-            <div class="skill-icon text-primary"><i class="fas fa-chart-line fs-2"></i></div>
-            <h4 class="text-white fw-bold mb-3">Digital Marketing</h4>
-            <p class="text-muted small mb-4">Strategic Facebook & Google Ads campaigns, target audience segmentation, conversion tracking, and social media brand growth.</p>
-            <a href="contact.html" class="text-primary fw-semibold text-decoration-none small">Inquire Service <i class="fas fa-arrow-right ms-1"></i></a>
+          <div class="glass-card p-4 h-100 tilt-card d-flex flex-column justify-content-between">
+            <div>
+              <div class="service-icon-box text-accent">
+                <i class="fas fa-robot fs-2"></i>
+              </div>
+              <h4 class="text-white fw-bold mb-2">AI Content Creation</h4>
+              <p class="text-muted small mb-4">Leveraging AI generators, prompt engineering matrices, Midjourney concept art, AI avatar videos, and automated content workflows.</p>
+              
+              <div class="mb-4">
+                <h6 class="text-white fs-7 text-uppercase tracking-wider fw-bold mb-2"><i class="fas fa-check-circle text-accent me-1"></i> Key Features</h6>
+                <ul class="p-0 m-0 list-unstyled text-muted small">
+                  <li class="mb-1"><i class="fas fa-caret-right text-accent me-2"></i>Midjourney v6 photorealistic art</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-accent me-2"></i>Synthetic avatar speech video clips</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-accent me-2"></i>ChatGPT-4o &amp; Claude 3.5 prompt templates</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-accent me-2"></i>Automated social content pipelines</li>
+                </ul>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+              <button class="btn-outline-glass fs-7 py-1 px-3 service-learn-more" 
+                      data-title="AI Content Creation"
+                      data-icon="fas fa-robot"
+                      data-desc="Cutting-edge generative AI services accelerating brand creation with custom visual prompts, automated scripts, and AI media."
+                      data-features="Prompt Engineering Library, Concept Artwork Generation, AI Synthetic Voiceover, Automated Content Workflows"
+                      data-process="1. Objective Brief -> 2. Prompt Matrix -> 3. Generation & Refinement -> 4. Post-Processing"
+                      data-tech="ChatGPT-4o, Midjourney v6, Runway Gen-2, ElevenLabs"
+                      data-timeline="3 - 7 Days"
+                      data-deliverables="High-Res GenArt Images, AI Video Files, Custom Prompt Matrix Document">
+                Learn More
+              </button>
+              <a href="contact.html" class="btn-primary-glow fs-7 py-1 px-3 text-decoration-none">Request Service</a>
+            </div>
           </div>
         </div>
 
-        <!-- Service 9: AI Content Creation -->
+        <!-- Service 9: Website Maintenance -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="glass-card p-4 height-100 tilt-card">
-            <div class="skill-icon text-accent"><i class="fas fa-robot fs-2"></i></div>
-            <h4 class="text-white fw-bold mb-3">AI Content Creation</h4>
-            <p class="text-muted small mb-4">Prompt engineering, generative AI artwork creation, automated video workflows, and AI-assisted copywriting for modern brand assets.</p>
-            <a href="contact.html" class="text-primary fw-semibold text-decoration-none small">Inquire Service <i class="fas fa-arrow-right ms-1"></i></a>
+          <div class="glass-card p-4 h-100 tilt-card d-flex flex-column justify-content-between">
+            <div>
+              <div class="service-icon-box text-secondary">
+                <i class="fas fa-screwdriver-wrench fs-2"></i>
+              </div>
+              <h4 class="text-white fw-bold mb-2">Website Maintenance</h4>
+              <p class="text-muted small mb-4">Continuous website updates, speed optimization, bug fixing, security monitoring, SSL renewal, and content updates to keep sites smooth.</p>
+              
+              <div class="mb-4">
+                <h6 class="text-white fs-7 text-uppercase tracking-wider fw-bold mb-2"><i class="fas fa-check-circle text-secondary me-1"></i> Key Features</h6>
+                <ul class="p-0 m-0 list-unstyled text-muted small">
+                  <li class="mb-1"><i class="fas fa-caret-right text-secondary me-2"></i>Regular bug fixing &amp; layout patches</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-secondary me-2"></i>Performance &amp; page speed maintenance</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-secondary me-2"></i>Security monitoring &amp; SSL updates</li>
+                  <li class="mb-1"><i class="fas fa-caret-right text-secondary me-2"></i>Content refresh &amp; asset updates</li>
+                </ul>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+              <button class="btn-outline-glass fs-7 py-1 px-3 service-learn-more" 
+                      data-title="Website Maintenance"
+                      data-icon="fas fa-screwdriver-wrench"
+                      data-desc="Reliable ongoing technical maintenance ensuring your application or website stays secure, fast, and up-to-date at all times."
+                      data-features="24/7 Security Health Check, Code Refactoring & Speed Optimization, Monthly Backups, Content & Graphic Updates"
+                      data-process="1. Audit & Handover -> 2. Monitoring Setup -> 3. Weekly Maintenance -> 4. Monthly Report"
+                      data-tech="Git, NGINX, Cloudflare, DevTools"
+                      data-timeline="Monthly / Yearly Plan"
+                      data-deliverables="Monthly Uptime & Health Report, Ongoing Code Fixes, Priority Support">
+                Learn More
+              </button>
+              <a href="contact.html" class="btn-primary-glow fs-7 py-1 px-3 text-decoration-none">Request Service</a>
+            </div>
           </div>
         </div>
 
@@ -166,19 +502,531 @@
     </div>
   </section>
 
+  <!-- Why Choose Me Section -->
+  <section class="py-5 bg-glass border-top border-bottom border-secondary border-opacity-10 my-5">
+    <div class="container" data-aos="fade-up">
+      <div class="text-center mb-5">
+        <span class="badge-glow mb-2"><i class="fas fa-award text-warning me-1"></i> VALUE PROPOSITION</span>
+        <h2 class="section-title text-white">Why Choose <span class="gradient-text">Habib Hasan</span></h2>
+        <p class="text-muted max-w-600 mx-auto">Combining agency-proven technical expertise, clean code practices, and creative design thinking.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- 8 Animated Feature Cards -->
+        <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="glass-card p-4 text-center tilt-card h-100">
+            <div class="display-6 text-primary mb-3"><i class="fas fa-comments"></i></div>
+            <h6 class="text-white fw-bold mb-2">Professional Communication</h6>
+            <p class="text-muted tiny mb-0">Transparent updates and active project collaboration.</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="150">
+          <div class="glass-card p-4 text-center tilt-card h-100">
+            <div class="display-6 text-info mb-3"><i class="fas fa-code"></i></div>
+            <h6 class="text-white fw-bold mb-2">Clean Code</h6>
+            <p class="text-muted tiny mb-0">Maintainable, well-structured, and modular codebase.</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+          <div class="glass-card p-4 text-center tilt-card h-100">
+            <div class="display-6 text-accent mb-3"><i class="fas fa-wand-magic-sparkles"></i></div>
+            <h6 class="text-white fw-bold mb-2">Modern Design</h6>
+            <p class="text-muted tiny mb-0">Futuristic dark glassmorphism and smooth UI transitions.</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="250">
+          <div class="glass-card p-4 text-center tilt-card h-100">
+            <div class="display-6 text-warning mb-3"><i class="fas fa-mobile-screen"></i></div>
+            <h6 class="text-white fw-bold mb-2">Responsive Development</h6>
+            <p class="text-muted tiny mb-0">Flawless display on mobile, tablet, and desktop screens.</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+          <div class="glass-card p-4 text-center tilt-card h-100">
+            <div class="display-6 text-danger mb-3"><i class="fas fa-lightbulb"></i></div>
+            <h6 class="text-white fw-bold mb-2">Creative Thinking</h6>
+            <p class="text-muted tiny mb-0">Innovative solution design tailored to business needs.</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="350">
+          <div class="glass-card p-4 text-center tilt-card h-100">
+            <div class="display-6 text-success mb-3"><i class="fas fa-bolt"></i></div>
+            <h6 class="text-white fw-bold mb-2">Fast Delivery</h6>
+            <p class="text-muted tiny mb-0">On-time milestone delivery without quality compromises.</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+          <div class="glass-card p-4 text-center tilt-card h-100">
+            <div class="display-6 text-purple mb-3"><i class="fas fa-graduation-cap"></i></div>
+            <h6 class="text-white fw-bold mb-2">Continuous Learning</h6>
+            <p class="text-muted tiny mb-0">Constantly updating skills with DevOps and AI workflows.</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="450">
+          <div class="glass-card p-4 text-center tilt-card h-100">
+            <div class="display-6 text-secondary mb-3"><i class="fas fa-headset"></i></div>
+            <h6 class="text-white fw-bold mb-2">Reliable Support</h6>
+            <p class="text-muted tiny mb-0">Dedicated post-launch technical assistance and maintenance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Process Section -->
+  <section class="py-5">
+    <div class="container" data-aos="fade-up">
+      <div class="text-center mb-5">
+        <span class="badge-glow mb-2"><i class="fas fa-list-check text-primary me-1"></i> METHODOLOGY</span>
+        <h2 class="section-title text-white">Work <span class="gradient-text">Process</span></h2>
+        <p class="text-muted max-w-600 mx-auto">A structured 6-step workflow ensuring seamless execution from idea to deployment.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+          <div class="process-card-step">
+            <div class="process-step-number">1</div>
+            <i class="fas fa-comments fs-3 text-info mb-3"></i>
+            <h6 class="text-white fw-bold mb-2">Requirement Discussion</h6>
+            <p class="text-muted tiny mb-0">Understanding goals, target audience, and scope.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-2" data-aos="fade-up" data-aos-delay="200">
+          <div class="process-card-step">
+            <div class="process-step-number">2</div>
+            <i class="fas fa-magnifying-glass fs-3 text-primary mb-3"></i>
+            <h6 class="text-white fw-bold mb-2">Research &amp; Planning</h6>
+            <p class="text-muted tiny mb-0">Tech stack selection &amp; architecture blueprinting.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-2" data-aos="fade-up" data-aos-delay="300">
+          <div class="process-card-step">
+            <div class="process-step-number">3</div>
+            <i class="fas fa-pen-ruler fs-3 text-accent mb-3"></i>
+            <h6 class="text-white fw-bold mb-2">UI/UX Design</h6>
+            <p class="text-muted tiny mb-0">Wireframing &amp; interactive visual prototype.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-2" data-aos="fade-up" data-aos-delay="400">
+          <div class="process-card-step">
+            <div class="process-step-number">4</div>
+            <i class="fas fa-laptop-code fs-3 text-warning mb-3"></i>
+            <h6 class="text-white fw-bold mb-2">Development</h6>
+            <p class="text-muted tiny mb-0">Clean coding, API integration &amp; state binding.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-2" data-aos="fade-up" data-aos-delay="500">
+          <div class="process-card-step">
+            <div class="process-step-number">5</div>
+            <i class="fas fa-vial-circle-check fs-3 text-danger mb-3"></i>
+            <h6 class="text-white fw-bold mb-2">Testing &amp; QA</h6>
+            <p class="text-muted tiny mb-0">Cross-device verification &amp; speed optimization.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-2" data-aos="fade-up" data-aos-delay="600">
+          <div class="process-card-step">
+            <div class="process-step-number">6</div>
+            <i class="fas fa-rocket fs-3 text-success mb-3"></i>
+            <h6 class="text-white fw-bold mb-2">Deployment &amp; Support</h6>
+            <p class="text-muted tiny mb-0">Live production release &amp; ongoing support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Benefits Section -->
+  <section class="py-5 bg-glass border-top border-bottom border-secondary border-opacity-10 my-5">
+    <div class="container" data-aos="fade-up">
+      <div class="text-center mb-5">
+        <span class="badge-glow mb-2"><i class="fas fa-thumbs-up text-accent me-1"></i> GUARANTEED QUALITY</span>
+        <h2 class="section-title text-white">Client <span class="gradient-text">Benefits</span></h2>
+        <p class="text-muted max-w-600 mx-auto">Every project is built to meet high standards of performance, usability, and scale.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="client-benefit-card">
+            <div class="client-benefit-icon"><i class="fas fa-mobile-alt"></i></div>
+            <div>
+              <h6 class="text-white fw-bold mb-1">100% Responsive</h6>
+              <p class="text-muted tiny mb-0">Optimized for smartphones, tablets, and desktops.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="client-benefit-card">
+            <div class="client-benefit-icon"><i class="fas fa-search"></i></div>
+            <div>
+              <h6 class="text-white fw-bold mb-1">SEO Friendly</h6>
+              <p class="text-muted tiny mb-0">Semantic HTML structure for search engine indexing.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="client-benefit-card">
+            <div class="client-benefit-icon"><i class="fas fa-code"></i></div>
+            <div>
+              <h6 class="text-white fw-bold mb-1">Clean Code</h6>
+              <p class="text-muted tiny mb-0">Modular codebase easy to maintain and expand.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="client-benefit-card">
+            <div class="client-benefit-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <div>
+              <h6 class="text-white fw-bold mb-1">Fast Performance</h6>
+              <p class="text-muted tiny mb-0">Lightweight assets for rapid loading speeds.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="client-benefit-card">
+            <div class="client-benefit-icon"><i class="fas fa-globe"></i></div>
+            <div>
+              <h6 class="text-white fw-bold mb-1">Cross Browser</h6>
+              <p class="text-muted tiny mb-0">Tested across Chrome, Firefox, Safari, and Edge.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="client-benefit-card">
+            <div class="client-benefit-icon"><i class="fas fa-sparkles"></i></div>
+            <div>
+              <h6 class="text-white fw-bold mb-1">Modern UI</h6>
+              <p class="text-muted tiny mb-0">Eye-catching dark mode glassmorphism aesthetics.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="client-benefit-card">
+            <div class="client-benefit-icon"><i class="fas fa-wrench"></i></div>
+            <div>
+              <h6 class="text-white fw-bold mb-1">Easy Maintenance</h6>
+              <p class="text-muted tiny mb-0">Clear documentation and scalable code setup.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="client-benefit-card">
+            <div class="client-benefit-icon"><i class="fas fa-diagram-project"></i></div>
+            <div>
+              <h6 class="text-white fw-bold mb-1">Scalable Architecture</h6>
+              <p class="text-muted tiny mb-0">Built to accommodate future feature additions easily.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing & Custom Quote Section -->
+  <section class="py-5">
+    <div class="container" data-aos="fade-up">
+      <div class="text-center mb-5">
+        <span class="badge-glow mb-2"><i class="fas fa-tags text-warning me-1"></i> TRANSPARENT PRICING</span>
+        <h2 class="section-title text-white">Flexible <span class="gradient-text">Project Packages</span></h2>
+        <p class="text-muted max-w-600 mx-auto">No rigid fixed pricing — transparent quotes tailored precisely to your project scope and budget.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Starter Package -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="pricing-card-glass h-100 d-flex flex-column justify-content-between">
+            <div>
+              <span class="badge-glow bg-dark text-info border-info mb-3">STARTER</span>
+              <h4 class="text-white fw-bold mb-2">Single Page / Landing</h4>
+              <p class="text-muted small mb-4">Ideal for individuals, personal portfolios, and single product promo pages.</p>
+              <h3 class="display-6 fw-extrabold text-white mb-4">Custom Quote</h3>
+              <ul class="p-0 m-0 list-unstyled text-muted small mb-4">
+                <li class="mb-2"><i class="fas fa-check text-info me-2"></i>Free Initial Consultation</li>
+                <li class="mb-2"><i class="fas fa-check text-info me-2"></i>100% Mobile Responsive</li>
+                <li class="mb-2"><i class="fas fa-check text-info me-2"></i>Basic SEO &amp; Meta Configuration</li>
+                <li class="mb-2"><i class="fas fa-check text-info me-2"></i>Contact Form Integration</li>
+                <li class="mb-2"><i class="fas fa-check text-info me-2"></i>GitHub Pages Ready Deployment</li>
+              </ul>
+            </div>
+            <a href="contact.html" class="btn-outline-glass text-center py-2">Get Custom Quote</a>
+          </div>
+        </div>
+
+        <!-- Growth Package (Featured) -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="pricing-card-glass featured-pricing h-100 d-flex flex-column justify-content-between">
+            <div>
+              <span class="badge-glow bg-dark text-primary border-primary mb-3"><i class="fas fa-star text-warning me-1"></i> MOST POPULAR</span>
+              <h4 class="text-white fw-bold mb-2">Full Web / Mobile App</h4>
+              <p class="text-muted small mb-4">Comprehensive Flutter mobile application or multi-page corporate website.</p>
+              <h3 class="display-6 fw-extrabold text-white mb-4">Project-Based</h3>
+              <ul class="p-0 m-0 list-unstyled text-muted small mb-4">
+                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Free Strategy &amp; Specs Session</li>
+                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Flutter iOS &amp; Android / Full Web</li>
+                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>GetX / State Management &amp; REST API</li>
+                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Custom Dark Glassmorphism UI</li>
+                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>30-Day Post Launch Support</li>
+              </ul>
+            </div>
+            <a href="contact.html" class="btn-primary-glow text-center py-2 text-decoration-none">Inquire Full Package</a>
+          </div>
+        </div>
+
+        <!-- Custom Enterprise -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="pricing-card-glass h-100 d-flex flex-column justify-content-between">
+            <div>
+              <span class="badge-glow bg-dark text-accent border-accent mb-3">CUSTOM RETAINER</span>
+              <h4 class="text-white fw-bold mb-2">Agency &amp; Retainer</h4>
+              <p class="text-muted small mb-4">Ongoing development, maintenance, AI media creation, and DevOps support.</p>
+              <h3 class="display-6 fw-extrabold text-white mb-4">Flexible Retainer</h3>
+              <ul class="p-0 m-0 list-unstyled text-muted small mb-4">
+                <li class="mb-2"><i class="fas fa-check text-accent me-2"></i>Dedicated Monthly Hours</li>
+                <li class="mb-2"><i class="fas fa-check text-accent me-2"></i>Priority 24/7 Bug Fixes</li>
+                <li class="mb-2"><i class="fas fa-check text-accent me-2"></i>Graphic Design &amp; Video Production</li>
+                <li class="mb-2"><i class="fas fa-check text-accent me-2"></i>Docker &amp; CI/CD Infrastructure</li>
+                <li class="mb-2"><i class="fas fa-check text-accent me-2"></i>Weekly Progress Meetings</li>
+              </ul>
+            </div>
+            <a href="contact.html" class="btn-outline-glass text-center py-2">Schedule Discussion</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-5 position-relative">
+    <div class="container" data-aos="fade-up">
+      <div class="glass-card p-5 text-center position-relative overflow-hidden">
+        <div class="badge-glow mb-3"><i class="fas fa-rocket text-primary me-1"></i> READY TO START?</div>
+        <h2 class="display-5 fw-extrabold text-white mb-3">Let's Build Something <span class="gradient-text">Amazing Together</span></h2>
+        <p class="text-muted max-w-650 mx-auto lead mb-4">Have a new mobile application idea, website requirement, or branding project? Get in touch today for a free consultation.</p>
+        <div class="d-flex flex-wrap align-items-center justify-content-center gap-3">
+          <a href="contact.html" class="btn-primary-glow px-4 py-3 text-decoration-none"><i class="fas fa-paper-plane me-2"></i> Hire Me</a>
+          <a href="contact.html" class="btn-outline-glass px-4 py-3"><i class="fas fa-file-invoice me-2"></i> Request Quote</a>
+          <a href="contact.html" class="btn-outline-glass px-4 py-3"><i class="fas fa-calendar-check me-2"></i> Schedule Meeting</a>
+          <a href="contact.html" class="btn-outline-glass px-4 py-3"><i class="fas fa-download me-2"></i> Download Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Service Detail Modal -->
+  <div class="modal fade" id="serviceDetailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-glass-content text-white">
+        <div class="modal-header border-secondary border-opacity-25">
+          <div class="d-flex align-items-center gap-3">
+            <div class="service-icon-box text-primary mb-0 style-sm" style="width:45px;height:45px;margin-bottom:0;" id="modalServiceIcon">
+              <i class="fas fa-code"></i>
+            </div>
+            <div>
+              <h5 class="modal-title fw-bold" id="modalServiceTitle">Service Details</h5>
+              <span class="badge-glow bg-dark text-info fs-7" id="modalServiceTimeline">Estimated Timeline: 2 Weeks</span>
+            </div>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="mb-4">
+            <h6 class="text-uppercase text-primary fs-7 fw-bold mb-2">Overview</h6>
+            <p class="text-muted small mb-0" id="modalServiceDesc">Comprehensive service description.</p>
+          </div>
+
+          <div class="row g-3 mb-4">
+            <div class="col-md-6">
+              <div class="p-3 bg-glass rounded-3 border border-secondary border-opacity-25">
+                <h6 class="text-white fw-bold fs-7 mb-2"><i class="fas fa-star text-warning me-1"></i> Key Features &amp; Benefits</h6>
+                <p class="text-muted tiny mb-0" id="modalServiceFeatures">Feature bullet list.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 bg-glass rounded-3 border border-secondary border-opacity-25">
+                <h6 class="text-white fw-bold fs-7 mb-2"><i class="fas fa-diagram-project text-info me-1"></i> Development Process</h6>
+                <p class="text-muted tiny mb-0" id="modalServiceProcess">Process breakdown.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-3 mb-4">
+            <div class="col-md-6">
+              <h6 class="text-uppercase text-accent fs-7 fw-bold mb-2">Technologies Used</h6>
+              <div class="d-flex flex-wrap gap-1" id="modalServiceTech">
+                <span class="project-tech-badge">HTML5</span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h6 class="text-uppercase text-success fs-7 fw-bold mb-2">Deliverables</h6>
+              <p class="text-muted tiny mb-0" id="modalServiceDeliverables">Source files & documentation.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Accordion -->
+          <div class="mb-4">
+            <h6 class="text-uppercase text-warning fs-7 fw-bold mb-2">Frequently Asked Questions</h6>
+            <div class="accordion accordion-flush" id="serviceFaqAccordion">
+              <div class="accordion-item bg-transparent text-white border-secondary border-opacity-25">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-transparent text-white fs-7 py-2 px-0" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne">
+                    How do we start a new project?
+                  </button>
+                </h2>
+                <div id="faqOne" class="accordion-collapse collapse" data-bs-parent="#serviceFaqAccordion">
+                  <div class="accordion-body tiny text-muted px-0">Simply click "Request Service" or send a message on the Contact page. We will discuss project specs, timeline, and quote.</div>
+                </div>
+              </div>
+              <div class="accordion-item bg-transparent text-white border-secondary border-opacity-25">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-transparent text-white fs-7 py-2 px-0" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo">
+                    Is source code ownership provided?
+                  </button>
+                </h2>
+                <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#serviceFaqAccordion">
+                  <div class="accordion-body tiny text-muted px-0">Yes, 100% full source code ownership, repository access, and asset deliverables are handed over upon project completion.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-secondary border-opacity-25">
+          <button type="button" class="btn-outline-glass fs-7 py-1 px-3" data-bs-dismiss="modal">Close</button>
+          <a href="contact.html" class="btn-primary-glow fs-7 py-1 px-3 text-decoration-none">Inquire Service Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Overlay Modal -->
+  <div class="mobile-nav-overlay" id="searchOverlayModal" style="background: rgba(5,8,22,0.98);">
+    <div class="container max-w-700 pt-5">
+      <div class="d-flex align-items-center justify-content-between mb-4">
+        <h4 class="text-white fw-bold mb-0"><i class="fas fa-search text-primary me-2"></i> Search Entire Portfolio</h4>
+        <button class="mobile-nav-close" id="searchOverlayClose" aria-label="Close Search"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="search-input-group mb-4">
+        <i class="fas fa-search fs-5"></i>
+        <input type="text" id="searchOverlayInput" placeholder="Type service name, skill, technology, or category...">
+      </div>
+      <div id="searchResultsList" class="d-flex flex-column gap-2 max-h-400 overflow-y-auto pe-2"></div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer>
-    <div class="container text-center text-muted small">
-      <p class="mb-0">&copy; 2026 Habib Hasan. All Rights Reserved.</p>
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4">
+          <a class="navbar-brand mb-3 d-inline-block" href="index.html">
+            HABIB<span class="brand-dot"></span>
+          </a>
+          <p class="text-muted small">
+            Habib Hasan • Flutter App Developer, Full Stack Web Developer, Graphic Designer, Digital Marketer, Video Editor, AI Content Creator &amp; DevOps Learner.
+          </p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="text-white fw-bold mb-3">Quick Links</h6>
+          <ul class="p-0 m-0">
+            <li class="mb-2"><a href="about.html" class="text-muted small hover-primary">About Me</a></li>
+            <li class="mb-2"><a href="skills.html" class="text-muted small hover-primary">Skills</a></li>
+            <li class="mb-2"><a href="experience.html" class="text-muted small hover-primary">Experience</a></li>
+            <li class="mb-2"><a href="education.html" class="text-muted small hover-primary">Education</a></li>
+            <li class="mb-2"><a href="certificates.html" class="text-muted small hover-primary">Certificates</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="text-white fw-bold mb-3">Services</h6>
+          <ul class="p-0 m-0">
+            <li class="mb-2"><a href="services.html" class="text-muted small hover-primary">Flutter Apps</a></li>
+            <li class="mb-2"><a href="services.html" class="text-muted small hover-primary">Web Development</a></li>
+            <li class="mb-2"><a href="services.html" class="text-muted small hover-primary">UI/UX Design</a></li>
+            <li class="mb-2"><a href="services.html" class="text-muted small hover-primary">Graphic Design</a></li>
+            <li class="mb-2"><a href="services.html" class="text-muted small hover-primary">SEO &amp; Marketing</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h6 class="text-white fw-bold mb-3">Stay Connected</h6>
+          <p class="text-muted small">Reach out directly via email or social platforms.</p>
+          <div class="d-flex gap-2">
+            <a href="https://github.com" target="_blank" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://facebook.com" target="_blank" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:habibhasan@example.com" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary opacity-25 mb-4">
+      <div class="d-flex flex-column flex-md-row align-items-center justify-content-between text-muted small gap-2">
+        <p class="mb-0">&copy; 2026 Habib Hasan. All Rights Reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="privacy-policy.html" class="text-muted hover-primary">Privacy Policy</a>
+          <a href="terms.html" class="text-muted hover-primary">Terms of Service</a>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <div class="back-to-top"><i class="fas fa-chevron-up"></i></div>
+  <div class="back-to-top" aria-label="Back To Top"><i class="fas fa-chevron-up"></i></div>
 
+  <!-- JavaScript Bundle Plugins -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const learnBtns = document.querySelectorAll('.service-learn-more');
+      const serviceModalEl = document.getElementById('serviceDetailModal');
+      if (learnBtns.length > 0 && serviceModalEl) {
+        learnBtns.forEach(btn => {
+          btn.addEventListener('click', function() {
+            const title = this.getAttribute('data-title') || 'Service Details';
+            const iconClass = this.getAttribute('data-icon') || 'fas fa-code';
+            const desc = this.getAttribute('data-desc') || '';
+            const features = this.getAttribute('data-features') || '';
+            const process = this.getAttribute('data-process') || '';
+            const tech = this.getAttribute('data-tech') || '';
+            const timeline = this.getAttribute('data-timeline') || '2 Weeks';
+            const deliverables = this.getAttribute('data-deliverables') || '';
+
+            document.getElementById('modalServiceTitle').innerText = title;
+            document.getElementById('modalServiceIcon').className = 'service-icon-box text-primary mb-0 ' + iconClass;
+            document.getElementById('modalServiceDesc').innerText = desc;
+            document.getElementById('modalServiceFeatures').innerText = features;
+            document.getElementById('modalServiceProcess').innerText = process;
+            document.getElementById('modalServiceTimeline').innerText = 'Estimated Timeline: ' + timeline;
+            document.getElementById('modalServiceDeliverables').innerText = deliverables;
+
+            const techContainer = document.getElementById('modalServiceTech');
+            if (techContainer) {
+              techContainer.innerHTML = tech.split(',').map(t => `<span class="project-tech-badge me-1 mb-1">${t.trim()}</span>`).join('');
+            }
+
+            const modal = new bootstrap.Modal(serviceModalEl);
+            modal.show();
+          });
+        });
+      }
+    });
+  </script>
 </body>
 </html>
