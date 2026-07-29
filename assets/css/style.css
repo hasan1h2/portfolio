@@ -23,9 +23,12 @@
   --accent: #00FFA3;
   --accent-glow: rgba(0, 255, 163, 0.4);
 
+  --text-primary: #FFFFFF;
+  --text-secondary: #E5E7EB;
+  --text-muted: #CBD5E1;
   --text-main: #FFFFFF;
-  --text-muted: #94A3B8;
   --text-dark: #0F172A;
+  --text-contrast: #0F172A;
 
   --gradient-primary: linear-gradient(135deg, #00E5FF 0%, #7B61FF 50%, #00FFA3 100%);
   --gradient-text: linear-gradient(135deg, #00E5FF 0%, #7B61FF 50%, #00FFA3 100%);
@@ -62,8 +65,11 @@ body[data-theme="light"] {
   --border-glass: rgba(0, 0, 0, 0.1);
   --border-glow: rgba(0, 229, 255, 0.4);
 
-  --text-main: #0F172A;
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
   --text-muted: #64748B;
+  --text-main: #0F172A;
+  --text-contrast: #FFFFFF;
 
   --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
 }
@@ -206,6 +212,7 @@ body.hovering .cursor-follower {
 #preloader.loaded {
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
 }
 
 .preloader-spinner {
@@ -1875,21 +1882,23 @@ footer {
    17. SKILLS, EXPERIENCE, EDUCATION & CAREER TIMELINE MASTER SUITE
    ========================================================================== */
 
-/* Top Skills Feature Grid */
 .top-skill-card {
   background: var(--bg-card);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border-glass);
-  border-radius: var(--radius-md);
-  padding: 20px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glow);
+  border-radius: var(--radius-lg);
+  padding: 24px;
   display: flex;
-  align-items: center;
-  gap: 16px;
-  transition: var(--transition-normal);
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  transition: transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.35s ease, box-shadow 0.35s ease;
   position: relative;
   overflow: hidden;
   height: 100%;
+  box-shadow: 0 10px 30px rgba(0, 229, 255, 0.1);
+  will-change: transform;
 }
 
 .top-skill-card::after {
@@ -1897,16 +1906,16 @@ footer {
   position: absolute;
   top: 0;
   right: 0;
-  width: 60px;
-  height: 60px;
-  background: radial-gradient(circle at top right, rgba(0, 229, 255, 0.2) 0%, transparent 70%);
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle at top right, rgba(0, 229, 255, 0.25) 0%, transparent 70%);
   pointer-events: none;
 }
 
 .top-skill-card:hover {
-  transform: translateY(-6px) scale(1.02);
+  transform: translateY(-6px);
   border-color: var(--primary);
-  box-shadow: 0 10px 30px rgba(0, 229, 255, 0.25);
+  box-shadow: 0 14px 40px rgba(0, 229, 255, 0.22);
 }
 
 .top-skill-icon {
@@ -2615,35 +2624,16 @@ footer {
   background: rgba(0, 229, 255, 0.08);
 }
 
-/* Top Skills Glowing Feature Card */
-.top-skill-card {
-  background: var(--bg-card);
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--border-glow);
-  border-radius: var(--radius-lg);
-  padding: 28px;
-  position: relative;
-  overflow: hidden;
-  transition: var(--transition-normal);
-  box-shadow: 0 10px 30px rgba(0, 229, 255, 0.15);
-}
-
-.top-skill-card::after {
-  content: '';
-  position: absolute;
-  top: -50px;
-  right: -50px;
-  width: 120px;
-  height: 120px;
-  background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.top-skill-card:hover {
-  transform: translateY(-8px);
-  border-color: var(--accent);
-  box-shadow: 0 15px 45px rgba(0, 255, 163, 0.25);
+/* Top Skills Glowing Feature Card Duplicate Harmonization */
+.top-skill-card h5,
+.skill-card-v2 h5 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  font-size: 1.18rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-top: 4px;
 }
 
 /* Animated Learning Journey Pathway */
@@ -3212,4 +3202,329 @@ footer {
 .learning-step-arrow {
   color: var(--primary);
   font-size: 1.2rem;
+}
+
+/* ==========================================================================
+   GLOBAL TEXT OVERFLOW PROTECTION & SMOOTH ANIMATION SUITE
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6,
+.card-title, .project-title, .section-title,
+.top-skill-card h5, .skill-card-v2 h5 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.exp-badge {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+/* Smooth GPU Acceleration & Hover Transitions */
+.tilt-card,
+.top-skill-card,
+.skill-card-v2,
+.glass-card,
+.btn-primary-glow,
+.btn-outline-glass,
+.skill-tab-btn {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.top-skill-card,
+.skill-card-v2,
+.glass-card,
+.project-card,
+.learning-step-card {
+  transition: transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+/* ==========================================================================
+   MASTER GLOBAL DARK MODE TYPOGRAPHY OPTIMIZATION SUITE (WCAG AA ENFORCED)
+   ========================================================================== */
+
+/* 1. Global Dark Mode Text Defaults */
+body:not([data-theme="light"]),
+[data-theme="dark"] {
+  color: var(--text-primary);
+}
+
+body:not([data-theme="light"]) h1,
+body:not([data-theme="light"]) h2,
+body:not([data-theme="light"]) h3,
+body:not([data-theme="light"]) h4,
+body:not([data-theme="light"]) h5,
+body:not([data-theme="light"]) h6,
+body:not([data-theme="light"]) .h1,
+body:not([data-theme="light"]) .h2,
+body:not([data-theme="light"]) .h3,
+body:not([data-theme="light"]) .h4,
+body:not([data-theme="light"]) .h5,
+body:not([data-theme="light"]) .h6,
+body:not([data-theme="light"]) .display-1,
+body:not([data-theme="light"]) .display-2,
+body:not([data-theme="light"]) .display-3,
+body:not([data-theme="light"]) .display-4,
+body:not([data-theme="light"]) .display-5,
+body:not([data-theme="light"]) .display-6,
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3,
+[data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] h6 {
+  color: var(--text-primary) !important;
+}
+
+body:not([data-theme="light"]) p,
+body:not([data-theme="light"]) li,
+body:not([data-theme="light"]) td,
+body:not([data-theme="light"]) th,
+body:not([data-theme="light"]) blockquote,
+[data-theme="dark"] p, [data-theme="dark"] li {
+  color: var(--text-secondary);
+}
+
+body:not([data-theme="light"]) .text-muted,
+[data-theme="dark"] .text-muted {
+  color: var(--text-muted) !important;
+}
+
+body:not([data-theme="light"]) .text-secondary,
+[data-theme="dark"] .text-secondary {
+  color: var(--text-secondary) !important;
+}
+
+body:not([data-theme="light"]) .text-dark,
+[data-theme="dark"] .text-dark {
+  color: var(--text-primary) !important;
+}
+
+body:not([data-theme="light"]) a:not(.btn):not(.nav-link):not(.dropdown-item),
+[data-theme="dark"] a:not(.btn):not(.nav-link):not(.dropdown-item) {
+  color: var(--text-primary);
+}
+
+body:not([data-theme="light"]) a:not(.btn):not(.nav-link):not(.dropdown-item):hover,
+[data-theme="dark"] a:not(.btn):not(.nav-link):not(.dropdown-item):hover {
+  color: var(--primary);
+}
+
+/* 2. Navbar, Brand & Dropdowns */
+body:not([data-theme="light"]) .navbar-brand,
+[data-theme="dark"] .navbar-brand {
+  color: var(--text-primary) !important;
+}
+
+body:not([data-theme="light"]) .nav-link,
+[data-theme="dark"] .nav-link {
+  color: var(--text-primary) !important;
+  opacity: 0.9;
+}
+
+body:not([data-theme="light"]) .nav-link:hover,
+body:not([data-theme="light"]) .nav-link.active,
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active {
+  color: var(--primary) !important;
+  opacity: 1;
+}
+
+body:not([data-theme="light"]) .dropdown-menu,
+[data-theme="dark"] .dropdown-menu {
+  background: var(--bg-card) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glow) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+body:not([data-theme="light"]) .dropdown-item,
+[data-theme="dark"] .dropdown-item {
+  color: var(--text-primary) !important;
+}
+
+body:not([data-theme="light"]) .dropdown-item:hover,
+body:not([data-theme="light"]) .dropdown-item:focus,
+[data-theme="dark"] .dropdown-item:hover {
+  color: var(--primary) !important;
+  background: rgba(0, 229, 255, 0.12) !important;
+}
+
+/* 3. Cards & Component Containers */
+body:not([data-theme="light"]) .glass-card,
+body:not([data-theme="light"]) .top-skill-card,
+body:not([data-theme="light"]) .skill-card-v2,
+body:not([data-theme="light"]) .project-card,
+body:not([data-theme="light"]) .service-card,
+body:not([data-theme="light"]) .cert-card,
+body:not([data-theme="light"]) .learning-step-card,
+[data-theme="dark"] .glass-card {
+  color: var(--text-primary);
+}
+
+body:not([data-theme="light"]) .card-title,
+body:not([data-theme="light"]) .project-title,
+body:not([data-theme="light"]) .section-title,
+body:not([data-theme="light"]) .section-subtitle,
+[data-theme="dark"] .card-title {
+  color: var(--text-primary) !important;
+}
+
+body:not([data-theme="light"]) .card-text,
+body:not([data-theme="light"]) .project-desc,
+[data-theme="dark"] .card-text {
+  color: var(--text-secondary) !important;
+}
+
+/* 4. Modals (Lightbox, Skill Details, Project Details, Search Overlay) */
+body:not([data-theme="light"]) .modal-content,
+[data-theme="dark"] .modal-content {
+  background: rgba(15, 23, 42, 0.96) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border: 1px solid var(--border-glow) !important;
+  color: var(--text-primary) !important;
+}
+
+body:not([data-theme="light"]) .modal-header,
+body:not([data-theme="light"]) .modal-footer,
+[data-theme="dark"] .modal-header {
+  border-color: var(--border-glass) !important;
+}
+
+body:not([data-theme="light"]) .modal-title,
+[data-theme="dark"] .modal-title {
+  color: var(--text-primary) !important;
+}
+
+body:not([data-theme="light"]) .modal-body,
+[data-theme="dark"] .modal-body {
+  color: var(--text-secondary) !important;
+}
+
+body:not([data-theme="light"]) .modal-body strong,
+body:not([data-theme="light"]) .modal-body label,
+body:not([data-theme="light"]) .modal-body h5,
+body:not([data-theme="light"]) .modal-body h6,
+[data-theme="dark"] .modal-body strong {
+  color: var(--text-primary) !important;
+}
+
+/* 5. Forms, Inputs & Textareas */
+body:not([data-theme="light"]) input,
+body:not([data-theme="light"]) textarea,
+body:not([data-theme="light"]) select,
+body:not([data-theme="light"]) .form-control,
+body:not([data-theme="light"]) .form-select,
+[data-theme="dark"] .form-control {
+  background-color: rgba(15, 23, 42, 0.85) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-glass) !important;
+}
+
+body:not([data-theme="light"]) input:focus,
+body:not([data-theme="light"]) textarea:focus,
+body:not([data-theme="light"]) select:focus,
+body:not([data-theme="light"]) .form-control:focus,
+[data-theme="dark"] .form-control:focus {
+  background-color: rgba(15, 23, 42, 0.98) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.3) !important;
+}
+
+body:not([data-theme="light"]) input::placeholder,
+body:not([data-theme="light"]) textarea::placeholder,
+[data-theme="dark"] ::placeholder {
+  color: #94A3B8 !important;
+  opacity: 0.85;
+}
+
+body:not([data-theme="light"]) .form-label,
+body:not([data-theme="light"]) .form-check-label,
+[data-theme="dark"] .form-label {
+  color: var(--text-primary) !important;
+}
+
+/* 6. Accordions & FAQ */
+body:not([data-theme="light"]) .accordion-item,
+[data-theme="dark"] .accordion-item {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-glass) !important;
+}
+
+body:not([data-theme="light"]) .accordion-button,
+[data-theme="dark"] .accordion-button {
+  background: rgba(15, 23, 42, 0.7) !important;
+  color: var(--text-primary) !important;
+}
+
+body:not([data-theme="light"]) .accordion-button:not(.collapsed),
+[data-theme="dark"] .accordion-button:not(.collapsed) {
+  background: rgba(0, 229, 255, 0.1) !important;
+  color: var(--primary) !important;
+}
+
+body:not([data-theme="light"]) .accordion-body,
+[data-theme="dark"] .accordion-body {
+  color: var(--text-secondary) !important;
+}
+
+/* 7. Tables & Badges */
+body:not([data-theme="light"]) table,
+body:not([data-theme="light"]) th,
+body:not([data-theme="light"]) td,
+[data-theme="dark"] table {
+  color: var(--text-primary) !important;
+  border-color: var(--border-glass) !important;
+}
+
+body:not([data-theme="light"]) .badge:not(.bg-primary):not(.bg-warning):not(.bg-info):not(.bg-accent),
+[data-theme="dark"] .badge {
+  color: var(--text-primary);
+}
+
+/* 8. Buttons & Interactive Controls */
+body:not([data-theme="light"]) .btn-outline-glass,
+[data-theme="dark"] .btn-outline-glass {
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-glass);
+}
+
+body:not([data-theme="light"]) .btn-outline-glass:hover,
+[data-theme="dark"] .btn-outline-glass:hover {
+  color: var(--primary) !important;
+  border-color: var(--primary);
+  background: rgba(0, 229, 255, 0.1);
+}
+
+body:not([data-theme="light"]) .btn-primary-glow,
+[data-theme="dark"] .btn-primary-glow {
+  color: #050816 !important;
+  font-weight: 700;
+}
+
+/* 9. Search & Mobile Overlays */
+body:not([data-theme="light"]) .mobile-nav-overlay,
+body:not([data-theme="light"]) .search-overlay-modal,
+[data-theme="dark"] .mobile-nav-overlay {
+  background: rgba(5, 8, 22, 0.98) !important;
+  color: var(--text-primary) !important;
+}
+
+body:not([data-theme="light"]) .mobile-nav-link,
+body:not([data-theme="light"]) .search-result-item h6,
+[data-theme="dark"] .mobile-nav-link {
+  color: var(--text-primary) !important;
+}
+
+/* 10. Footer & Metadata Links */
+body:not([data-theme="light"]) footer,
+body:not([data-theme="light"]) footer a,
+[data-theme="dark"] footer {
+  color: var(--text-muted);
+}
+
+body:not([data-theme="light"]) footer a:hover,
+[data-theme="dark"] footer a:hover {
+  color: var(--primary) !important;
 }

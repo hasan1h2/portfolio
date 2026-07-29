@@ -2,17 +2,26 @@
    HABIB HASAN PORTFOLIO - MAIN INTERACTIVE CONTROLLER
    ========================================================================== */
 
-document.addEventListener('DOMContentLoaded', () => {
+function initPortfolioApp() {
   /* --------------------------------------------------------------------------
-     1. PRELOADER
+     1. PRELOADER HIDER WITH SAFETY FALLBACKS
      -------------------------------------------------------------------------- */
   const preloader = document.getElementById('preloader');
   if (preloader) {
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        preloader.classList.add('loaded');
-      }, 500);
-    });
+    let hidden = false;
+    const hidePreloader = () => {
+      if (hidden) return;
+      hidden = true;
+      preloader.classList.add('loaded');
+    };
+
+    if (document.readyState === 'complete') {
+      setTimeout(hidePreloader, 150);
+    } else {
+      window.addEventListener('load', () => setTimeout(hidePreloader, 150));
+      // Safety fallback: guaranteed hide after 500ms max so user is never stuck loading
+      setTimeout(hidePreloader, 500);
+    }
   }
 
   /* --------------------------------------------------------------------------
@@ -318,20 +327,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     11. CONTACT FORM HANDLER
+     11. CONTACT FORM HANDLER (Handled in Section 25 below)
      -------------------------------------------------------------------------- */
-  const contactForm = document.getElementById('contactForm');
-  const formStatus = document.getElementById('formStatus');
-
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      if (formStatus) {
-        formStatus.innerHTML = `<div class="alert alert-success bg-glass border-glow text-accent"><i class="fas fa-check-circle me-2"></i>Thank you! Your message has been sent successfully. Habib Hasan will respond shortly.</div>`;
-      }
-      contactForm.reset();
-    });
-  }
 
   /* --------------------------------------------------------------------------
      12. FULL-SCREEN MOBILE MENU CONTROLLER & ESC KEY SUPPORT
@@ -946,7 +943,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initPortfolioApp);
+} else {
+  initPortfolioApp();
+}
 
 
 
