@@ -1,0 +1,13 @@
+{
+  "habib-hasan": {
+    "name": "Ahosan Habib Hasan",
+    "role": "Lead Full Stack & Flutter Architect",
+    "avatar": "assets/images/profile.svg",
+    "bio": "Senior Software Engineer specializing in Flutter cross-platform mobile development, WebGL 3D graphics, and modern web architectures.",
+    "social": {
+      "github": "https://github.com/hasan1h2",
+      "twitter": "https://twitter.com",
+      "linkedin": "https://linkedin.com/in/hasan1h2"
+    }
+  }
+}

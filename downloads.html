@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Download Center & Resource Library - Habib Hasan Portfolio">
+  <title>Download Center & Resource Library | Habib Hasan</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Design System CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-theme="dark">
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-bar"></div>
+
+  <!-- Header -->
+  <header class="site-header scrolled">
+    <div class="container-fluid flex-between">
+      <a class="header-brand" href="index.html">
+        <div class="header-brand-logo">HH</div>
+        <div>
+          <span>HABIB HASAN</span>
+          <span class="badge-ds badge-ds-primary ms-2">Download Center</span>
+        </div>
+      </a>
+      <div class="d-flex align-items-center gap-3">
+        <button class="btn-ds btn-ds-ghost theme-toggle-btn" title="Toggle Theme">
+          <i class="bi bi-sun-fill text-warning-color fs-5"></i>
+        </button>
+        <a href="index.html" class="btn-ds btn-ds-outline btn-sm">
+          <i class="bi bi-arrow-left"></i> Back to Main Site
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container-fluid" style="padding-top: 120px; padding-bottom: 80px;">
+    
+    <!-- Hero Banner -->
+    <div class="glass-card p-5 mb-5 text-center pos-relative overflow-hidden">
+      <span class="section-title-badge"><i class="bi bi-cloud-arrow-down-fill"></i> Verified Developer Assets & Documentation</span>
+      <h1 class="display-lg gradient-text mb-3">Download Center & Resource Library</h1>
+      <p class="body-lg text-secondary mx-auto mb-4" style="max-width: 750px;">
+        Access official executive resumes, academic CVs, portfolio PDFs, Google Cloud certificates, project case studies, and brand vector asset kits.
+      </p>
+
+      <!-- Statistics Counters Row -->
+      <div class="row g-3 justify-content-center max-w-700 mx-auto mb-4">
+        <div class="col-4 col-md-3">
+          <div class="hero-stat-number text-primary-color" data-target="25">25+</div>
+          <div class="caption text-muted">Resources</div>
+        </div>
+        <div class="col-4 col-md-3">
+          <div class="hero-stat-number text-secondary-color" data-target="1500" data-suffix="+">1.5k+</div>
+          <div class="caption text-muted">Downloads</div>
+        </div>
+        <div class="col-4 col-md-3">
+          <div class="hero-stat-number text-accent-color" data-target="100" data-suffix="%">100%</div>
+          <div class="caption text-muted">Free & Verified</div>
+        </div>
+      </div>
+
+      <!-- Live Search Box -->
+      <div class="search-box-ds mx-auto" style="max-width: 550px;">
+        <i class="bi bi-search search-icon"></i>
+        <input type="text" id="downloadSearchInput" class="form-control-ds" placeholder="Search resources by title, category, format (PDF/ZIP), or tag...">
+      </div>
+    </div>
+
+    <!-- Category Filter Pills -->
+    <div class="d-flex justify-content-center flex-wrap gap-2 mb-5">
+      <button class="download-filter-btn portfolio-filter-btn active" data-category="all">All Resources</button>
+      <button class="download-filter-btn portfolio-filter-btn" data-category="resume">Resume</button>
+      <button class="download-filter-btn portfolio-filter-btn" data-category="cv">CV</button>
+      <button class="download-filter-btn portfolio-filter-btn" data-category="portfolio-pdf">Portfolio PDF</button>
+      <button class="download-filter-btn portfolio-filter-btn" data-category="certificates">Certificates</button>
+      <button class="download-filter-btn portfolio-filter-btn" data-category="case-studies">Case Studies</button>
+      <button class="download-filter-btn portfolio-filter-btn" data-category="brand-assets">Brand Assets</button>
+    </div>
+
+    <!-- Resource Cards Grid -->
+    <div class="row g-4" id="resourceGrid">
+      <!-- Dynamically Populated by download-loader.js -->
+    </div>
+  </div>
+
+  <!-- JavaScript Core & Engines -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme-engine.js"></script>
+  <script src="assets/js/download-analytics.js"></script>
+  <script src="assets/js/download-loader.js"></script>
+  <script src="assets/js/download-search.js"></script>
+  <script src="assets/js/download-filter.js"></script>
+  <script src="assets/js/download-preview.js"></script>
+  <script src="assets/js/download-modal.js"></script>
+</body>
+</html>

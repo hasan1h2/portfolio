@@ -1,0 +1,23 @@
+[
+  {
+    "id": "srv-1",
+    "title": "Flutter App Development",
+    "icon": "bi-phone",
+    "description": "Cross-platform iOS and Android mobile app development with clean architecture, state management, and high-performance native bridges.",
+    "features": ["Single Codebase for iOS & Android", "BLoC & Provider State Management", "Custom Native Plugins", "Play Store & App Store Deployment"]
+  },
+  {
+    "id": "srv-2",
+    "title": "Full Stack Web Engineering",
+    "icon": "bi-code-slash",
+    "description": "Modern web application development using React, Vue, Node.js, and static site architecture with 60 FPS GSAP & Three.js animations.",
+    "features": ["Responsive Web Apps", "API Integration & WebSockets", "SEO & Speed Optimization", "Serverless & Cloud Architecture"]
+  },
+  {
+    "id": "srv-3",
+    "title": "UI/UX & Design Systems",
+    "icon": "bi-palette",
+    "description": "Handcrafted luxury glassmorphism design systems, interactive prototypes, and atomic UI libraries in Figma.",
+    "features": ["Figma Wireframing & Prototyping", "Atomic Design System Tokens", "Dark/Light Mode Systems", "Accessibility (WCAG AA) Compliance"]
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "exp-1",
+    "role": "Lead Full Stack & Flutter Architect",
+    "company": "Sparktech Agency",
+    "period": "2023 - Present",
+    "location": "Dhaka, Bangladesh",
+    "description": "Architecting cross-platform Flutter applications, microservices backends, and Web3 solutions for global enterprise clients.",
+    "highlights": [
+      "Engineered 10+ production mobile apps with 500k+ total downloads.",
+      "Optimized frontend WebGL rendering pipelines achieving 60 FPS across devices."
+    ]
+  },
+  {
+    "id": "exp-2",
+    "role": "Senior Frontend Engineer",
+    "company": "TechVision Software",
+    "period": "2021 - 2023",
+    "location": "Remote",
+    "description": "Led frontend UI team building responsive dashboards, design systems, and WebGL visualizations.",
+    "highlights": [
+      "Created reusable design system adopted across 8 core product teams.",
+      "Reduced bundle size by 45% and improved Lighthouse score to 98."
+    ]
+  }
+]

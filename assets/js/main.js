@@ -1,8 +1,17 @@
 /* ==========================================================================
-   HABIB HASAN PORTFOLIO - MAIN INTERACTIVE CONTROLLER
+   HABIB HASAN PORTFOLIO - MAIN INTERACTIVE CONTROLLER & DESIGN SYSTEM
    ========================================================================== */
 
+// Global Design System Namespace Engine
+window.PortfolioDesignSystem = {
+  version: '2.0.0',
+  initialized: true
+};
+
 function initPortfolioApp() {
+  if (window.MasterAnimationEngine) {
+    window.MasterAnimationEngine.init();
+  }
   /* --------------------------------------------------------------------------
      1. PRELOADER HIDER WITH SAFETY FALLBACKS
      -------------------------------------------------------------------------- */

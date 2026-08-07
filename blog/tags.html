@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article Tags | Habib Hasan Blog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-theme="dark">
+  <header class="site-header scrolled">
+    <div class="container-fluid flex-between">
+      <a class="header-brand" href="../index.html">
+        <div class="header-brand-logo">HH</div>
+        <div><span>HABIB HASAN</span><span class="badge-ds badge-ds-primary ms-2">Tags</span></div>
+      </a>
+      <div class="d-flex align-items-center gap-3">
+        <a href="index.html" class="header-nav-link">Articles</a>
+        <a href="categories.html" class="header-nav-link">Categories</a>
+        <a href="tags.html" class="header-nav-link active">Tags</a>
+        <a href="../index.html" class="btn-ds btn-ds-outline btn-sm"><i class="bi bi-arrow-left"></i> Portfolio</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-fluid" style="padding-top: 120px; padding-bottom: 80px;">
+    <div class="glass-card p-5 mb-5 text-center">
+      <h1 class="display-lg gradient-text mb-3">Tag Cloud & Topics</h1>
+      <p class="body-lg text-secondary">Discover articles by technical tags and framework topics.</p>
+    </div>
+    <div class="glass-card p-5" id="tagsCloud"></div>
+  </div>
+
+  <script src="../assets/js/blog-loader.js"></script>
+  <script src="../assets/js/theme-engine.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const tags = await BlogLoader.getTags();
+      const cloud = document.querySelector('#tagsCloud');
+      if (tags && cloud) {
+        cloud.innerHTML = `
+          <div class="d-flex flex-wrap gap-3 justify-content-center">
+            ${tags.map(t => `<a href="index.html?tag=${t.slug}" class="badge-ds badge-ds-primary text-decoration-none fs-6 py-2 px-3"><i class="bi bi-tag-fill me-1"></i>${t.name}</a>`).join('')}
+          </div>
+        `;
+      }
+    });
+  </script>
+</body>
+</html>

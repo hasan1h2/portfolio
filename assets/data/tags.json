@@ -1,0 +1,9 @@
+[
+  { "name": "Flutter", "slug": "flutter" },
+  { "name": "Dart", "slug": "dart" },
+  { "name": "Three.js", "slug": "threejs" },
+  { "name": "WebGL", "slug": "webgl" },
+  { "name": "GSAP", "slug": "gsap" },
+  { "name": "Architecture", "slug": "architecture" },
+  { "name": "Performance", "slug": "performance" }
+]

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Technical Article - Habib Hasan Blog">
+  <title id="articlePageTitle">Article View | Habib Hasan Blog</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <!-- Marked.js & Prism.js -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-dart.min.js"></script>
+
+  <!-- Design System CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-theme="dark">
+
+  <!-- Reading Progress Bar -->
+  <div class="scroll-progress-bar" id="blog-reading-progress"></div>
+
+  <!-- Navigation -->
+  <header class="site-header scrolled">
+    <div class="container-fluid flex-between">
+      <a class="header-brand" href="../index.html">
+        <div class="header-brand-logo">HH</div>
+        <div>
+          <span>HABIB HASAN</span>
+          <span class="badge-ds badge-ds-primary ms-2">Article</span>
+        </div>
+      </a>
+      <div class="d-flex align-items-center gap-3">
+        <a href="index.html" class="btn-ds btn-ds-outline btn-sm"><i class="bi bi-arrow-left"></i> Back to Articles</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container-fluid" style="padding-top: 120px; padding-bottom: 80px;">
+    <div class="container-xl">
+      <div class="row g-4">
+        
+        <!-- Main Article Content -->
+        <div class="col-lg-8">
+          <div class="glass-card p-4 p-md-5">
+            <!-- Article Header -->
+            <span class="badge-ds badge-ds-primary mb-2" id="artCategory">Category</span>
+            <h1 class="display-lg mb-3" id="artTitle">Loading Article...</h1>
+            <div class="d-flex align-items-center gap-3 caption text-muted mb-4 pb-3 border-bottom border-secondary-subtle">
+              <span><i class="bi bi-calendar-event me-1"></i> <span id="artDate">--</span></span>
+              <span><i class="bi bi-clock me-1"></i> <span id="artReadTime">--</span></span>
+              <span><i class="bi bi-person me-1"></i> <span id="artAuthor">Habib Hasan</span></span>
+            </div>
+
+            <!-- Rendered Markdown Body -->
+            <div id="article-body" class="article-content body-lg text-secondary">
+              <div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
+            </div>
+
+            <!-- Social Share Bar -->
+            <div class="mt-5 pt-4 border-top border-secondary-subtle" id="shareButtonsContainer"></div>
+          </div>
+        </div>
+
+        <!-- Sidebar (Table of Contents & Author Card) -->
+        <div class="col-lg-4">
+          <div class="sticky-top" style="top: 100px;">
+            <!-- Table of Contents Container -->
+            <div class="glass-card p-4 mb-4" id="toc-container" style="display: none;"></div>
+
+            <!-- Author Card -->
+            <div class="glass-card p-4 text-center">
+              <img src="../assets/images/profile.svg" alt="Author" class="rounded-circle mb-3 border border-primary" style="width: 80px; height: 80px; object-fit: cover;">
+              <h5 class="mb-1">Ahosan Habib Hasan</h5>
+              <p class="body-sm text-secondary mb-3">Lead Full Stack & Flutter Architect</p>
+              <a href="../index.html" class="btn-ds btn-ds-primary btn-sm w-100">View Full Portfolio</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../assets/js/blog-loader.js"></script>
+  <script src="../assets/js/markdown-parser.js"></script>
+  <script src="../assets/js/toc.js"></script>
+  <script src="../assets/js/reading-progress.js"></script>
+  <script src="../assets/js/share.js"></script>
+  <script src="../assets/js/theme-engine.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const slug = urlParams.get('slug') || 'building-cross-platform-apps-with-flutter';
+
+      const post = await BlogLoader.getPostBySlug(slug);
+      if (post) {
+        document.querySelector('#articlePageTitle').textContent = `${post.title} | Habib Hasan Blog`;
+        document.querySelector('#artCategory').textContent = post.categoryName;
+        document.querySelector('#artTitle').textContent = post.title;
+        document.querySelector('#artDate').textContent = post.date;
+        document.querySelector('#artReadTime').textContent = post.readingTime;
+
+        // Parse Markdown Content
+        await MarkdownParserEngine.loadAndParseMarkdown(post.contentFile, document.querySelector('#article-body'));
+
+        // Render Share Buttons
+        BlogShareEngine.init(document.querySelector('#shareButtonsContainer'), post.title, window.location.href);
+      }
+    });
+  </script>
+</body>
+</html>

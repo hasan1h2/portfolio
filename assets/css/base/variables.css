@@ -1,0 +1,191 @@
+/* ==========================================================================
+   GLOBAL DESIGN SYSTEM - DESIGN TOKENS & CSS VARIABLES
+   ========================================================================== */
+
+:root {
+  /* --------------------------------------------------------------------------
+     1. COLOR PALETTE
+     -------------------------------------------------------------------------- */
+  /* Primary Brand Colors (Default Cyan) */
+  --color-primary: #00E5FF;
+  --color-primary-rgb: 0, 229, 255;
+  --color-secondary: #7B61FF;
+  --color-secondary-rgb: 123, 97, 255;
+  --color-accent: #00FFA3;
+  --color-accent-rgb: 0, 255, 163;
+
+  /* State Colors */
+  --color-success: #22C55E;
+  --color-success-rgb: 34, 197, 94;
+  --color-warning: #F59E0B;
+  --color-warning-rgb: 245, 158, 11;
+  --color-danger: #EF4444;
+  --color-danger-rgb: 239, 68, 68;
+  --color-info: #3B82F6;
+  --color-info-rgb: 59, 130, 246;
+
+  /* Neutral Dark Theme Colors */
+  --color-bg-main: #050816;
+  --color-surface: #0F172A;
+  --color-card: rgba(255, 255, 255, 0.08);
+  --color-card-hover: rgba(255, 255, 255, 0.14);
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-divider: rgba(255, 255, 255, 0.08);
+
+  /* Typography Colors */
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #CBD5E1;
+  --color-text-muted: #94A3B8;
+  --color-text-contrast: #0F172A;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-accent) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
+  --gradient-dark: linear-gradient(180deg, rgba(15, 23, 42, 0.8) 0%, rgba(5, 8, 22, 0.95) 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.03) 100%);
+  --gradient-text: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-accent) 100%);
+
+  /* --------------------------------------------------------------------------
+     2. SPACING SYSTEM (4px Base Grid)
+     -------------------------------------------------------------------------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* --------------------------------------------------------------------------
+     3. BORDER RADIUS
+     -------------------------------------------------------------------------- */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 9999px;
+  --radius-circle: 50%;
+
+  /* --------------------------------------------------------------------------
+     4. SHADOWS & GLOWS
+     -------------------------------------------------------------------------- */
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.15);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.25);
+  --shadow-large: 0 16px 40px rgba(0, 0, 0, 0.35);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --shadow-hover: 0 12px 36px rgba(var(--color-primary-rgb), 0.25);
+
+  /* Glow Effects */
+  --glow-primary: 0 0 25px rgba(var(--color-primary-rgb), 0.4);
+  --glow-secondary: 0 0 25px rgba(123, 97, 255, 0.4);
+  --glow-accent: 0 0 25px rgba(0, 255, 163, 0.4);
+
+  /* --------------------------------------------------------------------------
+     5. GLASSMORPHISM PROPERTIES
+     -------------------------------------------------------------------------- */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-bg-hover: rgba(255, 255, 255, 0.09);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-blur: blur(16px);
+  --glass-blur-heavy: blur(24px);
+
+  /* --------------------------------------------------------------------------
+     6. TRANSITIONS & EASING
+     -------------------------------------------------------------------------- */
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-medium: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-Index Hierarchy */
+  --z-negative: -1;
+  --z-normal: 1;
+  --z-elevated: 10;
+  --z-sticky: 100;
+  --z-fixed: 1000;
+  --z-modal: 2000;
+  --z-tooltip: 3000;
+  --z-toast: 4000;
+}
+
+/* --------------------------------------------------------------------------
+   DYNAMIC ACCENT COLOR PALETTES
+   -------------------------------------------------------------------------- */
+[data-accent="cyan"], body[data-accent="cyan"] {
+  --color-primary: #00E5FF;
+  --color-primary-rgb: 0, 229, 255;
+  --color-secondary: #7B61FF;
+  --color-accent: #00FFA3;
+}
+
+[data-accent="purple"], body[data-accent="purple"] {
+  --color-primary: #7B61FF;
+  --color-primary-rgb: 123, 97, 255;
+  --color-secondary: #00E5FF;
+  --color-accent: #EC4899;
+}
+
+[data-accent="emerald"], body[data-accent="emerald"] {
+  --color-primary: #10B981;
+  --color-primary-rgb: 16, 185, 129;
+  --color-secondary: #00E5FF;
+  --color-accent: #F59E0B;
+}
+
+[data-accent="blue"], body[data-accent="blue"] {
+  --color-primary: #3B82F6;
+  --color-primary-rgb: 59, 130, 246;
+  --color-secondary: #7B61FF;
+  --color-accent: #00E5FF;
+}
+
+[data-accent="orange"], body[data-accent="orange"] {
+  --color-primary: #F97316;
+  --color-primary-rgb: 249, 115, 22;
+  --color-secondary: #EF4444;
+  --color-accent: #F59E0B;
+}
+
+[data-accent="pink"], body[data-accent="pink"] {
+  --color-primary: #EC4899;
+  --color-primary-rgb: 236, 72, 153;
+  --color-secondary: #7B61FF;
+  --color-accent: #F97316;
+}
+
+/* --------------------------------------------------------------------------
+   LIGHT THEME OVERRIDES
+   -------------------------------------------------------------------------- */
+body[data-theme="light"] {
+  --color-bg-main: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-card: rgba(15, 23, 42, 0.04);
+  --color-card-hover: rgba(15, 23, 42, 0.08);
+  --color-border: rgba(15, 23, 42, 0.12);
+  --color-divider: rgba(15, 23, 42, 0.08);
+
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #334155;
+  --color-text-muted: #64748B;
+  --color-text-contrast: #FFFFFF;
+
+  --gradient-dark: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.95) 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 100%);
+
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-bg-hover: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(15, 23, 42, 0.12);
+
+  --shadow-soft: 0 4px 20px rgba(15, 23, 42, 0.06);
+  --shadow-medium: 0 8px 30px rgba(15, 23, 42, 0.1);
+  --shadow-large: 0 16px 40px rgba(15, 23, 42, 0.14);
+  --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.08);
+}

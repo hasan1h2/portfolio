@@ -1,0 +1,162 @@
+/* ==========================================================================
+   GLOBAL DESIGN SYSTEM - TYPOGRAPHY SYSTEM
+   ========================================================================== */
+
+:root {
+  --font-primary: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Fira Code', Consolas, Monaco, 'Andale Mono', monospace;
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+
+  /* Line Heights */
+  --lh-tight: 1.15;
+  --lh-snug: 1.25;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.65;
+  --lh-loose: 1.8;
+
+  /* Letter Spacing */
+  --ls-tighter: -0.04em;
+  --ls-tight: -0.02em;
+  --ls-normal: 0em;
+  --ls-wide: 0.04em;
+  --ls-wider: 0.08em;
+  --ls-widest: 0.15em;
+}
+
+/* Base Body Typography */
+body {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: var(--font-weight-regular);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings Base */
+h1, h2, h3, h4, h5, h6,
+.display-xl, .display-lg,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--lh-tight);
+  color: var(--color-text-primary);
+  letter-spacing: var(--ls-tight);
+  margin-bottom: var(--space-3);
+}
+
+/* Typography Scale Classes */
+.display-xl {
+  font-size: clamp(2.75rem, 5vw + 1rem, 4.5rem);
+  font-weight: var(--font-weight-black);
+  letter-spacing: var(--ls-tighter);
+  line-height: 1.05;
+}
+
+.display-lg {
+  font-size: clamp(2.25rem, 4vw + 1rem, 3.5rem);
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: var(--ls-tighter);
+  line-height: 1.1;
+}
+
+h1, .h1 {
+  font-size: clamp(2rem, 3.2vw + 0.8rem, 2.75rem);
+  font-weight: var(--font-weight-bold);
+}
+
+h2, .h2 {
+  font-size: clamp(1.6rem, 2.4vw + 0.6rem, 2.25rem);
+  font-weight: var(--font-weight-bold);
+}
+
+h3, .h3 {
+  font-size: clamp(1.35rem, 1.8vw + 0.5rem, 1.75rem);
+  font-weight: var(--font-weight-semibold);
+}
+
+h4, .h4 {
+  font-size: clamp(1.15rem, 1.2vw + 0.4rem, 1.4rem);
+  font-weight: var(--font-weight-semibold);
+}
+
+h5, .h5 {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-medium);
+}
+
+h6, .h6 {
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-medium);
+}
+
+/* Body Variants */
+.body-lg, .lead {
+  font-size: 1.125rem;
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-secondary);
+}
+
+.body-md, p {
+  font-size: 1rem;
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-4);
+}
+
+.body-sm {
+  font-size: 0.875rem;
+  line-height: var(--lh-normal);
+  color: var(--color-text-secondary);
+}
+
+.caption {
+  font-size: 0.75rem;
+  line-height: var(--lh-normal);
+  color: var(--color-text-muted);
+}
+
+.label-text {
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Gradient Text Effect */
+.gradient-text {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.gradient-text-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.gradient-text-accent {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}

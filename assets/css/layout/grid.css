@@ -1,0 +1,77 @@
+/* ==========================================================================
+   GLOBAL DESIGN SYSTEM - GRID & LAYOUT SYSTEM
+   ========================================================================== */
+
+/* Custom Container Max Widths */
+.container-sm { max-width: 540px; margin-inline: auto; }
+.container-md { max-width: 720px; margin-inline: auto; }
+.container-lg { max-width: 960px; margin-inline: auto; }
+.container-xl { max-width: 1140px; margin-inline: auto; }
+.container-xxl { max-width: 1320px; margin-inline: auto; }
+.container-fluid { width: 100%; padding-inline: var(--space-6); }
+
+/* Section Layout & Spacing */
+.section-padding {
+  padding-block: clamp(4rem, 8vw, 8rem);
+  position: relative;
+}
+
+.section-padding-sm {
+  padding-block: clamp(2.5rem, 5vw, 4.5rem);
+  position: relative;
+}
+
+.section-title-wrapper {
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+  position: relative;
+}
+
+.section-title-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 6px 16px;
+  background: rgba(0, 229, 255, 0.1);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  margin-bottom: var(--space-3);
+  backdrop-filter: blur(8px);
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: var(--ls-tight);
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+/* Flex Grid Utilities */
+.grid-autofit-sm {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-6);
+}
+
+.grid-autofit-md {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+}
+
+.grid-autofit-lg {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: var(--space-8);
+}

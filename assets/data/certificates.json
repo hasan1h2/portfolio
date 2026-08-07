@@ -1,0 +1,18 @@
+[
+  {
+    "id": "cert-1",
+    "title": "Google Certified Professional Cloud Architect",
+    "issuer": "Google Cloud",
+    "date": "2023",
+    "image": "assets/images/profile.svg",
+    "verifyUrl": "https://cloud.google.com/certification"
+  },
+  {
+    "id": "cert-2",
+    "title": "Flutter Application Development Specialist",
+    "issuer": "Google Developers",
+    "date": "2022",
+    "image": "assets/images/profile.svg",
+    "verifyUrl": "https://flutter.dev"
+  }
+]

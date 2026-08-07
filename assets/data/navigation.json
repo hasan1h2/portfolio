@@ -1,0 +1,11 @@
+[
+  { "label": "Home", "url": "index.html" },
+  { "label": "About", "url": "about.html" },
+  { "label": "Skills", "url": "skills.html" },
+  { "label": "Projects", "url": "projects.html" },
+  { "label": "Portfolio", "url": "portfolio.html" },
+  { "label": "Services", "url": "services.html" },
+  { "label": "Certificates", "url": "certificates.html" },
+  { "label": "Experience", "url": "experience.html" },
+  { "label": "Contact", "url": "contact.html" }
+]

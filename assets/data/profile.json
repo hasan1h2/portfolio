@@ -1,0 +1,17 @@
+{
+  "name": "Ahosan Habib Hasan",
+  "shortName": "Habib Hasan",
+  "title": "Flutter & Full Stack Developer | Graphic Designer | AI Creator",
+  "bio": "Passionate Full Stack Software Engineer, Flutter Developer, Graphic Designer, Digital Marketer, SEO Specialist, Video Editor, AI Creator, and DevOps Learner with over 5+ years of industry experience.",
+  "location": "Dhaka, Bangladesh",
+  "email": "habib@sparktech.agency",
+  "phone": "+880 1700-000000",
+  "status": "Available for Freelance & Full-time Roles",
+  "avatar": "assets/images/profile.svg",
+  "stats": [
+    { "label": "Years Experience", "value": "5+", "number": 5 },
+    { "label": "Completed Projects", "value": "150+", "number": 150 },
+    { "label": "Happy Clients", "value": "85+", "number": 85 },
+    { "label": "Awards Received", "value": "12", "number": 12 }
+  ]
+}

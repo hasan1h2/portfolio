@@ -1,0 +1,77 @@
+/* ==========================================================================
+   GLOBAL DESIGN SYSTEM - NAVIGATION COMPONENTS
+   ========================================================================== */
+
+/* Navbar Glass Shell */
+.navbar-ds {
+  padding-block: var(--space-4);
+  transition: all var(--transition-medium);
+}
+
+.navbar-ds.scrolled {
+  padding-block: var(--space-2);
+  background: rgba(5, 8, 22, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Glass Dropdown Menu */
+.dropdown-menu-ds {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-large);
+  padding: var(--space-2);
+  min-width: 220px;
+}
+
+.dropdown-item-ds {
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  transition: all var(--transition-fast);
+}
+
+.dropdown-item-ds:hover {
+  background: rgba(0, 229, 255, 0.1);
+  color: var(--color-primary);
+}
+
+/* Mega Menu Grid */
+.mega-menu-ds {
+  width: 100%;
+  max-width: 900px;
+  padding: var(--space-6);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+/* Breadcrumbs */
+.breadcrumb-ds {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.breadcrumb-ds a {
+  color: var(--color-text-secondary);
+}
+
+.breadcrumb-ds a:hover {
+  color: var(--color-primary);
+}
+
+.breadcrumb-ds .separator {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+}

@@ -1,0 +1,176 @@
+/* ==========================================================================
+   GLOBAL DESIGN SYSTEM - BUTTON COMPONENTS
+   ========================================================================== */
+
+.btn-ds {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 12px 28px;
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--ls-wide);
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  transition: all var(--transition-medium);
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* 1. Primary Button */
+.btn-ds-primary {
+  background: var(--color-primary);
+  color: #050816;
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 15px rgba(0, 229, 255, 0.3);
+}
+
+.btn-ds-primary:hover {
+  background: #26ecff;
+  color: #050816;
+  box-shadow: var(--glow-primary);
+  transform: translateY(-2px);
+}
+
+.btn-ds-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 229, 255, 0.2);
+}
+
+/* 2. Secondary Button */
+.btn-ds-secondary {
+  background: var(--color-secondary);
+  color: #FFFFFF;
+  border-color: var(--color-secondary);
+  box-shadow: 0 4px 15px rgba(123, 97, 255, 0.3);
+}
+
+.btn-ds-secondary:hover {
+  background: #8f79ff;
+  color: #FFFFFF;
+  box-shadow: var(--glow-secondary);
+  transform: translateY(-2px);
+}
+
+/* 3. Gradient Button */
+.btn-ds-gradient {
+  background: var(--gradient-primary);
+  background-size: 200% 200%;
+  color: #050816;
+  font-weight: var(--font-weight-bold);
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 229, 255, 0.35);
+  animation: gradient-shift 6s ease infinite;
+}
+
+.btn-ds-gradient:hover {
+  color: #050816;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--glow-primary);
+}
+
+/* 4. Outline Button */
+.btn-ds-outline {
+  background: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-ds-outline:hover {
+  background: rgba(0, 229, 255, 0.12);
+  color: var(--color-primary);
+  box-shadow: var(--glow-primary);
+  transform: translateY(-2px);
+}
+
+/* 5. Ghost Button */
+.btn-ds-ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--color-text-secondary);
+}
+
+.btn-ds-ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-text-primary);
+}
+
+/* 6. Icon Button */
+.btn-ds-icon {
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border-radius: var(--radius-circle);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 7. Floating Action Button (FAB) */
+.btn-ds-fab {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-circle);
+  background: var(--gradient-primary);
+  color: #050816;
+  font-size: 1.25rem;
+  box-shadow: 0 8px 30px rgba(0, 229, 255, 0.4);
+  z-index: var(--z-fixed);
+  border: none;
+  transition: all var(--transition-medium);
+}
+
+.btn-ds-fab:hover {
+  transform: translateY(-4px) rotate(8deg);
+  box-shadow: var(--glow-primary);
+}
+
+/* Disabled State */
+.btn-ds:disabled,
+.btn-ds.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Loading State */
+.btn-ds-loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.btn-ds-loading .btn-text {
+  visibility: hidden;
+}
+
+.btn-ds-loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: currentColor;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

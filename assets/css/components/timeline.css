@@ -1,0 +1,57 @@
+/* ==========================================================================
+   GLOBAL DESIGN SYSTEM - TIMELINE COMPONENTS
+   ========================================================================== */
+
+.timeline-vertical-ds {
+  position: relative;
+  padding-left: var(--space-8);
+}
+
+.timeline-vertical-ds::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.timeline-item-ds {
+  position: relative;
+  margin-bottom: var(--space-8);
+}
+
+.timeline-node-ds {
+  position: absolute;
+  left: calc(-1 * var(--space-8) + 5px);
+  top: 4px;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-circle);
+  background: #050816;
+  border: 3px solid var(--color-primary);
+  box-shadow: var(--glow-primary);
+  z-index: 2;
+}
+
+.timeline-content-ds {
+  background: var(--color-card);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+
+/* Horizontal Timeline */
+.timeline-horizontal-ds {
+  display: flex;
+  gap: var(--space-6);
+  overflow-x: auto;
+  padding-bottom: var(--space-4);
+}
+
+.timeline-horizontal-item {
+  min-width: 280px;
+  position: relative;
+}

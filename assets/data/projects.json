@@ -1,0 +1,47 @@
+[
+  {
+    "id": "proj-1",
+    "slug": "ai-smart-assistant",
+    "title": "AI Smart Assistant Platform",
+    "category": "mobile",
+    "categoryLabel": "Mobile App",
+    "image": "assets/images/profile.svg",
+    "summary": "Next-gen AI conversational platform powered by Gemini API, Flutter & Firebase.",
+    "description": "Full-featured cross-platform assistant application with voice synthesis, image recognition, markdown code rendering, and real-time cloud sync.",
+    "tags": ["Flutter", "Dart", "Gemini API", "Firebase"],
+    "liveUrl": "https://sparktech.agency",
+    "githubUrl": "https://github.com/hasan1h2",
+    "featured": true,
+    "date": "2024-05-15"
+  },
+  {
+    "id": "proj-2",
+    "slug": "3d-luxury-portfolio",
+    "title": "3D Luxury Glassmorphism Portfolio",
+    "category": "web",
+    "categoryLabel": "Web Application",
+    "image": "assets/images/profile.svg",
+    "summary": "Enterprise static portfolio with Three.js Neural Network scene, GSAP animations, and theme switcher.",
+    "description": "Award-winning portfolio architecture with 6 dynamic accent palettes, zero-reload theme switching, and JSON CMS engine.",
+    "tags": ["Three.js", "GSAP", "Bootstrap 5", "JavaScript"],
+    "liveUrl": "https://hasan1h2.github.io",
+    "githubUrl": "https://github.com/hasan1h2/portfolio",
+    "featured": true,
+    "date": "2024-08-01"
+  },
+  {
+    "id": "proj-3",
+    "slug": "crypto-analytics-dashboard",
+    "title": "Crypto Analytics Dashboard",
+    "category": "web",
+    "categoryLabel": "Web Application",
+    "image": "assets/images/profile.svg",
+    "summary": "Real-time cryptocurrency tracking and analytics platform with interactive charting.",
+    "description": "High-frequency crypto market dashboard integrating WebSockets, Chart.js, and dark glassmorphic UI.",
+    "tags": ["React", "TypeScript", "WebSockets", "TailwindCSS"],
+    "liveUrl": "https://sparktech.agency",
+    "githubUrl": "https://github.com/hasan1h2",
+    "featured": false,
+    "date": "2023-11-10"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  { "platform": "GitHub", "url": "https://github.com/hasan1h2", "icon": "bi-github" },
+  { "platform": "LinkedIn", "url": "https://linkedin.com/in/hasan1h2", "icon": "bi-linkedin" },
+  { "platform": "Twitter / X", "url": "https://twitter.com", "icon": "bi-twitter-x" },
+  { "platform": "YouTube", "url": "https://youtube.com", "icon": "bi-youtube" },
+  { "platform": "Discord", "url": "https://discord.com", "icon": "bi-discord" }
+]

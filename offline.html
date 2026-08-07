@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You are Offline | Habib Hasan Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-theme="dark" class="d-flex align-items-center justify-content-center min-vh-100 p-3">
+
+  <div class="glass-card p-5 text-center max-w-600 mx-auto" style="max-width: 600px;">
+    <div class="card-service__icon mx-auto mb-4 bg-primary-glow" style="width: 80px; height: 80px; font-size: 2.2rem;">
+      <i class="bi bi-wifi-off text-dark"></i>
+    </div>
+    <span class="badge-ds badge-ds-warning mb-3"><i class="bi bi-exclamation-triangle-fill me-1"></i> Connection Lost</span>
+    <h1 class="display-lg gradient-text mb-3">You are Currently Offline</h1>
+    <p class="body-lg text-secondary mb-4">
+      It seems your internet connection was interrupted. Previously cached pages and components are still accessible.
+    </p>
+
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <button onclick="window.location.reload()" class="btn-ds btn-ds-primary">
+        <i class="bi bi-arrow-clockwise"></i> Retry Connection
+      </button>
+      <a href="index.html" class="btn-ds btn-ds-outline">
+        <i class="bi bi-house"></i> Go to Homepage
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

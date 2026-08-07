@@ -1,0 +1,32 @@
+[
+  {
+    "category": "Mobile & Frontend",
+    "icon": "bi-phone",
+    "skills": [
+      { "name": "Flutter & Dart", "level": 95, "icon": "fa-brands fa-flutter" },
+      { "name": "React & Vue.js", "level": 90, "icon": "fa-brands fa-react" },
+      { "name": "JavaScript (ES6+) & jQuery", "level": 92, "icon": "fa-brands fa-js" },
+      { "name": "HTML5 & CSS3 / SASS", "level": 98, "icon": "fa-brands fa-html5" }
+    ]
+  },
+  {
+    "category": "Backend & Cloud",
+    "icon": "bi-server",
+    "skills": [
+      { "name": "Node.js & Express", "level": 88, "icon": "fa-brands fa-node-js" },
+      { "name": "Python & FastAPI", "level": 85, "icon": "fa-brands fa-python" },
+      { "name": "Firebase & PostgreSQL", "level": 90, "icon": "bi bi-database" },
+      { "name": "Docker & DevOps", "level": 80, "icon": "fa-brands fa-docker" }
+    ]
+  },
+  {
+    "category": "UI/UX & Creative",
+    "icon": "bi-palette",
+    "skills": [
+      { "name": "Figma & UI/UX Design", "level": 95, "icon": "fa-brands fa-figma" },
+      { "name": "Adobe Creative Cloud", "level": 92, "icon": "bi bi-bezier2" },
+      { "name": "3D Animation (Three.js)", "level": 85, "icon": "bi bi-box" },
+      { "name": "AI Content Creation", "level": 90, "icon": "bi bi-cpu" }
+    ]
+  }
+]

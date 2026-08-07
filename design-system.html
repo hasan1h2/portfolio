@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Global Design System & Living Component Library - Habib Hasan Portfolio">
+  <title>Global Design System & UI Components | Habib Hasan</title>
+
+  <!-- PWA Web App Manifest & Theme Color -->
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#050816">
+  <link rel="apple-touch-icon" href="assets/images/profile.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <!-- Design System CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    /* Design System Living Page Custom Layout */
+    .ds-sidebar-nav {
+      position: sticky;
+      top: 90px;
+      height: calc(100vh - 110px);
+      overflow-y: auto;
+      padding: var(--space-4);
+      border-radius: var(--radius-lg);
+    }
+
+    .ds-sidebar-link {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      padding: 10px 16px;
+      border-radius: var(--radius-md);
+      color: var(--color-text-secondary);
+      font-weight: var(--font-weight-medium);
+      font-size: 0.9rem;
+      transition: all var(--transition-fast);
+      margin-bottom: 4px;
+    }
+
+    .ds-sidebar-link:hover, .ds-sidebar-link.active {
+      background: rgba(0, 229, 255, 0.12);
+      color: var(--color-primary);
+    }
+
+    .color-swatch-card {
+      padding: var(--space-4);
+      border-radius: var(--radius-md);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 120px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      transition: transform var(--transition-fast);
+    }
+
+    .color-swatch-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .ds-section-block {
+      margin-bottom: var(--space-16);
+      padding-top: var(--space-6);
+      border-top: 1px solid var(--color-divider);
+    }
+
+    .ds-section-block:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .spacing-box {
+      background: rgba(0, 229, 255, 0.2);
+      border: 1px dashed var(--color-primary);
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: bold;
+      color: var(--color-primary);
+    }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-bar"></div>
+
+  <!-- Header -->
+  <header class="site-header scrolled">
+    <div class="container-fluid flex-between">
+      <a class="header-brand" href="index.html">
+        <div class="header-brand-logo">HH</div>
+        <div>
+          <span>HABIB HASAN</span>
+          <span class="badge-ds badge-ds-primary ms-2">Design System</span>
+        </div>
+      </a>
+      <div class="d-flex align-items-center gap-3">
+        <!-- Language Switcher Dropdown -->
+        <div class="dropdown">
+          <button class="btn-ds btn-ds-ghost btn-sm dropdown-toggle d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-globe text-primary-color current-lang-flag"></i>
+            <span class="current-lang-label fw-bold">EN</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-ds dropdown-menu-end">
+            <li><a class="dropdown-item dropdown-item-ds lang-select-item" href="#" data-lang="en"><i class="bi bi-check2 me-2"></i> English (EN)</a></li>
+            <li><a class="dropdown-item dropdown-item-ds lang-select-item" href="#" data-lang="bn"><i class="bi bi-translate me-2"></i> বাংলা (BN)</a></li>
+          </ul>
+        </div>
+        <button class="btn-ds btn-ds-ghost theme-toggle-btn" title="Toggle Theme">
+          <i class="bi bi-sun-fill text-warning-color fs-5"></i>
+        </button>
+        <a href="index.html" class="btn-ds btn-ds-outline btn-sm">
+          <i class="bi bi-arrow-left"></i> Back to Main Site
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container-fluid" style="padding-top: 110px; padding-bottom: 80px;">
+    <div class="row g-4">
+      
+      <!-- Sidebar Navigation -->
+      <div class="col-lg-3 col-xl-2 d-none d-lg-block">
+        <div class="glass-sidebar ds-sidebar-nav">
+          <div class="caption text-uppercase fw-bold text-muted mb-3 px-2">Design Architecture</div>
+          <a href="#tokens" class="ds-sidebar-link active"><i class="bi bi-palette"></i> Color Tokens</a>
+          <a href="#typography" class="ds-sidebar-link"><i class="bi bi-type"></i> Typography System</a>
+          <a href="#spacing" class="ds-sidebar-link"><i class="bi bi-aspect-ratio"></i> Spacing & Radius</a>
+          <a href="#glassmorphism" class="ds-sidebar-link"><i class="bi bi-layers"></i> Glassmorphism</a>
+          <a href="#buttons" class="ds-sidebar-link"><i class="bi bi-menu-button-wide"></i> Button Suite</a>
+          <a href="#cards" class="ds-sidebar-link"><i class="bi bi-card-heading"></i> Card Library</a>
+          <a href="#forms" class="ds-sidebar-link"><i class="bi bi-input-cursor-text"></i> Form Controls</a>
+          <a href="#badges" class="ds-sidebar-link"><i class="bi bi-award"></i> Badges & Alerts</a>
+          <a href="#components" class="ds-sidebar-link"><i class="bi bi-grid-3x3-gap"></i> UI Components</a>
+          <a href="#icons" class="ds-sidebar-link"><i class="bi bi-stars"></i> Icon System</a>
+          <a href="#animations" class="ds-sidebar-link"><i class="bi bi-activity"></i> Motion Standards</a>
+        </div>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="col-lg-9 col-xl-10">
+
+        <!-- Banner -->
+        <div class="glass-card p-5 mb-5 pos-relative overflow-hidden">
+          <div class="pos-relative z-elevated">
+            <span class="section-title-badge"><i class="bi bi-shield-check"></i> Enterprise Standard v2.0</span>
+            <h1 class="display-lg gradient-text mb-3">Global Design System & UI Architecture</h1>
+            <p class="body-lg text-secondary mb-4" style="max-width: 800px;">
+              A unified, handcrafted, luxury dark-glassmorphism visual language engineered for scale, high performance, full accessibility, and modern responsive interactivity.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <span class="badge-ds badge-ds-primary"><i class="bi bi-bootstrap"></i> Bootstrap 5 Grid</span>
+              <span class="badge-ds badge-ds-secondary"><i class="bi bi-palette"></i> CSS Custom Tokens</span>
+              <span class="badge-ds badge-ds-success"><i class="bi bi-universal-access"></i> WCAG AA Accessible</span>
+              <span class="badge-ds badge-ds-gradient"><i class="bi bi-moon-stars"></i> Dual Theme Engine</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1. COLOR TOKENS SECTION -->
+        <section id="tokens" class="ds-section-block">
+          <div class="section-title-wrapper text-start">
+            <span class="section-title-badge">Tokens</span>
+            <h2 class="section-title">1. Color Palette System</h2>
+            <p class="section-subtitle ms-0">Primary brand colors, status indicators, and glass neutrals defined as CSS variables.</p>
+          </div>
+
+          <h4 class="mb-3 text-primary-color">Primary & Brand Colors</h4>
+          <div class="row g-3 mb-4">
+            <div class="col-6 col-md-4 col-xl-3">
+              <div class="color-swatch-card" style="background: #00E5FF; color: #050816;">
+                <span class="fw-bold">Primary</span>
+                <span class="font-mono">#00E5FF</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-xl-3">
+              <div class="color-swatch-card" style="background: #7B61FF; color: #FFFFFF;">
+                <span class="fw-bold">Secondary</span>
+                <span class="font-mono">#7B61FF</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-xl-3">
+              <div class="color-swatch-card" style="background: #00FFA3; color: #050816;">
+                <span class="fw-bold">Accent</span>
+                <span class="font-mono">#00FFA3</span>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="mb-3 text-secondary-color">State & Feedback Colors</h4>
+          <div class="row g-3 mb-4">
+            <div class="col-6 col-md-3">
+              <div class="color-swatch-card" style="background: #22C55E; color: #FFFFFF;">
+                <span class="fw-bold">Success</span>
+                <span class="font-mono">#22C55E</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="color-swatch-card" style="background: #F59E0B; color: #050816;">
+                <span class="fw-bold">Warning</span>
+                <span class="font-mono">#F59E0B</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="color-swatch-card" style="background: #EF4444; color: #FFFFFF;">
+                <span class="fw-bold">Danger</span>
+                <span class="font-mono">#EF4444</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="color-swatch-card" style="background: #3B82F6; color: #FFFFFF;">
+                <span class="fw-bold">Info</span>
+                <span class="font-mono">#3B82F6</span>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="mb-3 text-accent-color">Neutral & Glass Backgrounds</h4>
+          <div class="row g-3">
+            <div class="col-6 col-md-4 col-xl-2">
+              <div class="color-swatch-card" style="background: #050816; color: #FFFFFF; border-color: rgba(255,255,255,0.2);">
+                <span class="fw-bold">Background</span>
+                <span class="font-mono">#050816</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-xl-2">
+              <div class="color-swatch-card" style="background: #0F172A; color: #FFFFFF; border-color: rgba(255,255,255,0.2);">
+                <span class="fw-bold">Surface</span>
+                <span class="font-mono">#0F172A</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-xl-2">
+              <div class="color-swatch-card" style="background: rgba(255,255,255,0.08); color: #FFFFFF; border-color: rgba(255,255,255,0.2);">
+                <span class="fw-bold">Card</span>
+                <span class="font-mono">rgba(255..08)</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-xl-2">
+              <div class="color-swatch-card" style="background: #FFFFFF; color: #050816;">
+                <span class="fw-bold">Text Primary</span>
+                <span class="font-mono">#FFFFFF</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-xl-2">
+              <div class="color-swatch-card" style="background: #CBD5E1; color: #050816;">
+                <span class="fw-bold">Text Sec.</span>
+                <span class="font-mono">#CBD5E1</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-xl-2">
+              <div class="color-swatch-card" style="background: #94A3B8; color: #050816;">
+                <span class="fw-bold">Text Muted</span>
+                <span class="font-mono">#94A3B8</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. TYPOGRAPHY SYSTEM SECTION -->
+        <section id="typography" class="ds-section-block">
+          <div class="section-title-wrapper text-start">
+            <span class="section-title-badge">Typography</span>
+            <h2 class="section-title">2. Type Scale & Hierarchy</h2>
+            <p class="section-subtitle ms-0">Outfit primary sans-serif font paired with Fira Code for code blocks.</p>
+          </div>
+
+          <div class="glass-card p-4 d-flex flex-direction-column gap-4">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-1">
+                <span class="caption font-mono">Display XL — 4.5rem / Black 900</span>
+                <span class="badge-ds badge-ds-primary">.display-xl</span>
+              </div>
+              <div class="display-xl gradient-text">Architect Portfolio</div>
+            </div>
+
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-1">
+                <span class="caption font-mono">Display Large — 3.5rem / ExtraBold 800</span>
+                <span class="badge-ds badge-ds-primary">.display-lg</span>
+              </div>
+              <div class="display-lg">Full-Stack Innovator</div>
+            </div>
+
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-1">
+                <span class="caption font-mono">Heading 1 — 2.75rem / Bold 700</span>
+                <span class="badge-ds badge-ds-secondary">h1, .h1</span>
+              </div>
+              <h1>Crafting High-Performance Web Apps</h1>
+            </div>
+
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-1">
+                <span class="caption font-mono">Heading 2 — 2.25rem / Bold 700</span>
+                <span class="badge-ds badge-ds-secondary">h2, .h2</span>
+              </div>
+              <h2>Featured Projects & Enterprise Case Studies</h2>
+            </div>
+
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-1">
+                <span class="caption font-mono">Body Large — 1.125rem / Regular 400</span>
+                <span class="badge-ds badge-ds-success">.body-lg</span>
+              </div>
+              <p class="body-lg text-secondary">
+                Specialized in Flutter cross-platform mobile apps, React / Vue modern web architectures, Three.js 3D animations, and secure cloud DevOps deployments.
+              </p>
+            </div>
+
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-1">
+                <span class="caption font-mono">Label Text & Mono Code</span>
+                <span class="badge-ds badge-ds-gradient">.label-text / .font-mono</span>
+              </div>
+              <div class="label-text mb-2">System Overview Label</div>
+              <code class="font-mono p-2 rounded glass-card text-primary-color d-inline-block">
+                const system = new DesignSystem({ theme: 'luxury-dark', responsive: true });
+              </code>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. SPACING & RADIUS SECTION -->
+        <section id="spacing" class="ds-section-block">
+          <div class="section-title-wrapper text-start">
+            <span class="section-title-badge">Grid & Spacing</span>
+            <h2 class="section-title">3. Spacing & Border Radius System</h2>
+            <p class="section-subtitle ms-0">4px base grid variables mapping to margins, paddings, and consistent container radii.</p>
+          </div>
+
+          <div class="row g-4 mb-4">
+            <div class="col-md-6">
+              <div class="glass-card p-4">
+                <h4 class="mb-3 text-primary-color">Border Radius Scale</h4>
+                <div class="d-flex flex-wrap gap-3 align-items-center">
+                  <div class="p-3 bg-surface border rounded-sm" style="width: 80px; height: 80px; font-size: 0.75rem;">Small 6px</div>
+                  <div class="p-3 bg-surface border rounded-md" style="width: 80px; height: 80px; font-size: 0.75rem;">Medium 12px</div>
+                  <div class="p-3 bg-surface border rounded-lg" style="width: 80px; height: 80px; font-size: 0.75rem;">Large 20px</div>
+                  <div class="p-3 bg-surface border rounded-xl" style="width: 80px; height: 80px; font-size: 0.75rem;">XL 28px</div>
+                  <div class="px-4 py-2 bg-surface border rounded-pill" style="font-size: 0.75rem;">Pill 9999px</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="glass-card p-4">
+                <h4 class="mb-3 text-secondary-color">4px Spacing Grid System</h4>
+                <div class="d-flex flex-wrap gap-2 align-items-center">
+                  <div class="spacing-box" style="width: 16px; height: 16px;">4</div>
+                  <div class="spacing-box" style="width: 24px; height: 24px;">8</div>
+                  <div class="spacing-box" style="width: 32px; height: 32px;">12</div>
+                  <div class="spacing-box" style="width: 40px; height: 40px;">16</div>
+                  <div class="spacing-box" style="width: 48px; height: 48px;">24</div>
+                  <div class="spacing-box" style="width: 64px; height: 64px;">32</div>
+                  <div class="spacing-box" style="width: 80px; height: 80px;">48</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. BUTTON SUITE SECTION -->
+        <section id="buttons" class="ds-section-block">
+          <div class="section-title-wrapper text-start">
+            <span class="section-title-badge">Buttons</span>
+            <h2 class="section-title">4. Handcrafted Button Suite</h2>
+            <p class="section-subtitle ms-0">Interactive buttons supporting hover, active, focus, disabled, loading, glow, and icon states.</p>
+          </div>
+
+          <div class="glass-card p-4 mb-4">
+            <h5 class="mb-3 text-primary-color">Button Variants</h5>
+            <div class="d-flex flex-wrap gap-3 align-items-center mb-4">
+              <button class="btn-ds btn-ds-primary"><i class="bi bi-rocket-takeoff-fill"></i> Primary Button</button>
+              <button class="btn-ds btn-ds-secondary"><i class="bi bi-star-fill"></i> Secondary Button</button>
+              <button class="btn-ds btn-ds-gradient"><i class="bi bi-lightning-charge-fill"></i> Gradient Glow</button>
+              <button class="btn-ds btn-ds-outline"><i class="bi bi-download"></i> Outline Button</button>
+              <button class="btn-ds btn-ds-ghost"><i class="bi bi-eye-fill"></i> Ghost Button</button>
+            </div>
+
+            <h5 class="mb-3 text-secondary-color">Button States & Utilities</h5>
+            <div class="d-flex flex-wrap gap-3 align-items-center">
+              <button class="btn-ds btn-ds-primary btn-ds-loading"><span class="btn-text">Loading State</span></button>
+              <button class="btn-ds btn-ds-primary" disabled><i class="bi bi-slash-circle"></i> Disabled</button>
+              <button class="btn-ds btn-ds-icon btn-ds-primary"><i class="bi bi-heart-fill"></i></button>
+              <button class="btn-ds btn-ds-icon btn-ds-secondary"><i class="bi bi-share-fill"></i></button>
+              <button class="btn-ds btn-ds-icon btn-ds-outline"><i class="bi bi-bookmark-star-fill"></i></button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. CARDS LIBRARY SECTION -->
+        <section id="cards" class="ds-section-block">
+          <div class="section-title-wrapper text-start">
+            <span class="section-title-badge">Cards</span>
+            <h2 class="section-title">5. Component Cards Library</h2>
+            <p class="section-subtitle ms-0">Handcrafted card variants for projects, skills, services, statistics, pricing, and profile info.</p>
+          </div>
+
+          <div class="row g-4">
+            <!-- Project Card -->
+            <div class="col-md-6 col-xl-4">
+              <div class="card-ds card-project">
+                <div class="card-project__image-wrapper">
+                  <img src="assets/images/profile.svg" alt="Project" class="card-project__image">
+                </div>
+                <div class="card-project__body">
+                  <span class="badge-ds badge-ds-primary mb-2">Featured Project</span>
+                  <h4>AI Smart Assistant Platform</h4>
+                  <p class="body-sm text-secondary flex-grow-1">Next-gen AI conversational platform powered by Gemini API & Flutter.</p>
+                  <div class="project-tech-stack">
+                    <span class="project-tech-tag">Flutter</span>
+                    <span class="project-tech-tag">Dart</span>
+                    <span class="project-tech-tag">Firebase</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service Card -->
+            <div class="col-md-6 col-xl-4">
+              <div class="card-ds card-service">
+                <div class="card-service__icon">
+                  <i class="bi bi-code-slash"></i>
+                </div>
+                <h4>Full Stack Engineering</h4>
+                <p class="body-sm text-secondary mb-0">Building ultra-fast responsive web applications with modern frontend frameworks and backend microservices.</p>
+              </div>
+            </div>
+
+            <!-- Statistic Card -->
+            <div class="col-md-6 col-xl-4">
+              <div class="card-ds card-statistic">
+                <div class="card-statistic__number" data-target="150" data-suffix="+">150+</div>
+                <div class="hero-stat-label">Projects Completed</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. FORMS SECTION -->
+        <section id="forms" class="ds-section-block">
+          <div class="section-title-wrapper text-start">
+            <span class="section-title-badge">Forms</span>
+            <h2 class="section-title">6. Glass Form Controls</h2>
+            <p class="section-subtitle ms-0">Modern glass inputs with floating labels, custom checkboxes, switches, search box, and file uploads.</p>
+          </div>
+
+          <div class="glass-card p-4">
+            <form class="contact-form-ds">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-group-ds form-floating-ds">
+                    <input type="text" class="form-control-ds" id="inputName" placeholder=" " required>
+                    <label for="inputName">Your Full Name</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group-ds form-floating-ds">
+                    <input type="email" class="form-control-ds is-valid" id="inputEmail" placeholder=" " value="habib@sparktech.agency">
+                    <label for="inputEmail">Email Address</label>
+                    <div class="form-feedback valid"><i class="bi bi-check-circle-fill"></i> Valid email address</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label class="label-text mb-2">Search Input</label>
+                  <div class="search-box-ds">
+                    <i class="bi bi-search search-icon"></i>
+                    <input type="text" class="form-control-ds" placeholder="Search components...">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="label-text mb-2">Custom Switches & Radios</label>
+                  <div class="d-flex align-items-center gap-4">
+                    <label class="custom-switch-ds">
+                      <input type="checkbox" checked>
+                      <span class="switch-slider"></span>
+                    </label>
+                    <label class="custom-check-ds">
+                      <input type="checkbox" checked>
+                      <span class="checkmark-ds"></span>
+                      <span>Subscribe</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="file-upload-ds mb-4">
+                <i class="bi bi-cloud-arrow-up fs-2 text-primary-color mb-2 d-block"></i>
+                <div class="fw-bold">Drag and drop project briefs or attachments</div>
+                <div class="caption text-muted">Supports PDF, PNG, JPG up to 25MB</div>
+              </div>
+
+              <button type="submit" class="btn-ds btn-ds-primary"><i class="bi bi-send-fill"></i> Send Message</button>
+            </form>
+          </div>
+        </section>
+
+        <!-- 7. BADGES & ALERTS SECTION -->
+        <section id="badges" class="ds-section-block">
+          <div class="section-title-wrapper text-start">
+            <span class="section-title-badge">Badges</span>
+            <h2 class="section-title">7. Badges & Alert Indicators</h2>
+            <p class="section-subtitle ms-0">Glowing status chips, alert banners, and animated notification dots.</p>
+          </div>
+
+          <div class="glass-card p-4">
+            <h5 class="mb-3 text-primary-color">Badge Suite</h5>
+            <div class="d-flex flex-wrap gap-3 align-items-center mb-4">
+              <span class="badge-ds badge-ds-primary">Primary Tag</span>
+              <span class="badge-ds badge-ds-secondary">Secondary Tag</span>
+              <span class="badge-ds badge-ds-success">Success Active</span>
+              <span class="badge-ds badge-ds-warning">Warning Warning</span>
+              <span class="badge-ds badge-ds-danger">Danger Alert</span>
+              <span class="badge-ds badge-ds-gradient">Gradient Pro</span>
+              <span class="badge-ds badge-ds-primary badge-ds-animated">Animated Shine</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 8. TIMELINE & COMPONENTS -->
+        <section id="components" class="ds-section-block">
+          <div class="section-title-wrapper text-start">
+            <span class="section-title-badge">Timeline</span>
+            <h2 class="section-title">8. Interactive Vertical Timeline</h2>
+            <p class="section-subtitle ms-0">Glowing milestone nodes and vertical progress line.</p>
+          </div>
+
+          <div class="timeline-vertical-ds">
+            <div class="timeline-item-ds">
+              <div class="timeline-node-ds"></div>
+              <div class="timeline-content-ds">
+                <span class="badge-ds badge-ds-primary mb-2">2024 - Present</span>
+                <h4>Lead Full Stack Architect</h4>
+                <p class="body-sm text-secondary mb-0">Sparktech Agency — Leading cross-platform mobile and Web3 application engineering.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item-ds">
+              <div class="timeline-node-ds"></div>
+              <div class="timeline-content-ds">
+                <span class="badge-ds badge-ds-secondary mb-2">2022 - 2024</span>
+                <h4>Senior Flutter Developer</h4>
+                <p class="body-sm text-secondary mb-0">Designed enterprise mobile apps with state management and custom native plugins.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 9. ICON SYSTEM SECTION -->
+        <section id="icons" class="ds-section-block">
+          <div class="section-title-wrapper text-start">
+            <span class="section-title-badge">Icons</span>
+            <h2 class="section-title">9. Icon System & Glow Effects</h2>
+            <p class="section-subtitle ms-0">Integrated Bootstrap Icons & Font Awesome with hover animations and cyan glows.</p>
+          </div>
+
+          <div class="glass-card p-4">
+            <div class="d-flex flex-wrap gap-4 align-items-center">
+              <div class="footer-social-icon"><i class="bi bi-github"></i></div>
+              <div class="footer-social-icon"><i class="bi bi-linkedin"></i></div>
+              <div class="footer-social-icon"><i class="bi bi-twitter-x"></i></div>
+              <div class="footer-social-icon"><i class="bi bi-youtube"></i></div>
+              <div class="footer-social-icon"><i class="bi bi-discord"></i></div>
+              <div class="footer-social-icon"><i class="fa-brands fa-figma"></i></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 10. ANIMATIONS SECTION -->
+        <section id="animations" class="ds-section-block">
+          <div class="section-title-wrapper text-start">
+            <span class="section-title-badge">Motion</span>
+            <h2 class="section-title">10. Motion & Utility Standards</h2>
+            <p class="section-subtitle ms-0">Subtle floating, hover lifts, pulse glows, and reduced-motion access overrides.</p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="glass-card p-4 text-center hover-lift">
+                <i class="bi bi-arrows-angle-expand fs-1 text-primary-color mb-3 d-block"></i>
+                <h5 class="mb-1">Hover Lift</h5>
+                <span class="caption font-mono">.hover-lift</span>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="glass-card p-4 text-center anim-floating">
+                <i class="bi bi-water fs-1 text-secondary-color mb-3 d-block"></i>
+                <h5 class="mb-1">Floating Motion</h5>
+                <span class="caption font-mono">.anim-floating</span>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="glass-card p-4 text-center anim-pulse-glow">
+                <i class="bi bi-brightness-high-fill fs-1 text-accent-color mb-3 d-block"></i>
+                <h5 class="mb-1">Pulse Glow</h5>
+                <span class="caption font-mono">.anim-pulse-glow</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Action Button -->
+  <button class="btn-ds btn-ds-fab back-to-top-btn" id="backToTop" title="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Centralized Error Handler Script -->
+  <script src="assets/js/error-handler.js"></script>
+
+  <!-- JavaScript Animation Libraries & Core -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+  <!-- Modular Animation Engine Scripts -->
+  <script src="assets/js/utilities.js"></script>
+  <script src="assets/js/cursor.js"></script>
+  <script src="assets/js/preloader.js"></script>
+  <script src="assets/js/three-background.js"></script>
+  <script src="assets/js/hero-animation.js"></script>
+  <script src="assets/js/scroll-animation.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/theme-transition.js"></script>
+  <script src="assets/js/portfolio-animation.js"></script>
+  <script src="assets/js/animation.js"></script>
+
+  <!-- Advanced Theme Engine Script -->
+  <script src="assets/js/theme-engine.js"></script>
+
+  <!-- 3D Interaction Engine Scripts -->
+  <script src="assets/js/three-engine.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- Global Search & Discovery System Scripts -->
+  <script src="assets/js/search/search-index.js"></script>
+  <script src="assets/js/search/search-engine.js"></script>
+  <script src="assets/js/search/filter-engine.js"></script>
+  <script src="assets/js/search/recent-searches.js"></script>
+  <script src="assets/js/search/quick-actions.js"></script>
+  <script src="assets/js/search/keyboard.js"></script>
+  <script src="assets/js/search/search-modal.js"></script>
+
+  <!-- Multi-Language System Scripts -->
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/locale-loader.js"></script>
+  <script src="assets/js/translator.js"></script>
+  <script src="assets/js/language-switcher.js"></script>
+  <script src="assets/js/i18n.js"></script>
+
+  <!-- Progressive Web App Scripts -->
+  <script src="assets/js/pwa.js"></script>
+  <script src="assets/js/install.js"></script>
+  <script src="assets/js/update.js"></script>
+  <script src="assets/js/offline.js"></script>
+
+  <!-- Analytics & Visitor Intelligence System Scripts -->
+  <script src="assets/js/analytics/config.js"></script>
+  <script src="assets/js/analytics/privacy.js"></script>
+  <script src="assets/js/analytics/events.js"></script>
+  <script src="assets/js/analytics/tracking.js"></script>
+  <script src="assets/js/analytics/analytics.js"></script>
+  <script src="assets/js/analytics/dashboard.js"></script>
+
+  <!-- Application Entry point -->
+  <script src="assets/js/core/utils.js"></script>
+  <script src="assets/js/core/theme.js"></script>
+  <script src="assets/js/core/navigation.js"></script>
+  <script src="assets/js/core/portfolio.js"></script>
+  <script src="assets/js/core/contact.js"></script>
+  <script src="assets/js/core/scroll.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

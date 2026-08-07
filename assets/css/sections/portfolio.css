@@ -1,0 +1,32 @@
+/* ==========================================================================
+   GLOBAL DESIGN SYSTEM - PORTFOLIO FILTER SECTION STYLES
+   ========================================================================== */
+
+.portfolio-filter-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-10);
+}
+
+.portfolio-filter-btn {
+  padding: 8px 22px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.portfolio-filter-btn:hover,
+.portfolio-filter-btn.active {
+  background: var(--gradient-primary);
+  border-color: transparent;
+  color: #050816;
+  font-weight: var(--font-weight-bold);
+  box-shadow: var(--glow-primary);
+}

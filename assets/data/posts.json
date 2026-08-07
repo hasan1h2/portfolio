@@ -1,0 +1,32 @@
+[
+  {
+    "id": "post-1",
+    "slug": "building-cross-platform-apps-with-flutter",
+    "title": "Building Production-Ready Cross-Platform Apps with Flutter 3",
+    "summary": "An in-depth guide on clean architecture, BLoC state management, and native plugin integration for enterprise Flutter applications.",
+    "contentFile": "building-cross-platform-apps-with-flutter.md",
+    "date": "2024-07-28",
+    "category": "mobile-development",
+    "categoryName": "Mobile Development",
+    "tags": ["Flutter", "Dart", "Architecture", "Mobile"],
+    "author": "habib-hasan",
+    "coverImage": "assets/images/profile.svg",
+    "readingTime": "6 min read",
+    "featured": true
+  },
+  {
+    "id": "post-2",
+    "slug": "mastering-threejs-webgl-performance",
+    "title": "Mastering 60 FPS WebGL Animations with Three.js & GSAP",
+    "summary": "How to optimize buffer geometries, manage WebGL render loops, handle page visibility, and build stunning 3D canvas backgrounds.",
+    "contentFile": "mastering-threejs-webgl-performance.md",
+    "date": "2024-08-01",
+    "category": "web-engineering",
+    "categoryName": "Web Engineering",
+    "tags": ["Three.js", "WebGL", "GSAP", "Performance"],
+    "author": "habib-hasan",
+    "coverImage": "assets/images/profile.svg",
+    "readingTime": "8 min read",
+    "featured": true
+  }
+]

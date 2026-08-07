@@ -1,0 +1,18 @@
+[
+  {
+    "id": "test-1",
+    "name": "Sarah Jenkins",
+    "position": "CEO at NexaTech",
+    "avatar": "assets/images/profile.svg",
+    "rating": 5,
+    "quote": "Habib is a world-class engineer. He transformed our complex Flutter mobile requirements into a stunning, ultra-fast application delivered ahead of schedule."
+  },
+  {
+    "id": "test-2",
+    "name": "Michael Chang",
+    "position": "Product Director at Horizon Cloud",
+    "avatar": "assets/images/profile.svg",
+    "rating": 5,
+    "quote": "The 3D animations and glassmorphic UI design system created by Habib gave our platform an award-winning edge."
+  }
+]

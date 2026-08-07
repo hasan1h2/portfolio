@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "mobile-development",
+    "name": "Mobile Development",
+    "icon": "bi-phone",
+    "description": "Flutter, Dart, iOS, Android, and cross-platform native bridges."
+  },
+  {
+    "slug": "web-engineering",
+    "name": "Web Engineering",
+    "icon": "bi-code-slash",
+    "description": "JavaScript ES6, Three.js 3D WebGL, GSAP animations, and frontend performance."
+  },
+  {
+    "slug": "ui-ux-design",
+    "name": "UI/UX & Design Systems",
+    "icon": "bi-palette",
+    "description": "Figma design tokens, dark glassmorphism, accessibility, and visual aesthetics."
+  }
+]

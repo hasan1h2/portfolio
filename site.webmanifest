@@ -1,0 +1,33 @@
+{
+  "name": "Ahosan Habib Hasan | Award-Winning 3D Portfolio",
+  "short_name": "Habib Hasan",
+  "description": "Portfolio of Habib Hasan - Flutter Developer, Full Stack Web Developer, Graphic Designer, AI Creator & DevOps Learner.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#050816",
+  "background_color": "#050816",
+  "lang": "en-US",
+  "categories": ["portfolio", "developer", "technology"],
+  "icons": [
+    {
+      "src": "assets/images/profile.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/profile.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/profile.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+/* ==========================================================================
+   GLOBAL DESIGN SYSTEM - RESPONSIVE BREAKPOINT ADAPTERS
+   ========================================================================== */
+
+/* Extra Small (Mobile Phones < 576px) */
+@media (max-width: 575.98px) {
+  .section-padding {
+    padding-block: var(--space-10);
+  }
+
+  .display-xl {
+    font-size: 2.25rem;
+  }
+
+  .display-lg {
+    font-size: 1.85rem;
+  }
+
+  .btn-ds {
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .mega-menu-ds {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small Devices (Landscape Phones >= 576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .btn-ds {
+    padding: 12px 24px;
+  }
+}
+
+/* Medium Devices (Tablets >= 768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .mega-menu-ds {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large Devices (Desktops >= 992px) */
+@media (min-width: 992px) {
+  .hero-section {
+    min-height: 90vh;
+  }
+}
+
+/* Extra Large Devices (Large Desktops >= 1200px) */
+@media (min-width: 1200px) {
+  .container-ds {
+    max-width: 1140px;
+  }
+}
+
+/* Extra Extra Large Devices (Wide Screens >= 1400px) */
+@media (min-width: 1400px) {
+  .container-ds {
+    max-width: 1320px;
+  }
+}
