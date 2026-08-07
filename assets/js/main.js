@@ -110,35 +110,7 @@ function initPortfolioApp() {
     });
   }
 
-  /* --------------------------------------------------------------------------
-     4. DARK / LIGHT THEME TOGGLE
-     -------------------------------------------------------------------------- */
-  const themeToggleBtn = document.querySelector('.theme-toggle-btn');
-  const storedTheme = localStorage.getItem('theme') || 'dark';
-  document.body.setAttribute('data-theme', storedTheme);
 
-  if (themeToggleBtn) {
-    updateThemeIcon(storedTheme);
-    themeToggleBtn.addEventListener('click', () => {
-      const currentTheme = document.body.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      document.body.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      updateThemeIcon(newTheme);
-    });
-  }
-
-  function updateThemeIcon(theme) {
-    if (!themeToggleBtn) return;
-    const icon = themeToggleBtn.querySelector('i');
-    if (icon) {
-      if (theme === 'light') {
-        icon.className = 'fas fa-moon';
-      } else {
-        icon.className = 'fas fa-sun';
-      }
-    }
-  }
 
   /* --------------------------------------------------------------------------
      5. TYPED.JS TEXT & GSAP ENTRANCE INITIALIZATION

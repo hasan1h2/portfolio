@@ -39,8 +39,9 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/theme.js"></script>
 </head>
-<body data-theme="dark">
+<body>
 
   <!-- Preloader -->
   <div id="preloader">
@@ -70,9 +71,9 @@
         <button class="nav-action-btn search-trigger-btn" aria-label="Search">
           <i class="fas fa-search"></i>
         </button>
-        <button class="theme-toggle-btn" aria-label="Toggle Theme">
-          <i class="fas fa-sun"></i>
-        </button>
+        <button class="theme-toggle-btn" aria-label="Toggle Theme" aria-pressed="false" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Switch Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
       </div>
 
       <!-- Custom Hamburger Button for Mobile -->
@@ -177,8 +178,8 @@
             <i class="fas fa-search"></i>
           </button>
 
-          <button class="theme-toggle-btn" aria-label="Toggle Theme" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Switch Theme">
-            <i class="fas fa-sun"></i>
+          <button class="theme-toggle-btn" aria-label="Toggle Theme" aria-pressed="false" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Switch Theme">
+            <i class="bi bi-moon-stars-fill"></i>
           </button>
 
           <a href="#" class="btn-outline-glass btn-download-resume ripple-btn px-3 py-2 fs-7" id="downloadResumeBtn">

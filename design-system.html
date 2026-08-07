@@ -95,8 +95,9 @@
       color: var(--color-primary);
     }
   </style>
+  <script src="assets/js/theme.js"></script>
 </head>
-<body data-theme="dark">
+<body>
 
   <!-- Scroll Progress Indicator -->
   <div class="scroll-progress-bar"></div>
@@ -123,9 +124,9 @@
             <li><a class="dropdown-item dropdown-item-ds lang-select-item" href="#" data-lang="bn"><i class="bi bi-translate me-2"></i> বাংলা (BN)</a></li>
           </ul>
         </div>
-        <button class="btn-ds btn-ds-ghost theme-toggle-btn" title="Toggle Theme">
-          <i class="bi bi-sun-fill text-warning-color fs-5"></i>
-        </button>
+        <button class="theme-toggle-btn" aria-label="Toggle Theme" aria-pressed="false" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Switch Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
         <a href="index.html" class="btn-ds btn-ds-outline btn-sm">
           <i class="bi bi-arrow-left"></i> Back to Main Site
         </a>

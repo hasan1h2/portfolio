@@ -18,8 +18,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/theme.js"></script>
 </head>
-<body data-theme="dark">
+<body>
 
   <!-- Preloader & Background FX -->
   <div id="preloader"><div class="preloader-spinner"></div><div class="preloader-logo">HABIB HASAN</div></div>
@@ -33,7 +34,9 @@
       </a>
       <div class="d-flex align-items-center gap-2 ms-auto d-lg-none me-2">
         <button class="nav-action-btn search-trigger-btn" aria-label="Quick Search"><i class="fas fa-search"></i></button>
-        <button class="theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
+        <button class="theme-toggle-btn" aria-label="Toggle Theme" aria-pressed="false" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Switch Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
       </div>
       <button class="mobile-hamburger-btn d-lg-none" id="mobileHamburgerBtn" aria-label="Toggle Menu">
         <span></span><span></span><span></span>
@@ -125,7 +128,9 @@
         <div class="d-flex align-items-center gap-3 ms-lg-3 mt-3 mt-lg-0">
           <button class="nav-action-btn search-trigger-btn d-none d-lg-flex" aria-label="Global Search"><i class="fas fa-search"></i></button>
           <a href="contact.html" class="btn-primary-glow px-4 py-2 text-decoration-none"><i class="fas fa-paper-plane me-1"></i> Hire Me</a>
-          <button class="theme-toggle-btn d-none d-lg-flex" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
+          <button class="theme-toggle-btn" aria-label="Toggle Theme" aria-pressed="false" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Switch Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
         </div>
       </div>
     </div>
