@@ -1,7 +1,7 @@
 [
   { "platform": "GitHub", "url": "https://github.com/hasan1h2", "icon": "bi-github" },
-  { "platform": "LinkedIn", "url": "https://linkedin.com/in/hasan1h2", "icon": "bi-linkedin" },
-  { "platform": "Twitter / X", "url": "https://twitter.com", "icon": "bi-twitter-x" },
-  { "platform": "YouTube", "url": "https://youtube.com", "icon": "bi-youtube" },
-  { "platform": "Discord", "url": "https://discord.com", "icon": "bi-discord" }
+  { "platform": "LinkedIn", "url": "https://linkedin.com", "icon": "bi-linkedin" },
+  { "platform": "Email", "url": "mailto:mdhasanhabibh@gmail.com", "icon": "bi-envelope-fill" },
+  { "platform": "Phone", "url": "tel:01742757448", "icon": "bi-telephone-fill" },
+  { "platform": "WhatsApp", "url": "https://wa.me/8801742757448", "icon": "bi-whatsapp" }
 ]

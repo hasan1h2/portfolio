@@ -207,7 +207,7 @@ function initPortfolioApp() {
   }
 
   /* --------------------------------------------------------------------------
-     9. ANIMATED COUNTERS
+     9. ANIMATED COUNTERS & CAREER SLIDER
      -------------------------------------------------------------------------- */
   const counters = document.querySelectorAll('.counter-value');
   let counterStarted = false;
@@ -215,13 +215,14 @@ function initPortfolioApp() {
   function runCounters() {
     counters.forEach(counter => {
       const target = +counter.getAttribute('data-target');
+      if (!target) return;
       let count = 0;
-      const speed = target / 40;
+      const speed = Math.max(1, Math.ceil(target / 40));
       const updateCount = () => {
         count += speed;
         if (count < target) {
-          counter.innerText = Math.ceil(count);
-          setTimeout(updateCount, 30);
+          counter.innerText = Math.ceil(count) + (target === 100 ? '%' : '+');
+          setTimeout(updateCount, 35);
         } else {
           counter.innerText = target === 100 ? '100%' : target + '+';
         }
@@ -232,12 +233,35 @@ function initPortfolioApp() {
 
   const counterSection = document.querySelector('.stats-section');
   if (counterSection) {
-    window.addEventListener('scroll', () => {
+    const checkCounters = () => {
       const rect = counterSection.getBoundingClientRect();
-      if (rect.top <= window.innerHeight && !counterStarted) {
+      if (rect.top <= window.innerHeight && rect.bottom >= 0 && !counterStarted) {
         counterStarted = true;
         runCounters();
       }
+    };
+    window.addEventListener('scroll', checkCounters);
+    checkCounters(); // Initial check on load
+  }
+
+  // Career Timeline & Experience Swiper Carousel
+  if (document.querySelector('.career-slider')) {
+    new Swiper('.career-slider', {
+      loop: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      speed: 800,
+      effect: 'slide',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     });
   }
 
@@ -926,11 +950,25 @@ function initPortfolioApp() {
   }
 }
 
+window.printCV = function() {
+  window.open('assets/documents/Habib-Hasan-CV.pdf');
+};
+
+document.addEventListener('click', function(e) {
+  const printBtn = e.target.closest('.btn-print-cv');
+  if (printBtn) {
+    e.preventDefault();
+    window.printCV();
+  }
+});
+
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initPortfolioApp);
 } else {
   initPortfolioApp();
 }
+
+
 
 
 

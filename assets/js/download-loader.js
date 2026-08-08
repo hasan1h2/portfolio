@@ -63,15 +63,15 @@ const DownloadLoaderEngine = {
               <span><i class="bi bi-clock me-1"></i>${item.updatedDate}</span>
             </div>
             <div class="project-tech-stack mb-3">${tagsHtml}</div>
-            <div class="d-flex gap-2">
-              <a href="${item.fileUrl}" download class="btn-ds btn-ds-primary btn-sm btn-download-track" data-id="${item.id}">
+            <div class="d-flex flex-wrap gap-2">
+              <a href="${item.fileUrl}" download="${item.title}.pdf" class="btn-ds btn-ds-primary btn-sm btn-download-track" data-id="${item.id}">
                 <i class="bi bi-download"></i> Download
               </a>
-              <button class="btn-ds btn-ds-outline btn-sm btn-preview-resource" data-id="${item.id}">
-                <i class="bi bi-eye"></i> Preview
-              </button>
-              <button class="btn-ds btn-ds-ghost btn-sm btn-open-modal" data-id="${item.id}" title="Details">
-                <i class="bi bi-info-circle"></i>
+              <a href="${item.fileUrl}" target="_blank" class="btn-ds btn-ds-outline btn-sm">
+                <i class="bi bi-eye"></i> View
+              </a>
+              <button class="btn-ds btn-ds-outline btn-sm btn-print-cv" onclick="window.printCV()">
+                <i class="bi bi-printer"></i> Print
               </button>
             </div>
           </div>

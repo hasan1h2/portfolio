@@ -40,10 +40,12 @@
    1. ROOT VARIABLES & THEME DEFINITION
    -------------------------------------------------------------------------- */
 :root {
-  /* Color Palette */
+  /* DARK MODE DEFAULT VARIABLES */
+  --bg-main: #050816;
   --bg-dark: #050816;
-  --bg-card: rgba(15, 23, 42, 0.65);
-  --bg-card-hover: rgba(30, 41, 59, 0.85);
+  --bg-secondary: #0B1120;
+  --bg-card: rgba(15, 23, 42, 0.75);
+  --bg-card-hover: rgba(30, 41, 59, 0.90);
   --bg-glass: rgba(255, 255, 255, 0.03);
   --border-glass: rgba(255, 255, 255, 0.1);
   --border-glow: rgba(0, 229, 255, 0.3);
@@ -57,69 +59,79 @@
 
   --text-primary: #FFFFFF;
   --text-secondary: #E5E7EB;
-  --text-muted: #CBD5E1;
+  --text-muted: #94A3B8;
   --text-main: #FFFFFF;
   --text-dark: #0F172A;
   --text-contrast: #0F172A;
 
-  /* Aliases for User Requested Variables */
+  --nav-bg: rgba(5, 8, 22, 0.85);
+  --nav-link: #FFFFFF;
+  --footer-bg: #03050C;
+  --footer-text: #94A3B8;
+
   --bg-color: var(--bg-dark);
   --text-color: var(--text-primary);
   --card-bg: var(--bg-card);
   --primary-color: var(--primary);
   --border-color: var(--border-glass);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   --shadow-color: var(--shadow-glass);
 
   --gradient-primary: linear-gradient(135deg, #00E5FF 0%, #7B61FF 50%, #00FFA3 100%);
   --gradient-text: linear-gradient(135deg, #00E5FF 0%, #7B61FF 50%, #00FFA3 100%);
   --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
 
-  /* Typography */
   --font-main: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-code: 'Fira Code', monospace;
 
-  /* Shadows & Glows */
-  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  --glow-cyan: 0 0 25px rgba(0, 229, 255, 0.35);
-  --glow-purple: 0 0 25px rgba(123, 97, 255, 0.35);
-  --glow-green: 0 0 25px rgba(0, 255, 163, 0.35);
-
-  /* Transitions */
-  --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-normal: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* Layout Radius */
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-full: 9999px;
 }
 
-/* Light Theme Overrides (Controlled via body[data-theme="light"]) */
-body[data-theme="light"] {
+/* LIGHT MODE THEME SYSTEM */
+[data-theme="light"],
+body[data-theme="light"],
+body.light-theme {
+  --bg-main: #F8FAFC;
   --bg-dark: #F8FAFC;
-  --bg-card: rgba(255, 255, 255, 0.85);
-  --bg-card-hover: rgba(241, 245, 249, 0.95);
-  --bg-glass: rgba(0, 0, 0, 0.03);
+  --bg-secondary: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F1F5F9;
+  --bg-glass: rgba(0, 0, 0, 0.02);
   --border-glass: rgba(0, 0, 0, 0.1);
-  --border-glow: rgba(0, 229, 255, 0.4);
+  --border-glow: rgba(2, 132, 199, 0.4);
+
+  --primary: #0284C7;
+  --primary-glow: rgba(2, 132, 199, 0.25);
+  --secondary: #6366F1;
+  --secondary-glow: rgba(99, 102, 241, 0.25);
+  --accent: #059669;
+  --accent-glow: rgba(5, 150, 105, 0.25);
 
   --text-primary: #0F172A;
   --text-secondary: #334155;
-  --text-muted: #64748B;
+  --text-muted: #475569;
   --text-main: #0F172A;
+  --text-dark: #0F172A;
   --text-contrast: #FFFFFF;
 
-  /* Aliases for User Requested Variables (Light Mode Override if needed) */
+  --nav-bg: rgba(255, 255, 255, 0.90);
+  --nav-link: #1E293B;
+  --footer-bg: #E2E8F0;
+  --footer-text: #334155;
+
   --bg-color: var(--bg-dark);
   --text-color: var(--text-primary);
   --card-bg: var(--bg-card);
   --primary-color: var(--primary);
   --border-color: var(--border-glass);
+  --shadow-glass: 0 8px 30px 0 rgba(15, 23, 42, 0.08);
   --shadow-color: var(--shadow-glass);
 
-  --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  --gradient-text: linear-gradient(135deg, #0284C7 0%, #6366F1 50%, #059669 100%) !important;
+  --gradient-glass: linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.01) 100%);
 }
 
 /* --------------------------------------------------------------------------
@@ -370,14 +382,10 @@ body.hovering .cursor-follower {
 }
 
 .gradient-text {
-  background: var(--gradient-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-}.gradient-text {
-  background: var(--gradient-);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: var(--gradient-text, linear-gradient(135deg, #00E5FF 0%, #7B61FF 50%, #00FFA3 100%)) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
   display: inline-block;
 }
 
@@ -1487,6 +1495,60 @@ body.hovering .cursor-follower {
   border-radius: var(--radius-lg);
   overflow: hidden;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card > .p-3,
+.project-card > .p-4 {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.card-text-clamp,
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Career Timeline & Experience Swiper Slider */
+.career-slider {
+  width: 100%;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.career-slider-img {
+  height: 380px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-md);
+}
+
+.slider-caption-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 18px 24px;
+  background: linear-gradient(180deg, transparent 0%, rgba(5, 8, 22, 0.95) 100%);
+  z-index: 2;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .career-slider-img {
+    height: 240px;
+  }
+  .slider-caption-overlay {
+    padding: 12px 16px;
+  }
 }
 
 .project-img-wrapper {
@@ -1737,12 +1799,13 @@ footer {
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-md);
-  padding: 16px;
+  padding: 14px 16px;
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   transition: var(--transition-normal);
   height: 100%;
+  overflow: hidden;
 }
 
 .quick-info-card:hover {
@@ -1752,17 +1815,24 @@ footer {
 }
 
 .quick-info-icon {
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  flex-shrink: 0;
   border-radius: 12px;
   background: rgba(0, 229, 255, 0.1);
   color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   box-shadow: var(--glow-cyan);
+}
+
+.quick-info-card > div:not(.quick-info-icon) {
+  min-width: 0;
+  flex-grow: 1;
+  overflow: hidden;
 }
 
 .quick-info-title {
@@ -3584,14 +3654,513 @@ body:not([data-theme="light"]) .search-result-item h6,
   color: var(--text-primary) !important;
 }
 
-/* 10. Footer & Metadata Links */
-body:not([data-theme="light"]) footer,
-body:not([data-theme="light"]) footer a,
-[data-theme="dark"] footer {
-  color: var(--text-muted);
+/* ==========================================================================
+   COMPREHENSIVE LIGHT MODE COMPONENT STYLES
+   ========================================================================== */
+[data-theme="light"] {
+  background-color: var(--bg-main) !important;
+  color: var(--text-primary) !important;
 }
 
-body:not([data-theme="light"]) footer a:hover,
-[data-theme="dark"] footer a:hover {
+[data-theme="light"] body {
+  background-color: var(--bg-main) !important;
+  color: var(--text-primary) !important;
+}
+
+/* 1. Navbar & Navigation */
+[data-theme="light"] .glass-nav {
+  background: var(--nav-bg) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+[data-theme="light"] .nav-link {
+  color: var(--nav-link) !important;
+}
+
+[data-theme="light"] .nav-link:hover,
+[data-theme="light"] .nav-link.active {
   color: var(--primary) !important;
+}
+
+[data-theme="light"] .navbar-brand {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .mega-menu {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12) !important;
+}
+
+[data-theme="light"] .mega-title {
+  color: #0F172A !important;
+}
+
+[data-theme="light"] .mega-desc {
+  color: #64748B !important;
+}
+
+/* 2. Adaptive Text Overrides for HTML Hardcoded Classes */
+html[data-theme="light"] .text-white,
+body[data-theme="light"] .text-white,
+[data-theme="light"] .text-white,
+html[data-theme="light"] [class*="text-white"],
+body[data-theme="light"] [class*="text-white"],
+html[data-theme="light"] .quick-info-value,
+body[data-theme="light"] .quick-info-value,
+html[data-theme="light"] .quick-info-title,
+body[data-theme="light"] .quick-info-title,
+html[data-theme="light"] .highlight-card h6,
+body[data-theme="light"] .highlight-card h6,
+html[data-theme="light"] .about-timeline-item h6,
+body[data-theme="light"] .about-timeline-item h6,
+html[data-theme="light"] .card-title,
+body[data-theme="light"] .card-title,
+html[data-theme="light"] .project-title,
+body[data-theme="light"] .project-title,
+html[data-theme="light"] strong.text-white,
+body[data-theme="light"] strong.text-white,
+html[data-theme="light"] h1, body[data-theme="light"] h1,
+html[data-theme="light"] h2, body[data-theme="light"] h2,
+html[data-theme="light"] h3, body[data-theme="light"] h3,
+html[data-theme="light"] h4, body[data-theme="light"] h4,
+html[data-theme="light"] h5, body[data-theme="light"] h5,
+html[data-theme="light"] h6, body[data-theme="light"] h6 {
+  color: #0F172A !important;
+  --bs-text-opacity: 1 !important;
+}
+
+html[data-theme="light"] .text-muted,
+body[data-theme="light"] .text-muted,
+html[data-theme="light"] p.text-muted,
+body[data-theme="light"] p.text-muted,
+html[data-theme="light"] span.text-muted,
+body[data-theme="light"] span.text-muted {
+  color: #475569 !important;
+}
+
+html[data-theme="light"] .text-secondary,
+body[data-theme="light"] .text-secondary {
+  color: #334155 !important;
+}
+
+/* 3. Cards & Glassmorphic Containers */
+html[data-theme="light"] .glass-card,
+body[data-theme="light"] .glass-card,
+html[data-theme="light"] .card,
+body[data-theme="light"] .card,
+html[data-theme="light"] .project-card,
+body[data-theme="light"] .project-card,
+html[data-theme="light"] .quick-info-card,
+body[data-theme="light"] .quick-info-card,
+html[data-theme="light"] .highlight-card,
+body[data-theme="light"] .highlight-card,
+html[data-theme="light"] .service-card,
+body[data-theme="light"] .service-card,
+html[data-theme="light"] .testimonial-card,
+body[data-theme="light"] .testimonial-card,
+html[data-theme="light"] .experience-card,
+body[data-theme="light"] .experience-card,
+html[data-theme="light"] .education-card,
+body[data-theme="light"] .education-card {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  color: #0F172A !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06) !important;
+}
+
+html[data-theme="light"] .glass-card:hover,
+body[data-theme="light"] .glass-card:hover,
+html[data-theme="light"] .project-card:hover,
+body[data-theme="light"] .project-card:hover,
+html[data-theme="light"] .quick-info-card:hover,
+body[data-theme="light"] .quick-info-card:hover,
+html[data-theme="light"] .highlight-card:hover,
+body[data-theme="light"] .highlight-card:hover {
+  background: #F8FAFC !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 15px 35px rgba(2, 132, 199, 0.15) !important;
+}
+
+/* 4. Hero Section in Light Mode */
+html[data-theme="light"] .hero-section,
+body[data-theme="light"] .hero-section,
+html[data-theme="light"] #hero,
+body[data-theme="light"] #hero {
+  background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 50%, #E2E8F0 100%) !important;
+}
+
+html[data-theme="light"] .hero-title,
+body[data-theme="light"] .hero-title,
+html[data-theme="light"] .typed-text,
+body[data-theme="light"] .typed-text,
+html[data-theme="light"] .hero-description,
+body[data-theme="light"] .hero-description {
+  color: #0F172A !important;
+}
+
+html[data-theme="light"] #three-canvas,
+body[data-theme="light"] #three-canvas,
+html[data-theme="light"] #particles-js,
+body[data-theme="light"] #particles-js {
+  opacity: 0.2 !important;
+}
+
+/* 5. Timeline & Badges */
+html[data-theme="light"] .about-timeline-item,
+body[data-theme="light"] .about-timeline-item {
+  border-left-color: rgba(2, 132, 199, 0.3) !important;
+}
+
+html[data-theme="light"] .about-timeline-dot,
+body[data-theme="light"] .about-timeline-dot {
+  background: var(--primary) !important;
+  box-shadow: 0 0 12px rgba(2, 132, 199, 0.4) !important;
+}
+
+html[data-theme="light"] .project-tech-badge,
+body[data-theme="light"] .project-tech-badge,
+html[data-theme="light"] .value-pill,
+body[data-theme="light"] .value-pill,
+html[data-theme="light"] .interest-badge,
+body[data-theme="light"] .interest-badge {
+  background: #F1F5F9 !important;
+  color: #0F172A !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 6. Footer Section */
+html[data-theme="light"] footer,
+body[data-theme="light"] footer,
+html[data-theme="light"] footer.bg-dark,
+body[data-theme="light"] footer.bg-dark,
+html[data-theme="light"] .footer-section,
+body[data-theme="light"] .footer-section,
+html[data-theme="light"] .footer,
+body[data-theme="light"] .footer {
+  background-color: #E2E8F0 !important;
+  background: #E2E8F0 !important;
+  color: #0F172A !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+html[data-theme="light"] footer h5,
+body[data-theme="light"] footer h5,
+html[data-theme="light"] footer h6,
+body[data-theme="light"] footer h6,
+html[data-theme="light"] footer .navbar-brand,
+body[data-theme="light"] footer .navbar-brand,
+html[data-theme="light"] footer p,
+body[data-theme="light"] footer p,
+html[data-theme="light"] footer span,
+body[data-theme="light"] footer span,
+html[data-theme="light"] footer div,
+body[data-theme="light"] footer div {
+  color: #0F172A !important;
+}
+
+html[data-theme="light"] footer a,
+body[data-theme="light"] footer a,
+html[data-theme="light"] .footer a,
+body[data-theme="light"] .footer a {
+  color: #334155 !important;
+}
+
+html[data-theme="light"] footer a:hover,
+body[data-theme="light"] footer a:hover,
+html[data-theme="light"] .footer a:hover,
+body[data-theme="light"] .footer a:hover {
+  color: #0284C7 !important;
+}
+
+html[data-theme="light"] .footer-bottom,
+body[data-theme="light"] .footer-bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: #475569 !important;
+}
+
+html[data-theme="light"] .footer-bottom p,
+body[data-theme="light"] .footer-bottom p,
+html[data-theme="light"] .footer-bottom span,
+body[data-theme="light"] .footer-bottom span,
+html[data-theme="light"] .footer-bottom a,
+body[data-theme="light"] .footer-bottom a {
+  color: #475569 !important;
+}
+
+/* 7. Buttons & Form Controls */
+html[data-theme="light"] .btn-outline-glass,
+body[data-theme="light"] .btn-outline-glass {
+  background: rgba(255, 255, 255, 0.85) !important;
+  color: #0F172A !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+}
+
+html[data-theme="light"] .btn-outline-glass:hover,
+body[data-theme="light"] .btn-outline-glass:hover {
+  background: var(--primary) !important;
+  color: #FFFFFF !important;
+  border-color: var(--primary) !important;
+}
+
+html[data-theme="light"] .form-control,
+body[data-theme="light"] .form-control {
+  background: #FFFFFF !important;
+  color: #0F172A !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+}
+
+html[data-theme="light"] .form-control::placeholder,
+body[data-theme="light"] .form-control::placeholder {
+  color: #94A3B8 !important;
+}
+
+/* 8. Mobile Navigation & Modals */
+html[data-theme="light"] .mobile-nav-overlay,
+body[data-theme="light"] .mobile-nav-overlay,
+html[data-theme="light"] .search-overlay-modal,
+body[data-theme="light"] .search-overlay-modal {
+  background: rgba(248, 250, 252, 0.98) !important;
+  color: #0F172A !important;
+}
+
+html[data-theme="light"] .mobile-nav-link,
+body[data-theme="light"] .mobile-nav-link {
+  color: #0F172A !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+/* ==========================================================================
+   3D SOFT UI (NEUMORPHISM / GLASSMORPHISM) & SEARCH CONTROLS IN LIGHT MODE
+   ========================================================================== */
+
+/* 1. 3D Soft UI Hero Section */
+html[data-theme="light"] .hero-section,
+body[data-theme="light"] .hero-section,
+html[data-theme="light"] #hero,
+body[data-theme="light"] #hero {
+  background: #EBF1F5 !important;
+  background: radial-gradient(circle at 10% 20%, #F4F8FA 0%, #E2ECF2 90%) !important;
+}
+
+html[data-theme="light"] .hero-profile-wrapper,
+body[data-theme="light"] .hero-profile-wrapper {
+  border-radius: 50% !important;
+  padding: 10px !important;
+  background: #EBF1F5 !important;
+  box-shadow: 15px 15px 30px #cbd2d8, -15px -15px 30px #ffffff !important;
+}
+
+html[data-theme="light"] .hero-badge-soft,
+body[data-theme="light"] .hero-badge-soft,
+html[data-theme="light"] .badge-glow,
+body[data-theme="light"] .badge-glow {
+  background: #EBF1F5 !important;
+  color: #0F172A !important;
+  border-radius: var(--radius-full) !important;
+  box-shadow: 6px 6px 14px #cbd2d8, -6px -6px 14px #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+}
+
+html[data-theme="light"] .btn-primary-glow,
+body[data-theme="light"] .btn-primary-glow {
+  background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 6px 6px 16px rgba(2, 132, 199, 0.35), -4px -4px 12px #ffffff !important;
+  border: none !important;
+}
+
+html[data-theme="light"] .btn-outline-glass,
+body[data-theme="light"] .btn-outline-glass {
+  background: #EBF1F5 !important;
+  color: #0F172A !important;
+  border-radius: var(--radius-full) !important;
+  box-shadow: 6px 6px 14px #cbd2d8, -6px -6px 14px #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+}
+
+html[data-theme="light"] .btn-outline-glass:hover,
+body[data-theme="light"] .btn-outline-glass:hover {
+  box-shadow: inset 4px 4px 8px #cbd2d8, inset -4px -4px 8px #ffffff !important;
+  color: #0284C7 !important;
+}
+
+/* 2. Interactive Search & Select Box Contrast Fix */
+html[data-theme="light"] input,
+body[data-theme="light"] input,
+html[data-theme="light"] select,
+body[data-theme="light"] select,
+html[data-theme="light"] textarea,
+body[data-theme="light"] textarea,
+html[data-theme="light"] .form-control,
+body[data-theme="light"] .form-control,
+html[data-theme="light"] .form-select,
+body[data-theme="light"] .form-select,
+html[data-theme="light"] .skill-search-input,
+body[data-theme="light"] .skill-search-input {
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+  border: 1px solid #CBD5E1 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+html[data-theme="light"] .skill-search-input:focus,
+body[data-theme="light"] .skill-search-input:focus,
+html[data-theme="light"] .form-control:focus,
+body[data-theme="light"] .form-control:focus,
+html[data-theme="light"] input:focus,
+body[data-theme="light"] input:focus {
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+  border-color: #0284C7 !important;
+  box-shadow: 0 0 15px rgba(2, 132, 199, 0.25) !important;
+}
+
+html[data-theme="light"] input::placeholder,
+body[data-theme="light"] input::placeholder,
+html[data-theme="light"] .form-control::placeholder,
+body[data-theme="light"] .form-control::placeholder,
+html[data-theme="light"] .skill-search-input::placeholder,
+body[data-theme="light"] .skill-search-input::placeholder {
+  color: #64748B !important;
+  opacity: 1 !important;
+}
+
+html[data-theme="light"] option,
+body[data-theme="light"] option {
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+}
+
+/* 3. Theme Toggle Button High-Contrast Visibility */
+html[data-theme="light"] .theme-toggle-btn,
+body[data-theme="light"] .theme-toggle-btn,
+html[data-theme="light"] #themeToggleBtn,
+body[data-theme="light"] #themeToggleBtn {
+  background: #F1F5F9 !important;
+  color: #0F172A !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+html[data-theme="light"] .theme-toggle-btn:hover,
+body[data-theme="light"] .theme-toggle-btn:hover,
+html[data-theme="light"] #themeToggleBtn:hover,
+body[data-theme="light"] #themeToggleBtn:hover {
+  background: #0F172A !important;
+  color: #FFFFFF !important;
+  border-color: #0F172A !important;
+}
+
+/* ==========================================================================
+   GLOBAL LIGHT MODE COLOR SYSTEM & HIGH-SPECIFICITY OVERRIDES
+   ========================================================================== */
+
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme),
+html:not([data-theme="dark"]) body,
+[data-theme="light"],
+body[data-theme="light"],
+body.light-mode {
+  --bg-color: #f8f9fa;
+  --surface-color: #ffffff;
+  --card-bg: #ffffff;
+  --text-color: #212529;
+  --heading-color: #111111;
+  --muted-color: #6c757d;
+  --border-color: #dee2e6;
+}
+
+/* 1. Universal Card & Text Light Mode Overrides */
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .card,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .glass-card,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .project-card,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .quick-info-card,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .highlight-card,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .timeline-box,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .service-box,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) p,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) h1,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) h2,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) h3,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) h4,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) h5,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) h6,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .card-title,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .card-text,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .quick-info-value,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .quick-info-title,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) strong,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) span.text-white,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) p.text-white {
+  color: #212529 !important;
+}
+
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .card,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .glass-card,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .timeline-box,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .service-box {
+  background-color: #ffffff !important;
+  border: 1px solid #dee2e6 !important;
+}
+
+/* 2. Form Controls & Inputs in Light Mode */
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) input,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) select,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) textarea,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .skill-search-input {
+  background-color: #f8f9fa !important;
+  color: #111111 !important;
+  border: 1px solid #adb5bd !important;
+}
+
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) input::placeholder,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) textarea::placeholder,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .skill-search-input::placeholder {
+  color: #6c757d !important;
+  opacity: 1 !important;
+}
+
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) input:focus,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) select:focus,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) textarea:focus,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .skill-search-input:focus {
+  outline: none;
+  border-color: var(--primary-color, #00E5FF) !important;
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.15) !important;
+  background-color: #ffffff !important;
+  color: #111111 !important;
+}
+
+/* 3. Light Mode Hero 3D / Neumorphism */
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .hero-section,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) #hero {
+  background: #e0e5ec !important;
+}
+
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .hero-card-3d,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .hero-profile-wrapper {
+  box-shadow: 9px 9px 16px rgb(163 177 198 / 60%), -9px -9px 16px rgb(255 255 255 / 50%) !important;
+  border-radius: 50% !important;
+  background: #e0e5ec !important;
+}
+
+/* 4. Profile Image Container Responsiveness */
+.profile-image-container img,
+.hero-profile-wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* 5. Light Mode Timeline */
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .timeline-box,
+body:not([data-theme="dark"]):not(.dark-mode):not(.dark-theme) .about-timeline-item {
+  background: #ffffff !important;
+  color: #212529 !important;
+  border-color: #dee2e6 !important;
 }

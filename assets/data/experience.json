@@ -1,26 +1,41 @@
 [
   {
     "id": "exp-1",
-    "role": "Lead Full Stack & Flutter Architect",
-    "company": "Sparktech Agency",
-    "period": "2023 - Present",
+    "role": "Flutter App Developer",
+    "company": "Sparktech Agency, Betopa Group",
+    "period": "Duration: 6 Months",
     "location": "Dhaka, Bangladesh",
-    "description": "Architecting cross-platform Flutter applications, microservices backends, and Web3 solutions for global enterprise clients.",
-    "highlights": [
-      "Engineered 10+ production mobile apps with 500k+ total downloads.",
-      "Optimized frontend WebGL rendering pipelines achieving 60 FPS across devices."
+    "description": "Engineered responsive cross-platform Flutter applications, clean architecture UI components, GetX state management, and seamless REST API integrations.",
+    "responsibilities": [
+      "Developed responsive and user-friendly Flutter mobile applications.",
+      "Designed and implemented clean, reusable, and maintainable UI components.",
+      "Integrated REST APIs and handled JSON data streams efficiently.",
+      "Used GetX for state management, dependency injection, and reactive navigation.",
+      "Fixed bugs, optimized app performance, and improved user experience.",
+      "Collaborated with team members using Git and GitHub version control.",
+      "Participated in testing, debugging, and deployment of Flutter applications."
+    ],
+    "technologies": ["Flutter", "Dart", "GetX", "REST API", "JSON", "Git", "GitHub"],
+    "achievements": [
+      "Successfully built and deployed live apps including Chef Starz, Worker Hiring, and Artisan.",
+      "Maintained 100% modular code architecture for seamless team collaboration."
     ]
   },
   {
     "id": "exp-2",
-    "role": "Senior Frontend Engineer",
-    "company": "TechVision Software",
-    "period": "2021 - 2023",
-    "location": "Remote",
-    "description": "Led frontend UI team building responsive dashboards, design systems, and WebGL visualizations.",
-    "highlights": [
-      "Created reusable design system adopted across 8 core product teams.",
-      "Reduced bundle size by 45% and improved Lighthouse score to 98."
+    "role": "Web Design & Development Engineer (Trainee / Freelance)",
+    "company": "Dreamland IT Institute & Independent Client Works",
+    "period": "3 Months Training + Projects",
+    "location": "Dhaka, Bangladesh",
+    "description": "Designed responsive web interfaces, modern HTML5/CSS3 components, JavaScript ES6+ logic, and graphic design assets for businesses.",
+    "responsibilities": [
+      "Built clean, responsive static and dynamic web pages with HTML5, CSS3, and JavaScript.",
+      "Managed web hosting, domain setups, and cross-browser performance tuning.",
+      "Created promotional graphics, brand assets, and social media designs with Photoshop & Illustrator."
+    ],
+    "technologies": ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Bootstrap 5", "Photoshop", "Illustrator"],
+    "achievements": [
+      "Delivered production-ready client websites with 100% responsive scores on modern devices."
     ]
   }
 ]

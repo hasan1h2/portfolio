@@ -1,0 +1,20 @@
+[
+  {
+    "id": "train-1",
+    "course": "App Development",
+    "institution": "Bdcalling Academy, Dhaka",
+    "duration": "3 Months",
+    "location": "Dhaka, Bangladesh",
+    "skillsLearned": ["Dart", "Flutter Framework", "GetX State Management", "REST API Integration", "GitHub Integration"],
+    "description": "Comprehensive hands-on training on mobile app development, cross-platform architecture, and version control collaboration."
+  },
+  {
+    "id": "train-2",
+    "course": "Web Development",
+    "institution": "Dreamland IT Institute, Dhaka",
+    "duration": "3 Months",
+    "location": "Dhaka, Bangladesh",
+    "skillsLearned": ["HTML5", "CSS3", "JavaScript (ES6+)", "Responsive Web Design", "Hosting & Deployment"],
+    "description": "Professional web engineering training covering frontend standards, layout design, responsive media queries, and web deployment."
+  }
+]

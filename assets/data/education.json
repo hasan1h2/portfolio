@@ -1,9 +1,35 @@
 [
   {
-    "degree": "B.Sc. in Computer Science & Engineering",
-    "institution": "Daffodil International University",
-    "period": "2018 - 2022",
-    "grade": "CGPA 3.85 / 4.00",
-    "description": "Specialized in Software Engineering, Mobile Computing, Algorithm Design, and Artificial Intelligence."
+    "id": "edu-1",
+    "degree": "Diploma in Engineering (CST)",
+    "institution": "Sirajganj Polytechnic Institute",
+    "board": "BTEB",
+    "group": "CST (Computer Science & Technology)",
+    "period": "Passing Year: 2025",
+    "grade": "CGPA 3.15",
+    "location": "Sirajganj, Bangladesh",
+    "description": "Specialized in Computer Science & Technology, Software Engineering, Mobile Development, Web Technologies, Database Systems, and Network Architecture."
+  },
+  {
+    "id": "edu-2",
+    "degree": "H.S.C (Higher Secondary Certificate)",
+    "institution": "Moulana Bhasani College Sirajgonj",
+    "board": "Rajshahi Board",
+    "group": "Science",
+    "period": "Passing Year: 2021",
+    "grade": "GPA 3.25",
+    "location": "Sirajgonj, Bangladesh",
+    "description": "Focused on Higher Mathematics, Physics, Chemistry, and Information Technology."
+  },
+  {
+    "id": "edu-3",
+    "degree": "S.S.C (Secondary School Certificate)",
+    "institution": "Char Sonagachhia Islamia Fazil Madrasah",
+    "board": "Dhaka Board",
+    "group": "Science",
+    "period": "Passing Year: 2019",
+    "grade": "GPA 3.33",
+    "location": "Sirajgonj / Dhaka, Bangladesh",
+    "description": "Completed secondary education in General Science, Mathematics, and Computer Science basics."
   }
 ]

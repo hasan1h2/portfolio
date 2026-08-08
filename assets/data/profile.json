@@ -1,17 +1,44 @@
 {
-  "name": "Ahosan Habib Hasan",
+  "name": "Md: Ahosan Habib Hasan",
   "shortName": "Habib Hasan",
-  "title": "Flutter & Full Stack Developer | Graphic Designer | AI Creator",
-  "bio": "Passionate Full Stack Software Engineer, Flutter Developer, Graphic Designer, Digital Marketer, SEO Specialist, Video Editor, AI Creator, and DevOps Learner with over 5+ years of industry experience.",
-  "location": "Dhaka, Bangladesh",
-  "email": "habib@sparktech.agency",
-  "phone": "+880 1700-000000",
-  "status": "Available for Freelance & Full-time Roles",
+  "title": "Flutter App Developer & Full-Stack Web Developer | UI/UX & Graphic Designer | Video Editor | DevOps Learner",
+  "bio": "Sincere, professional, and hardworking Flutter App Developer with 6 months of hands-on experience at Sparktech Agency (Betopa Group). Specialized in cross-platform mobile apps (Dart, Flutter, GetX, REST APIs), responsive web engineering, clean UI architecture, graphic design, video editing, and DevOps.",
+  "careerObjective": "I would like to join an institution where I can build up my career through sincerity, professionalism, and hard work. I aim to develop my skills in web and app development by contributing to real-world projects as an intern or junior developer.",
+  "location": "Vill: Ghorachara, PO: Fulkocha, PS: Sirajgonj Sadar, Dist: Sirajgonj, Bangladesh",
+  "email": "mdhasanhabibh@gmail.com",
+  "phone": "01742757448",
+  "status": "Available for Remote & On-Site Roles",
   "avatar": "assets/images/profile.svg",
+  "github": "https://github.com/hasan1h2",
+  "dob": "2003-02-15",
+  "nationality": "Bangladeshi",
+  "maritalStatus": "Unmarried",
+  "gender": "Male",
+  "languages": [
+    { "name": "Bengali", "reading": "Excellent", "writing": "Excellent", "listening": "Excellent", "speaking": "Excellent" },
+    { "name": "English", "reading": "Excellent", "writing": "Good", "listening": "Good", "speaking": "Good" }
+  ],
+  "strengths": [
+    "Hardworking and adaptable",
+    "Willing to work anywhere in Bangladesh & Remotely",
+    "Able to understand people and situations easily",
+    "Strong interpersonal communication skills",
+    "Quick learner with leadership ability"
+  ],
+  "hobbies": [
+    "Reading books",
+    "Playing sports",
+    "Learning new technologies to expand knowledge"
+  ],
+  "reference": {
+    "name": "Md RAFSAN HOSSAIN OPI",
+    "title": "Sr. Flutter Developer",
+    "organization": "Spark Tech Agency / Bdcalling"
+  },
   "stats": [
-    { "label": "Years Experience", "value": "5+", "number": 5 },
-    { "label": "Completed Projects", "value": "150+", "number": 150 },
-    { "label": "Happy Clients", "value": "85+", "number": 85 },
-    { "label": "Awards Received", "value": "12", "number": 12 }
+    { "label": "Months Experience", "value": "6 Mos", "number": 6 },
+    { "label": "Live Projects", "value": "4+", "number": 4 },
+    { "label": "Technologies Mastered", "value": "15+", "number": 15 },
+    { "label": "Client Satisfaction", "value": "100%", "number": 100 }
   ]
 }

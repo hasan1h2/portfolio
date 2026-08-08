@@ -1,32 +1,105 @@
 [
   {
-    "category": "Mobile & Frontend",
-    "icon": "bi-phone",
+    "category": "Flutter Development",
+    "icon": "fa-brands fa-flutter",
     "skills": [
-      { "name": "Flutter & Dart", "level": 95, "icon": "fa-brands fa-flutter" },
-      { "name": "React & Vue.js", "level": 90, "icon": "fa-brands fa-react" },
-      { "name": "JavaScript (ES6+) & jQuery", "level": 92, "icon": "fa-brands fa-js" },
-      { "name": "HTML5 & CSS3 / SASS", "level": 98, "icon": "fa-brands fa-html5" }
+      { "name": "Flutter Framework & Dart", "level": 95, "icon": "fa-brands fa-flutter" },
+      { "name": "GetX State Management & Routes", "level": 92, "icon": "bi bi-layers-half" },
+      { "name": "REST API Integration & JSON", "level": 90, "icon": "bi bi-cloud-arrow-down" },
+      { "name": "Clean UI & Widget Architecture", "level": 94, "icon": "bi bi-layout-text-window-reverse" }
     ]
   },
   {
-    "category": "Backend & Cloud",
-    "icon": "bi-server",
+    "category": "Web Development",
+    "icon": "fa-brands fa-html5",
     "skills": [
-      { "name": "Node.js & Express", "level": 88, "icon": "fa-brands fa-node-js" },
-      { "name": "Python & FastAPI", "level": 85, "icon": "fa-brands fa-python" },
-      { "name": "Firebase & PostgreSQL", "level": 90, "icon": "bi bi-database" },
-      { "name": "Docker & DevOps", "level": 80, "icon": "fa-brands fa-docker" }
+      { "name": "HTML5 & Semantic Markup", "level": 98, "icon": "fa-brands fa-html5" },
+      { "name": "CSS3 & Modern Layouts (Flex/Grid)", "level": 95, "icon": "fa-brands fa-css3-alt" },
+      { "name": "Responsive Web Design", "level": 96, "icon": "bi bi-phone" },
+      { "name": "Web Hosting & Deployment", "level": 90, "icon": "bi bi-globe" }
     ]
   },
   {
-    "category": "UI/UX & Creative",
-    "icon": "bi-palette",
+    "category": "Frontend Development",
+    "icon": "fa-brands fa-js",
     "skills": [
-      { "name": "Figma & UI/UX Design", "level": 95, "icon": "fa-brands fa-figma" },
-      { "name": "Adobe Creative Cloud", "level": 92, "icon": "bi bi-bezier2" },
-      { "name": "3D Animation (Three.js)", "level": 85, "icon": "bi bi-box" },
-      { "name": "AI Content Creation", "level": 90, "icon": "bi bi-cpu" }
+      { "name": "JavaScript (ES6+) Logic", "level": 92, "icon": "fa-brands fa-js" },
+      { "name": "Bootstrap 5 Framework", "level": 95, "icon": "fa-brands fa-bootstrap" },
+      { "name": "jQuery & DOM Manipulation", "level": 90, "icon": "bi bi-code-slash" },
+      { "name": "GSAP & Web Animations", "level": 88, "icon": "bi bi-magic" }
+    ]
+  },
+  {
+    "category": "Graphic Design",
+    "icon": "fa-solid fa-palette",
+    "skills": [
+      { "name": "Adobe Photoshop", "level": 90, "icon": "bi bi-file-image" },
+      { "name": "Adobe Illustrator", "level": 88, "icon": "bi bi-vector-pen" },
+      { "name": "Brand Identity & Logos", "level": 92, "icon": "bi bi-award" },
+      { "name": "Social Media Banner Design", "level": 94, "icon": "bi bi-aspect-ratio" }
+    ]
+  },
+  {
+    "category": "Video Editing",
+    "icon": "fa-solid fa-video",
+    "skills": [
+      { "name": "CapCut Video Projects", "level": 92, "icon": "bi bi-scissors" },
+      { "name": "Motion Graphics & Reels", "level": 88, "icon": "bi bi-play-btn" },
+      { "name": "Promotional Video Editing", "level": 90, "icon": "bi bi-camera-reels" },
+      { "name": "YouTube Content & Thumbnails", "level": 92, "icon": "fa-brands fa-youtube" }
+    ]
+  },
+  {
+    "category": "Digital Marketing & SEO",
+    "icon": "fa-solid fa-chart-line",
+    "skills": [
+      { "name": "Search Engine Optimization (SEO)", "level": 88, "icon": "bi bi-search" },
+      { "name": "Content Strategy & Keywords", "level": 90, "icon": "bi bi-card-heading" },
+      { "name": "Social Media Growth", "level": 86, "icon": "bi bi-graph-up-arrow" }
+    ]
+  },
+  {
+    "category": "AI Tools & Workflows",
+    "icon": "fa-solid fa-robot",
+    "skills": [
+      { "name": "Prompt Engineering", "level": 94, "icon": "bi bi-chat-left-dots" },
+      { "name": "AI Image & Design Generation", "level": 92, "icon": "bi bi-paint-bucket" },
+      { "name": "AI Video & Content Automation", "level": 90, "icon": "bi bi-cpu" }
+    ]
+  },
+  {
+    "category": "Git & GitHub",
+    "icon": "fa-brands fa-github",
+    "skills": [
+      { "name": "Version Control (Git)", "level": 92, "icon": "fa-brands fa-git-alt" },
+      { "name": "GitHub Repositories & Collaboration", "level": 94, "icon": "fa-brands fa-github" },
+      { "name": "Branching & Merge Workflows", "level": 90, "icon": "bi bi-git" }
+    ]
+  },
+  {
+    "category": "DevOps & Infrastructure",
+    "icon": "fa-solid fa-server",
+    "skills": [
+      { "name": "Linux Command Line", "level": 85, "icon": "fa-brands fa-linux" },
+      { "name": "Docker Containerization", "level": 82, "icon": "fa-brands fa-docker" },
+      { "name": "GitHub Actions & CI/CD", "level": 80, "icon": "bi bi-arrow-repeat" }
+    ]
+  },
+  {
+    "category": "Computer Literacy & Tools",
+    "icon": "fa-solid fa-desktop",
+    "skills": [
+      { "name": "Microsoft Office Professional", "level": 95, "icon": "bi bi-file-earmark-word" },
+      { "name": "VS Code & Code Editors", "level": 96, "icon": "bi bi-terminal" },
+      { "name": "Internet & Email Processing", "level": 98, "icon": "bi bi-envelope-at" }
+    ]
+  },
+  {
+    "category": "Languages",
+    "icon": "fa-solid fa-language",
+    "skills": [
+      { "name": "Bengali (Native - Excellent)", "level": 100, "icon": "bi bi-chat-quote" },
+      { "name": "English (Reading Ex, Writing/Speaking Good)", "level": 85, "icon": "bi bi-translate" }
     ]
   }
 ]

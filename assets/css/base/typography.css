@@ -138,7 +138,7 @@ h6, .h6 {
 
 /* Gradient Text Effect */
 .gradient-text {
-  background: var(--gradient-text);
+  background: var(--gradient-text, linear-gradient(135deg, #00E5FF 0%, #7B61FF 50%, #00FFA3 100%));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
