@@ -330,7 +330,7 @@
     <div class="row g-4 mb-5">
       <div class="col-lg-4">
         <a class="navbar-brand mb-3 d-inline-block" href="index.html">
-          AHOSAN HABIB HASAN<span class="brand-dot"></span>
+          AHOSAN HABIB HASAN<span class="brand-dot pulse ml-2"></span>
         </a>
         <p class="text-muted small">
           Ahosan Habib Hasan • Flutter App Developer, Full Stack Web Developer, Graphic Designer, Digital Marketer, Video
