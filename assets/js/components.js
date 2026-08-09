@@ -330,10 +330,10 @@
     <div class="row g-4 mb-5">
       <div class="col-lg-4">
         <a class="navbar-brand mb-3 d-inline-block" href="index.html">
-          HABIB<span class="brand-dot"></span>
+          AHOSAN HABIB HASAN<span class="brand-dot"></span>
         </a>
         <p class="text-muted small">
-          Habib Hasan • Flutter App Developer, Full Stack Web Developer, Graphic Designer, Digital Marketer, Video
+          Ahosan Habib Hasan • Flutter App Developer, Full Stack Web Developer, Graphic Designer, Digital Marketer, Video
           Editor, AI Content Creator &amp; DevOps Learner.
         </p>
       </div>
@@ -370,7 +370,7 @@
     </div>
     <hr class="border-secondary opacity-25 mb-4">
     <div class="d-flex flex-column flex-md-row align-items-center justify-content-between text-muted small gap-2">
-      <p class="mb-0">&copy; 2026 Habib Hasan. All Rights Reserved.</p>
+      <p class="mb-0">&copy; 2026 Ahosan Habib Hasan. All Rights Reserved.</p>
       <div class="d-flex gap-3">
         <a href="privacy-policy.html" class="text-muted hover-primary">Privacy Policy</a>
         <a href="terms.html" class="text-muted hover-primary">Terms of Service</a>
