@@ -1,0 +1,75 @@
+<form id="contactForm" novalidate>
+  <div class="row g-3">
+    
+    <div class="col-md-6">
+      <label for="contactName" class="form-label text-muted small fw-semibold">Your Name *</label>
+      <input type="text" id="contactName" class="form-control-glass" placeholder="John Doe" required>
+    </div>
+
+    <div class="col-md-6">
+      <label for="contactEmail" class="form-label text-muted small fw-semibold">Your Email *</label>
+      <input type="email" id="contactEmail" class="form-control-glass" placeholder="john@example.com" required>
+    </div>
+
+    <div class="col-md-6">
+      <label for="contactPhone" class="form-label text-muted small fw-semibold">Phone Number (Optional)</label>
+      <input type="tel" id="contactPhone" class="form-control-glass" placeholder="+1 (555) 000-0000">
+    </div>
+
+    <div class="col-md-6">
+      <label for="contactCompany" class="form-label text-muted small fw-semibold">Company / Org (Optional)</label>
+      <input type="text" id="contactCompany" class="form-control-glass" placeholder="Agency or Business Name">
+    </div>
+
+    <div class="col-md-6">
+      <label for="contactService" class="form-label text-muted small fw-semibold">Required Service</label>
+      <select id="contactService" class="form-select-glass">
+        <option value="Flutter Mobile App Development">Flutter Mobile App Development</option>
+        <option value="Full Stack Website Development">Full Stack Website Development</option>
+        <option value="UI/UX Interface Design">UI/UX Interface Design</option>
+        <option value="Graphic Design & Branding">Graphic Design &amp; Branding</option>
+        <option value="Video Editing & Motion Graphics">Video Editing &amp; Motion Graphics</option>
+        <option value="SEO & Growth Marketing">SEO &amp; Growth Marketing</option>
+        <option value="AI Content & Workflows">AI Content &amp; Workflows</option>
+        <option value="DevOps & Infrastructure">DevOps &amp; Infrastructure</option>
+        <option value="Website Maintenance & Fixes">Website Maintenance &amp; Fixes</option>
+      </select>
+    </div>
+
+    <div class="col-md-6">
+      <label for="contactBudget" class="form-label text-muted small fw-semibold">Estimated Budget (Optional)</label>
+      <select id="contactBudget" class="form-select-glass">
+        <option value="Under $500">&lt; $500 (Small Project)</option>
+        <option value="$500 - $1,500" selected>$500 - $1,500 (Standard)</option>
+        <option value="$1,500 - $5,000">$1,500 - $5,000 (Full Scope)</option>
+        <option value="$5,000+">$5,000+ (Enterprise / Retainer)</option>
+      </select>
+    </div>
+
+    <div class="col-12">
+      <label for="contactSubject" class="form-label text-muted small fw-semibold">Subject *</label>
+      <input type="text" id="contactSubject" class="form-control-glass" placeholder="Flutter App Project / Full Stack Website Consultation" required>
+    </div>
+
+    <div class="col-12">
+      <label for="contactMessage" class="form-label text-muted small fw-semibold">Project Details / Message *</label>
+      <textarea id="contactMessage" class="form-control-glass" rows="5" placeholder="Describe your project goals, scope, requirements, or inquiry here..." required></textarea>
+    </div>
+
+    <div class="col-12">
+      <div class="form-check text-start">
+        <input class="form-check-input" type="checkbox" id="contactPrivacy" checked required>
+        <label class="form-check-label text-muted tiny" for="contactPrivacy">
+          I agree to the storing and processing of my data in accordance with the <a href="privacy-policy.html" class="text-primary">Privacy Policy</a>.
+        </label>
+      </div>
+    </div>
+
+    <div class="col-12 mt-4">
+      <button type="submit" id="contactSubmitBtn" class="btn-primary-glow px-5 py-3 w-100 justify-content-center text-decoration-none">
+        <i class="fas fa-paper-plane me-2"></i> Send Message Now
+      </button>
+    </div>
+
+  </div>
+</form>

@@ -24,7 +24,7 @@
 <body>
 
   <!-- Preloader & Background FX -->
-  <div id="preloader"><div class="preloader-spinner"></div><div class="preloader-logo">HABIB HASAN</div></div>
+  <div id="preloader"></div>
   <div class="custom-cursor"></div><div class="cursor-follower"></div><div class="mouse-glow-bg"></div><div class="scroll-progress-bar"></div>
 
   <div id="navbar"></div>
@@ -73,14 +73,47 @@
         <div class="row align-items-center g-4">
           <div class="col-lg-7">
             <div class="position-relative rounded-4 overflow-hidden shadow-lg border border-secondary border-opacity-25">
-              <img src="assets/images/projects/flutter/chef-starz.svg" alt="Chef Starz Featured Project" class="hero-cover-img img-fluid">
-              <div class="position-absolute top-0 start-0 p-3 d-flex gap-2">
+              <div class="swiper project-gallery-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="assets/images/projects/flutter/chef-starz.svg" class="glightbox" data-gallery="featured-gallery" data-title="Chef Starz - Live App Screen">
+                      <img src="assets/images/projects/flutter/chef-starz.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="Chef Starz Featured Project" class="hero-cover-img img-fluid w-100 object-fit-cover" loading="lazy">
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="assets/images/projects/flutter/worker-hiring.svg" class="glightbox" data-gallery="featured-gallery" data-title="Worker Hiring - App Overview">
+                      <img src="assets/images/projects/flutter/worker-hiring.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="Worker Hiring App" class="hero-cover-img img-fluid w-100 object-fit-cover" loading="lazy">
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="assets/images/projects/flutter/artisan.svg" class="glightbox" data-gallery="featured-gallery" data-title="Artisan - Business UI">
+                      <img src="assets/images/projects/flutter/artisan.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="Artisan Business App" class="hero-cover-img img-fluid w-100 object-fit-cover" loading="lazy">
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="assets/images/projects-wireframe.jpg" class="glightbox" data-gallery="featured-gallery" data-title="Chef Starz - UI Wireframe">
+                      <img src="assets/images/projects-wireframe.jpg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="Chef Starz UI Wireframe" class="hero-cover-img img-fluid w-100 object-fit-cover" loading="lazy">
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="assets/images/skills-coding_Ahosan Habib.jpeg" class="glightbox" data-gallery="featured-gallery" data-title="Chef Starz - Development Workstation">
+                      <img src="assets/images/skills-coding_Ahosan Habib.jpeg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="Chef Starz Development Workstation" class="hero-cover-img img-fluid w-100 object-fit-cover" loading="lazy">
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="assets/images/experience-teamAhosan.png" class="glightbox" data-gallery="featured-gallery" data-title="Sparktech Agency - Team Discussion">
+                      <img src="assets/images/experience-teamAhosan.png" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="Sparktech Agency Team Discussion" class="hero-cover-img img-fluid w-100 object-fit-cover" loading="lazy">
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next text-white"></div>
+                <div class="swiper-button-prev text-white"></div>
+              </div>
+              <div class="position-absolute top-0 start-0 p-3 d-flex gap-2" style="z-index: 10;">
                 <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live Online</span>
                 <span class="badge-glow bg-dark text-info border-info"><i class="fab fa-flutter me-1"></i> Flutter Flagship</span>
               </div>
-              <a href="assets/images/projects/flutter/chef-starz.svg" class="position-absolute bottom-0 end-0 m-3 btn-primary-glow py-2 px-3 fs-7 glightbox" data-gallery="featured-gallery" data-title="Chef Starz App Spotlight">
-                <i class="fas fa-expand me-1"></i> Expand Preview
-              </a>
             </div>
           </div>
           <div class="col-lg-5">
@@ -152,16 +185,7 @@
       </div>
 
       <!-- Animated Category Filter Buttons -->
-      <div class="d-flex flex-wrap justify-content-center gap-2 mb-5" data-aos="fade-up">
-        <button class="btn-outline-glass filter-btn active px-4 py-2" data-filter="all"><i class="fas fa-layer-group me-1"></i> All Projects</button>
-        <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="flutter"><i class="fab fa-flutter text-info me-1"></i> Flutter</button>
-        <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="web"><i class="fas fa-code text-primary me-1"></i> Web</button>
-        <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="graphic"><i class="fas fa-palette text-warning me-1"></i> Graphic Design</button>
-        <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="ai"><i class="fas fa-robot text-accent me-1"></i> AI</button>
-        <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="video"><i class="fas fa-film text-danger me-1"></i> Video Editing</button>
-        <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="marketing"><i class="fas fa-chart-line text-success me-1"></i> Digital Marketing</button>
-        <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="devops"><i class="fas fa-server text-secondary me-1"></i> DevOps</button>
-      </div>
+      <div id="portfolio-filter"></div>
 
       <!-- Responsive Projects Grid -->
       <div class="row g-4" id="projectsGrid">
@@ -170,7 +194,7 @@
         <div class="col-md-6 col-lg-4 filter-item" data-category="flutter" data-aos="fade-up">
           <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
-              <img src="assets/images/projects/flutter/chef-starz.svg" alt="Chef Starz">
+              <img src="assets/images/projects/flutter/chef-starz.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="Chef Starz">
               <div class="project-overlay">
                 <div>
                   <div class="d-flex align-items-center justify-content-between mb-2">
@@ -217,7 +241,7 @@
         <div class="col-md-6 col-lg-4 filter-item" data-category="flutter" data-aos="fade-up" data-aos-delay="100">
           <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
-              <img src="assets/images/projects/flutter/worker-hiring.svg" alt="Worker Hiring Platform">
+              <img src="assets/images/projects/flutter/worker-hiring.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="Worker Hiring Platform">
               <div class="project-overlay">
                 <div>
                   <div class="d-flex align-items-center justify-content-between mb-2">
@@ -264,7 +288,7 @@
         <div class="col-md-6 col-lg-4 filter-item" data-category="flutter" data-aos="fade-up" data-aos-delay="200">
           <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
-              <img src="assets/images/projects/flutter/artisan.svg" alt="Artisan App">
+              <img src="assets/images/projects/flutter/artisan.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="Artisan App">
               <div class="project-overlay">
                 <div>
                   <div class="d-flex align-items-center justify-content-between mb-2">
@@ -311,7 +335,7 @@
         <div class="col-md-6 col-lg-4 filter-item" data-category="flutter" data-aos="fade-up">
           <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
-              <img src="assets/images/projects/flutter/flutter-ui-kit.svg" alt="Flutter Static UI Kit">
+              <img src="assets/images/projects/flutter/flutter-ui-kit.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="Flutter Static UI Kit">
               <div class="project-overlay">
                 <div>
                   <div class="d-flex align-items-center justify-content-between mb-2">
@@ -358,7 +382,7 @@
         <div class="col-md-6 col-lg-4 filter-item" data-category="web" data-aos="fade-up" data-aos-delay="100">
           <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
-              <img src="assets/images/projects/web/portfolio-site.svg" alt="3D Personal Portfolio Website">
+              <img src="assets/images/projects/web/portfolio-site.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="3D Personal Portfolio Website">
               <div class="project-overlay">
                 <div>
                   <div class="d-flex align-items-center justify-content-between mb-2">
@@ -405,7 +429,7 @@
         <div class="col-md-6 col-lg-4 filter-item" data-category="web" data-aos="fade-up" data-aos-delay="200">
           <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
-              <img src="assets/images/projects/web/landing-page.svg" alt="SaaS Landing Page">
+              <img src="assets/images/projects/web/landing-page.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="SaaS Landing Page">
               <div class="project-overlay">
                 <div>
                   <div class="d-flex align-items-center justify-content-between mb-2">
@@ -452,7 +476,7 @@
         <div class="col-md-6 col-lg-4 filter-item" data-category="graphic" data-aos="fade-up">
           <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
-              <img src="assets/images/projects/graphic/logo-design.svg" alt="Brand Logo &amp; Identity">
+              <img src="assets/images/projects/graphic/logo-design.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="Brand Logo &amp; Identity">
               <div class="project-overlay">
                 <div>
                   <div class="d-flex align-items-center justify-content-between mb-2">
@@ -498,7 +522,7 @@
         <div class="col-md-6 col-lg-4 filter-item" data-category="ai" data-aos="fade-up" data-aos-delay="100">
           <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
-              <img src="assets/images/projects/ai/ai-images.svg" alt="AI Visual Concepts">
+              <img src="assets/images/projects/ai/ai-images.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="AI Visual Concepts">
               <div class="project-overlay">
                 <div>
                   <div class="d-flex align-items-center justify-content-between mb-2">
@@ -544,7 +568,7 @@
         <div class="col-md-6 col-lg-4 filter-item" data-category="video" data-aos="fade-up" data-aos-delay="200">
           <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
-              <img src="assets/images/projects/video/youtube-video.svg" alt="YouTube Video Editing">
+              <img src="assets/images/projects/video/youtube-video.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="YouTube Video Editing">
               <div class="project-overlay">
                 <div>
                   <div class="d-flex align-items-center justify-content-between mb-2">
@@ -590,7 +614,7 @@
         <div class="col-md-6 col-lg-4 filter-item" data-category="marketing" data-aos="fade-up">
           <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
-              <img src="assets/images/projects/digital-marketing/seo-report.svg" alt="Digital Marketing Campaign">
+              <img src="assets/images/projects/digital-marketing/seo-report.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="Digital Marketing Campaign">
               <div class="project-overlay">
                 <div>
                   <div class="d-flex align-items-center justify-content-between mb-2">
@@ -636,7 +660,7 @@
         <div class="col-md-6 col-lg-4 filter-item" data-category="devops" data-aos="fade-up" data-aos-delay="100">
           <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
-              <img src="assets/images/projects/devops/docker-containers.svg" alt="DevOps CI/CD Lab">
+              <img src="assets/images/projects/devops/docker-containers.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="DevOps CI/CD Lab">
               <div class="project-overlay">
                 <div>
                   <div class="d-flex align-items-center justify-content-between mb-2">
@@ -683,7 +707,7 @@
         <div class="col-md-6 col-lg-4 filter-item" data-category="web" data-aos="fade-up" data-aos-delay="200">
           <div class="glass-card project-card tilt-card h-100 border-dashed">
             <div class="project-img-wrapper">
-              <img src="assets/images/projects/web/agency-website.svg" alt="Future Custom Project">
+              <img src="assets/images/projects/web/agency-website.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="Future Custom Project">
               <div class="project-overlay">
                 <div>
                   <div class="d-flex align-items-center justify-content-between mb-2">
@@ -886,74 +910,14 @@
   <div class="mobile-nav-overlay" id="searchOverlayModal" style="background: rgba(5,8,22,0.98);">
     <div class="container max-w-700 pt-5">
       <div class="d-flex align-items-center justify-content-between mb-4">
-        <h4 class="text-white fw-bold mb-0"><i class="fas fa-search text-primary me-2"></i> Search Entire Portfolio</h4>
-        <button class="mobile-nav-close" id="searchOverlayClose" aria-label="Close Search"><i class="fas fa-times"></i></button>
-      </div>
-      <div class="search-input-group mb-4">
-        <i class="fas fa-search fs-5"></i>
-        <input type="text" id="searchOverlayInput" placeholder="Type project name, skill, technology, or category...">
-      </div>
-      <div id="searchResultsList" class="d-flex flex-column gap-2 max-h-400 overflow-y-auto pe-2">
-        <!-- Live search results injected dynamically by JS -->
-      </div>
-    </div>
-  </div>
+  <!-- Search Modal Component -->
+  <div id="search-modal"></div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="row g-4 mb-5">
-        <div class="col-lg-4">
-          <a class="navbar-brand mb-3 d-inline-block" href="index.html">
-            HABIB<span class="brand-dot"></span>
-          </a>
-          <p class="text-muted small">
-            Habib Hasan • Flutter App Developer, Full Stack Web Developer, Graphic Designer, Digital Marketer, Video Editor, AI Content Creator &amp; DevOps Learner.
-          </p>
-        </div>
-        <div class="col-6 col-lg-2">
-          <h6 class="text-white fw-bold mb-3">Quick Links</h6>
-          <ul class="p-0 m-0">
-            <li class="mb-2"><a href="about.html" class="text-muted small hover-primary">About Me</a></li>
-            <li class="mb-2"><a href="skills.html" class="text-muted small hover-primary">Skills</a></li>
-            <li class="mb-2"><a href="experience.html" class="text-muted small hover-primary">Experience</a></li>
-            <li class="mb-2"><a href="education.html" class="text-muted small hover-primary">Education</a></li>
-            <li class="mb-2"><a href="certificates.html" class="text-muted small hover-primary">Certificates</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2">
-          <h6 class="text-white fw-bold mb-3">Portfolio</h6>
-          <ul class="p-0 m-0">
-            <li class="mb-2"><a href="portfolio/flutter.html" class="text-muted small hover-primary">Flutter Apps</a></li>
-            <li class="mb-2"><a href="portfolio/web-development.html" class="text-muted small hover-primary">Web Projects</a></li>
-            <li class="mb-2"><a href="portfolio/graphic-design.html" class="text-muted small hover-primary">Graphic Design</a></li>
-            <li class="mb-2"><a href="portfolio/video-editing.html" class="text-muted small hover-primary">Video Editing</a></li>
-            <li class="mb-2"><a href="portfolio/devops.html" class="text-muted small hover-primary">DevOps</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-4">
-          <h6 class="text-white fw-bold mb-3">Stay Connected</h6>
-          <p class="text-muted small">Reach out directly via email or social platforms.</p>
-          <div class="d-flex gap-2">
-            <a href="https://github.com" target="_blank" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com" target="_blank" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://facebook.com" target="_blank" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="mailto:habibhasan@example.com" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="Email"><i class="fas fa-envelope"></i></a>
-          </div>
-        </div>
-      </div>
-      <hr class="border-secondary opacity-25 mb-4">
-      <div class="d-flex flex-column flex-md-row align-items-center justify-content-between text-muted small gap-2">
-        <p class="mb-0">&copy; 2026 Habib Hasan. All Rights Reserved.</p>
-        <div class="d-flex gap-3">
-          <a href="privacy-policy.html" class="text-muted hover-primary">Privacy Policy</a>
-          <a href="terms.html" class="text-muted hover-primary">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <!-- Footer Component -->
+  <div id="footer"></div>
 
-  <div class="back-to-top" aria-label="Back To Top"><i class="fas fa-chevron-up"></i></div>
+  <!-- Back To Top Component -->
+  <div id="back-to-top"></div>
 
   <!-- JavaScript Bundle Plugins -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

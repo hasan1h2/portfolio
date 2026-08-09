@@ -23,7 +23,7 @@
 <body data-theme="dark">
 
   <!-- Preloader & Background FX -->
-  <div id="preloader"><div class="preloader-spinner"></div><div class="preloader-logo">HABIB HASAN</div></div>
+  <div id="preloader"></div>
   <div class="custom-cursor"></div><div class="cursor-follower"></div><div class="mouse-glow-bg"></div><div class="scroll-progress-bar"></div>
 
   <div id="navbar"></div>
@@ -318,76 +318,14 @@
     </div>
   </section>
 
-  <!-- Search Overlay -->
-  <div class="mobile-nav-overlay" id="searchOverlayModal" style="background: rgba(5,8,22,0.98);">
-    <div class="container max-w-700 pt-5">
-      <div class="d-flex align-items-center justify-content-between mb-4">
-        <h4 class="text-white fw-bold mb-0"><i class="fas fa-search text-primary me-2"></i> Search Entire Portfolio</h4>
-        <button class="mobile-nav-close" id="searchOverlayClose" aria-label="Close Search"><i class="fas fa-times"></i></button>
-      </div>
-      <div class="search-input-group mb-4">
-        <i class="fas fa-search fs-5"></i>
-        <input type="text" id="searchOverlayInput" placeholder="Type project name, skill, technology, or category...">
-      </div>
-      <div id="searchResultsList" class="d-flex flex-column gap-2 max-h-400 overflow-y-auto pe-2"></div>
-    </div>
-  </div>
+  <!-- Search Modal Component -->
+  <div id="search-modal"></div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="row g-4 mb-5">
-        <div class="col-lg-4">
-          <a class="navbar-brand mb-3 d-inline-block" href="../index.html">
-            HABIB<span class="brand-dot"></span>
-          </a>
-          <p class="text-muted small">
-            Habib Hasan • Flutter App Developer, Full Stack Web Developer, Graphic Designer, Digital Marketer, Video Editor, AI Content Creator &amp; DevOps Learner.
-          </p>
-        </div>
-        <div class="col-6 col-lg-2">
-          <h6 class="text-white fw-bold mb-3">Quick Links</h6>
-          <ul class="p-0 m-0">
-            <li class="mb-2"><a href="../about.html" class="text-muted small hover-primary">About Me</a></li>
-            <li class="mb-2"><a href="../skills.html" class="text-muted small hover-primary">Skills</a></li>
-            <li class="mb-2"><a href="../experience.html" class="text-muted small hover-primary">Experience</a></li>
-            <li class="mb-2"><a href="../education.html" class="text-muted small hover-primary">Education</a></li>
-            <li class="mb-2"><a href="../certificates.html" class="text-muted small hover-primary">Certificates</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2">
-          <h6 class="text-white fw-bold mb-3">Portfolio</h6>
-          <ul class="p-0 m-0">
-            <li class="mb-2"><a href="flutter.html" class="text-muted small hover-primary">Flutter Apps</a></li>
-            <li class="mb-2"><a href="web-development.html" class="text-muted small hover-primary">Web Projects</a></li>
-            <li class="mb-2"><a href="graphic-design.html" class="text-muted small hover-primary">Graphic Design</a></li>
-            <li class="mb-2"><a href="video-editing.html" class="text-muted small hover-primary">Video Editing</a></li>
-            <li class="mb-2"><a href="devops.html" class="text-muted small hover-primary">DevOps</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-4">
-          <h6 class="text-white fw-bold mb-3">Stay Connected</h6>
-          <p class="text-muted small">Reach out directly via email or social platforms.</p>
-          <div class="d-flex gap-2">
-            <a href="https://github.com" target="_blank" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com" target="_blank" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://facebook.com" target="_blank" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="mailto:habibhasan@example.com" class="btn-outline-glass p-2 rounded-circle" style="width:40px;height:40px;justify-content:center;" aria-label="Email"><i class="fas fa-envelope"></i></a>
-          </div>
-        </div>
-      </div>
-      <hr class="border-secondary opacity-25 mb-4">
-      <div class="d-flex flex-column flex-md-row align-items-center justify-content-between text-muted small gap-2">
-        <p class="mb-0">&copy; 2026 Habib Hasan. All Rights Reserved.</p>
-        <div class="d-flex gap-3">
-          <a href="../privacy-policy.html" class="text-muted hover-primary">Privacy Policy</a>
-          <a href="../terms.html" class="text-muted hover-primary">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <!-- Footer Component -->
+  <div id="footer"></div>
 
-  <div class="back-to-top" aria-label="Back To Top"><i class="fas fa-chevron-up"></i></div>
+  <!-- Back To Top Component -->
+  <div id="back-to-top"></div>
 
   <!-- JavaScript Bundle Plugins -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

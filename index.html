@@ -51,11 +51,8 @@
 
 <body data-theme="dark">
 
-  <!-- Preloader -->
-  <div id="preloader">
-    <div class="preloader-spinner"></div>
-    <div class="preloader-logo">HABIB HASAN</div>
-  </div>
+  <!-- Preloader Component Container -->
+  <div id="preloader"></div>
 
   <!-- Animated Cursor & Glow -->
   <div class="custom-cursor"></div>
@@ -100,26 +97,7 @@
           </p>
 
           <!-- Primary CTAs (Download CV, View CV, Print CV, Hire Me, Contact Me) -->
-          <div class="d-flex flex-wrap align-items-center gap-3 mb-4 gsap-hero-item">
-            <a href="assets/documents/Md-Ahosan_Habib_Hasan_CV.pdf" download="Md-Ahosan_Habib_Hasan_CV.pdf"
-              class="btn-primary-glow ripple-btn">
-              <i class="fas fa-download me-1"></i> Download CV
-            </a>
-            <a href="assets/documents/Md-Ahosan_Habib_Hasan_CV.pdf" target="_blank"
-              class="btn-outline-glass ripple-btn">
-              <i class="fas fa-eye me-1"></i> View CV
-            </a>
-            <button class="btn-outline-glass ripple-btn btn-print-cv"
-              onclick="window.open('assets/documents/Md-Ahosan_Habib_Hasan_CV.pdf')">
-              <i class="fas fa-print me-1"></i> Print CV
-            </button>
-            <a href="contact.html" class="btn-primary-glow ripple-btn">
-              <i class="fas fa-paper-plane me-1"></i> Hire Me
-            </a>
-            <a href="contact.html" class="btn-outline-glass ripple-btn">
-              <i class="fas fa-envelope me-1"></i> Contact Me
-            </a>
-          </div>
+          <div id="cv-actions"></div>
 
           <!-- Social Media & Contact Links -->
           <div class="hero-social-wrapper d-flex flex-wrap align-items-center gap-2 pt-2 gsap-hero-item">
@@ -1016,78 +994,11 @@
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="row g-4 mb-5">
-        <div class="col-lg-4">
-          <a class="navbar-brand mb-3 d-inline-block" href="index.html">
-            HABIB<span class="brand-dot"></span>
-          </a>
-          <p class="text-muted small">
-            Habib Hasan • Flutter App Developer, Full Stack Web Developer, Graphic Designer, Digital Marketer, Video
-            Editor, AI Content Creator &amp; DevOps Learner.
-          </p>
-        </div>
-        <div class="col-6 col-lg-2">
-          <h6 class="text-white fw-bold mb-3">Quick Links</h6>
-          <ul class="p-0 m-0">
-            <li class="mb-2"><a href="about.html" class="text-muted small hover-primary">About Me</a></li>
-            <li class="mb-2"><a href="skills.html" class="text-muted small hover-primary">Skills</a></li>
-            <li class="mb-2"><a href="experience.html" class="text-muted small hover-primary">Experience</a></li>
-            <li class="mb-2"><a href="education.html" class="text-muted small hover-primary">Education</a></li>
-            <li class="mb-2"><a href="certificates.html" class="text-muted small hover-primary">Certificates</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2">
-          <h6 class="text-white fw-bold mb-3">Portfolio</h6>
-          <ul class="p-0 m-0">
-            <li class="mb-2"><a href="portfolio/flutter.html" class="text-muted small hover-primary">Flutter Apps</a>
-            </li>
-            <li class="mb-2"><a href="portfolio/web.html" class="text-muted small hover-primary">Web Projects</a></li>
-            <li class="mb-2"><a href="portfolio/graphic-design.html" class="text-muted small hover-primary">Graphic
-                Design</a></li>
-            <li class="mb-2"><a href="portfolio/video-editing.html" class="text-muted small hover-primary">Video
-                Editing</a></li>
-            <li class="mb-2"><a href="portfolio/devops.html" class="text-muted small hover-primary">DevOps</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-4">
-          <h6 class="text-white fw-bold mb-3">Stay Connected</h6>
-          <p class="text-muted small">Reach out directly via email or social platforms.</p>
-          <div class="d-flex gap-2">
-            <a href="https://github.com" target="_blank" class="btn-outline-glass p-2 rounded-circle"
-              style="width:40px;height:40px;justify-content:center;" aria-label="GitHub"><i
-                class="fab fa-github"></i></a>
-            <a href="https://linkedin.com" target="_blank" class="btn-outline-glass p-2 rounded-circle"
-              style="width:40px;height:40px;justify-content:center;" aria-label="LinkedIn"><i
-                class="fab fa-linkedin-in"></i></a>
-            <a href="https://facebook.com" target="_blank" class="btn-outline-glass p-2 rounded-circle"
-              style="width:40px;height:40px;justify-content:center;" aria-label="Facebook"><i
-                class="fab fa-facebook-f"></i></a>
-            <a href="mailto:habibhasan@example.com" class="btn-outline-glass p-2 rounded-circle"
-              style="width:40px;height:40px;justify-content:center;" aria-label="Email"><i
-                class="fas fa-envelope"></i></a>
-          </div>
-        </div>
-      </div>
-      <hr class="border-secondary opacity-25 mb-4">
-      <div class="d-flex flex-column flex-md-row align-items-center justify-content-between text-muted small gap-2">
-        <p class="mb-0">&copy; 2026 Habib Hasan. All Rights Reserved.</p>
-        <div class="d-flex gap-3">
-          <a href="privacy-policy.html" class="text-muted hover-primary">Privacy Policy</a>
-          <a href="terms.html" class="text-muted hover-primary">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <div id="footer"></div>
 
-  <!-- ============================================================
-       FULL-SCREEN MOBILE NAVIGATION OVERLAY
-       ============================================================ -->
+  <!-- Mobile Overlay -->
   <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true" role="dialog" aria-modal="true"
     aria-label="Mobile Navigation Menu">
-
-    <!-- Mobile Nav Header -->
     <div class="mobile-nav-header">
       <a class="navbar-brand" href="index.html">
         <div class="logo-badge">AH</div>
@@ -1097,8 +1008,6 @@
         <i class="fas fa-times"></i>
       </button>
     </div>
-
-    <!-- Mobile Nav Links with staggered animation -->
     <nav class="mobile-nav-links" role="navigation">
       <div class="mobile-nav-item" style="transition-delay: 0.05s">
         <a href="index.html" class="mobile-nav-link active">
@@ -1161,81 +1070,30 @@
         </a>
       </div>
     </nav>
-
-    <!-- Mobile CTA Buttons -->
     <div class="d-flex gap-3 mb-4">
-      <a href="#" class="btn-outline-glass flex-fill text-center ripple-btn py-2" id="mobileDownloadBtn">
+      <a href="assets/documents/Md-Ahosan_Habib_Hasan_CV.pdf" download="Md-Ahosan_Habib_Hasan_CV.pdf" class="btn-outline-glass flex-fill text-center ripple-btn py-2" id="mobileDownloadBtn">
         <i class="fas fa-download me-2"></i>Download CV
       </a>
       <a href="contact.html" class="btn-primary-glow flex-fill text-center ripple-btn py-2">
         <i class="fas fa-paper-plane me-2"></i>Hire Me
       </a>
     </div>
-
-    <!-- Mobile Social Bar -->
     <div class="mobile-social-bar">
       <p class="text-muted small mb-3">Connect with me</p>
       <div class="d-flex gap-3">
-        <a href="https://github.com" target="_blank" class="nav-action-btn" aria-label="GitHub"><i
-            class="fab fa-github"></i></a>
-        <a href="https://linkedin.com" target="_blank" class="nav-action-btn" aria-label="LinkedIn"><i
-            class="fab fa-linkedin-in"></i></a>
-        <a href="https://facebook.com" target="_blank" class="nav-action-btn" aria-label="Facebook"><i
-            class="fab fa-facebook-f"></i></a>
-        <a href="mailto:habibhasan@example.com" class="nav-action-btn" aria-label="Email"><i
-            class="fas fa-envelope"></i></a>
-        <a href="https://wa.me/8801700000000" target="_blank" class="nav-action-btn text-success"
-          aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://github.com/hasan1h2" target="_blank" class="nav-action-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank" class="nav-action-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:mdhasanhabibh@gmail.com" class="nav-action-btn" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://wa.me/8801742757448" target="_blank" class="nav-action-btn text-success" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
-
   </div>
 
-  <!-- ============================================================
-       GLOBAL SEARCH OVERLAY MODAL
-       ============================================================ -->
-  <div class="search-overlay-modal" id="searchOverlayModal" role="dialog" aria-modal="true"
-    aria-label="Search Portfolio">
+  <!-- Search Modal Component -->
+  <div id="search-modal"></div>
 
-    <button class="search-overlay-close" id="searchOverlayClose" aria-label="Close Search">
-      <i class="fas fa-times"></i>
-    </button>
-
-    <div class="search-overlay-container">
-      <div class="text-center mb-5">
-        <span class="section-subtitle">SEARCH</span>
-        <h3 class="text-white fw-bold">Find Anything in <span class="gradient-text">My Portfolio</span></h3>
-      </div>
-
-      <!-- Search Input -->
-      <div class="search-input-group mb-4">
-        <i class="fas fa-search"></i>
-        <input type="text" id="searchOverlayInput" class="form-control form-control-lg rounded-pill"
-          placeholder="Search projects, skills, services..." autocomplete="off" aria-label="Search input">
-      </div>
-
-      <!-- Quick Nav Tags -->
-      <div class="d-flex flex-wrap gap-2 mb-4">
-        <span class="project-tech-badge">Flutter Apps</span>
-        <span class="project-tech-badge">Web Projects</span>
-        <span class="project-tech-badge">Graphic Design</span>
-        <span class="project-tech-badge">DevOps</span>
-        <span class="project-tech-badge">AI Projects</span>
-        <span class="project-tech-badge">Resume</span>
-      </div>
-
-      <!-- Live Search Results -->
-      <div class="search-results-list" id="searchResultsList">
-        <!-- Populated by JS -->
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Back To Top Button -->
-  <div class="back-to-top" aria-label="Back To Top">
-    <i class="fas fa-chevron-up"></i>
-  </div>
+  <!-- Back To Top Component -->
+  <div id="back-to-top"></div>
 
   <!-- Lightbox Modal -->
   <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">

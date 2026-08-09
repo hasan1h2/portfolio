@@ -1,0 +1,34 @@
+<div class="search-overlay-modal" id="searchOverlayModal" role="dialog" aria-modal="true" aria-label="Search Portfolio">
+  <button class="search-overlay-close" id="searchOverlayClose" aria-label="Close Search">
+    <i class="fas fa-times"></i>
+  </button>
+
+  <div class="search-overlay-container">
+    <div class="text-center mb-5">
+      <span class="section-subtitle">SEARCH</span>
+      <h3 class="text-white fw-bold">Find Anything in <span class="gradient-text">My Portfolio</span></h3>
+    </div>
+
+    <!-- Search Input -->
+    <div class="search-input-group mb-4">
+      <i class="fas fa-search"></i>
+      <input type="text" id="searchOverlayInput" class="form-control form-control-lg rounded-pill"
+        placeholder="Search projects, skills, services..." autocomplete="off" aria-label="Search input">
+    </div>
+
+    <!-- Quick Nav Tags -->
+    <div class="d-flex flex-wrap gap-2 mb-4">
+      <span class="project-tech-badge">Flutter Apps</span>
+      <span class="project-tech-badge">Web Projects</span>
+      <span class="project-tech-badge">Graphic Design</span>
+      <span class="project-tech-badge">DevOps</span>
+      <span class="project-tech-badge">AI Projects</span>
+      <span class="project-tech-badge">Resume</span>
+    </div>
+
+    <!-- Live Search Results -->
+    <div class="search-results-list" id="searchResultsList">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+</div>

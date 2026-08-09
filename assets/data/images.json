@@ -1,0 +1,88 @@
+{
+  "profile": {
+    "headshot": {
+      "src": "assets/images/MD Ahosan_Habib.jpeg",
+      "alt": "Professional headshot of Md. Ahosan Habib Hasan with beard, glasses, and laptop"
+    },
+    "contact": {
+      "src": "assets/images/contact-portrait.jpg",
+      "alt": "Md. Ahosan Habib Hasan professional contact portrait"
+    },
+    "hero": {
+      "src": "assets/images/hero.jpg",
+      "alt": "Ahosan Habib Hasan developer hero banner"
+    }
+  },
+  "common": {
+    "wireframes": {
+      "src": "assets/images/projects-wireframe.jpg",
+      "alt": "Developer working on mobile app wireframe on a tablet alongside smartphone app"
+    },
+    "team": {
+      "src": "assets/images/experience-teamAhosan.png",
+      "alt": "Ahosan Habib Hasan collaborating with Sparktech Agency development team"
+    },
+    "workstation": {
+      "src": "assets/images/skills-coding_Ahosan Habib.jpeg",
+      "alt": "Ahosan Habib Hasan at Flutter coding development workstation"
+    }
+  },
+  "certificates": [
+    {
+      "id": "cert-1",
+      "src": "assets/images/certificates/flutter-cert.svg",
+      "alt": "Flutter App Development Professional Diploma - BdCalling Academy",
+      "title": "Flutter App Development Certificate"
+    },
+    {
+      "id": "cert-2",
+      "src": "assets/images/certificates/web-cert.svg",
+      "alt": "Full Stack Web Development Certification - Programming Hero",
+      "title": "Full Stack Web Development Certificate"
+    },
+    {
+      "id": "cert-3",
+      "src": "assets/images/certificates/design-cert.svg",
+      "alt": "UI Visual & Graphic Design Certification - Creative IT Institute",
+      "title": "Graphic Design Certificate"
+    }
+  ],
+  "galleries": {
+    "chef-starz": [
+      {
+        "src": "assets/images/projects/flutter/chef-starz.svg",
+        "alt": "Chef Starz Live App Screen Screenshot",
+        "title": "Chef Starz - Live App Screen"
+      },
+      {
+        "src": "assets/images/projects-wireframe.jpg",
+        "alt": "Chef Starz Prototyping & UI Wireframes",
+        "title": "Chef Starz - Prototyping & Wireframes"
+      },
+      {
+        "src": "assets/images/skills-coding_Ahosan Habib.jpeg",
+        "alt": "Chef Starz Development Workstation",
+        "title": "Chef Starz - Development Workstation"
+      }
+    ],
+    "worker-hiring": [
+      {
+        "src": "assets/images/projects/flutter/worker-hiring.svg",
+        "alt": "Worker Hiring Platform App Overview Screenshot",
+        "title": "Worker Hiring - App Overview"
+      },
+      {
+        "src": "assets/images/experience-teamAhosan.png",
+        "alt": "Worker Hiring Team Collaboration",
+        "title": "Worker Hiring - Team Collaboration"
+      }
+    ],
+    "artisan": [
+      {
+        "src": "assets/images/projects/flutter/artisan.svg",
+        "alt": "Artisan Business Management App Screenshot",
+        "title": "Artisan - Business Management App"
+      }
+    ]
+  }
+}

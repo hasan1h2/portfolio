@@ -287,39 +287,319 @@
   </div>
 </nav>`;
 
-  function renderNavbarHTML(navbarContainer, html, prefix) {
-    navbarContainer.innerHTML = html;
-    adjustRelativePaths(navbarContainer, prefix);
-    highlightActivePage(navbarContainer);
-    initializeNavbarFeatures(navbarContainer);
+  function initializeSearchModal(container) {
+    const searchModal = container.querySelector('#searchOverlayModal') || document.getElementById('searchOverlayModal');
+    const closeBtn = container.querySelector('#searchOverlayClose') || document.getElementById('searchOverlayClose');
+
+    if (closeBtn && searchModal) {
+      closeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        searchModal.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && searchModal && searchModal.classList.contains('active')) {
+        searchModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
   }
 
-  function loadNavbar() {
-    const navbarContainer = document.getElementById('navbar');
-    if (!navbarContainer) return;
+  function initializeBackToTop(container) {
+    const backBtn = container.querySelector('.back-to-top, #backToTopBtn') || document.querySelector('.back-to-top, #backToTopBtn');
+    if (!backBtn) return;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backBtn.classList.add('active');
+      } else {
+        backBtn.classList.remove('active');
+      }
+    });
+
+    backBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  const FOOTER_FALLBACK_HTML = `<footer>
+  <div class="container">
+    <div class="row g-4 mb-5">
+      <div class="col-lg-4">
+        <a class="navbar-brand mb-3 d-inline-block" href="index.html">
+          HABIB<span class="brand-dot"></span>
+        </a>
+        <p class="text-muted small">
+          Habib Hasan • Flutter App Developer, Full Stack Web Developer, Graphic Designer, Digital Marketer, Video
+          Editor, AI Content Creator &amp; DevOps Learner.
+        </p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="text-white fw-bold mb-3">Quick Links</h6>
+        <ul class="p-0 m-0">
+          <li class="mb-2"><a href="about.html" class="text-muted small hover-primary">About Me</a></li>
+          <li class="mb-2"><a href="skills.html" class="text-muted small hover-primary">Skills</a></li>
+          <li class="mb-2"><a href="experience.html" class="text-muted small hover-primary">Experience</a></li>
+          <li class="mb-2"><a href="education.html" class="text-muted small hover-primary">Education</a></li>
+          <li class="mb-2"><a href="certificates.html" class="text-muted small hover-primary">Certificates</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="text-white fw-bold mb-3">Portfolio</h6>
+        <ul class="p-0 m-0">
+          <li class="mb-2"><a href="portfolio/flutter.html" class="text-muted small hover-primary">Flutter Apps</a></li>
+          <li class="mb-2"><a href="portfolio/web.html" class="text-muted small hover-primary">Web Projects</a></li>
+          <li class="mb-2"><a href="portfolio/graphic-design.html" class="text-muted small hover-primary">Graphic Design</a></li>
+          <li class="mb-2"><a href="portfolio/video-editing.html" class="text-muted small hover-primary">Video Editing</a></li>
+          <li class="mb-2"><a href="portfolio/devops.html" class="text-muted small hover-primary">DevOps</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="text-white fw-bold mb-3">Stay Connected</h6>
+        <p class="text-muted small">Reach out directly via email or social platforms.</p>
+        <div class="d-flex gap-2">
+          <a href="https://github.com/hasan1h2" target="_blank" class="btn-outline-glass p-2 rounded-circle d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com" target="_blank" class="btn-outline-glass p-2 rounded-circle d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:mdhasanhabibh@gmail.com" class="btn-outline-glass p-2 rounded-circle d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://wa.me/8801742757448" target="_blank" class="btn-outline-glass p-2 rounded-circle text-success d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="border-secondary opacity-25 mb-4">
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between text-muted small gap-2">
+      <p class="mb-0">&copy; 2026 Habib Hasan. All Rights Reserved.</p>
+      <div class="d-flex gap-3">
+        <a href="privacy-policy.html" class="text-muted hover-primary">Privacy Policy</a>
+        <a href="terms.html" class="text-muted hover-primary">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>`;
+
+  const SEARCH_FALLBACK_HTML = `<div class="search-overlay-modal" id="searchOverlayModal" role="dialog" aria-modal="true" aria-label="Search Portfolio">
+  <button class="search-overlay-close" id="searchOverlayClose" aria-label="Close Search">
+    <i class="fas fa-times"></i>
+  </button>
+  <div class="search-overlay-container">
+    <div class="text-center mb-5">
+      <span class="section-subtitle">SEARCH</span>
+      <h3 class="text-white fw-bold">Find Anything in <span class="gradient-text">My Portfolio</span></h3>
+    </div>
+    <div class="search-input-group mb-4">
+      <i class="fas fa-search"></i>
+      <input type="text" id="searchOverlayInput" class="form-control form-control-lg rounded-pill" placeholder="Search projects, skills, services..." autocomplete="off" aria-label="Search input">
+    </div>
+    <div class="d-flex flex-wrap gap-2 mb-4">
+      <span class="project-tech-badge">Flutter Apps</span>
+      <span class="project-tech-badge">Web Projects</span>
+      <span class="project-tech-badge">Graphic Design</span>
+      <span class="project-tech-badge">DevOps</span>
+      <span class="project-tech-badge">AI Projects</span>
+      <span class="project-tech-badge">Resume</span>
+    </div>
+    <div class="search-results-list" id="searchResultsList"></div>
+  </div>
+</div>`;
+
+  const BACK_TO_TOP_FALLBACK_HTML = `<div class="back-to-top" id="backToTopBtn" aria-label="Back To Top">
+  <i class="fas fa-chevron-up"></i>
+</div>`;
+
+  const PRELOADER_FALLBACK_HTML = `<div class="preloader-spinner"></div>
+<div class="preloader-logo">HABIB HASAN</div>`;
+
+  const CV_ACTIONS_FALLBACK_HTML = `<div class="d-flex flex-wrap align-items-center gap-3 mb-4 gsap-hero-item">
+  <a href="assets/documents/Md-Ahosan_Habib_Hasan_CV.pdf" download="Md-Ahosan_Habib_Hasan_CV.pdf" class="btn-primary-glow ripple-btn">
+    <i class="fas fa-download me-1"></i> Download CV
+  </a>
+  <a href="assets/documents/Md-Ahosan_Habib_Hasan_CV.pdf" target="_blank" class="btn-outline-glass ripple-btn">
+    <i class="fas fa-eye me-1"></i> View CV
+  </a>
+  <button class="btn-outline-glass ripple-btn btn-print-cv" onclick="window.open('assets/documents/Md-Ahosan_Habib_Hasan_CV.pdf')">
+    <i class="fas fa-print me-1"></i> Print CV
+  </button>
+  <a href="contact.html" class="btn-primary-glow ripple-btn">
+    <i class="fas fa-paper-plane me-1"></i> Hire Me
+  </a>
+  <a href="contact.html" class="btn-outline-glass ripple-btn">
+    <i class="fas fa-envelope me-1"></i> Contact Me
+  </a>
+</div>`;
+
+  const CONTACT_FORM_FALLBACK_HTML = `<form id="contactForm" novalidate>
+  <div class="row g-3">
+    <div class="col-md-6">
+      <label for="contactName" class="form-label text-muted small fw-semibold">Your Name *</label>
+      <input type="text" id="contactName" class="form-control-glass" placeholder="John Doe" required>
+    </div>
+    <div class="col-md-6">
+      <label for="contactEmail" class="form-label text-muted small fw-semibold">Your Email *</label>
+      <input type="email" id="contactEmail" class="form-control-glass" placeholder="john@example.com" required>
+    </div>
+    <div class="col-md-6">
+      <label for="contactPhone" class="form-label text-muted small fw-semibold">Phone Number (Optional)</label>
+      <input type="tel" id="contactPhone" class="form-control-glass" placeholder="+1 (555) 000-0000">
+    </div>
+    <div class="col-md-6">
+      <label for="contactCompany" class="form-label text-muted small fw-semibold">Company / Org (Optional)</label>
+      <input type="text" id="contactCompany" class="form-control-glass" placeholder="Agency or Business Name">
+    </div>
+    <div class="col-md-6">
+      <label for="contactService" class="form-label text-muted small fw-semibold">Required Service</label>
+      <select id="contactService" class="form-select-glass">
+        <option value="Flutter Mobile App Development">Flutter Mobile App Development</option>
+        <option value="Full Stack Website Development">Full Stack Website Development</option>
+        <option value="UI/UX Interface Design">UI/UX Interface Design</option>
+        <option value="Graphic Design & Branding">Graphic Design &amp; Branding</option>
+        <option value="Video Editing & Motion Graphics">Video Editing &amp; Motion Graphics</option>
+        <option value="SEO & Growth Marketing">SEO &amp; Growth Marketing</option>
+        <option value="AI Content & Workflows">AI Content &amp; Workflows</option>
+        <option value="DevOps & Infrastructure">DevOps &amp; Infrastructure</option>
+        <option value="Website Maintenance & Fixes">Website Maintenance &amp; Fixes</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label for="contactBudget" class="form-label text-muted small fw-semibold">Estimated Budget (Optional)</label>
+      <select id="contactBudget" class="form-select-glass">
+        <option value="Under $500">&lt; $500 (Small Project)</option>
+        <option value="$500 - $1,500" selected>$500 - $1,500 (Standard)</option>
+        <option value="$1,500 - $5,000">$1,500 - $5,000 (Full Scope)</option>
+        <option value="$5,000+">$5,000+ (Enterprise / Retainer)</option>
+      </select>
+    </div>
+    <div class="col-12">
+      <label for="contactSubject" class="form-label text-muted small fw-semibold">Subject *</label>
+      <input type="text" id="contactSubject" class="form-control-glass" placeholder="Flutter App Project / Full Stack Website Consultation" required>
+    </div>
+    <div class="col-12">
+      <label for="contactMessage" class="form-label text-muted small fw-semibold">Project Details / Message *</label>
+      <textarea id="contactMessage" class="form-control-glass" rows="5" placeholder="Describe your project goals, scope, requirements, or inquiry here..." required></textarea>
+    </div>
+    <div class="col-12">
+      <div class="form-check text-start">
+        <input class="form-check-input" type="checkbox" id="contactPrivacy" checked required>
+        <label class="form-check-label text-muted tiny" for="contactPrivacy">
+          I agree to the storing and processing of my data in accordance with the <a href="privacy-policy.html" class="text-primary">Privacy Policy</a>.
+        </label>
+      </div>
+    </div>
+    <div class="col-12 mt-4">
+      <button type="submit" id="contactSubmitBtn" class="btn-primary-glow px-5 py-3 w-100 justify-content-center text-decoration-none">
+        <i class="fas fa-paper-plane me-2"></i> Send Message Now
+      </button>
+    </div>
+  </div>
+</form>`;
+
+  const PORTFOLIO_FILTER_FALLBACK_HTML = `<div class="d-flex flex-wrap justify-content-center gap-2 mb-5" data-aos="fade-up">
+  <button class="btn-outline-glass filter-btn active px-4 py-2" data-filter="all"><i class="fas fa-layer-group me-1"></i> All Projects</button>
+  <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="flutter"><i class="fab fa-flutter text-info me-1"></i> Flutter</button>
+  <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="web"><i class="fas fa-code text-primary me-1"></i> Web</button>
+  <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="graphic"><i class="fas fa-palette text-warning me-1"></i> Graphic Design</button>
+  <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="ai"><i class="fas fa-robot text-accent me-1"></i> AI</button>
+  <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="video"><i class="fas fa-film text-danger me-1"></i> Video Editing</button>
+  <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="marketing"><i class="fas fa-chart-line text-success me-1"></i> Digital Marketing</button>
+  <button class="btn-outline-glass filter-btn px-4 py-2" data-filter="devops"><i class="fas fa-server text-secondary me-1"></i> DevOps</button>
+</div>`;
+
+  function loadComponent(selector, componentPath, fallbackHtml, initCallback) {
+    const container = document.querySelector(selector);
+    if (!container) return;
 
     const prefix = getPathPrefix();
-    const componentUrl = prefix + 'components/navbar.html';
+    const fullPath = prefix + componentPath;
 
-    fetch(componentUrl)
+    if (window.location.protocol === 'file:' && fallbackHtml) {
+      container.innerHTML = fallbackHtml;
+      adjustRelativePaths(container, prefix);
+      if (initCallback) initCallback(container, prefix);
+      return;
+    }
+
+    fetch(fullPath)
       .then(response => {
         if (!response.ok) {
-          throw new Error(`Navbar component fetch failed (${response.status}) at ${componentUrl}`);
+          throw new Error(`Failed to load component: ${fullPath}`);
         }
         return response.text();
       })
       .then(html => {
-        renderNavbarHTML(navbarContainer, html, prefix);
+        container.innerHTML = html;
+        adjustRelativePaths(container, prefix);
+        if (initCallback) initCallback(container, prefix);
       })
       .catch(error => {
-        console.warn("Navbar fetch failed (likely file:// protocol CORS restriction), applying embedded fallback component:", error);
-        renderNavbarHTML(navbarContainer, NAVBAR_FALLBACK_HTML, prefix);
+        if (fallbackHtml) {
+          container.innerHTML = fallbackHtml;
+          adjustRelativePaths(container, prefix);
+          if (initCallback) initCallback(container, prefix);
+        }
       });
   }
 
+  function loadAllComponents() {
+    const prefix = getPathPrefix();
+
+    // 1. Load Navbar
+    loadComponent('#navbar', 'components/navbar.html', NAVBAR_FALLBACK_HTML, (container) => {
+      highlightActivePage(container);
+      initializeNavbarFeatures(container);
+    });
+
+    // 2. Load Footer
+    loadComponent('#footer', 'components/footer.html', FOOTER_FALLBACK_HTML, (container) => {
+      adjustRelativePaths(container, prefix);
+    });
+
+    // 3. Load Search Modal
+    loadComponent('#search-modal', 'components/search.html', SEARCH_FALLBACK_HTML, (container) => {
+      initializeSearchModal(container);
+    });
+
+    // 4. Load Back To Top
+    loadComponent('#back-to-top', 'components/back-to-top.html', BACK_TO_TOP_FALLBACK_HTML, (container) => {
+      initializeBackToTop(container);
+    });
+
+    // 5. Load Preloader
+    const preloaderEl = document.querySelector('#preloader');
+    if (preloaderEl && !preloaderEl.children.length) {
+      loadComponent('#preloader', 'components/preloader.html', PRELOADER_FALLBACK_HTML, (container) => {
+        adjustRelativePaths(container, prefix);
+      });
+    }
+
+    // 6. Load CV Actions
+    const cvActionsEl = document.querySelector('#cv-actions');
+    if (cvActionsEl && !cvActionsEl.children.length) {
+      loadComponent('#cv-actions', 'components/cv-actions.html', CV_ACTIONS_FALLBACK_HTML, (container) => {
+        adjustRelativePaths(container, prefix);
+      });
+    }
+
+    // 7. Load Contact Form
+    const contactFormEl = document.querySelector('#contact-form');
+    if (contactFormEl && !contactFormEl.children.length) {
+      loadComponent('#contact-form', 'components/contact-form.html', CONTACT_FORM_FALLBACK_HTML, (container) => {
+        adjustRelativePaths(container, prefix);
+      });
+    }
+
+    // 8. Load Portfolio Filter
+    const portfolioFilterEl = document.querySelector('#portfolio-filter');
+    if (portfolioFilterEl && !portfolioFilterEl.children.length) {
+      loadComponent('#portfolio-filter', 'components/portfolio-filter.html', PORTFOLIO_FILTER_FALLBACK_HTML, (container) => {
+        adjustRelativePaths(container, prefix);
+      });
+    }
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadNavbar);
+    document.addEventListener('DOMContentLoaded', loadAllComponents);
   } else {
-    loadNavbar();
+    loadAllComponents();
   }
 })();
