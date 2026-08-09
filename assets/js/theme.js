@@ -48,6 +48,22 @@ const ThemeAPI = {
       document.body.setAttribute('data-theme', effectiveTheme);
       document.body.dataset.theme = effectiveTheme;
     }
+
+    if (effectiveTheme === 'dark') {
+      document.documentElement.classList.remove('light-theme');
+      document.documentElement.classList.add('dark-theme');
+      if (document.body) {
+        document.body.classList.remove('light-theme');
+        document.body.classList.add('dark-theme');
+      }
+    } else {
+      document.documentElement.classList.remove('dark-theme');
+      document.documentElement.classList.add('light-theme');
+      if (document.body) {
+        document.body.classList.remove('dark-theme');
+        document.body.classList.add('light-theme');
+      }
+    }
     
     this.saveTheme(theme);
     this.updateThemeIcon(effectiveTheme);
@@ -90,11 +106,7 @@ const ThemeAPI = {
         const savedTheme = this.loadTheme();
         if (savedTheme === 'system') {
           const effectiveTheme = e.matches ? 'dark' : 'light';
-          document.documentElement.setAttribute('data-theme', effectiveTheme);
-          if (document.body) {
-            document.body.setAttribute('data-theme', effectiveTheme);
-          }
-          this.updateThemeIcon(effectiveTheme);
+          this.setTheme(effectiveTheme, false);
         }
       });
     } catch (e) {}
@@ -119,22 +131,25 @@ const ThemeAPI = {
     icon.classList.add('rotating');
     setTimeout(() => {
       if (theme === 'light') {
-        icon.className = 'bi bi-sun-fill';
+        icon.className = 'fas fa-sun bi bi-sun-fill';
       } else {
-        icon.className = 'bi bi-moon-stars-fill';
+        icon.className = 'fas fa-moon bi bi-moon-stars-fill';
       }
       icon.classList.remove('rotating');
     }, 150);
   },
 
   bindUIEvents() {
-    document.addEventListener('click', (e) => {
-      const toggleBtn = e.target.closest('.theme-toggle-btn, #themeToggleBtn');
-      if (toggleBtn) {
-        e.preventDefault();
-        this.toggleTheme();
-      }
-    });
+    if (!this._eventsBound) {
+      document.addEventListener('click', (e) => {
+        const toggleBtn = e.target.closest('.theme-toggle-btn, #themeToggleBtn');
+        if (toggleBtn) {
+          e.preventDefault();
+          this.toggleTheme();
+        }
+      });
+      this._eventsBound = true;
+    }
 
     const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
     this.updateThemeIcon(currentTheme);

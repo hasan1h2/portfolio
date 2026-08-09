@@ -7,7 +7,6 @@ const DSTheme = {
     if (window.ThemeAPI) {
       window.ThemeAPI.initTheme();
     }
-    this.bindEvents();
   },
 
   setTheme(theme) {
@@ -23,12 +22,7 @@ const DSTheme = {
   },
 
   bindEvents() {
-    document.addEventListener('click', (e) => {
-      const toggleBtn = e.target.closest('.theme-toggle-btn');
-      if (toggleBtn) {
-        this.toggleTheme();
-      }
-    });
+    // Single delegated listener is managed by ThemeAPI in assets/js/theme.js
   }
 };
 

@@ -164,28 +164,39 @@
 /* --------------------------------------------------------------------------
    LIGHT THEME OVERRIDES
    -------------------------------------------------------------------------- */
-body[data-theme="light"] {
-  --color-bg-main: #F8FAFC;
-  --color-surface: #FFFFFF;
-  --color-card: rgba(15, 23, 42, 0.04);
-  --color-card-hover: rgba(15, 23, 42, 0.08);
-  --color-border: rgba(15, 23, 42, 0.12);
-  --color-divider: rgba(15, 23, 42, 0.08);
+[data-theme="light"],
+body[data-theme="light"],
+body.light-theme {
+  --bg-primary: #F6F8FC;
+  --bg-secondary: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-section: #EEF2F7;
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --text-muted: #6B7280;
+  --border-color: #E5E7EB;
 
-  --color-text-primary: #0F172A;
-  --color-text-secondary: #334155;
-  --color-text-muted: #64748B;
+  --color-bg-main: #F6F8FC;
+  --color-surface: #FFFFFF;
+  --color-card: #FFFFFF;
+  --color-card-hover: #F1F5F9;
+  --color-border: #E5E7EB;
+  --color-divider: #E5E7EB;
+
+  --color-text-primary: #111827;
+  --color-text-secondary: #4B5563;
+  --color-text-muted: #6B7280;
   --color-text-contrast: #FFFFFF;
 
-  --gradient-dark: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.95) 100%);
-  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 100%);
+  --gradient-dark: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(246, 248, 252, 0.98) 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
 
-  --glass-bg: rgba(255, 255, 255, 0.65);
-  --glass-bg-hover: rgba(255, 255, 255, 0.85);
-  --glass-border: rgba(15, 23, 42, 0.12);
+  --glass-bg: #FFFFFF;
+  --glass-bg-hover: #F8FAFC;
+  --glass-border: #E5E7EB;
 
-  --shadow-soft: 0 4px 20px rgba(15, 23, 42, 0.06);
-  --shadow-medium: 0 8px 30px rgba(15, 23, 42, 0.1);
-  --shadow-large: 0 16px 40px rgba(15, 23, 42, 0.14);
-  --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.08);
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-large: 0 16px 40px rgba(0, 0, 0, 0.12);
+  --shadow-glass: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
