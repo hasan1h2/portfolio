@@ -265,6 +265,45 @@ function initPortfolioApp() {
     });
   }
 
+  // Featured Projects Image Gallery Swiper Initialization
+  if (typeof Swiper !== 'undefined' && document.querySelector('.project-gallery-slider')) {
+    document.querySelectorAll('.project-gallery-slider').forEach(sliderEl => {
+      const slideCount = sliderEl.querySelectorAll('.swiper-slide').length;
+      const isSingle = slideCount <= 1;
+
+      new Swiper(sliderEl, {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: false, // NO DUPLICATE IMAGES
+        grabCursor: !isSingle,
+        allowTouchMove: !isSingle,
+        keyboard: {
+          enabled: true,
+          onlyInViewport: true,
+        },
+        pagination: {
+          el: sliderEl.querySelector('.swiper-pagination'),
+          clickable: true,
+          enabled: !isSingle
+        },
+        navigation: {
+          nextEl: sliderEl.querySelector('.swiper-button-next'),
+          prevEl: sliderEl.querySelector('.swiper-button-prev'),
+          enabled: !isSingle
+        }
+      });
+
+      if (isSingle) {
+        const nextBtn = sliderEl.querySelector('.swiper-button-next');
+        const prevBtn = sliderEl.querySelector('.swiper-button-prev');
+        const pagEl = sliderEl.querySelector('.swiper-pagination');
+        if (nextBtn) nextBtn.style.display = 'none';
+        if (prevBtn) prevBtn.style.display = 'none';
+        if (pagEl) pagEl.style.display = 'none';
+      }
+    });
+  }
+
   /* --------------------------------------------------------------------------
      9. DYNAMIC FILTERING & SEARCH ENGINE (PROJECTS & PORTFOLIO)
      -------------------------------------------------------------------------- */
@@ -311,25 +350,87 @@ function initPortfolioApp() {
   }
 
   /* --------------------------------------------------------------------------
-     10. LIGHTBOX PREVIEW MODAL
+     10. ENHANCED LIGHTBOX PREVIEW MODAL WITH GALLERY NAVIGATION & KEYBOARD
      -------------------------------------------------------------------------- */
   const modalImage = document.getElementById('lightboxImage');
   const modalTitle = document.getElementById('lightboxTitle');
-  const lightboxTriggers = document.querySelectorAll('.lightbox-trigger');
+  const lightboxPrevBtn = document.getElementById('lightboxPrevBtn');
+  const lightboxNextBtn = document.getElementById('lightboxNextBtn');
+  let currentGalleryItems = [];
+  let currentGalleryIndex = 0;
 
-  if (lightboxTriggers.length > 0 && modalImage) {
-    lightboxTriggers.forEach(trigger => {
-      trigger.addEventListener('click', function (e) {
-        e.preventDefault();
-        const imgSrc = this.getAttribute('href') || this.getAttribute('data-src');
-        const title = this.getAttribute('data-title') || 'Preview';
-        modalImage.src = imgSrc;
-        if (modalTitle) modalTitle.innerText = title;
-        const modal = new bootstrap.Modal(document.getElementById('lightboxModal'));
+  function updateLightboxState() {
+    if (!currentGalleryItems.length || !modalImage) return;
+    const item = currentGalleryItems[currentGalleryIndex];
+    const imgSrc = item.getAttribute('href') || item.getAttribute('data-src');
+    const title = item.getAttribute('data-title') || 'Preview';
+    modalImage.src = imgSrc;
+    if (modalTitle) modalTitle.innerText = title;
+
+    if (lightboxPrevBtn && lightboxNextBtn) {
+      if (currentGalleryItems.length > 1) {
+        lightboxPrevBtn.style.display = 'inline-flex';
+        lightboxNextBtn.style.display = 'inline-flex';
+      } else {
+        lightboxPrevBtn.style.display = 'none';
+        lightboxNextBtn.style.display = 'none';
+      }
+    }
+  }
+
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('.lightbox-trigger');
+    if (trigger) {
+      e.preventDefault();
+      const galleryName = trigger.getAttribute('data-gallery');
+      if (galleryName) {
+        currentGalleryItems = Array.from(document.querySelectorAll(`.lightbox-trigger[data-gallery="${galleryName}"]`));
+      } else {
+        currentGalleryItems = [trigger];
+      }
+      currentGalleryIndex = currentGalleryItems.indexOf(trigger);
+      if (currentGalleryIndex < 0) currentGalleryIndex = 0;
+
+      updateLightboxState();
+
+      const modalEl = document.getElementById('lightboxModal');
+      if (modalEl && typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+        const modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
         modal.show();
-      });
+      }
+    }
+  });
+
+  if (lightboxPrevBtn) {
+    lightboxPrevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (currentGalleryItems.length > 1) {
+        currentGalleryIndex = (currentGalleryIndex - 1 + currentGalleryItems.length) % currentGalleryItems.length;
+        updateLightboxState();
+      }
     });
   }
+
+  if (lightboxNextBtn) {
+    lightboxNextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (currentGalleryItems.length > 1) {
+        currentGalleryIndex = (currentGalleryIndex + 1) % currentGalleryItems.length;
+        updateLightboxState();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    const modalEl = document.getElementById('lightboxModal');
+    if (modalEl && modalEl.classList.contains('show')) {
+      if (e.key === 'ArrowLeft') {
+        if (lightboxPrevBtn && lightboxPrevBtn.style.display !== 'none') lightboxPrevBtn.click();
+      } else if (e.key === 'ArrowRight') {
+        if (lightboxNextBtn && lightboxNextBtn.style.display !== 'none') lightboxNextBtn.click();
+      }
+    }
+  });
 
   /* --------------------------------------------------------------------------
      11. CONTACT FORM HANDLER (Handled in Section 25 below)

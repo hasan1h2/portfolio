@@ -2,66 +2,129 @@
    GLOBAL DESIGN SYSTEM - RESPONSIVE BREAKPOINT ADAPTERS
    ========================================================================== */
 
-/* Extra Small (Mobile Phones < 576px) */
-@media (max-width: 575.98px) {
-  .section-padding {
-    padding-block: var(--space-10);
+/* Mobile & Tablet Devices (< 992px) */
+@media (max-width: 991.98px) {
+  .hero-section {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    min-height: auto;
+    text-align: center;
   }
 
-  .display-xl {
-    font-size: 2.25rem;
+  .hero-content .row {
+    flex-direction: column-reverse;
   }
 
-  .display-lg {
-    font-size: 1.85rem;
-  }
-
-  .btn-ds {
-    width: 100%;
-    padding: 10px 20px;
-  }
-
-  .hero-cta-group {
+  .gsap-hero-left {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 3rem) !important;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    text-align: center;
+  }
+
+  .hero-description {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-social-wrapper {
+    justify-content: center !important;
     width: 100%;
   }
 
-  .mega-menu-ds {
-    grid-template-columns: 1fr;
+  .hero-profile-container {
+    margin: 0 auto;
+  }
+
+  .navbar .navbar-collapse {
+    display: none !important;
+  }
+
+  .mobile-hamburger-btn {
+    display: flex !important;
   }
 }
 
-/* Small Devices (Landscape Phones >= 576px) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .btn-ds {
-    padding: 12px 24px;
+/* Extra Small Mobile Phones (< 576px) */
+@media (max-width: 575.98px) {
+  .hero-title {
+    font-size: clamp(1.8rem, 7vw, 2.4rem) !important;
+  }
+
+  .hero-profile-container {
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero-profile-img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .orbit-ring.ring-1 {
+    width: 220px;
+    height: 220px;
+  }
+
+  .floating-tech-badge {
+    padding: 3px 8px;
+    font-size: 0.7rem;
+  }
+
+  .badge-flutter { top: 2%; left: 0%; }
+  .badge-html { top: 0%; right: 0%; }
+  .badge-css { top: 22%; right: -5%; }
+  .badge-js { bottom: 25%; right: -5%; }
+  .badge-bootstrap { bottom: 0%; right: 10%; }
+  .badge-github { bottom: -5%; left: 35%; }
+  .badge-ps { bottom: 0%; left: 5%; }
+  .badge-illustrator { bottom: 25%; left: -8%; }
+  .badge-docker { top: 40%; left: -10%; }
+  .badge-linux { top: 20%; left: -5%; }
+  .badge-ai { top: 40%; right: -10%; }
+
+  .hero-social-wrapper {
+    gap: 8px;
+  }
+
+  .btn-primary-glow,
+  .btn-outline-glass {
+    padding: 10px 20px;
+    font-size: 0.88rem;
+  }
+
+  .quick-info-card {
+    padding: 12px;
   }
 }
 
-/* Medium Devices (Tablets >= 768px) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .mega-menu-ds {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Large Devices (Desktops >= 992px) */
+/* Desktop Screens (>= 992px) */
 @media (min-width: 992px) {
   .hero-section {
-    min-height: 90vh;
+    min-height: 100vh;
+  }
+
+  .mobile-hamburger-btn {
+    display: none !important;
   }
 }
 
-/* Extra Large Devices (Large Desktops >= 1200px) */
-@media (min-width: 1200px) {
-  .container-ds {
-    max-width: 1140px;
+/* Wide Monitor Screens (>= 1600px) */
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1440px;
   }
 }
 
-/* Extra Extra Large Devices (Wide Screens >= 1400px) */
-@media (min-width: 1400px) {
-  .container-ds {
-    max-width: 1320px;
-  }
-}

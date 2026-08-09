@@ -120,25 +120,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 7. Animation Loop
   const clock = new THREE.Clock();
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function animate() {
     requestAnimationFrame(animate);
 
-    const elapsedTime = clock.getElapsedTime();
+    if (!prefersReducedMotion) {
+      const elapsedTime = clock.getElapsedTime();
 
-    // Rotate meshes
-    mainMesh.rotation.y = elapsedTime * 0.15;
-    mainMesh.rotation.x = elapsedTime * 0.1;
-    coreMesh.rotation.y = -elapsedTime * 0.25;
-    coreMesh.rotation.z = elapsedTime * 0.15;
-    particleSystem.rotation.y = elapsedTime * 0.05;
+      // Rotate meshes
+      mainMesh.rotation.y = elapsedTime * 0.15;
+      mainMesh.rotation.x = elapsedTime * 0.1;
+      coreMesh.rotation.y = -elapsedTime * 0.25;
+      coreMesh.rotation.z = elapsedTime * 0.15;
+      particleSystem.rotation.y = elapsedTime * 0.05;
 
-    // Smooth Mouse parallax effect
-    targetX += (mouseX - targetX) * 0.05;
-    targetY += (mouseY - targetY) * 0.05;
+      // Smooth Mouse parallax effect
+      targetX += (mouseX - targetX) * 0.05;
+      targetY += (mouseY - targetY) * 0.05;
 
-    scene.rotation.y = targetX * 1.5;
-    scene.rotation.x = targetY * 1.5;
+      scene.rotation.y = targetX * 1.5;
+      scene.rotation.x = targetY * 1.5;
+    }
 
     renderer.render(scene, camera);
   }

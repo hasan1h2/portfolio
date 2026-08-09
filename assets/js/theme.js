@@ -1,19 +1,17 @@
 /**
  * Theme Engine API
  * Prevents FOUC (Flash of Unstyled Content) by executing immediately in the <head>.
- * Implements Dark, Light, and System themes with prefers-color-scheme detection and localStorage.
+ * Implements Dark, Light, and System themes with localStorage. DEFAULT IS DARK MODE.
  */
 
 const ThemeAPI = {
-  STORAGE_KEY: 'theme_preference',
+  STORAGE_KEYS: ['theme', 'theme_preference', 'hh_portfolio_theme', 'ds-portfolio-theme'],
 
   initTheme() {
     const savedTheme = this.loadTheme();
-    if (savedTheme) {
-      this.setTheme(savedTheme, false);
-    } else {
-      this.setTheme('system', false);
-    }
+    // Default to 'dark' if no saved theme preference exists
+    const themeToApply = savedTheme || 'dark';
+    this.setTheme(themeToApply, false);
 
     this.detectSystemTheme();
     
@@ -39,29 +37,37 @@ const ThemeAPI = {
       effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
 
-    if (animate) {
-      document.body?.classList.add('theme-transitioning');
+    if (animate && document.body) {
+      document.body.classList.add('theme-transitioning');
     }
 
     // Apply to both documentElement (HTML) and body to ensure all variables cascade and prevent FOUC
     document.documentElement.setAttribute('data-theme', effectiveTheme);
+    document.documentElement.dataset.theme = effectiveTheme;
     if (document.body) {
       document.body.setAttribute('data-theme', effectiveTheme);
+      document.body.dataset.theme = effectiveTheme;
     }
     
     this.saveTheme(theme);
-    this.updateThemeIcon(theme);
+    this.updateThemeIcon(effectiveTheme);
+
+    window.dispatchEvent(new CustomEvent('ds-theme-change', { detail: { theme: effectiveTheme, mode: theme } }));
 
     if (animate) {
       setTimeout(() => {
         document.body?.classList.remove('theme-transitioning');
-      }, 300); // 300ms matches CSS transition duration
+      }, 300);
     }
   },
 
   loadTheme() {
     try {
-      return localStorage.getItem(this.STORAGE_KEY);
+      for (const key of this.STORAGE_KEYS) {
+        const val = localStorage.getItem(key);
+        if (val) return val;
+      }
+      return null;
     } catch (e) {
       console.warn('localStorage is not accessible');
       return null;
@@ -70,42 +76,39 @@ const ThemeAPI = {
 
   saveTheme(theme) {
     try {
-      localStorage.setItem(this.STORAGE_KEY, theme);
+      for (const key of this.STORAGE_KEYS) {
+        localStorage.setItem(key, theme);
+      }
     } catch (e) {
       console.warn('localStorage is not accessible');
     }
   },
 
   detectSystemTheme() {
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-      const savedTheme = this.loadTheme();
-      if (!savedTheme || savedTheme === 'system') {
-        const effectiveTheme = e.matches ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-theme', effectiveTheme);
-        if (document.body) {
-          document.body.setAttribute('data-theme', effectiveTheme);
+    try {
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        const savedTheme = this.loadTheme();
+        if (savedTheme === 'system') {
+          const effectiveTheme = e.matches ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', effectiveTheme);
+          if (document.body) {
+            document.body.setAttribute('data-theme', effectiveTheme);
+          }
+          this.updateThemeIcon(effectiveTheme);
         }
-        this.updateThemeIcon('system');
-      }
-    });
+      });
+    } catch (e) {}
   },
 
-  updateThemeIcon(theme) {
-    const buttons = document.querySelectorAll('.theme-toggle-btn');
+  updateThemeIcon(effectiveTheme) {
+    const buttons = document.querySelectorAll('.theme-toggle-btn, #themeToggleBtn');
     if (!buttons.length) return;
-
-    let effectiveTheme = theme;
-    if (theme === 'system') {
-      effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
 
     buttons.forEach(btn => {
       const icon = btn.querySelector('i');
       if (icon) {
         this.animateThemeIcon(icon, effectiveTheme);
       }
-      
-      // ARIA Support
       btn.setAttribute('aria-pressed', effectiveTheme === 'dark');
       btn.setAttribute('title', `Switch to ${effectiveTheme === 'dark' ? 'Light' : 'Dark'} Theme`);
       btn.setAttribute('aria-label', `Switch to ${effectiveTheme === 'dark' ? 'Light' : 'Dark'} Theme`);
@@ -113,54 +116,39 @@ const ThemeAPI = {
   },
 
   animateThemeIcon(icon, theme) {
-    // Add rotating class for CSS animation
     icon.classList.add('rotating');
-    
     setTimeout(() => {
       if (theme === 'light') {
         icon.className = 'bi bi-sun-fill';
       } else {
         icon.className = 'bi bi-moon-stars-fill';
       }
-      // Remove rotating class to let the icon scale back in
       icon.classList.remove('rotating');
-    }, 150); // Halfway through the transition
+    }, 150);
   },
 
   bindUIEvents() {
-    const buttons = document.querySelectorAll('.theme-toggle-btn');
-    
-    buttons.forEach(btn => {
-      // Mouse Click
-      btn.addEventListener('click', (e) => {
+    document.addEventListener('click', (e) => {
+      const toggleBtn = e.target.closest('.theme-toggle-btn, #themeToggleBtn');
+      if (toggleBtn) {
         e.preventDefault();
         this.toggleTheme();
-      });
-
-      // Keyboard Accessibility
-      btn.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          this.toggleTheme();
-        }
-      });
+      }
     });
 
-    // Run once on load to ensure UI matches state
-    const savedTheme = this.loadTheme() || 'system';
-    this.updateThemeIcon(savedTheme);
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    this.updateThemeIcon(currentTheme);
   }
 };
 
-// Expose Global API as requested
+// Execute immediately in head to set theme before paint
+ThemeAPI.initTheme();
+
+// Expose Global API
+window.ThemeAPI = ThemeAPI;
 window.initTheme = () => ThemeAPI.initTheme();
 window.toggleTheme = () => ThemeAPI.toggleTheme();
 window.setTheme = (theme) => ThemeAPI.setTheme(theme, true);
 window.loadTheme = () => ThemeAPI.loadTheme();
 window.saveTheme = (theme) => ThemeAPI.saveTheme(theme);
-window.detectSystemTheme = () => ThemeAPI.detectSystemTheme();
-window.updateThemeIcon = (theme) => ThemeAPI.updateThemeIcon(theme);
-window.animateThemeIcon = (icon, theme) => ThemeAPI.animateThemeIcon(icon, theme);
 
-// Execute immediately to prevent FOUC
-ThemeAPI.initTheme();
