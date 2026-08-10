@@ -1070,6 +1070,26 @@ document.addEventListener('click', function(e) {
     e.preventDefault();
     window.printCV();
   }
+
+  const seeMoreBtn = e.target.closest('.btn-see-more');
+  if (seeMoreBtn) {
+    e.preventDefault();
+    const targetId = seeMoreBtn.getAttribute('data-target');
+    let target;
+    if (targetId) {
+      target = document.getElementById(targetId);
+    } else {
+      target = seeMoreBtn.previousElementSibling;
+    }
+
+    if (target) {
+      target.classList.toggle('expanded');
+      const isExpanded = target.classList.contains('expanded');
+      seeMoreBtn.innerHTML = isExpanded 
+        ? '<i class="fas fa-chevron-up me-1"></i> See Less' 
+        : '<i class="fas fa-chevron-down me-1"></i> See More';
+    }
+  }
 });
 
 if (document.readyState === 'loading') {

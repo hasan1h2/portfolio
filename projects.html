@@ -43,11 +43,11 @@
   </section>
 
   <!-- Large Featured Project Spotlight Section -->
-  <section class="py-4">
+  <section class="py-3 py-md-4">
     <div class="container" data-aos="fade-up">
-      <div class="featured-project-hero tilt-card p-4 p-lg-5 mb-5">
+      <div class="featured-project-hero tilt-card p-3 p-sm-4 p-lg-5 mb-4 mb-md-5">
         <div class="row align-items-center g-4">
-          <div class="col-lg-7">
+          <div class="col-12 col-lg-7">
             <div class="position-relative rounded-4 overflow-hidden shadow-lg border border-secondary border-opacity-25">
               <div class="swiper project-gallery-slider">
                 <div class="swiper-wrapper">
@@ -92,33 +92,38 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-5">
-            <div class="ps-lg-3">
+          <div class="col-12 col-lg-5">
+            <div  class="ps-lg-3 ms-4 me-4 mb-4">
               <div class="d-flex align-items-center justify-content-between mb-2">
                 <span class="text-accent fw-bold small text-uppercase tracking-wider">FEATURED SPOTLIGHT</span>
                 <button class="btn-favorite" aria-label="Favorite Project" data-bs-toggle="tooltip" title="Save to Favorites"><i class="far fa-heart"></i></button>
               </div>
               <h2 class="text-white fw-extrabold display-6 mb-3">Chef Starz Mobile App</h2>
-              <p class="text-muted mb-4 lead fs-6">
-                On-demand gourmet chef booking and food ordering mobile application built at Sparktech Agency. Features real-time GPS tracking, automated appointment dispatch, REST API backend sync, and interactive recipe video guides.
-              </p>
               
-              <div class="d-flex flex-wrap gap-2 mb-4">
-                <span class="project-tech-badge"><i class="fab fa-flutter text-info me-1"></i> Flutter</span>
-                <span class="project-tech-badge"><i class="fas fa-code me-1"></i> Dart</span>
-                <span class="project-tech-badge"><i class="fas fa-cubes me-1"></i> GetX</span>
-                <span class="project-tech-badge"><i class="fas fa-plug me-1"></i> REST API</span>
-                <span class="project-tech-badge"><i class="fas fa-credit-card me-1"></i> Stripe API</span>
+              <div class="expandable-details" id="spotlight-details">
+                <p class="text-muted mb-3 lead fs-6 card-text-clamp">
+                  On-demand gourmet chef booking and food ordering mobile application built at Sparktech Agency. Features real-time GPS tracking, automated appointment dispatch, REST API backend sync, and interactive recipe video guides.
+                </p>
+                
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="project-tech-badge"><i class="fab fa-flutter text-info me-1"></i> Flutter</span>
+                  <span class="project-tech-badge"><i class="fas fa-code me-1"></i> Dart</span>
+                  <span class="project-tech-badge"><i class="fas fa-cubes me-1"></i> GetX</span>
+                  <span class="project-tech-badge"><i class="fas fa-plug me-1"></i> REST API</span>
+                  <span class="project-tech-badge"><i class="fas fa-credit-card me-1"></i> Stripe API</span>
+                </div>
               </div>
 
-              <div class="d-flex flex-wrap align-items-center gap-3">
-                <a href="https://github.com/hasan1h2/chef-starz-full-api" target="_blank" class="btn-primary-glow px-4 py-2 text-decoration-none">
+              <button class="btn-see-more mt-2 mb-3 w-100 justify-content-center d-md-none" data-target="spotlight-details"><i class="fas fa-chevron-down me-1"></i> See More</button>
+
+              <div class="d-flex flex-wrap align-items-center gap-2 gap-sm-3">
+                <a href="https://github.com/hasan1h2/chef-starz-full-api" target="_blank" class="btn-primary-glow px-3 px-sm-4 py-2 text-decoration-none">
                   <i class="fab fa-github me-1"></i> GitHub Repo
                 </a>
-                <a href="portfolio/flutter.html" class="btn-outline-glass px-4 py-2 text-decoration-none">
+                <a href="portfolio/flutter.html" class="btn-outline-glass px-3 px-sm-4 py-2 text-decoration-none">
                   <i class="fas fa-external-link-alt me-1"></i> Live Demo
                 </a>
-                <button class="btn-outline-glass px-4 py-2 border-accent text-accent project-details-trigger" 
+                <button class="btn-outline-glass px-3 px-sm-4 py-2 border-accent text-accent project-details-trigger" 
                   data-title="Chef Starz Gourmet App"
                   data-category="Flutter Mobile Application"
                   data-desc="Live cooking and recipe application built with Flutter, Dart, GetX, and REST API integration. Features real-time recipe discovery, dynamic data management, clean architecture, and responsive UI."
@@ -142,14 +147,14 @@
       
       <!-- Live Search & Controls -->
       <div class="row align-items-center justify-content-between g-3 mb-4" data-aos="fade-up">
-        <div class="col-md-7 col-lg-6">
+        <div class="col-12 col-md-7 col-lg-6">
           <div class="search-input-group">
             <i class="fas fa-search"></i>
             <input type="text" id="portfolioSearch" placeholder="Search by project, technology, category, or keyword...">
           </div>
         </div>
         
-        <div class="col-md-5 col-lg-4 text-md-end">
+        <div class="col-12 col-md-5 col-lg-4 text-start text-md-end">
           <div class="d-inline-flex align-items-center gap-2 p-1 bg-glass rounded-pill border border-secondary border-opacity-25">
             <span class="text-muted small px-3 fw-bold">Layout:</span>
             <button class="layout-btn active" data-view="grid" aria-label="Grid View" data-bs-toggle="tooltip" title="3-Column Grid"><i class="fas fa-th-large"></i></button>
@@ -164,10 +169,10 @@
       <div id="portfolio-filter"></div>
 
       <!-- Responsive Projects Grid -->
-      <div class="row g-4" id="projectsGrid">
+      <div class="row g-3 g-md-4" id="projectsGrid">
         
         <!-- Project 1: Chef Starz -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="flutter" data-aos="fade-up">
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="flutter" data-aos="fade-up">
           <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
               <img src="assets/images/projects/flutter/chef-starz.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="Chef Starz">
@@ -200,9 +205,15 @@
                   <span class="project-tech-badge">REST API</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">Chef Starz (Live Project)</h5>
-                <p class="text-muted small card-text mb-3">Live cooking and recipe application with responsive UI and API integration.</p>
+                
+                <div class="expandable-details" id="pj-details-1">
+                  <p class="text-muted small card-text mb-2">Live cooking and recipe application with responsive UI and API integration.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center d-md-none" data-target="pj-details-1"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+
+              <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-25">
                 <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live</span>
                 <div class="d-flex gap-2 fs-6">
                   <a href="https://github.com/hasan1h2/chef-starz-full-api" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -214,7 +225,7 @@
         </div>
 
         <!-- Project 2: Worker Hiring Platform -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="flutter" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="flutter" data-aos="fade-up" data-aos-delay="100">
           <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
               <img src="assets/images/projects/flutter/worker-hiring.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="Worker Hiring Platform">
@@ -247,9 +258,15 @@
                   <span class="project-tech-badge">REST API</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">Worker Hiring (Live Project)</h5>
-                <p class="text-muted small card-text mb-3">Live worker hiring platform connecting clients with skilled service providers.</p>
+
+                <div class="expandable-details" id="pj-details-2">
+                  <p class="text-muted small card-text mb-2">Live worker hiring platform connecting clients with skilled service providers.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center d-md-none" data-target="pj-details-2"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+
+              <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-25">
                 <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live</span>
                 <div class="d-flex gap-2 fs-6">
                   <a href="https://github.com/hasan1h2/worker_hiring" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -261,7 +278,7 @@
         </div>
 
         <!-- Project 3: Artisan -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="flutter" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="flutter" data-aos="fade-up" data-aos-delay="200">
           <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
               <img src="assets/images/projects/flutter/artisan.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="Artisan App">
@@ -294,9 +311,15 @@
                   <span class="project-tech-badge">REST API</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">Artisan (Live Project)</h5>
-                <p class="text-muted small card-text mb-3">Live business management application with clean architecture and seamless user experience.</p>
+
+                <div class="expandable-details" id="pj-details-3">
+                  <p class="text-muted small card-text mb-2">Live business management application with clean architecture and seamless user experience.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center d-md-none" data-target="pj-details-3"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+
+              <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-25">
                 <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live</span>
                 <div class="d-flex gap-2 fs-6">
                   <a href="https://github.com/hasan1h2/artisan" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -308,7 +331,7 @@
         </div>
 
         <!-- Project 4: Flutter Static UI Kit -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="flutter" data-aos="fade-up">
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="flutter" data-aos="fade-up">
           <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
               <img src="assets/images/projects/flutter/flutter-ui-kit.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="Flutter Static UI Kit">
@@ -341,9 +364,15 @@
                   <span class="project-tech-badge">Animations</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">Flutter Static UI Kit</h5>
-                <p class="text-muted small card-text mb-3">Collection of high-performance mobile UI layouts and widget components.</p>
+
+                <div class="expandable-details" id="pj-details-4">
+                  <p class="text-muted small card-text mb-2">Collection of high-performance mobile UI layouts and widget components.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center d-md-none" data-target="pj-details-4"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+
+              <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-25">
                 <span class="status-badge-live"><span class="pulsating-dot-live"></span> Ready</span>
                 <div class="d-flex gap-2 fs-6">
                   <a href="https://github.com" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -355,7 +384,7 @@
         </div>
 
         <!-- Project 5: 3D Personal Portfolio Website -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="web" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="web" data-aos="fade-up" data-aos-delay="100">
           <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
               <img src="assets/images/projects/web/portfolio-site.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="3D Personal Portfolio Website">
@@ -388,9 +417,15 @@
                   <span class="project-tech-badge">Vanilla CSS</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">3D Personal Portfolio</h5>
-                <p class="text-muted small card-text mb-3">Award-winning dark glassmorphism website with 3D interactive hero canvas.</p>
+
+                <div class="expandable-details" id="pj-details-5">
+                  <p class="text-muted small card-text mb-2">Award-winning dark glassmorphism website with 3D interactive hero canvas.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center d-md-none" data-target="pj-details-5"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+
+              <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-25">
                 <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live</span>
                 <div class="d-flex gap-2 fs-6">
                   <a href="https://github.com" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -402,7 +437,7 @@
         </div>
 
         <!-- Project 6: SaaS Product Landing Page -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="web" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="web" data-aos="fade-up" data-aos-delay="200">
           <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
               <img src="assets/images/projects/web/landing-page.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="SaaS Landing Page">
@@ -435,9 +470,15 @@
                   <span class="project-tech-badge">JS ES6</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">SaaS Landing Page</h5>
-                <p class="text-muted small card-text mb-3">Optimized landing page layout engineered for high conversion rates.</p>
+
+                <div class="expandable-details" id="pj-details-6">
+                  <p class="text-muted small card-text mb-2">Optimized landing page layout engineered for high conversion rates.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center d-md-none" data-target="pj-details-6"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+
+              <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-25">
                 <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live</span>
                 <div class="d-flex gap-2 fs-6">
                   <a href="https://github.com" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -449,7 +490,7 @@
         </div>
 
         <!-- Project 7: Graphic Brand Identity -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="graphic" data-aos="fade-up">
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="graphic" data-aos="fade-up">
           <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
               <img src="assets/images/projects/graphic/logo-design.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="Brand Logo &amp; Identity">
@@ -482,9 +523,15 @@
                   <span class="project-tech-badge">Branding</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">Brand Logo &amp; Identity</h5>
-                <p class="text-muted small card-text mb-3">Modern vector logo suite with typography and color system specifications.</p>
+
+                <div class="expandable-details" id="pj-details-7">
+                  <p class="text-muted small card-text mb-2">Modern vector logo suite with typography and color system specifications.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center d-md-none" data-target="pj-details-7"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+
+              <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-25">
                 <span class="status-badge-live"><span class="pulsating-dot-live"></span> Completed</span>
                 <div class="d-flex gap-2 fs-6">
                   <a href="portfolio/graphic-design.html" class="text-muted hover-primary" aria-label="View Gallery"><i class="fas fa-eye"></i></a>
@@ -495,7 +542,7 @@
         </div>
 
         <!-- Project 8: AI Avatar & Prompt Matrix -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="ai" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="ai" data-aos="fade-up" data-aos-delay="100">
           <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
               <img src="assets/images/projects/ai/ai-images.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="AI Visual Concepts">
@@ -528,9 +575,15 @@
                   <span class="project-tech-badge">ChatGPT-4o</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">Generative AI Matrix</h5>
-                <p class="text-muted small card-text mb-3">AI visual creation, prompt structuring, and creative concept prototyping.</p>
+
+                <div class="expandable-details" id="pj-details-8">
+                  <p class="text-muted small card-text mb-2">AI visual creation, prompt structuring, and creative concept prototyping.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center d-md-none" data-target="pj-details-8"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+
+              <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-25">
                 <span class="status-badge-live"><span class="pulsating-dot-live"></span> Active</span>
                 <div class="d-flex gap-2 fs-6">
                   <a href="portfolio/ai-projects.html" class="text-muted hover-primary" aria-label="View AI Gallery"><i class="fas fa-arrow-right"></i></a>
@@ -541,7 +594,7 @@
         </div>
 
         <!-- Project 9: YouTube Tech Review & Motion Video -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="video" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="video" data-aos="fade-up" data-aos-delay="200">
           <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
               <img src="assets/images/projects/video/youtube-video.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="YouTube Video Editing">
@@ -574,9 +627,15 @@
                   <span class="project-tech-badge">CapCut</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">Tech Review Video Edit</h5>
-                <p class="text-muted small card-text mb-3">High-energy video pacing, dynamic lower-thirds, and visual effects.</p>
+
+                <div class="expandable-details" id="pj-details-9">
+                  <p class="text-muted small card-text mb-2">High-energy video pacing, dynamic lower-thirds, and visual effects.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center d-md-none" data-target="pj-details-9"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+
+              <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-25">
                 <span class="status-badge-live"><span class="pulsating-dot-live"></span> Published</span>
                 <div class="d-flex gap-2 fs-6">
                   <a href="portfolio/video-editing.html" class="text-muted hover-primary" aria-label="Watch Video"><i class="fas fa-play"></i></a>
@@ -587,7 +646,7 @@
         </div>
 
         <!-- Project 10: Technical SEO & Digital Growth Campaign -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="marketing" data-aos="fade-up">
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="marketing" data-aos="fade-up">
           <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
               <img src="assets/images/projects/digital-marketing/seo-report.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="Digital Marketing Campaign">
@@ -620,9 +679,15 @@
                   <span class="project-tech-badge">Analytics</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">Technical SEO &amp; Growth</h5>
-                <p class="text-muted small card-text mb-3">Comprehensive keyword indexing, conversion funnel optimization, and analytics.</p>
+
+                <div class="expandable-details" id="pj-details-10">
+                  <p class="text-muted small card-text mb-2">Comprehensive keyword indexing, conversion funnel optimization, and analytics.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center d-md-none" data-target="pj-details-10"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+
+              <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-25">
                 <span class="status-badge-live"><span class="pulsating-dot-live"></span> Verified</span>
                 <div class="d-flex gap-2 fs-6">
                   <a href="portfolio/digital-marketing.html" class="text-muted hover-primary" aria-label="View Report"><i class="fas fa-chart-pie"></i></a>
@@ -633,7 +698,7 @@
         </div>
 
         <!-- Project 11: Docker & CI/CD Pipeline Automation -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="devops" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="devops" data-aos="fade-up" data-aos-delay="100">
           <div class="glass-card project-card tilt-card h-100">
             <div class="project-img-wrapper">
               <img src="assets/images/projects/devops/docker-containers.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="DevOps CI/CD Lab">
@@ -666,9 +731,15 @@
                   <span class="project-tech-badge">NGINX</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">Docker &amp; CI/CD Pipeline</h5>
-                <p class="text-muted small card-text mb-3">Containerized web application deployment setup with automated test workflows.</p>
+
+                <div class="expandable-details" id="pj-details-11">
+                  <p class="text-muted small card-text mb-2">Containerized web application deployment setup with automated test workflows.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center d-md-none" data-target="pj-details-11"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+
+              <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-25">
                 <span class="status-badge-live"><span class="pulsating-dot-live"></span> Active Lab</span>
                 <div class="d-flex gap-2 fs-6">
                   <a href="https://github.com" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -680,7 +751,7 @@
         </div>
 
         <!-- Project 12: Future Project Placeholder (Editable) -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="web" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="web" data-aos="fade-up" data-aos-delay="200">
           <div class="glass-card project-card tilt-card h-100 border-dashed">
             <div class="project-img-wrapper">
               <img src="assets/images/projects/web/agency-website.svg" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="Future Custom Project">
@@ -712,7 +783,12 @@
                   <span class="project-tech-badge">Editable</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">Future Custom Project</h5>
-                <p class="text-muted small card-text mb-3">Reserved slot for next featured project deployment or client release.</p>
+
+                <div class="expandable-details" id="pj-details-12">
+                  <p class="text-muted small card-text mb-2">Reserved slot for next featured project deployment or client release.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center d-md-none" data-target="pj-details-12"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
               <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
                 <span class="badge bg-secondary bg-opacity-25 text-muted px-2 py-1 fs-7">Placeholder</span>

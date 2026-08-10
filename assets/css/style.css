@@ -1204,6 +1204,7 @@ body.hovering .cursor-follower {
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--text-main);
+  white-space: nowrap;
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   animation: floatIndependent 4s ease-in-out infinite alternate;
   animation-delay: var(--delay);
@@ -1223,68 +1224,68 @@ body.hovering .cursor-follower {
 
 /* Radial Placement for 11 Tech Badges */
 .badge-flutter {
-  top: -2%;
-  left: 20%;
+  top: -3%;
+  left: 18%;
   border-color: rgba(0, 229, 255, 0.4);
 }
 
 .badge-html {
-  top: 5%;
-  right: 5%;
+  top: 15%;
+  right: -5%;
   border-color: rgba(239, 68, 68, 0.4);
 }
 
 .badge-css {
-  top: 28%;
+  top: 36%;
   right: -8%;
   border-color: rgba(59, 130, 246, 0.4);
 }
 
 .badge-js {
-  top: 52%;
-  right: -10%;
+  top: 58%;
+  right: -6%;
   border-color: rgba(234, 179, 8, 0.4);
 }
 
 .badge-bootstrap {
-  bottom: 15%;
-  right: -2%;
+  bottom: 8%;
+  right: 2%;
   border-color: rgba(168, 85, 247, 0.4);
 }
 
 .badge-github {
-  bottom: -4%;
-  right: 22%;
+  bottom: -5%;
+  right: 28%;
   border-color: rgba(255, 255, 255, 0.4);
 }
 
 .badge-ps {
   bottom: -5%;
-  left: 20%;
+  left: 28%;
   border-color: rgba(0, 229, 255, 0.4);
 }
 
 .badge-illustrator {
-  bottom: 12%;
-  left: -6%;
+  bottom: 8%;
+  left: 2%;
   border-color: rgba(245, 158, 11, 0.4);
 }
 
 .badge-docker {
-  top: 52%;
-  left: -12%;
+  top: 58%;
+  left: -6%;
   border-color: rgba(6, 182, 212, 0.4);
 }
 
 .badge-linux {
-  top: 28%;
+  top: 36%;
   left: -8%;
   border-color: rgba(234, 179, 8, 0.4);
 }
 
 .badge-ai {
-  top: 6%;
-  left: 2%;
+  top: -3%;
+  right: 18%;
   border-color: rgba(0, 255, 163, 0.4);
 }
 
@@ -1747,7 +1748,13 @@ footer {
 
   .btn-primary-glow,
   .btn-outline-glass {
-    padding: 12px 24px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  .btn-primary-glow.w-100-mobile,
+  .btn-outline-glass.w-100-mobile {
     width: 100%;
     justify-content: center;
   }
@@ -1755,6 +1762,43 @@ footer {
   .custom-cursor,
   .cursor-follower {
     display: none !important;
+  }
+
+  /* Mobile 2-column grid rows for Career Timeline (Leaves desktop vertical timeline unchanged) */
+  .about-timeline {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-left: 0 !important;
+    border-left: none !important;
+  }
+
+  .about-timeline-item {
+    margin-bottom: 0 !important;
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-md);
+    padding: 12px;
+    height: 100%;
+  }
+
+  .about-timeline-dot {
+    display: none !important;
+  }
+
+  .about-timeline-date {
+    display: inline-block !important;
+    background: rgba(0, 229, 255, 0.12);
+    border: 1px solid rgba(0, 229, 255, 0.25);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.72rem;
+    margin-bottom: 6px;
+  }
+
+  .about-timeline-item h6 {
+    font-size: 0.85rem;
   }
 }
 
@@ -4490,6 +4534,484 @@ section[id] {
   .floating-tech-badge {
     padding: 3px 8px;
     font-size: 0.72rem;
+  }
+
+  .highlight-card {
+    padding: 14px 12px;
+  }
+
+  .highlight-icon {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+
+  .highlight-card h6 {
+    font-size: 0.85rem;
+  }
+
+  /* Compact 2-column mobile project cards */
+  .project-card .p-3.p-sm-4 {
+    padding: 10px !important;
+  }
+
+  .project-card h5.card-title-text {
+    font-size: 0.85rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .project-card p.card-text-clamp {
+    font-size: 0.74rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 6px !important;
+  }
+
+  .project-tech-badge {
+    font-size: 0.65rem !important;
+    padding: 2px 6px !important;
+  }
+
+  /* Compact 2-column mobile service cards */
+  #services .glass-card {
+    padding: 12px 10px !important;
+  }
+
+  #services .skill-icon {
+    font-size: 1.5rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  #services h4 {
+    font-size: 0.85rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  #services p {
+    font-size: 0.72rem !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Compact 2-column mobile testimonial cards */
+  #testimonials .glass-card {
+    padding: 12px 10px !important;
+  }
+
+  #testimonials .fa-star {
+    font-size: 0.72rem !important;
+  }
+
+  #testimonials p {
+    font-size: 0.72rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 8px !important;
+  }
+
+  #testimonials h6 {
+    font-size: 0.82rem !important;
+  }
+
+  #testimonials span.tiny {
+    font-size: 0.68rem !important;
+  }
+
+  #testimonials .rounded-circle {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 0.75rem !important;
+  }
+
+  /* Compact 2-column mobile skill cards */
+  .top-skill-card,
+  .skill-card-v2 {
+    padding: 12px 10px !important;
+  }
+
+  .top-skill-card h5,
+  .skill-card-v2 h5 {
+    font-size: 0.85rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  .top-skill-card p,
+  .skill-card-v2 p {
+    font-size: 0.70rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .progress-ring {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .btn-expand-skill {
+    font-size: 0.68rem !important;
+    padding: 4px 6px !important;
+  }
+
+  /* Compact 2-column mobile DevOps learning step cards */
+  .learning-step-card {
+    padding: 10px 8px !important;
+  }
+
+  .learning-step-card h6 {
+    font-size: 0.82rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  .learning-step-card p {
+    font-size: 0.68rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .learning-step-card .badge {
+    font-size: 0.60rem !important;
+    padding: 2px 4px !important;
+  }
+
+  .learning-step-card i {
+    font-size: 1.25rem !important;
+  }
+
+  /* Compact 2-column mobile Professional Goal cards */
+  .goal-card-v2 {
+    padding: 12px 10px !important;
+  }
+
+  .goal-card-v2 h6 {
+    font-size: 0.82rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .goal-card-v2 p {
+    font-size: 0.68rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .goal-icon {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* 2-Column Mobile Row Grid for Career Roadmap widget on skills.html (.desktop-sticky-left .timeline-v2) */
+  .desktop-sticky-left .timeline-v2 {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    padding-left: 0 !important;
+  }
+
+  .desktop-sticky-left .timeline-v2::before {
+    display: none !important;
+  }
+
+  .desktop-sticky-left .timeline-item-v2 {
+    margin-bottom: 0 !important;
+    padding: 12px 10px !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 10px !important;
+    position: relative !important;
+  }
+
+  .desktop-sticky-left .timeline-node-v2 {
+    position: static !important;
+    display: inline-block !important;
+    width: 8px !important;
+    height: 8px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .desktop-sticky-left .timeline-item-v2 h6 {
+    font-size: 0.82rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  .desktop-sticky-left .timeline-item-v2 span.tiny {
+    font-size: 0.68rem !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   EXPANDABLE DETAILS & SEE MORE BUTTON (Height Short & Expandable)
+   -------------------------------------------------------------------------- */
+.expandable-details {
+  max-height: 0px;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, margin 0.3s ease;
+  margin-bottom: 0 !important;
+}
+
+.expandable-details.expanded {
+  max-height: 1000px;
+  opacity: 1;
+  margin-bottom: 1rem !important;
+}
+
+.btn-see-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--primary, #38bdf8);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 12px;
+}
+
+.btn-see-more:hover {
+  background: var(--primary, #38bdf8);
+  color: #0b1120;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+  transform: translateY(-1px);
+}
+
+@media (min-width: 768px) {
+  .expandable-details {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .project-card .p-4, 
+  .project-card .p-3,
+  .glass-card.p-4 {
+    padding: 10px 8px !important;
+  }
+
+  .card-title, .card-title-text {
+    font-size: 0.85rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .project-tech-badge {
+    font-size: 0.65rem !important;
+    padding: 2px 6px !important;
+  }
+
+  .btn-see-more {
+    padding: 4px 10px !important;
+    font-size: 0.72rem !important;
+    margin-top: 4px !important;
+    margin-bottom: 6px !important;
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .card-text-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.75rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .expandable-details.expanded .card-text-clamp {
+    -webkit-line-clamp: unset !important;
+    overflow: visible !important;
+  }
+
+  .category-landing-img {
+    height: 120px !important;
+  }
+
+  .category-icon-floating {
+    top: 98px !important;
+    right: 10px !important;
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1.1rem !important;
+    border-radius: 10px !important;
+  }
+
+  .category-landing-card h3 {
+    font-size: 0.9rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .category-landing-card p {
+    font-size: 0.72rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 8px !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .category-landing-card .btn-primary-glow {
+    font-size: 0.72rem !important;
+    padding: 6px 8px !important;
+  }
+
+  .process-card-step {
+    padding: 14px 10px !important;
+  }
+
+  .process-step-number {
+    width: 26px !important;
+    height: 26px !important;
+    font-size: 0.75rem !important;
+    top: -10px !important;
+    right: 10px !important;
+  }
+
+  .process-card-step h6 {
+    font-size: 0.8rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .process-card-step p {
+    font-size: 0.7rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .process-card-step i {
+    font-size: 1.25rem !important;
+    margin-bottom: 6px !important;
+  }
+
+  .client-benefit-card {
+    padding: 10px 8px !important;
+    gap: 8px !important;
+  }
+
+  .client-benefit-icon {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    font-size: 0.95rem !important;
+    border-radius: 8px !important;
+  }
+
+  .client-benefit-card h6 {
+    font-size: 0.78rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  .client-benefit-card p {
+    font-size: 0.68rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .pricing-card-glass {
+    padding: 14px 10px !important;
+  }
+
+  .pricing-card-glass h4 {
+    font-size: 0.82rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .pricing-card-glass h3 {
+    font-size: 1.05rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .pricing-card-glass p {
+    font-size: 0.7rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .pricing-card-glass ul li {
+    font-size: 0.68rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .pricing-card-glass .badge-glow {
+    font-size: 0.65rem !important;
+    padding: 2px 6px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .pricing-card-glass .btn-outline-glass,
+  .pricing-card-glass .btn-primary-glow {
+    font-size: 0.72rem !important;
+    padding: 6px 8px !important;
+  }
+
+  .cert-item .project-img-wrapper img {
+    height: 110px !important;
+    object-fit: cover !important;
+  }
+
+  .cert-item .p-4 {
+    padding: 10px 8px !important;
+  }
+
+  .cert-item h5 {
+    font-size: 0.85rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  .cert-item p {
+    font-size: 0.7rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 6px !important;
+  }
+
+  .cert-item .badge-glow,
+  .cert-item .badge {
+    font-size: 0.62rem !important;
+    padding: 2px 5px !important;
+  }
+
+  .cert-item .project-tech-badge {
+    font-size: 0.6rem !important;
+    padding: 2px 5px !important;
+  }
+
+  .cert-item .btn-outline-glass,
+  .cert-item .btn-primary-glow {
+    font-size: 0.68rem !important;
+    padding: 4px 6px !important;
+  }
+
+  .service-icon-box {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .service-icon-box i {
+    font-size: 1rem !important;
+  }
+
+  .accordion-button {
+    font-size: 0.85rem !important;
+    padding: 10px 12px !important;
+  }
+
+  .accordion-button i {
+    font-size: 0.95rem !important;
+  }
+
+  .accordion-body {
+    font-size: 0.78rem !important;
+    padding: 10px 12px !important;
+    line-height: 1.35 !important;
+  }
+
+  .form-control-glass,
+  .form-select-glass {
+    font-size: 0.78rem !important;
+    padding: 8px 10px !important;
+  }
+
+  .form-label {
+    font-size: 0.72rem !important;
+    margin-bottom: 3px !important;
   }
 }
 

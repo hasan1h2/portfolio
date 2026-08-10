@@ -83,17 +83,17 @@
     font-size: 0.7rem;
   }
 
-  .badge-flutter { top: 2%; left: 0%; }
-  .badge-html { top: 0%; right: 0%; }
-  .badge-css { top: 22%; right: -5%; }
-  .badge-js { bottom: 25%; right: -5%; }
-  .badge-bootstrap { bottom: 0%; right: 10%; }
-  .badge-github { bottom: -5%; left: 35%; }
-  .badge-ps { bottom: 0%; left: 5%; }
-  .badge-illustrator { bottom: 25%; left: -8%; }
-  .badge-docker { top: 40%; left: -10%; }
-  .badge-linux { top: 20%; left: -5%; }
-  .badge-ai { top: 40%; right: -10%; }
+  .badge-flutter { top: -4%; left: 8%; }
+  .badge-ai { top: -4%; right: 8%; }
+  .badge-html { top: 16%; right: -8%; }
+  .badge-css { top: 38%; right: -10%; }
+  .badge-js { top: 60%; right: -8%; }
+  .badge-bootstrap { bottom: 2%; right: 4%; }
+  .badge-github { bottom: -6%; right: 28%; }
+  .badge-ps { bottom: -6%; left: 28%; }
+  .badge-illustrator { bottom: 2%; left: 4%; }
+  .badge-docker { top: 60%; left: -8%; }
+  .badge-linux { top: 38%; left: -10%; }
 
   .hero-social-wrapper {
     gap: 8px;
