@@ -439,42 +439,51 @@ function initPortfolioApp() {
   /* --------------------------------------------------------------------------
      12. FULL-SCREEN MOBILE MENU CONTROLLER & ESC KEY SUPPORT
      -------------------------------------------------------------------------- */
-  const mobileHamburgerBtn = document.getElementById('mobileHamburgerBtn');
-  const mobileNavOverlay = document.getElementById('mobileNavOverlay');
-  const mobileNavClose = document.getElementById('mobileNavClose');
-
-  function openMobileNav() {
-    if (mobileNavOverlay) {
-      mobileNavOverlay.classList.add('active');
-      if (mobileHamburgerBtn) mobileHamburgerBtn.classList.add('active');
-      document.body.style.overflow = 'hidden';
+  function closeGlobalMobileNav() {
+    const mobileOverlay = document.querySelector('.mobile-nav-overlay, #mobileNavOverlay');
+    const hamburgerBtns = document.querySelectorAll('#mobileHamburgerBtn, .mobile-hamburger-btn');
+    if (mobileOverlay) {
+      mobileOverlay.classList.remove('active');
     }
+    hamburgerBtns.forEach(btn => btn.classList.remove('active'));
+    document.body.style.overflow = '';
   }
 
-  function closeMobileNav() {
-    if (mobileNavOverlay) {
-      mobileNavOverlay.classList.remove('active');
-      if (mobileHamburgerBtn) mobileHamburgerBtn.classList.remove('active');
-      document.body.style.overflow = '';
+  function openGlobalMobileNav() {
+    const mobileOverlay = document.querySelector('.mobile-nav-overlay, #mobileNavOverlay');
+    const hamburgerBtns = document.querySelectorAll('#mobileHamburgerBtn, .mobile-hamburger-btn');
+    if (mobileOverlay) {
+      mobileOverlay.classList.add('active');
     }
+    hamburgerBtns.forEach(btn => btn.classList.add('active'));
+    document.body.style.overflow = 'hidden';
   }
 
-  if (mobileHamburgerBtn) {
-    mobileHamburgerBtn.addEventListener('click', () => {
-      if (mobileNavOverlay && mobileNavOverlay.classList.contains('active')) {
-        closeMobileNav();
+  document.addEventListener('click', (e) => {
+    const hamburgerBtn = e.target.closest('#mobileHamburgerBtn, .mobile-hamburger-btn');
+    const closeBtn = e.target.closest('#mobileNavClose, .mobile-nav-close');
+    const mobileLink = e.target.closest('.mobile-nav-link');
+
+    if (hamburgerBtn) {
+      e.preventDefault();
+      const mobileOverlay = document.querySelector('.mobile-nav-overlay, #mobileNavOverlay');
+      if (mobileOverlay && mobileOverlay.classList.contains('active')) {
+        closeGlobalMobileNav();
       } else {
-        openMobileNav();
+        openGlobalMobileNav();
       }
-    });
-  }
+    } else if (closeBtn) {
+      e.preventDefault();
+      closeGlobalMobileNav();
+    } else if (mobileLink) {
+      closeGlobalMobileNav();
+    }
+  });
 
-  if (mobileNavClose) {
-    mobileNavClose.addEventListener('click', closeMobileNav);
-  }
-
-  document.querySelectorAll('.mobile-nav-link').forEach(link => {
-    link.addEventListener('click', closeMobileNav);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeGlobalMobileNav();
+    }
   });
 
   /* --------------------------------------------------------------------------

@@ -131,9 +131,9 @@ const ThemeAPI = {
     icon.classList.add('rotating');
     setTimeout(() => {
       if (theme === 'light') {
-        icon.className = 'fas fa-sun bi bi-sun-fill';
+        icon.className = 'fas fa-sun';
       } else {
-        icon.className = 'fas fa-moon bi bi-moon-stars-fill';
+        icon.className = 'fas fa-moon';
       }
       icon.classList.remove('rotating');
     }, 150);

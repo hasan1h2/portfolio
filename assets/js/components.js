@@ -107,24 +107,7 @@
       });
     }
 
-    // 3. Re-bind Mobile Hamburger Button
-    const hamburgerBtn = container.querySelector('#mobileHamburgerBtn');
-    const mobileOverlay = document.getElementById('mobileNavOverlay');
-    if (hamburgerBtn && mobileOverlay) {
-      hamburgerBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const isActive = mobileOverlay.classList.contains('active');
-        if (isActive) {
-          mobileOverlay.classList.remove('active');
-          hamburgerBtn.classList.remove('active');
-          document.body.style.overflow = '';
-        } else {
-          mobileOverlay.classList.add('active');
-          hamburgerBtn.classList.add('active');
-          document.body.style.overflow = 'hidden';
-        }
-      });
-    }
+    // 3. Mobile Navigation state is centrally handled by global event delegation in main.js
 
     // 4. Re-bind Search Triggers
     const searchBtns = container.querySelectorAll('.search-trigger-btn');
@@ -147,34 +130,34 @@
     window.dispatchEvent(new CustomEvent('navbarLoaded', { detail: { container } }));
   }
 
-const NAVBAR_FALLBACK_HTML = `<nav class="navbar navbar-expand-lg fixed-top glass-nav">
+const NAVBAR_FALLBACK_HTML = `<nav class="navbar navbar-expand-xl fixed-top glass-nav">
   <div class="container">
     <a class="navbar-brand" href="index.html">
       <div class="logo-badge">AH</div>
-      <span>AHOSAN <span class="gradient-text">HABIB</span> <span class="gradient-text">HASAN</span></span>
+      <span>AHOSAN <span class="d-none d-sm-inline"><span class="gradient-text">HABIB</span> </span><span class="gradient-text">HASAN</span></span>
       <span class="brand-dot pulse"></span>
     </a>
 
     <!-- Controls & Toggler (Mobile Right) -->
-    <div class="d-flex align-items-center gap-2 d-lg-none ms-auto me-2">
+    <div class="d-flex align-items-center gap-2 d-xl-none ms-auto me-2">
       <button class="nav-action-btn search-trigger-btn" aria-label="Search">
         <i class="fas fa-search"></i>
       </button>
       <button class="theme-toggle-btn" aria-label="Toggle Theme" aria-pressed="false" data-bs-toggle="tooltip"
         data-bs-placement="bottom" title="Switch Theme">
-        <i class="fas fa-moon bi bi-moon-stars-fill"></i>
+        <i class="fas fa-moon"></i>
       </button>
     </div>
 
     <!-- Custom Hamburger Button for Mobile -->
-    <button class="mobile-hamburger-btn d-lg-none" id="mobileHamburgerBtn" aria-label="Toggle Mobile Menu">
+    <button class="mobile-hamburger-btn d-xl-none" id="mobileHamburgerBtn" aria-label="Toggle Mobile Menu">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
     <!-- Desktop Navigation Links & Mega Menu -->
-    <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
+    <div class="collapse navbar-collapse d-none d-xl-flex" id="navbarNav">
       <ul class="navbar-nav mx-auto align-items-center">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
@@ -271,7 +254,7 @@ const NAVBAR_FALLBACK_HTML = `<nav class="navbar navbar-expand-lg fixed-top glas
 
         <button class="theme-toggle-btn" aria-label="Toggle Theme" aria-pressed="false" data-bs-toggle="tooltip"
           data-bs-placement="bottom" title="Switch Theme">
-          <i class="fas fa-moon bi bi-moon-stars-fill"></i>
+          <i class="fas fa-moon"></i>
         </button>
 
         <a href="assets/documents/Md-Ahosan_Habib_Hasan_CV.pdf" download="Md-Ahosan_Habib_Hasan_CV.pdf" class="btn-outline-glass btn-download-resume ripple-btn px-3 py-2 fs-7" id="downloadResumeBtn">
@@ -285,7 +268,90 @@ const NAVBAR_FALLBACK_HTML = `<nav class="navbar navbar-expand-lg fixed-top glas
       </div>
     </div>
   </div>
-</nav>`;
+</nav>
+
+<!-- Full-Screen Mobile Navigation Overlay -->
+<div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+  <div class="mobile-nav-header">
+    <a class="navbar-brand" href="index.html">
+      <div class="logo-badge">AH</div>
+      <span>AHOSAN HABIB <span class="gradient-text">HASAN</span></span>
+    </a>
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close Menu">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <nav class="mobile-nav-links" role="navigation">
+    <div class="mobile-nav-item">
+      <a href="index.html" class="mobile-nav-link">
+        <span><i class="fas fa-home me-3 text-primary"></i>Home</span>
+        <i class="fas fa-chevron-right text-muted small"></i>
+      </a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="about.html" class="mobile-nav-link">
+        <span><i class="fas fa-user me-3 text-info"></i>About</span>
+        <i class="fas fa-chevron-right text-muted small"></i>
+      </a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="skills.html" class="mobile-nav-link">
+        <span><i class="fas fa-code me-3 text-primary"></i>Skills</span>
+        <i class="fas fa-chevron-right text-muted small"></i>
+      </a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="experience.html" class="mobile-nav-link">
+        <span><i class="fas fa-briefcase me-3 text-warning"></i>Experience</span>
+        <i class="fas fa-chevron-right text-muted small"></i>
+      </a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="education.html" class="mobile-nav-link">
+        <span><i class="fas fa-graduation-cap me-3 text-accent"></i>Education</span>
+        <i class="fas fa-chevron-right text-muted small"></i>
+      </a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="projects.html" class="mobile-nav-link">
+        <span><i class="fas fa-folder-open me-3 text-success"></i>Projects</span>
+        <i class="fas fa-chevron-right text-muted small"></i>
+      </a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="portfolio.html" class="mobile-nav-link">
+        <span><i class="fas fa-th-large me-3 text-secondary"></i>Portfolio</span>
+        <i class="fas fa-chevron-right text-muted small"></i>
+      </a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="services.html" class="mobile-nav-link">
+        <span><i class="fas fa-concierge-bell me-3 text-danger"></i>Services</span>
+        <i class="fas fa-chevron-right text-muted small"></i>
+      </a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="certificates.html" class="mobile-nav-link">
+        <span><i class="fas fa-certificate me-3 text-warning"></i>Certificates</span>
+        <i class="fas fa-chevron-right text-muted small"></i>
+      </a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="contact.html" class="mobile-nav-link">
+        <span><i class="fas fa-envelope me-3 text-primary"></i>Contact</span>
+        <i class="fas fa-chevron-right text-muted small"></i>
+      </a>
+    </div>
+  </nav>
+  <div class="d-flex gap-3 mt-auto pt-3">
+    <a href="assets/documents/Md-Ahosan_Habib_Hasan_CV.pdf" download="Md-Ahosan_Habib_Hasan_CV.pdf" class="btn-outline-glass flex-fill text-center ripple-btn py-2">
+      <i class="fas fa-download me-2"></i>Download CV
+    </a>
+    <a href="contact.html" class="btn-primary-glow flex-fill text-center ripple-btn py-2">
+      <i class="fas fa-paper-plane me-2"></i>Hire Me
+    </a>
+  </div>
+</div>`;
 
   function initializeSearchModal(container) {
     const searchModal = container.querySelector('#searchOverlayModal') || document.getElementById('searchOverlayModal');
