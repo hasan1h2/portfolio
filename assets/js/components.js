@@ -147,7 +147,7 @@
     window.dispatchEvent(new CustomEvent('navbarLoaded', { detail: { container } }));
   }
 
-  const NAVBAR_FALLBACK_HTML = `<nav class="navbar navbar-expand-lg fixed-top glass-nav">
+const NAVBAR_FALLBACK_HTML = `<nav class="navbar navbar-expand-lg fixed-top glass-nav">
   <div class="container">
     <a class="navbar-brand" href="index.html">
       <div class="logo-badge">AH</div>
@@ -279,7 +279,7 @@
           <span class="spinner-border spinner-border-sm d-none ms-1" role="status"></span>
         </a>
 
-        <a href="contact.html" class="btn-primary-glow ripple-btn px-3 py-2 fs-7">
+        <a href="contact.html" class="btn-primary-glow ripple-btn px-3 py-1 fs-7 text-nowrap">
           <i class="fas fa-paper-plane me-1"></i> Hire Me
         </a>
       </div>
