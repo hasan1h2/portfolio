@@ -840,15 +840,21 @@ function initPortfolioApp() {
      -------------------------------------------------------------------------- */
   const detailTriggers = document.querySelectorAll('.project-details-trigger');
   const projectDetailModalEl = document.getElementById('projectDetailModal');
+  let modalSwiperInstance = null;
+
   if (detailTriggers.length > 0 && projectDetailModalEl) {
     detailTriggers.forEach(trigger => {
       trigger.addEventListener('click', function(e) {
         e.preventDefault();
         const title = this.getAttribute('data-title') || 'Project Details';
         const category = this.getAttribute('data-category') || 'Web & Mobile App';
+        const role = this.getAttribute('data-role') || '';
         const desc = this.getAttribute('data-desc') || 'Comprehensive digital solution engineered with clean architecture and modern UI/UX principles.';
         const imgSrc = this.getAttribute('data-img') || 'assets/images/projects/flutter/chef-starz.svg';
-        const github = this.getAttribute('data-github') || 'https://github.com';
+        const rawImages = this.getAttribute('data-images');
+        const rawFeatures = this.getAttribute('data-features');
+        const rawTech = this.getAttribute('data-tech');
+        const github = this.getAttribute('data-github') || 'https://github.com/hasan1h2';
         const demo = this.getAttribute('data-demo') || '#';
         const apk = this.getAttribute('data-apk') || '';
 
@@ -859,15 +865,17 @@ function initPortfolioApp() {
         const modalGithubEl = document.getElementById('detailModalGithub');
         const modalDemoEl = document.getElementById('detailModalDemo');
         const modalApkEl = document.getElementById('detailModalApk');
+        const modalTechStackEl = document.getElementById('detailModalTechStack');
+        const modalFeaturesListEl = projectDetailModalEl.querySelector('ul.text-muted');
 
         if (modalTitleEl) modalTitleEl.innerText = title;
-        if (modalCategoryEl) modalCategoryEl.innerText = category;
+        if (modalCategoryEl) modalCategoryEl.innerText = category + (role ? ` • ${role}` : '');
         if (modalDescEl) modalDescEl.innerText = desc;
         if (modalImgEl) modalImgEl.src = imgSrc;
         if (modalGithubEl) modalGithubEl.href = github;
         if (modalDemoEl) modalDemoEl.href = demo;
         if (modalApkEl) {
-          if (apk) {
+          if (apk && apk !== '#') {
             modalApkEl.style.display = 'inline-flex';
             modalApkEl.href = apk;
           } else {
@@ -875,21 +883,62 @@ function initPortfolioApp() {
           }
         }
 
+        // Populate Tech Stack
+        if (modalTechStackEl && rawTech) {
+          modalTechStackEl.innerHTML = rawTech.split(',').map(t => `<span class="project-tech-badge me-1 mb-1">${t.trim()}</span>`).join('');
+        }
+
+        // Populate Features List
+        if (modalFeaturesListEl && rawFeatures) {
+          modalFeaturesListEl.innerHTML = rawFeatures.split(',').map(f => `<li class="mb-1">${f.trim()}</li>`).join('');
+        }
+
+        // Multi-image Swiper Slides Dynamic Builder
+        const swiperWrapper = projectDetailModalEl.querySelector('.project-modal-swiper .swiper-wrapper');
+        if (swiperWrapper) {
+          let imagesList = [imgSrc];
+          if (rawImages) {
+            try {
+              const parsed = JSON.parse(rawImages);
+              if (Array.isArray(parsed) && parsed.length > 0) {
+                imagesList = parsed;
+              }
+            } catch (err) {
+              imagesList = rawImages.split(',').map(s => s.trim());
+            }
+          }
+
+          swiperWrapper.innerHTML = imagesList.map(src => `
+            <div class="swiper-slide">
+              <a href="${src}" class="glightbox" data-gallery="modal-project-gallery" data-title="${title}">
+                <img src="${src}" onerror="this.onerror=null;this.src='assets/images/placeholder.jpg';" alt="${title}" class="img-fluid w-100 rounded-3 object-fit-contain" style="max-height: 380px;">
+              </a>
+            </div>
+          `).join('');
+
+          if (modalSwiperInstance) {
+            modalSwiperInstance.destroy(true, true);
+            modalSwiperInstance = null;
+          }
+
+          if (typeof Swiper !== 'undefined') {
+            setTimeout(() => {
+              modalSwiperInstance = new Swiper(projectDetailModalEl.querySelector('.project-modal-swiper'), {
+                loop: imagesList.length > 1,
+                autoplay: imagesList.length > 1 ? { delay: 3500, disableOnInteraction: false } : false,
+                pagination: { el: '.project-modal-swiper .swiper-pagination', clickable: true },
+                navigation: { nextEl: '.project-modal-swiper .swiper-button-next', prevEl: '.project-modal-swiper .swiper-button-prev' }
+              });
+              if (typeof GLightbox !== 'undefined') {
+                GLightbox({ selector: '.glightbox' });
+              }
+            }, 200);
+          }
+        }
+
         const modalInst = new bootstrap.Modal(projectDetailModalEl);
         modalInst.show();
       });
-    });
-  }
-
-  /* --------------------------------------------------------------------------
-     23. ISOTOPE & SWIPER INITIALIZATION
-     -------------------------------------------------------------------------- */
-  if (typeof Swiper !== 'undefined' && document.querySelector('.project-modal-swiper')) {
-    new Swiper('.project-modal-swiper', {
-      loop: true,
-      autoplay: { delay: 3500, disableOnInteraction: false },
-      pagination: { el: '.swiper-pagination', clickable: true },
-      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
     });
   }
 

@@ -1,20 +1,191 @@
 [
   {
     "id": "port-1",
-    "title": "Flutter E-Commerce App",
+    "slug": "flutter-apps",
+    "title": "Flutter Cross-Platform Mobile Applications",
     "category": "mobile",
-    "image": "assets/images/profile.svg"
+    "categoryLabel": "Flutter Mobile Apps",
+    "image": "assets/images/projects/flutter/ChefStarz/ChefStarz-portfolio--modern-mobile-app -professio.png",
+    "images": [
+      "assets/images/projects/flutter/ChefStarz/ChefStarz-portfolio--modern-mobile-app -professio.png",
+      "assets/images/projects/flutter/worker_hiring/worker_hiring-ahosan-habib-android-app-development -ios-ap.png",
+      "assets/images/projects/flutter/artisan-/artisan--ahosan-habib-hasan-fludevelopment -.png",
+      "assets/images/projects/flutter/portfolio/portfolio.png",
+      "assets/images/projects/flutter/ChefStarz/ChefStarzCooking-portfolio-ahosan-habib-hasan-developer -development -ios.png"
+    ],
+    "description": "Production-ready mobile applications built with Flutter, Dart, GetX, Clean Architecture, and REST API bindings for Android and iOS devices.",
+    "purpose": "Deliver high-performance, aesthetically pleasing, cross-platform mobile solutions for startups and enterprises.",
+    "technologies": ["Flutter SDK", "Dart", "GetX", "REST API", "Clean Architecture", "Firebase", "Git"],
+    "features": [
+      "Real-time state binding and reactive UI updates with GetX",
+      "Robust REST API integration with comprehensive JSON serialization",
+      "Adaptive layouts for both phone and tablet form factors",
+      "Smooth 60 FPS transitions and micro-interactions"
+    ],
+    "contribution": "Designed UI components, implemented GetX state controllers, architected repository layers, and integrated end-to-end REST endpoints.",
+    "liveUrl": "portfolio/flutter.html",
+    "githubUrl": "https://github.com/hasan1h2"
   },
   {
     "id": "port-2",
-    "title": "SaaS Analytics Web Portal",
+    "slug": "web-engineering",
+    "title": "Full Stack Responsive Web Portals & Apps",
     "category": "web",
-    "image": "assets/images/profile.svg"
+    "categoryLabel": "Web Engineering",
+    "image": "assets/images/projects/web/landing-page.svg",
+    "images": [
+      "assets/images/projects/web/landing-page.svg",
+      "assets/images/projects/web/business-website.svg",
+      "assets/images/projects/web/dashboard-ui.svg",
+      "assets/images/projects/web/portfolio-site.svg",
+      "assets/images/projects/web/agency-website.svg"
+    ],
+    "description": "Modern, fast, and accessible web solutions including SaaS landing pages, analytics dashboards, corporate websites, and 3D personal portfolios.",
+    "purpose": "Build ultra-responsive, SEO-optimized web experiences with clean JavaScript ES6+ architecture and modern CSS styling.",
+    "technologies": ["HTML5", "CSS3", "JavaScript ES6+", "Bootstrap 5", "Three.js", "GSAP", "JSON API"],
+    "features": [
+      "Glassmorphic modern design system with dynamic theme switching",
+      "Interactive 3D particle canvas and smooth scroll animations",
+      "Search, filterable project galleries, and real-time form validation",
+      "ATS resume viewer and direct browser printing capabilities"
+    ],
+    "contribution": "Full frontend development, design system implementation, responsive styling, and dynamic JSON CMS engine integration.",
+    "liveUrl": "portfolio/web-development.html",
+    "githubUrl": "https://github.com/hasan1h2"
   },
   {
     "id": "port-3",
-    "title": "3D Brand Identity Concept",
+    "slug": "graphic-design",
+    "title": "Graphic Design & Brand Visual Identity",
     "category": "design",
-    "image": "assets/images/profile.svg"
+    "categoryLabel": "Graphic Design",
+    "image": "assets/images/projects/graphic/logo-design.svg",
+    "images": [
+      "assets/images/projects/graphic/logo-design.svg",
+      "assets/images/projects/graphic/brand-identity.svg",
+      "assets/images/projects/graphic/poster-design.svg",
+      "assets/images/projects/graphic/banner-design.svg",
+      "assets/images/projects/graphic/social-media-pack.svg"
+    ],
+    "description": "High-impact visual branding assets including custom vector logos, corporate stationery, social media campaign banners, and promotional posters.",
+    "purpose": "Create distinctive brand identities that captivate audiences and establish cohesive visual communication across media.",
+    "technologies": ["Adobe Photoshop", "Adobe Illustrator", "Vector Graphics", "Brand Identity", "Typography"],
+    "features": [
+      "Scalable vector logo assets and brand guideline books",
+      "High-conversion social media banners and promotional graphics",
+      "Print-ready CMYK collateral (business cards, flyers, brochures)",
+      "Structured typography and tailored color schemes"
+    ],
+    "contribution": "Conceptualized brand motifs, designed vector assets in Illustrator, and retouched marketing visuals in Photoshop.",
+    "liveUrl": "portfolio/graphic-design.html",
+    "githubUrl": "https://github.com/hasan1h2"
+  },
+  {
+    "id": "port-4",
+    "slug": "video-editing",
+    "title": "High-Conversion Video Editing & Motion Media",
+    "category": "video",
+    "categoryLabel": "Video Editing",
+    "image": "assets/images/projects/video/youtube-video.svg",
+    "images": [
+      "assets/images/projects/video/youtube-video.svg",
+      "assets/images/projects/video/instagram-reel.svg",
+      "assets/images/projects/video/short-video.svg",
+      "assets/images/projects/video/promo-video.svg",
+      "assets/images/projects/video/motion-graphics.svg"
+    ],
+    "description": "Dynamic video production spanning YouTube tech deep-dives, viral TikTok/Reels shorts, commercial promo videos, and animated intros.",
+    "purpose": "Produce engaging motion content optimized for retention and social media algorithmic reach.",
+    "technologies": ["Adobe Premiere Pro", "CapCut", "After Effects", "Sound Design", "Color Grading"],
+    "features": [
+      "Fast-paced jump cuts, dynamic captions, and motion sound effects",
+      "Multi-platform aspect ratios (16:9 widescreen and 9:16 vertical reels)",
+      "Engaging motion graphics intros and title overlays",
+      "Professional audio balancing and color grading"
+    ],
+    "contribution": "Video scripting, video editing, motion graphics animations, thumbnail design, and multi-format delivery.",
+    "liveUrl": "portfolio/video-editing.html",
+    "githubUrl": "https://github.com/hasan1h2"
+  },
+  {
+    "id": "port-5",
+    "slug": "digital-marketing",
+    "title": "Digital Marketing, SEO & Paid Advertising",
+    "category": "marketing",
+    "categoryLabel": "Digital Marketing",
+    "image": "assets/images/projects/digital-marketing/seo-report.svg",
+    "images": [
+      "assets/images/projects/digital-marketing/seo-report.svg",
+      "assets/images/projects/digital-marketing/facebook-ads.svg",
+      "assets/images/projects/digital-marketing/google-ads.svg",
+      "assets/images/projects/digital-marketing/analytics-dashboard.svg",
+      "assets/images/projects/digital-marketing/campaign-strategy.svg"
+    ],
+    "description": "Data-driven digital marketing campaigns featuring on-page and technical SEO, Meta Ads Manager campaigns, and GA4 analytics conversion tracking.",
+    "purpose": "Maximize organic visibility and acquire qualified leads through high-ROI paid ad funnels.",
+    "technologies": ["Google Search Console", "Google Analytics 4", "Meta Ads Manager", "Keyword Research", "SEO Audits"],
+    "features": [
+      "Technical SEO audit and on-page metadata optimization",
+      "Meta Ads campaign structure, A/B testing, and retargeting funnels",
+      "Google Search Ads campaign management",
+      "Comprehensive performance analytics and KPI dashboard reporting"
+    ],
+    "contribution": "Executed keyword strategy, managed ad campaigns, configured conversion tracking, and prepared monthly audit reports.",
+    "liveUrl": "portfolio/digital-marketing.html",
+    "githubUrl": "https://github.com/hasan1h2"
+  },
+  {
+    "id": "port-6",
+    "slug": "ai-projects",
+    "title": "Generative AI Workflows & Creative Automation",
+    "category": "ai",
+    "categoryLabel": "AI Workflows",
+    "image": "assets/images/projects/ai/ai-images.svg",
+    "images": [
+      "assets/images/projects/ai/ai-images.svg",
+      "assets/images/projects/ai/ai-videos.svg",
+      "assets/images/projects/ai/prompt-collection.svg",
+      "assets/images/projects/ai/creative-designs.svg",
+      "assets/images/projects/ai/automation-concepts.svg"
+    ],
+    "description": "Generative AI workflows incorporating Midjourney concept generation, AI avatar video synthesis, prompt engineering matrices, and automated content pipelines.",
+    "purpose": "Accelerate design and software workflows using cutting-edge artificial intelligence tools.",
+    "technologies": ["Midjourney", "ChatGPT / Claude / Gemini", "Runway Gen-2", "ElevenLabs", "Prompt Engineering"],
+    "features": [
+      "High-resolution concept art and product visualization prompts",
+      "AI video generation and synthetic voice avatar syncing",
+      "Systematic prompt engineering frameworks for code generation",
+      "Automated batch asset creation and background removal workflows"
+    ],
+    "contribution": "Formulated generative prompts, curated visual styles, synthesized multimedia assets, and designed automated pipelines.",
+    "liveUrl": "portfolio/ai-projects.html",
+    "githubUrl": "https://github.com/hasan1h2"
+  },
+  {
+    "id": "port-7",
+    "slug": "devops-journey",
+    "title": "DevOps, Containerization & CI/CD Pipelines",
+    "category": "devops",
+    "categoryLabel": "DevOps Journey",
+    "image": "assets/images/projects/devops/github-actions.svg",
+    "images": [
+      "assets/images/projects/devops/github-actions.svg",
+      "assets/images/projects/devops/docker-containers.svg",
+      "assets/images/projects/devops/linux-practice.svg",
+      "assets/images/projects/devops/nginx-config.svg",
+      "assets/images/projects/devops/cicd-notes.svg"
+    ],
+    "description": "Hands-on cloud infrastructure journey encompassing Linux server administration, Docker container orchestration, NGINX reverse proxies, and automated GitHub Actions CI/CD pipelines.",
+    "purpose": "Ensure automated testing, consistent build environments, and seamless zero-downtime deployments.",
+    "technologies": ["Linux CLI", "Bash Scripting", "Docker", "Docker Compose", "NGINX", "GitHub Actions", "Git"],
+    "features": [
+      "Automated GitHub Actions CI/CD workflows for test and deployment",
+      "Containerized microservices using Docker and multi-stage Dockerfiles",
+      "NGINX reverse proxy and SSL certificate management",
+      "Linux server hardening, SSH key management, and system monitoring"
+    ],
+    "contribution": "Authored CI/CD workflows, built Docker images, configured web servers, and documented deployment runbooks.",
+    "liveUrl": "portfolio/devops.html",
+    "githubUrl": "https://github.com/hasan1h2"
   }
 ]

@@ -30,14 +30,14 @@
   "certificates": [
     {
       "id": "cert-1",
-      "src": "assets/images/certificates/flutter-cert.svg",
+      "src": "assets/images/certificates/flutter certificate-Ahosan-Habib-Hasan-flutter-developer .png",
       "alt": "Flutter App Development Professional Diploma - BdCalling Academy",
       "title": "Flutter App Development Certificate"
     },
     {
       "id": "cert-2",
       "src": "assets/images/certificates/web-cert.svg",
-      "alt": "Full Stack Web Development Certification - Programming Hero",
+      "alt": "Full Stack Web Development Certification - Dreamland IT Institute",
       "title": "Full Stack Web Development Certificate"
     },
     {
@@ -45,43 +45,185 @@
       "src": "assets/images/certificates/design-cert.svg",
       "alt": "UI Visual & Graphic Design Certification - Creative IT Institute",
       "title": "Graphic Design Certificate"
+    },
+    {
+      "id": "cert-4",
+      "src": "assets/images/certificates/HSC-Ahosan-Habib-Hasan-flutter-developer -flutter-appd.png",
+      "alt": "Higher Secondary Certificate (HSC) - Computer & Academic Pathway",
+      "title": "HSC Academic Certificate"
+    },
+    {
+      "id": "cert-5",
+      "src": "assets/images/certificates/SSC-Ahosan-habib-hasan-custom-mobile-app-development -androidl.png",
+      "alt": "Secondary School Certificate (SSC) - Technical Foundation",
+      "title": "SSC Academic Certificate"
+    },
+    {
+      "id": "cert-6",
+      "src": "assets/images/certificates/flutter -flutter-developer -flutter-app-.png",
+      "alt": "Flutter Mobile Application Development Specialist Credential",
+      "title": "Flutter Mobile Specialist Credential"
+    },
+    {
+      "id": "cert-7",
+      "src": "assets/images/certificates/health certificate-app-development -getx-flutter -rest-.png",
+      "alt": "Health & Medical App Development with GetX and REST API",
+      "title": "Health App Development Certificate"
+    },
+    {
+      "id": "cert-8",
+      "src": "assets/images/certificates/skills-Ahosan-Habib-Hasan-flutterl.png",
+      "alt": "Technical Skills Mastery & Mobile Development Diploma",
+      "title": "Skills Mastery Certificate"
     }
   ],
   "galleries": {
     "chef-starz": [
       {
-        "src": "assets/images/projects/flutter/chef-starz.svg",
-        "alt": "Chef Starz Live App Screen Screenshot",
-        "title": "Chef Starz - Live App Screen"
+        "src": "assets/images/projects/flutter/ChefStarz/ChefStarz-portfolio--modern-mobile-app -professio.png",
+        "alt": "Chef Starz - Modern Mobile App Overview",
+        "title": "Chef Starz - App Overview"
       },
       {
-        "src": "assets/images/projects-wireframe.jpg",
-        "alt": "Chef Starz Prototyping & UI Wireframes",
-        "title": "Chef Starz - Prototyping & Wireframes"
+        "src": "assets/images/projects/flutter/ChefStarz/ChefStarzCooking-portfolio-ahosan-habib-hasan-developer -development -ios.png",
+        "alt": "Chef Starz - Cooking & Recipe Details Screen",
+        "title": "Chef Starz - Recipe Details"
       },
       {
-        "src": "assets/images/skills-coding_Ahosan Habib.jpeg",
-        "alt": "Chef Starz Development Workstation",
-        "title": "Chef Starz - Development Workstation"
+        "src": "assets/images/projects/flutter/ChefStarz/ChefStarzCooking-portfolio-ahosan-hasan-mobile-app-app -flut.png",
+        "alt": "Chef Starz - Mobile Application Interface",
+        "title": "Chef Starz - Mobile Interface"
+      },
+      {
+        "src": "assets/images/projects/flutter/ChefStarz/ChefStarzCookingProfile.png",
+        "alt": "Chef Starz - User & Chef Profile Management",
+        "title": "Chef Starz - Chef Profile"
+      },
+      {
+        "src": "assets/images/projects/flutter/ChefStarz/ChefStarzCookingRecipiList-portfolio-aandroid-develo.png",
+        "alt": "Chef Starz - Dynamic Recipe Discovery List",
+        "title": "Chef Starz - Recipe Discovery List"
+      },
+      {
+        "src": "assets/images/projects/flutter/ChefStarz/portfolio-ahosan-habib-developer -android-app-ios-.png",
+        "alt": "Chef Starz - Android & iOS Cross-Platform View",
+        "title": "Chef Starz - Cross-Platform View"
+      },
+      {
+        "src": "assets/images/projects/flutter/ChefStarz/portfolio-ahosan-habib-mobile-app -professional-flutte.png",
+        "alt": "Chef Starz - Professional Flutter Architecture",
+        "title": "Chef Starz - Architecture Overview"
       }
     ],
     "worker-hiring": [
       {
-        "src": "assets/images/projects/flutter/worker-hiring.svg",
-        "alt": "Worker Hiring Platform App Overview Screenshot",
-        "title": "Worker Hiring - App Overview"
+        "src": "assets/images/projects/flutter/worker_hiring/worker_hiring-ahosan-habib-android-app-development -ios-ap.png",
+        "alt": "Worker Hiring - Platform Overview",
+        "title": "Worker Hiring - Platform Overview"
       },
       {
-        "src": "assets/images/experience-teamAhosan.png",
-        "alt": "Worker Hiring Team Collaboration",
-        "title": "Worker Hiring - Team Collaboration"
+        "src": "assets/images/projects/flutter/worker_hiring/worker_hiringWork-mobile-app-developer -android-app-development -io.png",
+        "alt": "Worker Hiring - Service Booking & Dispatch",
+        "title": "Worker Hiring - Service Booking"
+      },
+      {
+        "src": "assets/images/projects/flutter/worker_hiring/Ahosana-flutter-mvp-development -flutter-business-app -f.png",
+        "alt": "Worker Hiring - MVP Architecture & Flow",
+        "title": "Worker Hiring - MVP Architecture"
+      },
+      {
+        "src": "assets/images/projects/flutter/worker_hiring/ahosan-habib-hasan-flutter-flutter-business.png",
+        "alt": "Worker Hiring - Business Services Dashboard",
+        "title": "Worker Hiring - Business Dashboard"
+      },
+      {
+        "src": "assets/images/projects/flutter/worker_hiring/flutter-ui-ux -flutter-ui-design -firebase-flutte.png",
+        "alt": "Worker Hiring - UI/UX Design & Firebase Integration",
+        "title": "Worker Hiring - UI/UX System"
+      },
+      {
+        "src": "assets/images/projects/flutter/worker_hiring/portfolio-ahosan-habib-hasan-ios-app-development .png",
+        "alt": "Worker Hiring - iOS Mobile App Build",
+        "title": "Worker Hiring - iOS Experience"
       }
     ],
     "artisan": [
       {
-        "src": "assets/images/projects/flutter/artisan.svg",
-        "alt": "Artisan Business Management App Screenshot",
-        "title": "Artisan - Business Management App"
+        "src": "assets/images/projects/flutter/artisan-/artisan--ahosan-habib-hasan-fludevelopment -.png",
+        "alt": "Artisan - Business App Overview",
+        "title": "Artisan - App Overview"
+      },
+      {
+        "src": "assets/images/projects/flutter/artisan-/artisan--ahosan-habib-hasan-flutter-ui-ux -flu-getx-flutter -rest-api-.png",
+        "alt": "Artisan - GetX State Management & REST API",
+        "title": "Artisan - API & State Architecture"
+      },
+      {
+        "src": "assets/images/projects/flutter/artisan-/artisan--ahosan-habib-hasan-flutter-ui-ux -flutter-ui-design .png",
+        "alt": "Artisan - UI Component Design System",
+        "title": "Artisan - UI Design System"
+      },
+      {
+        "src": "assets/images/projects/flutter/artisan-/artisan--ahosan-habib-hasan-mobile-app-business.png",
+        "alt": "Artisan - Business Client Management",
+        "title": "Artisan - Client Records"
+      },
+      {
+        "src": "assets/images/projects/flutter/artisan-/artisan-WorkeHome-app-development modern-mobile.png",
+        "alt": "Artisan - Worker Home Dashboard",
+        "title": "Artisan - Worker Home"
+      },
+      {
+        "src": "assets/images/projects/flutter/artisan-/artisan-WorkeProfile-handroid-app-development .png",
+        "alt": "Artisan - Worker Profile & Schedule",
+        "title": "Artisan - Worker Profile"
+      },
+      {
+        "src": "assets/images/projects/flutter/artisan-/flutter-developer -ios-app-development -.png",
+        "alt": "Artisan - Cross-Platform iOS & Android",
+        "title": "Artisan - Mobile Architecture"
+      }
+    ],
+    "portfolio": [
+      {
+        "src": "assets/images/projects/flutter/portfolio/portfolio.png",
+        "alt": "Flutter Mobile Portfolio - Main Showcase",
+        "title": "Flutter Portfolio - Main View"
+      },
+      {
+        "src": "assets/images/projects/flutter/portfolio/portfolio1.png",
+        "alt": "Flutter Mobile Portfolio - Secondary Showcase",
+        "title": "Flutter Portfolio - Screen Showcase"
+      },
+      {
+        "src": "assets/images/projects/flutter/portfolio/mobile-app-development-custom-flutter-app -flutter-app-design .png",
+        "alt": "Custom Flutter App UI Design",
+        "title": "Custom Flutter App Design"
+      },
+      {
+        "src": "assets/images/projects/flutter/portfolio/portfolio-ahosan-habib-hasan-flutter-android-ios-app-development -getx-flutter .png",
+        "alt": "GetX Mobile Architecture",
+        "title": "GetX State Architecture"
+      },
+      {
+        "src": "assets/images/projects/flutter/portfolio/portfolio-ahosan-habib-hasan-flutter-developer developer -.png",
+        "alt": "Flutter Developer Experience",
+        "title": "Flutter Developer Experience"
+      },
+      {
+        "src": "assets/images/projects/flutter/portfolio/portfolio-ahosan-habib-hasan-flutter-ui--ios-app-development -api.png",
+        "alt": "REST API Integration Flow",
+        "title": "REST API Integration"
+      },
+      {
+        "src": "assets/images/projects/flutter/portfolio/portfolio-ahosan-habib-hasan-flutter-ui-ux -flutter-.png",
+        "alt": "Clean UI/UX Components",
+        "title": "Clean UI Components"
+      },
+      {
+        "src": "assets/images/projects/flutter/portfolio/portfolio-ahosan-habib-hasan-flutter-ui-ux -flutter-ui-design t .png",
+        "alt": "Mobile Layout System",
+        "title": "Mobile Layout System"
       }
     ]
   }

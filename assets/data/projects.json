@@ -5,21 +5,36 @@
     "title": "Chef Starz (Live Project)",
     "category": "flutter",
     "categoryLabel": "Flutter Mobile App",
-    "image": "assets/images/profile.svg",
+    "role": "Lead Mobile App Developer",
+    "image": "assets/images/projects/flutter/ChefStarz/ChefStarz-portfolio--modern-mobile-app -professio.png",
+    "images": [
+      "assets/images/projects/flutter/ChefStarz/ChefStarz-portfolio--modern-mobile-app -professio.png",
+      "assets/images/projects/flutter/ChefStarz/ChefStarzCooking-portfolio-ahosan-habib-hasan-developer -development -ios.png",
+      "assets/images/projects/flutter/ChefStarz/ChefStarzCooking-portfolio-ahosan-hasan-mobile-app-app -flut.png",
+      "assets/images/projects/flutter/ChefStarz/ChefStarzCookingProfile.png",
+      "assets/images/projects/flutter/ChefStarz/ChefStarzCookingRecipiList-portfolio-aandroid-develo.png",
+      "assets/images/projects/flutter/ChefStarz/portfolio-ahosan-habib-developer -android-app-ios-.png",
+      "assets/images/projects/flutter/ChefStarz/portfolio-ahosan-habib-mobile-app -professional-flutte.png"
+    ],
+    "shortDescription": "Gourmet Chef Hiring & Recipe Discovery mobile app built with Flutter, GetX, and REST API.",
     "summary": "Live culinary & recipe discovery app featuring dynamic API integration, custom UI design, and GetX state management.",
-    "description": "Developed a live cooking and recipe application with responsive UI and API integration. Integrated REST APIs for dynamic data management and real-time functionality. Built responsive, user-friendly UI and maintained a clean, scalable project architecture. Collaborated with dev team using Git/GitHub.",
+    "description": "Developed a live cooking and recipe application with responsive UI and API integration at Sparktech Agency. Integrated REST APIs for dynamic recipe feeds, ingredient calculators, and user profiles. Built responsive, user-friendly UI and maintained a clean, scalable GetX project architecture.",
+    "technologies": ["Flutter", "Dart", "GetX", "REST API", "JSON", "Git"],
     "features": [
       "Real-time recipe discovery & dynamic REST API consumption",
       "GetX reactive state management & clean route handling",
-      "Custom responsive Flutter components for all screen sizes",
-      "Interactive search & dynamic category filtering"
+      "Custom responsive Flutter components for all phone and tablet screen sizes",
+      "Interactive search & dynamic category filtering",
+      "User profile and chef portfolio showcase screens"
     ],
-    "challenges": "Handling async data streams smoothly while ensuring 60 FPS scroll performance.",
-    "solutions": "Implemented GetX state controllers with cached image loading and structured model deserialization.",
+    "challenges": "Handling async data streams smoothly while ensuring 60 FPS scroll performance on mid-range devices.",
+    "solutions": "Implemented GetX state controllers with cached image loading, lazy lists, and structured JSON model deserialization.",
     "tags": ["Flutter", "Dart", "REST API", "GetX", "JSON"],
-    "liveUrl": "https://github.com/hasan1h2/chef-starz-full-api",
+    "liveUrl": "portfolio/flutter.html",
     "githubUrl": "https://github.com/hasan1h2/chef-starz-full-api",
+    "apkUrl": "#",
     "featured": true,
+    "status": "Completed & Live",
     "date": "2024-06-15"
   },
   {
@@ -28,21 +43,35 @@
     "title": "Worker Hiring (Live Project)",
     "category": "flutter",
     "categoryLabel": "Flutter Mobile App",
-    "image": "assets/images/profile.svg",
+    "role": "Flutter App Developer",
+    "image": "assets/images/projects/flutter/worker_hiring/worker_hiring-ahosan-habib-android-app-development -ios-ap.png",
+    "images": [
+      "assets/images/projects/flutter/worker_hiring/worker_hiring-ahosan-habib-android-app-development -ios-ap.png",
+      "assets/images/projects/flutter/worker_hiring/worker_hiringWork-mobile-app-developer -android-app-development -io.png",
+      "assets/images/projects/flutter/worker_hiring/Ahosana-flutter-mvp-development -flutter-business-app -f.png",
+      "assets/images/projects/flutter/worker_hiring/ahosan-habib-hasan-flutter-flutter-business.png",
+      "assets/images/projects/flutter/worker_hiring/flutter-ui-ux -flutter-ui-design -firebase-flutte.png",
+      "assets/images/projects/flutter/worker_hiring/portfolio-ahosan-habib-hasan-ios-app-development .png"
+    ],
+    "shortDescription": "On-demand worker hiring platform connecting clients with verified skilled service providers.",
     "summary": "Live multi-service worker hiring platform connecting clients directly with verified skilled service providers.",
     "description": "Built a live worker hiring platform for connecting clients with skilled service providers. Features clean architecture, role-based workflows, location mapping UI, and API integration.",
+    "technologies": ["Flutter", "Dart", "GetX", "REST API", "Firebase", "Git"],
     "features": [
       "Service provider listing & booking interface",
       "GetX state management & form validation",
       "REST API backend communication",
-      "Clean UI component design system"
+      "Clean UI component design system",
+      "Worker profile, ratings, and service request tracking"
     ],
-    "challenges": "Managing multi-step booking forms and reactive UI state updates.",
+    "challenges": "Managing multi-step booking forms and reactive UI state updates across client and worker views.",
     "solutions": "Architected clean separation of UI components, GetX controllers, and repository data fetching.",
     "tags": ["Flutter", "Dart", "REST API", "GetX", "Git"],
-    "liveUrl": "https://github.com/hasan1h2/worker_hiring",
+    "liveUrl": "portfolio/flutter.html",
     "githubUrl": "https://github.com/hasan1h2/worker_hiring",
+    "apkUrl": "#",
     "featured": true,
+    "status": "Completed & Live",
     "date": "2024-05-10"
   },
   {
@@ -51,43 +80,74 @@
     "title": "Artisan Business App (Live Project)",
     "category": "flutter",
     "categoryLabel": "Flutter Mobile App",
-    "image": "assets/images/profile.svg",
+    "role": "Flutter App Developer",
+    "image": "assets/images/projects/flutter/artisan-/artisan--ahosan-habib-hasan-fludevelopment -.png",
+    "images": [
+      "assets/images/projects/flutter/artisan-/artisan--ahosan-habib-hasan-fludevelopment -.png",
+      "assets/images/projects/flutter/artisan-/artisan--ahosan-habib-hasan-flutter-ui-ux -flu-getx-flutter -rest-api-.png",
+      "assets/images/projects/flutter/artisan-/artisan--ahosan-habib-hasan-flutter-ui-ux -flutter-ui-design .png",
+      "assets/images/projects/flutter/artisan-/artisan--ahosan-habib-hasan-mobile-app-business.png",
+      "assets/images/projects/flutter/artisan-/artisan-WorkeHome-app-development modern-mobile.png",
+      "assets/images/projects/flutter/artisan-/artisan-WorkeProfile-handroid-app-development .png",
+      "assets/images/projects/flutter/artisan-/flutter-developer -ios-app-development -.png"
+    ],
+    "shortDescription": "Business management & craftsman scheduling mobile application with clean architecture.",
     "summary": "Live business management application built with clean Flutter architecture and seamless user experience.",
     "description": "Developed a live business management application with clean architecture and seamless user experience. Integrates business dashboard metrics, client records, and service tracking.",
+    "technologies": ["Flutter", "Dart", "Clean Architecture", "REST API", "GetX"],
     "features": [
       "Business inventory & client management interface",
       "Clean Architecture code structure",
       "REST API data synchronization",
-      "Responsive layout for tablets and smartphones"
+      "Responsive layout for tablets and smartphones",
+      "Appointment scheduling and profile management"
     ],
-    "challenges": "Ensuring data consistency and high user responsiveness.",
+    "challenges": "Ensuring data consistency and high user responsiveness with offline caching.",
     "solutions": "Utilized clean architecture patterns separating presentation layer, domain entities, and data providers.",
     "tags": ["Flutter", "Dart", "REST API", "Clean Architecture"],
-    "liveUrl": "https://github.com/hasan1h2/artisan",
+    "liveUrl": "portfolio/flutter.html",
     "githubUrl": "https://github.com/hasan1h2/artisan",
+    "apkUrl": "#",
     "featured": true,
+    "status": "Completed & Live",
     "date": "2024-04-20"
   },
   {
     "id": "proj-4",
     "slug": "flutter-static-ui",
-    "title": "Flutter Multi-Screen UI Kit",
+    "title": "Flutter Multi-Screen UI Kit & Portfolio",
     "category": "flutter",
     "categoryLabel": "Flutter Mobile App",
-    "image": "assets/images/profile.svg",
+    "role": "UI/UX & Flutter Developer",
+    "image": "assets/images/projects/flutter/portfolio/portfolio.png",
+    "images": [
+      "assets/images/projects/flutter/portfolio/portfolio.png",
+      "assets/images/projects/flutter/portfolio/portfolio1.png",
+      "assets/images/projects/flutter/portfolio/mobile-app-development-custom-flutter-app -flutter-app-design .png",
+      "assets/images/projects/flutter/portfolio/portfolio-ahosan-habib-hasan-flutter-android-ios-app-development -getx-flutter .png",
+      "assets/images/projects/flutter/portfolio/portfolio-ahosan-habib-hasan-flutter-developer developer -.png",
+      "assets/images/projects/flutter/portfolio/portfolio-ahosan-habib-hasan-flutter-ui--ios-app-development -api.png",
+      "assets/images/projects/flutter/portfolio/portfolio-ahosan-habib-hasan-flutter-ui-ux -flutter-.png",
+      "assets/images/projects/flutter/portfolio/portfolio-ahosan-habib-hasan-flutter-ui-ux -flutter-ui-design t .png"
+    ],
+    "shortDescription": "Comprehensive Flutter mobile UI kit with sleek animations, custom widgets, and responsive layouts.",
     "summary": "Multi-screen Flutter UI kit featuring sleek dark/light aesthetics, smooth page transitions, and GetX routes.",
     "description": "Developed a multi-screen Flutter application with clean UI and GetX state management. Implemented smooth navigation and responsive design across diverse screen resolutions.",
+    "technologies": ["Flutter", "Dart", "GetX", "UI/UX Design", "Responsive Layout"],
     "features": [
       "10+ reusable UI screens and widgets",
       "GetX page route management",
-      "Custom themes and smooth animations"
+      "Custom themes and smooth animations",
+      "Pixel-perfect cross-platform rendering"
     ],
     "challenges": "Designing adaptable layouts across multiple phone dimensions.",
     "solutions": "Used Flutter LayoutBuilder, MediaQuery, and custom flexible UI widgets.",
     "tags": ["Flutter", "Dart", "GetX", "UI/UX"],
-    "liveUrl": "https://github.com/hasan1h2",
+    "liveUrl": "portfolio/flutter.html",
     "githubUrl": "https://github.com/hasan1h2",
+    "apkUrl": "#",
     "featured": false,
+    "status": "Completed",
     "date": "2024-03-12"
   },
   {
@@ -96,9 +156,19 @@
     "title": "3D Interactive Professional Portfolio",
     "category": "web",
     "categoryLabel": "Web Application",
-    "image": "assets/images/profile.svg",
+    "role": "Frontend Architect",
+    "image": "assets/images/projects/web/portfolio-site.svg",
+    "images": [
+      "assets/images/projects/web/portfolio-site.svg",
+      "assets/images/projects/web/landing-page.svg",
+      "assets/images/projects/web/dashboard-ui.svg",
+      "assets/images/projects/web/business-website.svg",
+      "assets/images/projects/web/agency-website.svg"
+    ],
+    "shortDescription": "Modern glassmorphic static portfolio built with HTML5, CSS3, Bootstrap 5, Three.js, and JSON CMS.",
     "summary": "Modern glassmorphic static portfolio built with HTML5, CSS3, Bootstrap 5, JS ES6+, Three.js, GSAP, and JSON CMS.",
     "description": "Enterprise-ready responsive personal portfolio featuring dynamic theme switching, 3D background animation, filterable project galleries, JSON CMS engine, and ATS resume download center.",
+    "technologies": ["HTML5", "CSS3", "JavaScript", "Bootstrap 5", "Three.js", "GSAP"],
     "features": [
       "100% static & GitHub Pages compatible",
       "Three.js particle canvas & GSAP animations",
@@ -108,9 +178,11 @@
     "challenges": "Optimizing 3D rendering and smooth animations without framework bloat.",
     "solutions": "Used vanilla JS ES6+, optimized requestAnimationFrame loops, and lightweight Bootstrap 5 styling.",
     "tags": ["HTML5", "CSS3", "JavaScript", "Bootstrap 5", "Three.js", "GSAP"],
-    "liveUrl": "https://hasan1h2.github.io",
+    "liveUrl": "https://hasan1h2.github.io/portfolio/",
     "githubUrl": "https://github.com/hasan1h2/portfolio",
+    "apkUrl": "",
     "featured": true,
+    "status": "Completed & Active",
     "date": "2024-08-01"
   },
   {
@@ -119,20 +191,33 @@
     "title": "Brand Design & Visual Identity",
     "category": "graphic-design",
     "categoryLabel": "Graphic Design",
-    "image": "assets/images/profile.svg",
+    "role": "Graphic & Brand Designer",
+    "image": "assets/images/projects/graphic/logo-design.svg",
+    "images": [
+      "assets/images/projects/graphic/logo-design.svg",
+      "assets/images/projects/graphic/brand-identity.svg",
+      "assets/images/projects/graphic/poster-design.svg",
+      "assets/images/projects/graphic/banner-design.svg",
+      "assets/images/projects/graphic/social-media-pack.svg"
+    ],
+    "shortDescription": "Vector logo designs, corporate identity packages, and social media posters created with Photoshop & Illustrator.",
     "summary": "Vector logo designs, corporate identity packages, and social media posters created with Photoshop & Illustrator.",
     "description": "Complete brand identity and graphic design suite including custom vector logos, social media banners, typography hierarchy, and print-ready posters.",
+    "technologies": ["Adobe Photoshop", "Adobe Illustrator", "Vector Graphics", "Brand Identity"],
     "features": [
       "High-resolution vector logos in Illustrator",
       "Social media marketing banner templates",
-      "Clean brand visual guidelines"
+      "Clean brand visual guidelines",
+      "Print-ready promotional collateral"
     ],
     "challenges": "Ensuring visual consistency across digital and print media.",
     "solutions": "Strict vector asset creation with standard HSL color palettes.",
     "tags": ["Photoshop", "Illustrator", "Brand Design", "Logos"],
     "liveUrl": "portfolio/graphic-design.html",
     "githubUrl": "https://github.com/hasan1h2",
+    "apkUrl": "",
     "featured": false,
+    "status": "Completed",
     "date": "2024-02-15"
   }
 ]
