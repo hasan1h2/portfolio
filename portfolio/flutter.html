@@ -81,23 +81,17 @@
       </div>
 
       <!-- 12 Mobile Apps Grid -->
-      <div class="row g-4" id="projectsGrid">
+      <div class="row g-3 g-md-4" id="projectsGrid">
 
         <!-- 1. Chef Starz -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="agency" data-aos="fade-up">
-          <div class="glass-card project-card tilt-card h-100">
-            <div class="project-img-wrapper">
-              <img src="../assets/images/projects/flutter/ChefStarz/ChefStarz-portfolio--modern-mobile-app -professio.png" alt="Chef Starz Live Mobile App">
-              <div class="project-overlay">
-                <div>
-                  <div class="d-flex justify-content-between mb-2">
-                    <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> Flutter</span>
-                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
-                  </div>
-                  <h5 class="text-white fw-bold project-title">Chef Starz App</h5>
-                  <p class="text-muted small project-desc">Gourmet chef hiring &amp; food ordering mobile application.</p>
-                  <div class="d-flex gap-2">
-                    <a href="../assets/images/projects/flutter/ChefStarz/ChefStarz-portfolio--modern-mobile-app -professio.png" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="Chef Starz - App Overview">Preview</a>
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="agency" data-aos="fade-up">
+          <div class="glass-card project-card tilt-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="project-img-wrapper">
+                <img src="../assets/images/projects/flutter/ChefStarz/ChefStarz-portfolio--modern-mobile-app -professio.png" onerror="this.onerror=null;this.src='../assets/images/placeholder.jpg';" alt="Chef Starz Live Mobile App">
+                <div class="project-overlay">
+                  <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+                    <a href="../assets/images/projects/flutter/ChefStarz/ChefStarz-portfolio--modern-mobile-app -professio.png" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="Chef Starz - App Overview"><i class="fas fa-eye me-1"></i> Preview</a>
                     <button class="btn-outline-glass py-1 px-3 fs-7 project-details-trigger"
                       data-project-id="proj-1"
                       data-title="Chef Starz Gourmet App"
@@ -110,44 +104,51 @@
                       data-images='["../assets/images/projects/flutter/ChefStarz/ChefStarz-portfolio--modern-mobile-app -professio.png","../assets/images/projects/flutter/ChefStarz/ChefStarzCooking-portfolio-ahosan-habib-hasan-developer -development -ios.png","../assets/images/projects/flutter/ChefStarz/ChefStarzCooking-portfolio-ahosan-hasan-mobile-app-app -flut.png","../assets/images/projects/flutter/ChefStarz/ChefStarzCookingProfile.png","../assets/images/projects/flutter/ChefStarz/ChefStarzCookingRecipiList-portfolio-aandroid-develo.png","../assets/images/projects/flutter/ChefStarz/portfolio-ahosan-habib-developer -android-app-ios-.png","../assets/images/projects/flutter/ChefStarz/portfolio-ahosan-habib-mobile-app -professional-flutte.png"]'
                       data-github="https://github.com/hasan1h2/chef-starz-full-api"
                       data-demo="https://github.com/hasan1h2/chef-starz-full-api"
-                      data-apk="#">Specs</button>
+                      data-apk="#"><i class="fas fa-info-circle me-1"></i> Details</button>
+                  </div>
+                  <div class="mt-auto">
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> Flutter Agency</span>
+                      <button class="btn-favorite" aria-label="Favorite Project"><i class="far fa-heart"></i></button>
+                    </div>
+                    <h5 class="text-white fw-bold project-title mb-0">Chef Starz App</h5>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-              <div>
+              <div class="p-3 p-sm-4">
                 <div class="d-flex flex-wrap gap-1 mb-2">
                   <span class="project-tech-badge">Flutter</span>
                   <span class="project-tech-badge">GetX</span>
                   <span class="project-tech-badge">REST API</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">Chef Starz (Live Project)</h5>
-                <p class="text-muted small card-text mb-3">Live cooking &amp; recipe app with API integration built at Sparktech Agency.</p>
+                
+                <div class="expandable-details" id="fl-details-1">
+                  <p class="text-muted small card-text mb-2">Live cooking &amp; recipe app with API integration built at Sparktech Agency.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center" data-target="fl-details-1"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
-                <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live</span>
-                <a href="https://github.com/hasan1h2/chef-starz-full-api" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github fs-5"></i></a>
+            </div>
+
+            <div class="p-3 p-sm-4 pt-0 d-flex flex-wrap align-items-center justify-content-between gap-2 border-top border-secondary border-opacity-25 mt-2 pt-3">
+              <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live</span>
+              <div class="d-flex gap-2 fs-6">
+                <a href="https://github.com/hasan1h2/chef-starz-full-api" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github"></i></a>
               </div>
             </div>
           </div>
         </div>
 
         <!-- 2. Worker Hiring Platform -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="agency" data-aos="fade-up" data-aos-delay="100">
-          <div class="glass-card project-card tilt-card h-100">
-            <div class="project-img-wrapper">
-              <img src="../assets/images/projects/flutter/worker_hiring/worker_hiring-ahosan-habib-android-app-development -ios-ap.png" alt="Worker Hiring App">
-              <div class="project-overlay">
-                <div>
-                  <div class="d-flex justify-content-between mb-2">
-                    <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> Flutter</span>
-                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
-                  </div>
-                  <h5 class="text-white fw-bold project-title">Worker Hiring (Live Project)</h5>
-                  <p class="text-muted small project-desc">Live worker hiring platform connecting clients with service providers.</p>
-                  <div class="d-flex gap-2">
-                    <a href="../assets/images/projects/flutter/worker_hiring/worker_hiring-ahosan-habib-android-app-development -ios-ap.png" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="Worker Hiring - App Overview">Preview</a>
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="agency" data-aos="fade-up" data-aos-delay="100">
+          <div class="glass-card project-card tilt-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="project-img-wrapper">
+                <img src="../assets/images/projects/flutter/worker_hiring/worker_hiring-ahosan-habib-android-app-development -ios-ap.png" onerror="this.onerror=null;this.src='../assets/images/placeholder.jpg';" alt="Worker Hiring App">
+                <div class="project-overlay">
+                  <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+                    <a href="../assets/images/projects/flutter/worker_hiring/worker_hiring-ahosan-habib-android-app-development -ios-ap.png" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="Worker Hiring - App Overview"><i class="fas fa-eye me-1"></i> Preview</a>
                     <button class="btn-outline-glass py-1 px-3 fs-7 project-details-trigger"
                       data-project-id="proj-2"
                       data-title="Worker Hiring Platform"
@@ -160,44 +161,51 @@
                       data-images='["../assets/images/projects/flutter/worker_hiring/worker_hiring-ahosan-habib-android-app-development -ios-ap.png","../assets/images/projects/flutter/worker_hiring/worker_hiringWork-mobile-app-developer -android-app-development -io.png","../assets/images/projects/flutter/worker_hiring/Ahosana-flutter-mvp-development -flutter-business-app -f.png","../assets/images/projects/flutter/worker_hiring/ahosan-habib-hasan-flutter-flutter-business.png","../assets/images/projects/flutter/worker_hiring/flutter-ui-ux -flutter-ui-design -firebase-flutte.png","../assets/images/projects/flutter/worker_hiring/portfolio-ahosan-habib-hasan-ios-app-development .png"]'
                       data-github="https://github.com/hasan1h2/worker_hiring"
                       data-demo="https://github.com/hasan1h2/worker_hiring"
-                      data-apk="#">Specs</button>
+                      data-apk="#"><i class="fas fa-info-circle me-1"></i> Details</button>
+                  </div>
+                  <div class="mt-auto">
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> Flutter Agency</span>
+                      <button class="btn-favorite" aria-label="Favorite Project"><i class="far fa-heart"></i></button>
+                    </div>
+                    <h5 class="text-white fw-bold project-title mb-0">Worker Hiring Platform</h5>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-              <div>
+              <div class="p-3 p-sm-4">
                 <div class="d-flex flex-wrap gap-1 mb-2">
                   <span class="project-tech-badge">Flutter</span>
                   <span class="project-tech-badge">GetX</span>
                   <span class="project-tech-badge">REST API</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">Worker Hiring (Live Project)</h5>
-                <p class="text-muted small card-text mb-3">Live worker hiring platform connecting clients with skilled service providers.</p>
+                
+                <div class="expandable-details" id="fl-details-2">
+                  <p class="text-muted small card-text mb-2">Live worker hiring platform connecting clients with skilled service providers.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center" data-target="fl-details-2"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
-                <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live</span>
-                <a href="https://github.com/hasan1h2/worker_hiring" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github fs-5"></i></a>
+            </div>
+
+            <div class="p-3 p-sm-4 pt-0 d-flex flex-wrap align-items-center justify-content-between gap-2 border-top border-secondary border-opacity-25 mt-2 pt-3">
+              <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live</span>
+              <div class="d-flex gap-2 fs-6">
+                <a href="https://github.com/hasan1h2/worker_hiring" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github"></i></a>
               </div>
             </div>
           </div>
         </div>
 
         <!-- 3. Artisan -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="api" data-aos="fade-up" data-aos-delay="200">
-          <div class="glass-card project-card tilt-card h-100">
-            <div class="project-img-wrapper">
-              <img src="../assets/images/projects/flutter/artisan-/artisan--ahosan-habib-hasan-fludevelopment -.png" alt="Artisan Business App">
-              <div class="project-overlay">
-                <div>
-                  <div class="d-flex justify-content-between mb-2">
-                    <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> Flutter</span>
-                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
-                  </div>
-                  <h5 class="text-white fw-bold project-title">Artisan (Live Project)</h5>
-                  <p class="text-muted small project-desc">Live business management application with clean architecture.</p>
-                  <div class="d-flex gap-2">
-                    <a href="../assets/images/projects/flutter/artisan-/artisan--ahosan-habib-hasan-fludevelopment -.png" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="Artisan - Business App Overview">Preview</a>
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="api" data-aos="fade-up" data-aos-delay="200">
+          <div class="glass-card project-card tilt-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="project-img-wrapper">
+                <img src="../assets/images/projects/flutter/artisan-/artisan--ahosan-habib-hasan-fludevelopment -.png" onerror="this.onerror=null;this.src='../assets/images/placeholder.jpg';" alt="Artisan Business App">
+                <div class="project-overlay">
+                  <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+                    <a href="../assets/images/projects/flutter/artisan-/artisan--ahosan-habib-hasan-fludevelopment -.png" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="Artisan - Business App Overview"><i class="fas fa-eye me-1"></i> Preview</a>
                     <button class="btn-outline-glass py-1 px-3 fs-7 project-details-trigger"
                       data-project-id="proj-3"
                       data-title="Artisan Business App"
@@ -210,44 +218,51 @@
                       data-images='["../assets/images/projects/flutter/artisan-/artisan--ahosan-habib-hasan-fludevelopment -.png","../assets/images/projects/flutter/artisan-/artisan--ahosan-habib-hasan-flutter-ui-ux -flu-getx-flutter -rest-api-.png","../assets/images/projects/flutter/artisan-/artisan--ahosan-habib-hasan-flutter-ui-ux -flutter-ui-design .png","../assets/images/projects/flutter/artisan-/artisan--ahosan-habib-hasan-mobile-app-business.png","../assets/images/projects/flutter/artisan-/artisan-WorkeHome-app-development modern-mobile.png","../assets/images/projects/flutter/artisan-/artisan-WorkeProfile-handroid-app-development .png","../assets/images/projects/flutter/artisan-/flutter-developer -ios-app-development -.png"]'
                       data-github="https://github.com/hasan1h2/artisan"
                       data-demo="https://github.com/hasan1h2/artisan"
-                      data-apk="#">Specs</button>
+                      data-apk="#"><i class="fas fa-info-circle me-1"></i> Details</button>
+                  </div>
+                  <div class="mt-auto">
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> REST API App</span>
+                      <button class="btn-favorite" aria-label="Favorite Project"><i class="far fa-heart"></i></button>
+                    </div>
+                    <h5 class="text-white fw-bold project-title mb-0">Artisan Business App</h5>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-              <div>
+              <div class="p-3 p-sm-4">
                 <div class="d-flex flex-wrap gap-1 mb-2">
                   <span class="project-tech-badge">Flutter UI</span>
                   <span class="project-tech-badge">Dart</span>
                   <span class="project-tech-badge">REST API</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">Artisan (Live Project)</h5>
-                <p class="text-muted small card-text mb-3">Live business management application with clean architecture and seamless user experience.</p>
+                
+                <div class="expandable-details" id="fl-details-3">
+                  <p class="text-muted small card-text mb-2">Live business management application with clean architecture and seamless UX.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center" data-target="fl-details-3"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
-                <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live</span>
-                <a href="https://github.com/hasan1h2/artisan" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github fs-5"></i></a>
+            </div>
+
+            <div class="p-3 p-sm-4 pt-0 d-flex flex-wrap align-items-center justify-content-between gap-2 border-top border-secondary border-opacity-25 mt-2 pt-3">
+              <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live</span>
+              <div class="d-flex gap-2 fs-6">
+                <a href="https://github.com/hasan1h2/artisan" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github"></i></a>
               </div>
             </div>
           </div>
         </div>
 
         <!-- 4. Flutter Static UI Kit -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="ui" data-aos="fade-up">
-          <div class="glass-card project-card tilt-card h-100">
-            <div class="project-img-wrapper">
-              <img src="../assets/images/projects/flutter/portfolio/portfolio.png" alt="Flutter Static UI Kit & Portfolio">
-              <div class="project-overlay">
-                <div>
-                  <div class="d-flex justify-content-between mb-2">
-                    <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> UI Kit</span>
-                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
-                  </div>
-                  <h5 class="text-white fw-bold project-title">Flutter Multi-Screen UI Kit</h5>
-                  <p class="text-muted small project-desc">Reusable component library for Flutter.</p>
-                  <div class="d-flex gap-2">
-                    <a href="../assets/images/projects/flutter/portfolio/portfolio.png" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="Flutter UI Kit - Main Showcase">Preview</a>
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="ui" data-aos="fade-up">
+          <div class="glass-card project-card tilt-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="project-img-wrapper">
+                <img src="../assets/images/projects/flutter/portfolio/portfolio.png" onerror="this.onerror=null;this.src='../assets/images/placeholder.jpg';" alt="Flutter Static UI Kit & Portfolio">
+                <div class="project-overlay">
+                  <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+                    <a href="../assets/images/projects/flutter/portfolio/portfolio.png" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="Flutter UI Kit - Main Showcase"><i class="fas fa-eye me-1"></i> Preview</a>
                     <button class="btn-outline-glass py-1 px-3 fs-7 project-details-trigger"
                       data-project-id="proj-4"
                       data-title="Flutter Multi-Screen UI Kit"
@@ -257,61 +272,54 @@
                       data-features="10+ reusable UI screens & widgets,GetX page route management,Custom themes & smooth animations,Pixel-perfect mobile rendering"
                       data-tech="Flutter,Dart,GetX,UI/UX,Responsive Layout"
                       data-img="../assets/images/projects/flutter/portfolio/portfolio.png"
-                      data-images='["../assets/images/projects/flutter/portfolio/portfolio.png","../assets/images/projects/flutter/portfolio/portfolio1.png","../assets/images/projects/flutter/portfolio/mobile-app-development-custom-flutter-app -flutter-app-design .png","../assets/images/projects/flutter/portfolio/portfolio-ahosan-habib-hasan-flutter-android-ios-app-development -getx-flutter .png","../assets/images/projects/flutter/portfolio/portfolio-ahosan-habib-hasan-flutter-developer developer -.png","../assets/images/projects/flutter/portfolio/portfolio-ahosan-habib-hasan-flutter-ui--ios-app-development -api.png","../assets/images/projects/flutter/portfolio/portfolio-ahosan-habib-hasan-flutter-ui-ux -flutter-.png"]'
+                      data-images='["../assets/images/projects/flutter/portfolio/portfolio.png","../assets/images/projects/flutter/portfolio/portfolio1.png","../assets/images/projects/flutter/portfolio/Ahosan.png","../assets/images/projects/flutter/portfolio/mobile-app-development-custom-flutter-app -flutter-app-design .png","../assets/images/projects/flutter/portfolio/portfolio-ahosan-habib-hasan-flutter-android-ios-app-development -getx-flutter .png","../assets/images/projects/flutter/portfolio/portfolio-ahosan-habib-hasan-flutter-developer developer -.png","../assets/images/projects/flutter/portfolio/portfolio-ahosan-habib-hasan-flutter-ui--ios-app-development -api.png","../assets/images/projects/flutter/portfolio/portfolio-ahosan-habib-hasan-flutter-ui-ux -flutter-.png","../assets/images/projects/flutter/portfolio/portfolio-ahosan-habib-hasan-flutter-ui-ux -flutter-ui-design t .png","../assets/images/projects/flutter/portfolio/portfolio-ahosan-habib-hasan-mobile-frontend-deve.png"]'
                       data-github="https://github.com/hasan1h2"
                       data-demo="#"
-                      data-apk="#">Specs</button>
+                      data-apk="#"><i class="fas fa-info-circle me-1"></i> Details</button>
+                  </div>
+                  <div class="mt-auto">
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> UI Kit</span>
+                      <button class="btn-favorite" aria-label="Favorite Project"><i class="far fa-heart"></i></button>
+                    </div>
+                    <h5 class="text-white fw-bold project-title mb-0">Flutter Multi-Screen UI Kit</h5>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-              <div>
+              <div class="p-3 p-sm-4">
                 <div class="d-flex flex-wrap gap-1 mb-2">
                   <span class="project-tech-badge">Flutter</span>
                   <span class="project-tech-badge">Dart</span>
                   <span class="project-tech-badge">GetX</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">Flutter Multi-Screen UI Kit</h5>
-                <p class="text-muted small card-text mb-3">Multi-screen Flutter UI kit with reusable widgets, smooth transitions, and responsive layout.</p>
-              </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
-                <span class="status-badge-live"><span class="pulsating-dot-live"></span> Ready</span>
-                <a href="https://github.com/hasan1h2" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github fs-5"></i></a>
+                
+                <div class="expandable-details" id="fl-details-4">
+                  <p class="text-muted small card-text mb-2">Multi-screen Flutter UI kit with reusable widgets, smooth transitions, and responsive layout.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center" data-target="fl-details-4"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
             </div>
-          </div>
-        </div>
-                  <span class="project-tech-badge">Flutter</span>
-                  <span class="project-tech-badge">GetX</span>
-                  <span class="project-tech-badge">Custom Painter</span>
-                </div>
-                <h5 class="text-white fw-bold card-title mb-2">Flutter Static UI</h5>
-                <p class="text-muted small card-text mb-3">Responsive reusable mobile UI kit for rapid application prototyping.</p>
-              </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
-                <span class="status-badge-live"><span class="pulsating-dot-live"></span> Ready</span>
-                <a href="https://github.com" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github fs-5"></i></a>
+
+            <div class="p-3 p-sm-4 pt-0 d-flex flex-wrap align-items-center justify-content-between gap-2 border-top border-secondary border-opacity-25 mt-2 pt-3">
+              <span class="status-badge-live"><span class="pulsating-dot-live"></span> Ready</span>
+              <div class="d-flex gap-2 fs-6">
+                <a href="https://github.com/hasan1h2" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github"></i></a>
               </div>
             </div>
           </div>
         </div>
 
         <!-- 5. E-Commerce Mobile App -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="api" data-aos="fade-up" data-aos-delay="100">
-          <div class="glass-card project-card tilt-card h-100">
-            <div class="project-img-wrapper">
-              <img src="../assets/images/projects/flutter/ecommerce-app.svg" alt="E-Commerce Mobile App">
-              <div class="project-overlay">
-                <div>
-                  <div class="d-flex justify-content-between mb-2">
-                    <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> E-Commerce</span>
-                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
-                  </div>
-                  <h5 class="text-white fw-bold project-title">E-Commerce Mobile</h5>
-                  <p class="text-muted small project-desc">Shopping cart, checkout, &amp; payment gateway UI.</p>
-                  <div class="d-flex gap-2">
-                    <a href="../assets/images/projects/flutter/ecommerce-app.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="E-Commerce Mobile Screenshot">Preview</a>
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="api" data-aos="fade-up" data-aos-delay="100">
+          <div class="glass-card project-card tilt-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="project-img-wrapper">
+                <img src="../assets/images/projects/flutter/ecommerce-app.svg" onerror="this.onerror=null;this.src='../assets/images/placeholder.jpg';" alt="E-Commerce Mobile App">
+                <div class="project-overlay">
+                  <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+                    <a href="../assets/images/projects/flutter/ecommerce-app.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="E-Commerce Mobile Screenshot"><i class="fas fa-eye me-1"></i> Preview</a>
                     <button class="btn-outline-glass py-1 px-3 fs-7 project-details-trigger"
                       data-title="E-Commerce Mobile App"
                       data-category="REST API Mobile App"
@@ -319,44 +327,51 @@
                       data-img="../assets/images/projects/flutter/ecommerce-app.svg"
                       data-github="https://github.com"
                       data-demo="#"
-                      data-apk="#">Specs</button>
+                      data-apk="#"><i class="fas fa-info-circle me-1"></i> Details</button>
+                  </div>
+                  <div class="mt-auto">
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> E-Commerce</span>
+                      <button class="btn-favorite" aria-label="Favorite Project"><i class="far fa-heart"></i></button>
+                    </div>
+                    <h5 class="text-white fw-bold project-title mb-0">E-Commerce Mobile</h5>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-              <div>
+              <div class="p-3 p-sm-4">
                 <div class="d-flex flex-wrap gap-1 mb-2">
                   <span class="project-tech-badge">Flutter</span>
                   <span class="project-tech-badge">Dart</span>
                   <span class="project-tech-badge">JSON</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">E-Commerce Mobile</h5>
-                <p class="text-muted small card-text mb-3">Product catalog &amp; checkout mobile client UI.</p>
+                
+                <div class="expandable-details" id="fl-details-5">
+                  <p class="text-muted small card-text mb-2">Product catalog &amp; checkout mobile client UI with cart management.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center" data-target="fl-details-5"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
-                <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live APK</span>
-                <a href="https://github.com" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github fs-5"></i></a>
+            </div>
+
+            <div class="p-3 p-sm-4 pt-0 d-flex flex-wrap align-items-center justify-content-between gap-2 border-top border-secondary border-opacity-25 mt-2 pt-3">
+              <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live APK</span>
+              <div class="d-flex gap-2 fs-6">
+                <a href="https://github.com" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github"></i></a>
               </div>
             </div>
           </div>
         </div>
 
         <!-- 6. Health Tracker Mobile UI -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="ui" data-aos="fade-up" data-aos-delay="200">
-          <div class="glass-card project-card tilt-card h-100">
-            <div class="project-img-wrapper">
-              <img src="../assets/images/projects/flutter/health-tracker.svg" alt="Health Tech App">
-              <div class="project-overlay">
-                <div>
-                  <div class="d-flex justify-content-between mb-2">
-                    <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> Health Tech</span>
-                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
-                  </div>
-                  <h5 class="text-white fw-bold project-title">Health Tech Tracker</h5>
-                  <p class="text-muted small project-desc">Fitness metrics &amp; doctor appointment app.</p>
-                  <div class="d-flex gap-2">
-                    <a href="../assets/images/projects/flutter/health-tracker.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="Health Tech Tracker Screenshot">Preview</a>
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="ui" data-aos="fade-up" data-aos-delay="200">
+          <div class="glass-card project-card tilt-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="project-img-wrapper">
+                <img src="../assets/images/projects/flutter/health-tracker.svg" onerror="this.onerror=null;this.src='../assets/images/placeholder.jpg';" alt="Health Tech App">
+                <div class="project-overlay">
+                  <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+                    <a href="../assets/images/projects/flutter/health-tracker.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="Health Tech Tracker Screenshot"><i class="fas fa-eye me-1"></i> Preview</a>
                     <button class="btn-outline-glass py-1 px-3 fs-7 project-details-trigger"
                       data-title="Health Tech Tracker"
                       data-category="Mobile UI Kit"
@@ -364,44 +379,51 @@
                       data-img="../assets/images/projects/flutter/health-tracker.svg"
                       data-github="https://github.com"
                       data-demo="#"
-                      data-apk="#">Specs</button>
+                      data-apk="#"><i class="fas fa-info-circle me-1"></i> Details</button>
+                  </div>
+                  <div class="mt-auto">
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> Health Tech</span>
+                      <button class="btn-favorite" aria-label="Favorite Project"><i class="far fa-heart"></i></button>
+                    </div>
+                    <h5 class="text-white fw-bold project-title mb-0">Health Tech Tracker</h5>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-              <div>
+              <div class="p-3 p-sm-4">
                 <div class="d-flex flex-wrap gap-1 mb-2">
                   <span class="project-tech-badge">Flutter</span>
                   <span class="project-tech-badge">GetX</span>
                   <span class="project-tech-badge">Charts</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">Health Tech Tracker</h5>
-                <p class="text-muted small card-text mb-3">Personal fitness monitoring and appointment booking platform.</p>
+                
+                <div class="expandable-details" id="fl-details-6">
+                  <p class="text-muted small card-text mb-2">Personal fitness monitoring and appointment booking platform UI.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center" data-target="fl-details-6"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
-                <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live APK</span>
-                <a href="https://github.com" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github fs-5"></i></a>
+            </div>
+
+            <div class="p-3 p-sm-4 pt-0 d-flex flex-wrap align-items-center justify-content-between gap-2 border-top border-secondary border-opacity-25 mt-2 pt-3">
+              <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live APK</span>
+              <div class="d-flex gap-2 fs-6">
+                <a href="https://github.com" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github"></i></a>
               </div>
             </div>
           </div>
         </div>
 
         <!-- 7. Real Estate Finder -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="agency" data-aos="fade-up">
-          <div class="glass-card project-card tilt-card h-100">
-            <div class="project-img-wrapper">
-              <img src="../assets/images/projects/flutter/real-estate.svg" alt="Real Estate App">
-              <div class="project-overlay">
-                <div>
-                  <div class="d-flex justify-content-between mb-2">
-                    <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> Real Estate</span>
-                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
-                  </div>
-                  <h5 class="text-white fw-bold project-title">Real Estate Finder</h5>
-                  <p class="text-muted small project-desc">Property listing &amp; map integration app.</p>
-                  <div class="d-flex gap-2">
-                    <a href="../assets/images/projects/flutter/real-estate.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="Real Estate Finder Screenshot">Preview</a>
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="agency" data-aos="fade-up">
+          <div class="glass-card project-card tilt-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="project-img-wrapper">
+                <img src="../assets/images/projects/flutter/real-estate.svg" onerror="this.onerror=null;this.src='../assets/images/placeholder.jpg';" alt="Real Estate App">
+                <div class="project-overlay">
+                  <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+                    <a href="../assets/images/projects/flutter/real-estate.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="Real Estate Finder Screenshot"><i class="fas fa-eye me-1"></i> Preview</a>
                     <button class="btn-outline-glass py-1 px-3 fs-7 project-details-trigger"
                       data-title="Real Estate Finder"
                       data-category="Agency Mobile App"
@@ -409,44 +431,51 @@
                       data-img="../assets/images/projects/flutter/real-estate.svg"
                       data-github="https://github.com"
                       data-demo="#"
-                      data-apk="#">Specs</button>
+                      data-apk="#"><i class="fas fa-info-circle me-1"></i> Details</button>
+                  </div>
+                  <div class="mt-auto">
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> Real Estate</span>
+                      <button class="btn-favorite" aria-label="Favorite Project"><i class="far fa-heart"></i></button>
+                    </div>
+                    <h5 class="text-white fw-bold project-title mb-0">Real Estate Finder</h5>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-              <div>
+              <div class="p-3 p-sm-4">
                 <div class="d-flex flex-wrap gap-1 mb-2">
                   <span class="project-tech-badge">Flutter</span>
                   <span class="project-tech-badge">REST API</span>
                   <span class="project-tech-badge">Google Maps</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">Real Estate Finder</h5>
-                <p class="text-muted small card-text mb-3">Property marketplace UI with dynamic filters and map previews.</p>
+                
+                <div class="expandable-details" id="fl-details-7">
+                  <p class="text-muted small card-text mb-2">Property marketplace UI with dynamic filters and map previews.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center" data-target="fl-details-7"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
-                <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live APK</span>
-                <a href="https://github.com" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github fs-5"></i></a>
+            </div>
+
+            <div class="p-3 p-sm-4 pt-0 d-flex flex-wrap align-items-center justify-content-between gap-2 border-top border-secondary border-opacity-25 mt-2 pt-3">
+              <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live APK</span>
+              <div class="d-flex gap-2 fs-6">
+                <a href="https://github.com" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github"></i></a>
               </div>
             </div>
           </div>
         </div>
 
         <!-- 8. Food Delivery Experience -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="api" data-aos="fade-up" data-aos-delay="100">
-          <div class="glass-card project-card tilt-card h-100">
-            <div class="project-img-wrapper">
-              <img src="../assets/images/projects/flutter/food-delivery.svg" alt="Food Delivery UI">
-              <div class="project-overlay">
-                <div>
-                  <div class="d-flex justify-content-between mb-2">
-                    <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> Food Delivery</span>
-                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
-                  </div>
-                  <h5 class="text-white fw-bold project-title">Food Express Delivery</h5>
-                  <p class="text-muted small project-desc">On-demand meal dispatch platform.</p>
-                  <div class="d-flex gap-2">
-                    <a href="../assets/images/projects/flutter/food-delivery.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="Food Delivery Screenshot">Preview</a>
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="api" data-aos="fade-up" data-aos-delay="100">
+          <div class="glass-card project-card tilt-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="project-img-wrapper">
+                <img src="../assets/images/projects/flutter/food-delivery.svg" onerror="this.onerror=null;this.src='../assets/images/placeholder.jpg';" alt="Food Delivery UI">
+                <div class="project-overlay">
+                  <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+                    <a href="../assets/images/projects/flutter/food-delivery.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="Food Delivery Screenshot"><i class="fas fa-eye me-1"></i> Preview</a>
                     <button class="btn-outline-glass py-1 px-3 fs-7 project-details-trigger"
                       data-title="Food Express Delivery"
                       data-category="REST API App"
@@ -454,44 +483,51 @@
                       data-img="../assets/images/projects/flutter/food-delivery.svg"
                       data-github="https://github.com"
                       data-demo="#"
-                      data-apk="#">Specs</button>
+                      data-apk="#"><i class="fas fa-info-circle me-1"></i> Details</button>
+                  </div>
+                  <div class="mt-auto">
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> Food Delivery</span>
+                      <button class="btn-favorite" aria-label="Favorite Project"><i class="far fa-heart"></i></button>
+                    </div>
+                    <h5 class="text-white fw-bold project-title mb-0">Food Express Delivery</h5>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-              <div>
+              <div class="p-3 p-sm-4">
                 <div class="d-flex flex-wrap gap-1 mb-2">
                   <span class="project-tech-badge">Flutter</span>
                   <span class="project-tech-badge">GetX</span>
                   <span class="project-tech-badge">REST API</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">Food Express Delivery</h5>
-                <p class="text-muted small card-text mb-3">Restaurant meal ordering with cart management.</p>
+                
+                <div class="expandable-details" id="fl-details-8">
+                  <p class="text-muted small card-text mb-2">Restaurant meal ordering platform with live order tracking.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center" data-target="fl-details-8"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
-                <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live APK</span>
-                <a href="https://github.com" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github fs-5"></i></a>
+            </div>
+
+            <div class="p-3 p-sm-4 pt-0 d-flex flex-wrap align-items-center justify-content-between gap-2 border-top border-secondary border-opacity-25 mt-2 pt-3">
+              <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live APK</span>
+              <div class="d-flex gap-2 fs-6">
+                <a href="https://github.com" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github"></i></a>
               </div>
             </div>
           </div>
         </div>
 
         <!-- 9. Crypto Wallet Interface -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="ui" data-aos="fade-up" data-aos-delay="200">
-          <div class="glass-card project-card tilt-card h-100">
-            <div class="project-img-wrapper">
-              <img src="../assets/images/projects/flutter/crypto-wallet.svg" alt="Crypto Wallet App">
-              <div class="project-overlay">
-                <div>
-                  <div class="d-flex justify-content-between mb-2">
-                    <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> Fintech</span>
-                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
-                  </div>
-                  <h5 class="text-white fw-bold project-title">Crypto Wallet UI</h5>
-                  <p class="text-muted small project-desc">Financial asset tracking &amp; chart visualizations.</p>
-                  <div class="d-flex gap-2">
-                    <a href="../assets/images/projects/flutter/crypto-wallet.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="Crypto Wallet Screenshot">Preview</a>
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="ui" data-aos="fade-up" data-aos-delay="200">
+          <div class="glass-card project-card tilt-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="project-img-wrapper">
+                <img src="../assets/images/projects/flutter/crypto-wallet.svg" onerror="this.onerror=null;this.src='../assets/images/placeholder.jpg';" alt="Crypto Wallet App">
+                <div class="project-overlay">
+                  <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+                    <a href="../assets/images/projects/flutter/crypto-wallet.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="Crypto Wallet Screenshot"><i class="fas fa-eye me-1"></i> Preview</a>
                     <button class="btn-outline-glass py-1 px-3 fs-7 project-details-trigger"
                       data-title="Crypto Wallet UI"
                       data-category="Fintech UI Kit"
@@ -499,44 +535,51 @@
                       data-img="../assets/images/projects/flutter/crypto-wallet.svg"
                       data-github="https://github.com"
                       data-demo="#"
-                      data-apk="#">Specs</button>
+                      data-apk="#"><i class="fas fa-info-circle me-1"></i> Details</button>
+                  </div>
+                  <div class="mt-auto">
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> Fintech UI</span>
+                      <button class="btn-favorite" aria-label="Favorite Project"><i class="far fa-heart"></i></button>
+                    </div>
+                    <h5 class="text-white fw-bold project-title mb-0">Crypto Wallet UI</h5>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-              <div>
+              <div class="p-3 p-sm-4">
                 <div class="d-flex flex-wrap gap-1 mb-2">
                   <span class="project-tech-badge">Flutter</span>
                   <span class="project-tech-badge">Charts</span>
                   <span class="project-tech-badge">Dart</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">Crypto Wallet UI</h5>
-                <p class="text-muted small card-text mb-3">Digital currency dashboard UI with real-time chart components.</p>
+                
+                <div class="expandable-details" id="fl-details-9">
+                  <p class="text-muted small card-text mb-2">Digital currency dashboard UI with real-time chart components.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center" data-target="fl-details-9"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
-                <span class="status-badge-live"><span class="pulsating-dot-live"></span> Ready</span>
-                <a href="https://github.com" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github fs-5"></i></a>
+            </div>
+
+            <div class="p-3 p-sm-4 pt-0 d-flex flex-wrap align-items-center justify-content-between gap-2 border-top border-secondary border-opacity-25 mt-2 pt-3">
+              <span class="status-badge-live"><span class="pulsating-dot-live"></span> Ready</span>
+              <div class="d-flex gap-2 fs-6">
+                <a href="https://github.com" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github"></i></a>
               </div>
             </div>
           </div>
         </div>
 
         <!-- 10. Social Connect -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="agency" data-aos="fade-up">
-          <div class="glass-card project-card tilt-card h-100">
-            <div class="project-img-wrapper">
-              <img src="../assets/images/projects/flutter/social-media.svg" alt="Social Connect App">
-              <div class="project-overlay">
-                <div>
-                  <div class="d-flex justify-content-between mb-2">
-                    <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> Social</span>
-                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
-                  </div>
-                  <h5 class="text-white fw-bold project-title">Social Connect</h5>
-                  <p class="text-muted small project-desc">Feed posting &amp; story sharing app.</p>
-                  <div class="d-flex gap-2">
-                    <a href="../assets/images/projects/flutter/social-media.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="Social Connect Screenshot">Preview</a>
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="agency" data-aos="fade-up">
+          <div class="glass-card project-card tilt-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="project-img-wrapper">
+                <img src="../assets/images/projects/flutter/social-media.svg" onerror="this.onerror=null;this.src='../assets/images/placeholder.jpg';" alt="Social Connect App">
+                <div class="project-overlay">
+                  <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+                    <a href="../assets/images/projects/flutter/social-media.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="Social Connect Screenshot"><i class="fas fa-eye me-1"></i> Preview</a>
                     <button class="btn-outline-glass py-1 px-3 fs-7 project-details-trigger"
                       data-title="Social Connect App"
                       data-category="Agency Mobile App"
@@ -544,44 +587,51 @@
                       data-img="../assets/images/projects/flutter/social-media.svg"
                       data-github="https://github.com"
                       data-demo="#"
-                      data-apk="#">Specs</button>
+                      data-apk="#"><i class="fas fa-info-circle me-1"></i> Details</button>
+                  </div>
+                  <div class="mt-auto">
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> Social Network</span>
+                      <button class="btn-favorite" aria-label="Favorite Project"><i class="far fa-heart"></i></button>
+                    </div>
+                    <h5 class="text-white fw-bold project-title mb-0">Social Connect</h5>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-              <div>
+              <div class="p-3 p-sm-4">
                 <div class="d-flex flex-wrap gap-1 mb-2">
                   <span class="project-tech-badge">Flutter</span>
                   <span class="project-tech-badge">REST API</span>
                   <span class="project-tech-badge">GetX</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">Social Connect</h5>
-                <p class="text-muted small card-text mb-3">Community post sharing, comments, &amp; like counters UI.</p>
+                
+                <div class="expandable-details" id="fl-details-10">
+                  <p class="text-muted small card-text mb-2">Community post sharing, comments, &amp; like counters UI.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center" data-target="fl-details-10"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
-                <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live APK</span>
-                <a href="https://github.com" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github fs-5"></i></a>
+            </div>
+
+            <div class="p-3 p-sm-4 pt-0 d-flex flex-wrap align-items-center justify-content-between gap-2 border-top border-secondary border-opacity-25 mt-2 pt-3">
+              <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live APK</span>
+              <div class="d-flex gap-2 fs-6">
+                <a href="https://github.com" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github"></i></a>
               </div>
             </div>
           </div>
         </div>
 
         <!-- 11. Realtime Messenger -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="api" data-aos="fade-up" data-aos-delay="100">
-          <div class="glass-card project-card tilt-card h-100">
-            <div class="project-img-wrapper">
-              <img src="../assets/images/projects/flutter/chat-app.svg" alt="Realtime Chat App">
-              <div class="project-overlay">
-                <div>
-                  <div class="d-flex justify-content-between mb-2">
-                    <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> Messenger</span>
-                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
-                  </div>
-                  <h5 class="text-white fw-bold project-title">Realtime Messenger</h5>
-                  <p class="text-muted small project-desc">Instant messaging &amp; group chat interface.</p>
-                  <div class="d-flex gap-2">
-                    <a href="../assets/images/projects/flutter/chat-app.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="Realtime Messenger Screenshot">Preview</a>
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="api" data-aos="fade-up" data-aos-delay="100">
+          <div class="glass-card project-card tilt-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="project-img-wrapper">
+                <img src="../assets/images/projects/flutter/chat-app.svg" onerror="this.onerror=null;this.src='../assets/images/placeholder.jpg';" alt="Realtime Chat App">
+                <div class="project-overlay">
+                  <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+                    <a href="../assets/images/projects/flutter/chat-app.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="Realtime Messenger Screenshot"><i class="fas fa-eye me-1"></i> Preview</a>
                     <button class="btn-outline-glass py-1 px-3 fs-7 project-details-trigger"
                       data-title="Realtime Messenger"
                       data-category="REST API App"
@@ -589,44 +639,51 @@
                       data-img="../assets/images/projects/flutter/chat-app.svg"
                       data-github="https://github.com"
                       data-demo="#"
-                      data-apk="#">Specs</button>
+                      data-apk="#"><i class="fas fa-info-circle me-1"></i> Details</button>
+                  </div>
+                  <div class="mt-auto">
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> Messenger</span>
+                      <button class="btn-favorite" aria-label="Favorite Project"><i class="far fa-heart"></i></button>
+                    </div>
+                    <h5 class="text-white fw-bold project-title mb-0">Realtime Messenger</h5>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-              <div>
+              <div class="p-3 p-sm-4">
                 <div class="d-flex flex-wrap gap-1 mb-2">
                   <span class="project-tech-badge">Flutter</span>
                   <span class="project-tech-badge">GetX</span>
                   <span class="project-tech-badge">WebSockets</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">Realtime Messenger</h5>
-                <p class="text-muted small card-text mb-3">Chat list, message bubbles, and status indicators.</p>
+                
+                <div class="expandable-details" id="fl-details-11">
+                  <p class="text-muted small card-text mb-2">Chat list, message bubbles, and status indicators platform UI.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center" data-target="fl-details-11"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
-                <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live APK</span>
-                <a href="https://github.com" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github fs-5"></i></a>
+            </div>
+
+            <div class="p-3 p-sm-4 pt-0 d-flex flex-wrap align-items-center justify-content-between gap-2 border-top border-secondary border-opacity-25 mt-2 pt-3">
+              <span class="status-badge-live"><span class="pulsating-dot-live"></span> Live APK</span>
+              <div class="d-flex gap-2 fs-6">
+                <a href="https://github.com" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github"></i></a>
               </div>
             </div>
           </div>
         </div>
 
         <!-- 12. Task & Productivity -->
-        <div class="col-md-6 col-lg-4 filter-item" data-category="ui" data-aos="fade-up" data-aos-delay="200">
-          <div class="glass-card project-card tilt-card h-100">
-            <div class="project-img-wrapper">
-              <img src="../assets/images/projects/flutter/task-manager.svg" alt="Task Manager App">
-              <div class="project-overlay">
-                <div>
-                  <div class="d-flex justify-content-between mb-2">
-                    <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> Productivity</span>
-                    <button class="btn-favorite" aria-label="Favorite"><i class="far fa-heart"></i></button>
-                  </div>
-                  <h5 class="text-white fw-bold project-title">Task &amp; Productivity</h5>
-                  <p class="text-muted small project-desc">Kanban &amp; schedule planner UI.</p>
-                  <div class="d-flex gap-2">
-                    <a href="../assets/images/projects/flutter/task-manager.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="Task Manager Screenshot">Preview</a>
+        <div class="col-6 col-md-6 col-lg-4 filter-item" data-category="ui" data-aos="fade-up" data-aos-delay="200">
+          <div class="glass-card project-card tilt-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="project-img-wrapper">
+                <img src="../assets/images/projects/flutter/task-manager.svg" onerror="this.onerror=null;this.src='../assets/images/placeholder.jpg';" alt="Task Manager App">
+                <div class="project-overlay">
+                  <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+                    <a href="../assets/images/projects/flutter/task-manager.svg" class="btn-primary-glow py-1 px-3 fs-7 glightbox" data-gallery="flutter-gallery" data-title="Task Manager Screenshot"><i class="fas fa-eye me-1"></i> Preview</a>
                     <button class="btn-outline-glass py-1 px-3 fs-7 project-details-trigger"
                       data-title="Task & Productivity App"
                       data-category="Mobile UI Kit"
@@ -634,24 +691,37 @@
                       data-img="../assets/images/projects/flutter/task-manager.svg"
                       data-github="https://github.com"
                       data-demo="#"
-                      data-apk="#">Specs</button>
+                      data-apk="#"><i class="fas fa-info-circle me-1"></i> Details</button>
+                  </div>
+                  <div class="mt-auto">
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <span class="badge-glow bg-dark text-info"><i class="fab fa-flutter me-1"></i> Productivity</span>
+                      <button class="btn-favorite" aria-label="Favorite Project"><i class="far fa-heart"></i></button>
+                    </div>
+                    <h5 class="text-white fw-bold project-title mb-0">Task &amp; Productivity</h5>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-              <div>
+              <div class="p-3 p-sm-4">
                 <div class="d-flex flex-wrap gap-1 mb-2">
                   <span class="project-tech-badge">Flutter</span>
                   <span class="project-tech-badge">Dart</span>
                   <span class="project-tech-badge">GetX</span>
                 </div>
                 <h5 class="text-white fw-bold card-title mb-2">Task &amp; Productivity</h5>
-                <p class="text-muted small card-text mb-3">Task list, deadline badges, and priority tags application UI.</p>
+                
+                <div class="expandable-details" id="fl-details-12">
+                  <p class="text-muted small card-text mb-2">Task list, deadline badges, and priority tags application UI.</p>
+                </div>
+
+                <button class="btn-see-more mt-1 mb-2 w-100 justify-content-center" data-target="fl-details-12"><i class="fas fa-chevron-down me-1"></i> See More</button>
               </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
-                <span class="status-badge-live"><span class="pulsating-dot-live"></span> Ready</span>
-                <a href="https://github.com" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github fs-5"></i></a>
+            </div>
+
+            <div class="p-3 p-sm-4 pt-0 d-flex flex-wrap align-items-center justify-content-between gap-2 border-top border-secondary border-opacity-25 mt-2 pt-3">
+              <span class="status-badge-live"><span class="pulsating-dot-live"></span> Ready</span>
+              <div class="d-flex gap-2 fs-6">
+                <a href="https://github.com" target="_blank" class="text-muted hover-primary" aria-label="GitHub"><i class="fab fa-github"></i></a>
               </div>
             </div>
           </div>
@@ -708,7 +778,7 @@
         </div>
         <div class="modal-body p-3">
           <div class="text-center mb-3">
-            <img id="detailModalImg" src="../assets/images/projects/flutter/chef-starz.svg" alt="App Preview" class="img-fluid rounded-3 max-h-350">
+            <img id="detailModalImg" src="../assets/images/projects/flutter/ChefStarz/ChefStarz-portfolio--modern-mobile-app -professio.png" alt="App Preview" class="img-fluid rounded-3 max-h-350">
           </div>
           <h5 class="fw-bold text-white mb-2">App Description &amp; Technical Specs</h5>
           <p class="text-muted small leading-relaxed mb-3" id="detailModalDesc">
