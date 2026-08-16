@@ -246,7 +246,7 @@ const NAVBAR_FALLBACK_HTML = `<nav class="navbar navbar-expand-xl fixed-top glas
       </ul>
 
       <!-- Right Action Controls -->
-      <div class="d-flex align-items-center gap-2">
+      <div class="d-flex align-items-center gap-2 flex-nowrap">
         <button class="nav-action-btn search-trigger-btn" aria-label="Search" data-bs-toggle="tooltip"
           data-bs-placement="bottom" title="Search Portfolio">
           <i class="fas fa-search"></i>
@@ -262,7 +262,7 @@ const NAVBAR_FALLBACK_HTML = `<nav class="navbar navbar-expand-xl fixed-top glas
           <span class="spinner-border spinner-border-sm d-none ms-1" role="status"></span>
         </a>
 
-        <a href="contact.html" class="btn-primary-glow ripple-btn px-3 py-1 fs-7 text-nowrap">
+        <a href="contact.html" class="btn-primary-glow btn-hire-me hire-me-btn ripple-btn px-3 py-1 fs-7 text-nowrap">
           <i class="fas fa-paper-plane me-1"></i> Hire Me
         </a>
       </div>

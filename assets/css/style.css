@@ -444,6 +444,17 @@ body.hovering .cursor-follower {
   white-space: nowrap;
 }
 
+.hire-me-btn,
+.btn-hire-me {
+  white-space: nowrap !important;
+  flex-wrap: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: max-content !important;
+  flex-shrink: 0 !important;
+}
+
 .btn-primary-glow::after {
   content: '';
   position: absolute;
